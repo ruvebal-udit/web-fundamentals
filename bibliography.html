@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web bibliography by Prf. Rubén Vega Balbás, phD @ udit.es</title>
+        <script>
+            // Set the countdown time (in seconds)
+            let countdownTime = 8; // 5-second countdown
+            let url = "https://www.zotero.org/groups/ruvebal-web/library"; // The URL to redirect to
+
+            // Function to update the countdown timer
+            function updateTimer() {
+                const timerElement = document.getElementById("countdown");
+                timerElement.textContent = countdownTime; // Display the current countdown value
+                if (countdownTime <= 0) {
+                    // Redirect when countdown reaches 0
+                    window.location.href = url;
+                } else {
+                    countdownTime--;
+                    setTimeout(updateTimer, 1000); // Call updateTimer again after 1 second
+                }
+            }
+
+            // Initialize the countdown when the page loads
+            window.onload = function () {
+                updateTimer();
+            };
+        </script>
+    </head>
+
+    <body>
+        <h1>You are being redirected</h1>
+        <p>You will be redirected to the <strong>Web bibliography</strong> by <strong>Rubén Vega Balbás, phD</strong> @
+            <a href="https://udit.es/">udit.es</a> in
+            <span id="countdown">8</span> seconds.
+        </p>
+        <p>If you are not redirected automatically, click <a
+                href="https://www.zotero.org/groups/ruvebal-web/library">https://www.zotero.org/groups/ruvebal-web/library</a>.
+        </p>
+    </body>
+
+</html>
