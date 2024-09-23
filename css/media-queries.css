@@ -1,5 +1,12 @@
-/* Mobile Portrait */
-@media only screen and (max-width: 600px) and (orientation: portrait) {
+/*
+  MEDIA QUERIES
+  https://alistapart.com/article/responsive-web-design/
+  https://www.w3.org/TR/mediaqueries-3/
+*/
+
+
+  /* Mobile Portrait */
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
     body {
       font-size: 1rem;
       background-color: #f0f0f0;
