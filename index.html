@@ -1,1 +1,93 @@
-<div>hello world</div>
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Simple CSS Grid Layout</title>
+        <style>
+            /* Basic reset for consistent margins and paddings */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+                height: 100vh;
+            }
+
+            header,
+            footer {
+                background-color: #007bff;
+                color: white;
+                padding: 20px;
+                display: grid;
+                grid-template-columns: 1fr 2fr 2fr;
+                gap: 10px;
+            }
+
+            header div,
+            footer div {
+                background-color: #0056b3;
+                padding: 10px;
+                text-align: center;
+            }
+
+            main {
+                padding: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+            }
+
+            .grid-item {
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Header with Grid Layout -->
+        <header>
+            <div>Logo</div>
+            <div>Navigation</div>
+            <div>Search</div>
+        </header>
+
+        <!-- Main Content Area with Grid Layout -->
+        <main>
+            <div class="grid-item">
+                <h2>Grid Item 1</h2>
+                <p>This is the content for the first grid item.</p>
+            </div>
+            <div class="grid-item">
+                <h2>Grid Item 2</h2>
+                <p>This is the content for the second grid item.</p>
+            </div>
+            <div class="grid-item">
+                <h2>Grid Item 3</h2>
+                <p>This is the content for the third grid item.</p>
+            </div>
+        </main>
+
+        <!-- Footer with Grid Layout -->
+        <footer>
+            <div>Contact Us</div>
+            <div>Privacy Policy</div>
+            <div>Follow Us</div>
+        </footer>
+
+    </body>
+
+</html>
