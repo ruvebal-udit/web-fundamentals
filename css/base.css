@@ -1,0 +1,158 @@
+/* Basic reset for consistent margins and paddings */
+           
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #3B3634;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    }
+
+    header,
+    footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr;
+            gap: 10px;
+        }
+
+    header div,
+    footer div {
+            background-color: #0056b3;
+            padding: 10px;
+            text-align: center;
+        }
+
+    main {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+    .grid-item {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+    header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 40px;
+            background-color: #B5A79F;
+            /* Mid-tone background for header */
+    }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #3B3634;
+        }
+
+        a {
+            color: #3F3F3F;
+        }
+
+        article {
+            margin-bottom: 40px;
+            background-color: #B5A79F;
+            /* Mid-tone background for sections */
+            padding: 20px 40px;
+            /* Lateral padding */
+            border-radius: 10px;
+            color: #3B3634;
+            /* Darker text within sections */
+        }
+
+        blockquote {
+            background-color: #f9f9f9;
+            border-left: 10px solid #ccc;
+            margin: 20px 0;
+            padding: 10px 20px;
+        }
+
+        cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #635B58;
+            /* Slightly darker highlight color */
+        }
+
+        p {
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: #635B58;
+            /* Slightly darker highlight color */
+        }
+
+        .header-container h1 {
+            font-size: 2.5em;
+            color: #3B3634;
+            margin: 0;
+            padding-bottom: 20px;
+            /* Space between the title and the image */
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .toc {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .toc a {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #8C817B;
+            border-radius: 5px;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            background-color: #635B58;
+        }
+
+        .final-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #8C817B;
+            color: #FFFFFF;
+        }
+
+        .final-section a {
+            display: block;
+            margin: 10px 0;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .final-section a:hover {
+            color: #B5A79F;
+        }

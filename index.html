@@ -6,54 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Simple CSS Grid Layout</title>
-        <style>
-            /* Basic reset for consistent margins and paddings */
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
 
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
-                color: #333;
-                display: grid;
-                grid-template-rows: auto 1fr auto;
-                height: 100vh;
-            }
+        <link rel="stylesheet" href="./css/index.css" />
 
-            header,
-            footer {
-                background-color: #007bff;
-                color: white;
-                padding: 20px;
-                display: grid;
-                grid-template-columns: 1fr 2fr 2fr;
-                gap: 10px;
-            }
-
-            header div,
-            footer div {
-                background-color: #0056b3;
-                padding: 10px;
-                text-align: center;
-            }
-
-            main {
-                padding: 20px;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 20px;
-            }
-
-            .grid-item {
-                background-color: white;
-                padding: 20px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-            }
-        </style>
     </head>
 
     <body>
