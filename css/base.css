@@ -8,151 +8,151 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #3B3634;
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--foreground);
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*  When the body has display: flex;, 
+    its children (header, footer, and main) become flex items. 
+    Flex items do not expand to fill their container's width
+    unless you explicitly set their width.
+*/
+
+main {
+    width: 100%; /* Make sure it takes full width */
+    flex: 1; /* Allow it to grow within the flex container */
+}
+
+.fluid-grid-container {
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-    }
+    grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+    gap: 1rem;
+}
 
-    header,
-    footer {
-            background-color: #007bff;
-            color: white;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 2fr 2fr;
-            gap: 10px;
-        }
+header,
+footer {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    padding: 20px;
+    gap: 10px;
+    width: 100%; /* Make the header and footer take full width */
+}
 
-    header div,
-    footer div {
-            background-color: #0056b3;
-            padding: 10px;
-            text-align: center;
-        }
+header {
+    margin-bottom: 30px;
+    padding: 20px 40px;
+    background-color: var(--secondary);
+}
 
-    main {
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
-        }
+header div,
+footer div {
+    background-color: var(--primary);
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
 
-    .grid-item {
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
 
-    header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 20px 40px;
-            background-color: #B5A79F;
-            /* Mid-tone background for header */
-    }
+h1,
+h2,
+h3,
+h4 {
+    color: var(--destructive);
+}
 
-        h1,
-        h2,
-        h3,
-        h4 {
-            color: #3B3634;
-        }
+a {
+    color: var(--muted-foreground);
+}
 
-        a {
-            color: #3F3F3F;
-        }
+article {
+    margin-bottom: 40px;
+    background-color: var(--accent);
+    padding: 20px 40px;
+    border-radius: 10px;
+    color: var(--destructive);
+}
 
-        article {
-            margin-bottom: 40px;
-            background-color: #B5A79F;
-            /* Mid-tone background for sections */
-            padding: 20px 40px;
-            /* Lateral padding */
-            border-radius: 10px;
-            color: #3B3634;
-            /* Darker text within sections */
-        }
+blockquote {
+    background-color: var(--foreground);
+    border-left: 10px solid var(--muted);
+    margin: 20px 0;
+    padding: 10px 20px;
+}
 
-        blockquote {
-            background-color: #f9f9f9;
-            border-left: 10px solid #ccc;
-            margin: 20px 0;
-            padding: 10px 20px;
-        }
+cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--primary);
+}
 
-        cite {
-            display: block;
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: #635B58;
-            /* Slightly darker highlight color */
-        }
+p {
+    margin: 15px 0;
+    line-height: 1.8;
+}
 
-        p {
-            margin: 15px 0;
-            line-height: 1.8;
-        }
+.highlight {
+    color: var(--primary);
+}
 
-        .highlight {
-            color: #635B58;
-            /* Slightly darker highlight color */
-        }
+.header-container h1 {
+    font-size: 2.5em;
+    color: var(--destructive);
+    margin: 0;
+    padding-bottom: 20px;
+}
 
-        .header-container h1 {
-            font-size: 2.5em;
-            color: #3B3634;
-            margin: 0;
-            padding-bottom: 20px;
-            /* Space between the title and the image */
-        }
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
+.image-container img {
+    width: 100%;
+    height: auto;
+}
 
-        .image-container img {
-            width: 100%;
-            height: auto;
-        }
+.toc {
+    text-align: center;
+    margin: 20px 0;
+}
 
-        .toc {
-            text-align: center;
-            margin: 20px 0;
-        }
+.toc a {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: var(--muted);
+    border-radius: 5px;
+    color: var(--foreground);
+    text-decoration: none;
+}
 
-        .toc a {
-            margin: 0 10px;
-            padding: 10px 20px;
-            background-color: #8C817B;
-            border-radius: 5px;
-            color: #FFFFFF;
-            text-decoration: none;
-        }
+.toc a:hover {
+    background-color: var(--primary);
+}
 
-        .toc a:hover {
-            background-color: #635B58;
-        }
+.final-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--muted);
+    color: var(--foreground);
+}
 
-        .final-section {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #8C817B;
-            color: #FFFFFF;
-        }
+.final-section a {
+    display: block;
+    margin: 10px 0;
+    color: var(--foreground);
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .final-section a {
-            display: block;
-            margin: 10px 0;
-            color: #FFFFFF;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .final-section a:hover {
-            color: #B5A79F;
-        }
+.final-section a:hover {
+    color: var(--accent);
+}

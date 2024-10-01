@@ -1,0 +1,67 @@
+:root {
+    /* Custom color palette */
+    --background: hsla(209, 12%, 22%, 1); /* #323B42 */
+    --foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+
+    --card: hsla(24, 29%, 80%, 1); /* #D9C7BE */
+    --card-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+
+    --popover: hsla(24, 29%, 80%, 1); /* #D9C7BE */
+    --popover-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+
+    --primary: hsla(16, 5%, 39%, 1); /* #635B58 */
+    --primary-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+
+    --secondary: hsla(28, 13%, 61%, 1); /* #A59B95 */
+    --secondary-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+
+    --muted: hsla(24, 6%, 48%, 1); /* #8C817B */
+    --muted-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+
+    --accent: hsla(28, 12%, 68%, 1); /* #B5A79F */
+    --accent-foreground: hsla(16, 5%, 39%, 1); /* #635B58 */
+
+    --destructive: hsla(10, 12%, 21%, 1); /* #3B3634 */
+    --destructive-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+
+    --border: hsla(28, 13%, 61%, 1); /* #A59B95 */
+    --input: hsla(28, 12%, 68%, 1); /* #B5A79F */
+    --ring: hsla(209, 12%, 22%, 1); /* #323B42 */
+
+
+    /* Combinations */
+    .card {
+        background-color: var(--card);
+        color: var(--card-foreground);
+    }
+
+    .popover {
+        background-color: var(--popover);
+        color: var(--popover-foreground);
+    }
+
+    .primary {
+        background-color: var(--primary);
+        color: var(--primary-foreground);
+    }
+
+    .secondary {
+        background-color: var(--secondary);
+        color: var(--secondary-foreground);
+    }
+
+    .muted {
+        background-color: var(--muted);
+        color: var(--muted-foreground);
+    }
+
+    .accent {
+        background-color: var(--accent);
+        color: var(--accent-foreground);
+    }
+
+    .destructive {
+        background-color: var(--destructive);
+        color: var(--destructive-foreground);
+    }
+}

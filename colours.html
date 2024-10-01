@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/index.css" />
+        <title>Color Test Grid</title>
+        <style>
+            main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+                max-width: 80%;
+            }
+
+            .grid-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                border-radius: 8px;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <div class="grid">
+                <div class="grid-item card">Card</div>
+                <div class="grid-item popover">Popover</div>
+                <div class="grid-item primary">Primary</div>
+                <div class="grid-item secondary">Secondary</div>
+                <div class="grid-item muted">Muted</div>
+                <div class="grid-item accent">Accent</div>
+                <div class="grid-item destructive">Destructive</div>
+                <div class="grid-item">Default</div>
+            </div>
+        </main>
+    </body>
+
+</html>
