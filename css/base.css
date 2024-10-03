@@ -29,12 +29,6 @@ main {
     flex: 1; /* Allow it to grow within the flex container */
 }
 
-.fluid-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
-    gap: 1rem;
-}
-
 header,
 footer {
     background-color: var(--secondary);
