@@ -12,12 +12,22 @@
     </head>
 
     <body>
-
-        <!-- Header with Grid Layout -->
+        <!-- Header -->
+        <!-- Recommended semantic nav
+              https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
+        -->
         <header>
-            <div>Logo</div>
-            <div>Navigation</div>
-            <div>Search</div>
+            <nav class="navbar">
+                <ul class="nav-icon">
+                    <img src="assets/icons/scroll_triangle_down_dark.svg" alt="Logo">
+                </ul>
+                <ul class="nav-items">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
         </header>
 
         <!-- Main Content Area with Grid Layout -->
@@ -50,7 +60,7 @@
             </div>
         </main>
         <!-- Footer with Grid Layout -->
-        <footer>
+        <footer class="fluid-grid-container">
             <div>Contact Us</div>
             <div>Privacy Policy</div>
             <div>Follow Us</div>

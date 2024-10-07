@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between the left and right sections */
+    padding: 0.5rem 1rem;
+    background-color: var(--background);
+    white-space: nowrap; /* Prevent the child elements from wrapping onto the next line */
+}
+
+.nav-icon {
+    display: inline-block;
+}
+
+.nav-icon svg, 
+.nav-icon img {
+    width: 100%; /* Makes the SVG flexible */
+    max-width: 40px; /* Limits the max size */
+    height: auto;
+}
+
+.nav-items {
+    display: inline-block; /* Allows nav items to flow inline */
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    white-space: nowrap;
+    flex-direction: row-reverse;
+}
+
+.nav-items li {
+    display: inline-block; /* Displays list items inline */
+    margin-left: 1rem; /* Adds spacing between items */
+}
+
+.nav-items li:first-child { /* for the first item */
+    margin-left: 0; 
+}
+
+.nav-items a {
+    color: var(--foreground);
+    text-decoration: none;
+    padding: 0.5rem;
+}

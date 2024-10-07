@@ -40,11 +40,8 @@ footer {
 
 header {
     margin-bottom: 30px;
-    padding: 20px 40px;
-    background-color: var(--secondary);
 }
 
-header div,
 footer div {
     background-color: var(--primary);
     padding: 10px;
