@@ -1,43 +1,110 @@
+/* Navbar styles */
 .navbar {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    justify-content: space-between; /* Space between the left and right sections */
-    padding: 0.5rem 1rem;
-    background-color: var(--background);
-    white-space: nowrap; /* Prevent the child elements from wrapping onto the next line */
+    display: flex; /* Use flexbox to align children horizontally */
+    align-items: center; /* Vertically center the content within the navbar */
+    justify-content: space-between; /* Space the children (logo and menu) to opposite ends */
+    width: 100%; /* Ensure the navbar takes up the full width of the viewport */
+    box-sizing: border-box; /* Include padding and border in the element’s width and height */
+    z-index: 11; /* Position the navbar above other elements on the page */
 }
 
+/* Logo (nav icon) */
 .nav-icon {
-    display: inline-block;
+    width: 40px;  /* Set a fixed width for the logo container */
+    height: auto;  /* Let the height adjust dynamically to maintain aspect ratio */
+    z-index: 11;  /* Ensure the logo is on top of other elements */
+    margin-left: 1rem; /* Add some space between the logo and the left edge */
 }
 
-.nav-icon svg, 
 .nav-icon img {
-    width: 100%; /* Makes the SVG flexible */
-    max-width: 40px; /* Limits the max size */
-    height: auto;
+    width: 100%; /* Scale the image to fit within the width of the parent (.nav-icon) */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Remove inline element space below the image */
 }
 
+/* Hide the checkbox for mobile menu toggle */
+.nav-menu-btn {
+    display: none; /* Hide the checkbox that controls the mobile menu toggle */
+}
+
+/* Hamburger Menu Icon (visible on mobile) */
+.nav-menu {
+    display: inline-block; /* Display the menu icon inline with other elements */
+    cursor: pointer; /* Change the cursor to indicate that the icon is clickable */
+    padding: 28px 20px; /* Add padding around the hamburger icon */
+    user-select: none; /* Prevent text selection when clicking the icon */
+}
+
+.nav-menu .nav-menu-icon {
+    background-color: var(--background); /* Set the color of the hamburger lines */
+    display: block; /* Display each line of the hamburger as a block */
+    height: 2px; /* Set the height (thickness) of each line */
+    width: 18px; /* Set the width of the hamburger lines */
+    position: relative; /* Position the lines relative to each other */
+    transition: background 0.2s ease-out; /* Smoothly transition the background color when changing */
+}
+
+.nav-menu .nav-menu-icon:before,
+.nav-menu .nav-menu-icon:after {
+    content: ''; /* Create the top and bottom lines of the hamburger using pseudo-elements */
+    background-color: var(--background); /* Set the color of the pseudo-elements */
+    height: 2px; /* Set the height of the top and bottom lines */
+    width: 18px; /* Ensure the width matches the main middle line */
+    position: absolute; /* Position them relative to the main line */
+    transition: all 0.2s ease-out; /* Smoothly animate changes to position and rotation */
+}
+
+.nav-menu .nav-menu-icon:before {
+    top: -6px; /* Position the top line above the middle line */
+}
+
+.nav-menu .nav-menu-icon:after {
+    top: 6px; /* Position the bottom line below the middle line */
+}
+
+/* Mobile Menu (hidden by default) */
 .nav-items {
-    display: inline-block; /* Allows nav items to flow inline */
-    list-style: none; /* Removes bullet points */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
-    white-space: nowrap;
-    flex-direction: row-reverse;
+    display: none; /* Hide the mobile menu by default */
+    background-color: var(--secondary); /* Set a background color (from CSS variables) */
+    flex-direction: column; /* Stack the menu items vertically */
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding from the list */
+    margin: 0; /* Remove default margin from the list */
+    width: 100%; /* Make the menu take up the full width of the screen */
+    text-align: right; /* Align the text to the right */
+    position: absolute; /* Position the menu relative to the navbar */
+    top: 100%; /* Position the menu right below the navbar */
+    left: 0; /* Align the menu with the left edge of the screen */
+    z-index: 9; /* Ensure the menu appears above most other elements */
 }
 
+/* Menu Items */
 .nav-items li {
-    display: inline-block; /* Displays list items inline */
-    margin-left: 1rem; /* Adds spacing between items */
+    border-bottom: 1px solid #f4f4f4; /* Add a border between each menu item */
 }
 
-.nav-items li:first-child { /* for the first item */
-    margin-left: 0; 
-}
-
-.nav-items a {
-    color: var(--foreground);
+.nav-items li a {
+    display: block; /* Make the entire area of the menu item clickable */
+    padding: 20px; /* Add padding inside each menu item for spacing */
     text-decoration: none;
-    padding: 0.5rem;
+}
+
+/* Show Mobile Menu when Checkbox is Checked */
+.nav-menu-btn:checked ~ .nav-items {
+    display: flex; /* Display the menu when the checkbox is checked */
+}
+
+/* Animate the Hamburger Icon into an "X" when clicked */
+.nav-menu-btn:checked ~ .nav-menu .nav-menu-icon {
+    background: transparent; /* Remove the middle line of the hamburger icon */
+}
+
+.nav-menu-btn:checked ~ .nav-menu .nav-menu-icon:before {
+    transform: rotate(-45deg); /* Rotate the top line to form part of the "X" */
+    top: 0; /* Move the top line to the center */
+}
+
+.nav-menu-btn:checked ~ .nav-menu .nav-menu-icon:after {
+    transform: rotate(45deg); /* Rotate the bottom line to complete the "X" */
+    top: 0; /* Move the bottom line to the center */
 }

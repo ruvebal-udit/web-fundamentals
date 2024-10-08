@@ -1,3 +1,8 @@
+/* Set the CSS variable based on an estimated height */
+:root {
+    --header-height: 80px; /* Estimate the height */
+}
+
 /* Basic reset for consistent margins and paddings */
            
 * {
@@ -15,6 +20,7 @@ body {
     flex-direction: column; /* Arrange items in a column */
     justify-content: center;
     align-items: center;
+    padding-top: var(--header-height); /* Use the variable  */
 }
 
 
@@ -33,15 +39,19 @@ header,
 footer {
     background-color: var(--secondary);
     color: var(--secondary-foreground);
-    padding: 20px;
     gap: 10px;
     width: 100%; /* Make the header and footer take full width */
+    z-index: 10;
 }
 
 header {
-    margin-bottom: 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
+header div,
 footer div {
     background-color: var(--primary);
     padding: 10px;
