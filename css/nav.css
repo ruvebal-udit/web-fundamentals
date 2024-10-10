@@ -5,14 +5,15 @@
     justify-content: space-between; /* Space the children (logo and menu) to opposite ends */
     width: 100%; /* Ensure the navbar takes up the full width of the viewport */
     box-sizing: border-box; /* Include padding and border in the element’s width and height */
-    z-index: 11; /* Position the navbar above other elements on the page */
+    /*z-index: 11;  /* Position the navbar above other elements on the page */
+    padding: 1rem 1rem 0 1rem;
 }
 
 /* Logo (nav icon) */
 .nav-icon {
     width: 40px;  /* Set a fixed width for the logo container */
     height: auto;  /* Let the height adjust dynamically to maintain aspect ratio */
-    z-index: 11;  /* Ensure the logo is on top of other elements */
+    /*z-index: 11;  /* Ensure the logo is on top of other elements */
     margin-left: 1rem; /* Add some space between the logo and the left edge */
 }
 
@@ -75,7 +76,7 @@
     position: absolute; /* Position the menu relative to the navbar */
     top: 100%; /* Position the menu right below the navbar */
     left: 0; /* Align the menu with the left edge of the screen */
-    z-index: 9; /* Ensure the menu appears above most other elements */
+    /*z-index: 9; /* Ensure the menu appears above most other elements */
 }
 
 /* Menu Items */
