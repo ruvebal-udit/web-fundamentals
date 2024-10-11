@@ -25,7 +25,7 @@ body {
 }
 
 
-/*  When the body has display: flex;, 
+/*  When the body has display: flex;
     its children (header, footer, and main) become flex items. 
     Flex items do not expand to fill their container's width
     unless you explicitly set their width.
@@ -63,7 +63,7 @@ header {
 
 header div,
 footer div {
-    background-color: var(--primary);
+    background-color: var(--primar-backgroundy);
     padding: 10px;
     text-align: center;
     display: block;

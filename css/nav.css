@@ -6,11 +6,11 @@
     width: 100%; /* Ensure the navbar takes up the full width of the viewport */
     box-sizing: border-box; /* Include padding and border in the element’s width and height */
     /*z-index: 11;  /* Position the navbar above other elements on the page */
-    padding: 1rem 1rem 0 1rem;
 }
 
 /* Logo (nav icon) */
 .nav-icon {
+    order: -1;
     width: 40px;  /* Set a fixed width for the logo container */
     height: auto;  /* Let the height adjust dynamically to maintain aspect ratio */
     /*z-index: 11;  /* Ensure the logo is on top of other elements */
