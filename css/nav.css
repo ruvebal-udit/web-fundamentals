@@ -64,7 +64,7 @@
 }
 
 /* Mobile Menu (hidden by default) */
-.nav-items {
+header .nav-items {
     display: none; /* Hide the mobile menu by default */
     background-color: var(--secondary); /* Set a background color (from CSS variables) */
     flex-direction: column; /* Stack the menu items vertically */
@@ -80,15 +80,47 @@
 }
 
 /* Menu Items */
-.nav-items li {
+header .nav-items li {
     border-bottom: 1px solid #f4f4f4; /* Add a border between each menu item */
 }
 
-.nav-items li a {
+header .nav-items li a {
     display: block; /* Make the entire area of the menu item clickable */
     padding: 20px; /* Add padding inside each menu item for spacing */
     text-decoration: none;
 }
+
+/* FOOTER */
+
+footer .nav-items {
+    display: flex;
+    background-color: var(--secondary); /* Set a background color (from CSS variables) */
+    flex-direction: row; /* Stack the menu items vertically */
+    justify-content: flex-end;
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding from the list */
+    margin: 0; /* Remove default margin from the list */
+    width: 100%; /* Make the menu take up the full width of the screen */
+    text-align: right; /* Align the text to the right */
+    position: static; /* Position the menu relative to the navbar */
+    bottom: 100%; /* Position the menu right below the navbar */
+    left: 0; /* Align the menu with the left edge of the screen */
+    /*z-index: 9; /* Ensure the menu appears above most other elements */
+}
+
+/* Menu Items */
+footer .nav-items li {
+    font-size: calc(1em - 0.5rem);  /* 1em refers to the inherited font size, and then it subtracts 0.5rem from it. */
+                                    /* This method allows you to adjust the font size relative to the inherited value. */
+}
+
+footer .nav-items li a {
+    display: block; /* Make the entire area of the menu item clickable */
+    padding: 20px; /* Add padding inside each menu item for spacing */
+    text-decoration: none;
+}
+
+/**/
 
 /* Show Mobile Menu when Checkbox is Checked */
 .nav-menu-btn:checked ~ .nav-items {

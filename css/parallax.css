@@ -1,0 +1,47 @@
+/* Wrapper that applies the perspective */
+.parallax-wrapper {
+    perspective: 2px; /* Control the intensity of the parallax */
+    height: 100vh;
+    overflow: hidden; /* Hide overflow to create the effect */
+}
+
+.scroll-snap-container {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    position: relative;
+}
+
+.snap-section {
+    scroll-snap-align: start;
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    position: relative;
+    transform-style: preserve-3d; /* Preserve 3D transform context for children */
+}
+
+.section1, .section2, .section3 {
+    position: relative;
+    z-index: 0; /* Ensure they're correctly layered */
+}
+
+.section1 {
+    background-image: url('https://via.placeholder.com/1920x1080/111111');
+}
+
+.section2 {
+    background-image: url('https://via.placeholder.com/1920x1080/444444');
+}
+
+.section3 {
+    background-image: url('https://via.placeholder.com/1920x1080/777777');
+}
+
+
+/* This will target the first .snap-section within the main element */
+main > .snap-section:first-of-type {
+    margin-top: var(--header-height); 
+/* This will target the last .snap-section within the main element */
+main > .snap-section:last-of-type {
+    margin-bottom: var(--footer-height); /* Use the header height variable */
+}

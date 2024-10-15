@@ -1,7 +1,7 @@
 /* Set the CSS variable based on an estimated height */
 :root {
     --header-height: 80px; /* Estimate the height */
-    --footer-height: var(--header-height); /* Set the footer height to match the header height */
+    --footer-height: 66px; /* Set the footer height to match the header height */
 }
 
 /* Basic reset for consistent margins and paddings */
@@ -16,12 +16,11 @@ body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
     background-color: var(--background);
-    color: var(--foreground);
+    color: var(--secondary-foreground);
     display: flex;
     flex-direction: column; /* Arrange items in a column */
     justify-content: center;
     align-items: center;
-    padding-top: var(--header-height); /* Use the variable  */
 }
 
 
@@ -33,17 +32,19 @@ body {
 
 main {
     width: 100%; /* Make sure it takes full width */
-    flex: 1; /* Allow it to grow within the flex container */
+    flex: 1; /* Allow it to grow within the flex container */    
 }
 
 header,
 footer {
+    display: flex;
+    align-items: center; 
     position: fixed;
     background-color: var(--secondary);
     color: var(--secondary-foreground);
     gap: 10px;
     width: 100%; /* Make the header and footer take full width */
-    /*z-index: 10;*/
+    z-index: 10;
 }
 
 
@@ -51,14 +52,14 @@ footer {
     bottom: 0;
     width: 100%;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-    max-height: var(--footer-height);
+    height: var(--footer-height);
 }
 
 header {
     top: 0;
     width: 100%;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-    max-height: var(--header-height);
+    height: var(--header-height);
 }
 
 header div,

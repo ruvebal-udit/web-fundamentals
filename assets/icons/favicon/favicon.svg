@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:svgjs="http://svgjs.dev/svgjs" width="1024" height="1024">
+  <svg id="SvgjsSvg1009"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <g id="SvgjsG1008">
+      <rect x="49.4" y="49.3" width="120.7" height="120.7" fill="none" stroke="#FFF" stroke-width="15"></rect>
+      <rect x="853.9" y="49.5" width="120.7" height="120.7" fill="none" stroke="#FFF" stroke-width="15"></rect>
+      <rect x="853.9" y="854" width="120.7" height="120.7" fill="none" stroke="#FFF" stroke-width="15"></rect>
+      <rect x="49.4" y="853.7" width="120.7" height="120.7" fill="none" stroke="#FFF" stroke-width="15"></rect>
+    </g>
+    <path id="SvgjsPath1007" d="M985,512c-10.6,621.8-935.5,621.7-946.1,0,10.7-621.8,935.6-621.7,946.1,0Z" fill="none" stroke="#000" stroke-width="15"></path>
+    <rect id="SvgjsRect1006" x="109.7" y="109.7" width="804.5" height="804.5" fill="none" stroke="#000" stroke-width="15"></rect>
+    <g id="SvgjsG1005">
+      <path d="M847.3,850.9c-23.08-71.66-45.61-143.99-88.1-205.56-108.53-161.88-349.6-175.09-474.71-25.44-55.5,65.75-81.3,149.48-107.59,231" fill="none" stroke="#000" stroke-width="15"></path>
+      <path d="M850.9,176.7c-71.66,23.08-143.99,45.61-205.56,88.1-161.88,108.53-175.09,349.6-25.44,474.71,65.75,55.5,149.48,81.3,231,107.59" fill="none" stroke="#000" stroke-width="15"></path>
+      <path d="M173.1,847.2c71.67-23.07,144.02-45.6,205.6-88.1,161.89-108.56,175.04-349.69,25.29-474.79-65.74-55.45-149.42-81.24-230.9-107.51" fill="none" stroke="#000" stroke-width="15"></path>
+      <path d="M177,173.1c23.07,71.67,45.6,144.02,88.1,205.6,108.56,161.89,349.69,175.04,474.79,25.29,55.45-65.74,81.24-149.42,107.51-230.9" fill="none" stroke="#000" stroke-width="15"></path>
+    </g>
+  </svg>
+  <style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+  </style>
+</svg>

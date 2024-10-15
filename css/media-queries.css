@@ -38,18 +38,18 @@
       display: none; /* Hide hamburger icon on desktop */
   }
 
-  .nav-items {
+  header .nav-items {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       position: static;
   }
 
-  .nav-items li {
+  header .nav-items li {
       border: none;
   }
 
-  .nav-items li a {
+  header .nav-items li a {
       padding: 20px 30px;
   } /* EndOf Navbar */   
   }
@@ -64,18 +64,18 @@
       display: none; /* Hide hamburger icon on desktop */
   }
 
-  .nav-items {
+  header .nav-items {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       position: static;
   }
 
-  .nav-items li {
+  header .nav-items li {
       border: none;
   }
 
-  .nav-items li a {
+  header .nav-items li a {
       padding: 20px 30px;
   }/* EndOf Navbar */  
   }
@@ -90,18 +90,18 @@
       display: none; /* Hide hamburger icon on desktop */
   }
 
-  .nav-items {
+  header .nav-items {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       position: static;
   }
 
-  .nav-items li {
+  header .nav-items li {
       border: none;
   }
 
-  .nav-items li a {
+  header .nav-items li a {
       padding: 20px 30px;
   } /* EndOf Navbar */  
   }
@@ -116,18 +116,18 @@
       display: none; /* Hide hamburger icon on desktop */
   }
 
-  .nav-items {
+  header .nav-items {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       position: static;
   }
 
-  .nav-items li {
+  header .nav-items li {
       border: none;
   }
 
-  .nav-items li a {
+  header .nav-items li a {
       padding: 20px 30px;
   }/* EndOf Navbar */ 
   }
