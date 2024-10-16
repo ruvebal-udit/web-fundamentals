@@ -36,18 +36,19 @@ body {
 main {
   display: grid;
   grid-template-columns: 1fr; /* One column taking full width */
-  grid-template-rows: 1fr; /* Two rows, each taking full height */
+  grid-template-rows: 1fr; /* One rows, each taking full height */
   height: calc(
     100vh - var(--header-height) - var(--footer-height)
   ); /* The viewport minus the header and footer heights */
   width: 100%; /* Full width */
   gap: 1rem; /* Optional, adds space between rows/columns */
-  padding: 1rem;
   position: fixed; /* Fixed positioning */
   top: var(--header-height); /* Position it below the header */
   left: 0; /* Ensure it's aligned to the left */
   right: 0; /* Ensure it's aligned to the right */
   overflow-y: auto; /* Enable scrolling for content */
+  scroll-snap-type: y mandatory; /* Enable snapping in the vertical direction */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 header,

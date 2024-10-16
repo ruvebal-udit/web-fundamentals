@@ -1,9 +1,12 @@
 /* Wrapper that applies the perspective */
-.parallax-wrapper {
-  perspective: 800px; /* Increased perspective for more pronounced parallax */
-  height: 100%;
-  width: 100%; /* Ensure full width */
+.parallax {
+  perspective: 1000px; /* Increased perspective for more pronounced parallax */
+  height: calc(
+    100vh - var(--header-height) - var(--footer-height)
+  ); /* The viewport minus the header and footer heights */
   overflow: hidden; /* Hide overflow for clean edges */
+  position: relative; /* Necessary for absolutely positioned children */
+  scroll-snap-align: start;
 }
 
 .slides {
@@ -27,7 +30,7 @@
   height: 100%;
   width: 100%; /* Ensure full width */
   overflow: hidden; /* Hide overflow for parallax effect */
-  transition: transform 0.8s ease-in-out; /* Smooth transition for scaling */
+  transition: transform 1.2s ease-in-out; /* Smooth transition for scaling */
 }
 
 .slide__bg {
@@ -36,18 +39,29 @@
   position: absolute; /* Positioning to cover the entire slide */
   top: 0;
   left: 0;
-  z-index: -1; /* Behind the content */
-  background-image: url("/assets/icons/mandala_progressive.svg"); /* Path to your SVG */
-  background-size: cover; /* Change to cover for better scaling */
-  background-repeat: no-repeat; /* Avoid repeating for a cleaner look */
-  background-position: center; /* Center the background */
-  transform: translateZ(-60px) scale(1.5); /* Increased scale for a more pronounced parallax */
+  z-index: -1; /* Ensure background stays behind content */
+  transform: translateZ(-100px) scale(1.2); /* Increased scale for a more pronounced parallax */
   transition: transform 0.8s ease-out; /* Smooth transition for background movement */
 }
 
+#parallax1 .slide__bg {
+  background-image: url("/assets/icons/mandala_progressive.svg"); /* Path to your SVG */
+  background-size: cover; /* Change to cover for better scaling */
+  background-repeat: repeat; /* Avoid repeating for a cleaner look */
+  background-position: center; /* Center the background */
+}
+
+#parallax2 .slide__bg {
+  filter: invert(1) brightness(0.8) contrast(1.2); /* Invert colors and adjust brightness and contrast */
+  background-image: url("/assets/icons/mandala_progressive.svg"); /* Path to your SVG */
+  background-size: cover; /* Change to cover for better scaling */
+  background-repeat: repeat; /* Avoid repeating for a cleaner look */
+  background-position: center; /* Center the background */
+}
+
 .slide-item {
-  transform: translateZ(20px) scale(0.9); /* Slightly adjusted scale for better visibility */
-  z-index: 1; /* Ensure content is on top of the background */
+  transform: translateZ(40px) scale(0.8); /* Adjusted scale for better visibility */
+  z-index: 3; /* Ensure content is above background */
   text-align: center; /* Center text for better aesthetics */
   padding: 1rem; /* Add some padding to the content */
   color: #fff; /* Example text color for better visibility */
