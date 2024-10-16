@@ -1,15 +1,22 @@
 .fluid-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
-    gap: 1rem;
-    box-sizing: border-box; /* Ensures padding and borders are included in the element’s total width and height, so the layout remains predictable. */
-    padding: 1rem;
-
+  display: grid;
+  flex: 1; /* Make sure each container takes the full available space */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(200px, 100%), 1fr)
+  ); /* Adapts the grid columns to fit as many items as possible while maintaining a minimum width. */
+  gap: 1rem;
+  box-sizing: border-box; /* Ensures padding and borders are included in the element’s total width and height, so the layout remains predictable. */
+  padding: 1rem;
+  height: calc(
+    100vh - var(--header-height) - var(--footer-height) - 1rem
+  ); /* Full height of the grid row  MINUS HEADER FOOTER AND GAP */
+  width: 100%; /* Full width of the grid column */
 }
-
 .grid-item {
-    background-color: #f4f4f4;
-    padding: 1rem;
-    border-radius: 8px;
+  background-color: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
 }
-

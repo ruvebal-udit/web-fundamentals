@@ -1,47 +1,62 @@
 /* Wrapper that applies the perspective */
 .parallax-wrapper {
-    perspective: 2px; /* Control the intensity of the parallax */
-    height: 100vh;
-    overflow: hidden; /* Hide overflow to create the effect */
+  perspective: 800px; /* Increased perspective for more pronounced parallax */
+  height: 100%;
+  width: 100%; /* Ensure full width */
+  overflow: hidden; /* Hide overflow for clean edges */
 }
 
-.scroll-snap-container {
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    position: relative;
+.slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+  scroll-snap-type: y proximity; /* Use proximity for smoother snaps */
+  will-change: transform; /* Hint to the browser to optimize for smooth animations */
 }
 
-.snap-section {
-    scroll-snap-align: start;
-    background-size: cover;
-    background-position: center;
-    min-height: calc(100vh - var(--header-height) - var(--footer-height));
-    position: relative;
-    transform-style: preserve-3d; /* Preserve 3D transform context for children */
+.slide {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  transform-style: preserve-3d; /* Preserve 3D transformations for children */
+  scroll-snap-align: start; /* Snap each slide to the start of the viewport */
+  height: 100%;
+  width: 100%; /* Ensure full width */
+  overflow: hidden; /* Hide overflow for parallax effect */
+  transition: transform 0.8s ease-in-out; /* Smooth transition for scaling */
 }
 
-.section1, .section2, .section3 {
-    position: relative;
-    z-index: 0; /* Ensure they're correctly layered */
+.slide__bg {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  position: absolute; /* Positioning to cover the entire slide */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Behind the content */
+  background-image: url("/assets/icons/mandala_progressive.svg"); /* Path to your SVG */
+  background-size: cover; /* Change to cover for better scaling */
+  background-repeat: no-repeat; /* Avoid repeating for a cleaner look */
+  background-position: center; /* Center the background */
+  transform: translateZ(-60px) scale(1.5); /* Increased scale for a more pronounced parallax */
+  transition: transform 0.8s ease-out; /* Smooth transition for background movement */
 }
 
-.section1 {
-    background-image: url('https://via.placeholder.com/1920x1080/111111');
+.slide-item {
+  transform: translateZ(20px) scale(0.9); /* Slightly adjusted scale for better visibility */
+  z-index: 1; /* Ensure content is on top of the background */
+  text-align: center; /* Center text for better aesthetics */
+  padding: 1rem; /* Add some padding to the content */
+  color: #fff; /* Example text color for better visibility */
 }
 
-.section2 {
-    background-image: url('https://via.placeholder.com/1920x1080/444444');
+.slide:first-child {
+  padding-top: 2rem; /* Increased padding for better spacing */
 }
 
-.section3 {
-    background-image: url('https://via.placeholder.com/1920x1080/777777');
-}
-
-
-/* This will target the first .snap-section within the main element */
-main > .snap-section:first-of-type {
-    margin-top: var(--header-height); 
-/* This will target the last .snap-section within the main element */
-main > .snap-section:last-of-type {
-    margin-bottom: var(--footer-height); /* Use the header height variable */
+.slide:last-child {
+  padding-bottom: 2rem; /* Increased padding for better spacing */
 }
