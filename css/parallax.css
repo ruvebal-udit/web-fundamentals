@@ -1,3 +1,12 @@
+@keyframes animateTransform {
+  0% {
+    transform: translateZ(0) scale(1);
+  }
+  100% {
+    transform: translateZ(-100px) scale(1.2);
+  }
+}
+
 /* Wrapper that applies the perspective */
 .parallax {
   perspective: 1000px; /* Increased perspective for more pronounced parallax */
@@ -7,6 +16,8 @@
   overflow: hidden; /* Hide overflow for clean edges */
   position: relative; /* Necessary for absolutely positioned children */
   scroll-snap-align: start;
+  scroll-snap-type: y mandatory; /* Enable scroll snap */
+  overflow-y: scroll; /* Enable vertical scrolling */
 }
 
 .slides {
@@ -40,8 +51,13 @@
   top: 0;
   left: 0;
   z-index: -1; /* Ensure background stays behind content */
-  transform: translateZ(-100px) scale(1.2); /* Increased scale for a more pronounced parallax */
+  transform: translateZ(0) scale(1);
   transition: transform 0.8s ease-out; /* Smooth transition for background movement */
+}
+
+#parallax1:target .slide__bg,
+#parallax2:target .slide__bg {
+  animation: animateTransform 7s ease-in-out forwards; /* Increased scale for a more pronounced parallax */
 }
 
 #parallax1 .slide__bg {
@@ -52,8 +68,8 @@
 }
 
 #parallax2 .slide__bg {
-  filter: invert(1) brightness(0.8) contrast(1.2); /* Invert colors and adjust brightness and contrast */
-  background-image: url("/assets/icons/mandala_progressive.svg"); /* Path to your SVG */
+  /*filter: invert(1) brightness(0.8) contrast(1.2); */ /* Invert colors and adjust brightness and contrast */
+  background-image: url("/assets/icons/mandala_progressive-inverted.svg"); /* Path to your SVG */
   background-size: cover; /* Change to cover for better scaling */
   background-repeat: repeat; /* Avoid repeating for a cleaner look */
   background-position: center; /* Center the background */

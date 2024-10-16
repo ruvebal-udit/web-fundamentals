@@ -1,22 +1,39 @@
-.fluid-grid-container {
+.grid-container {
   display: grid;
   flex: 1; /* Make sure each container takes the full available space */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(200px, 100%), 1fr)
-  ); /* Adapts the grid columns to fit as many items as possible while maintaining a minimum width. */
-  gap: 1rem;
   box-sizing: border-box; /* Ensures padding and borders are included in the element’s total width and height, so the layout remains predictable. */
   padding: 1rem;
   height: calc(
     100vh - var(--header-height) - var(--footer-height) - 1rem
   ); /* Full height of the grid row  MINUS HEADER FOOTER AND GAP */
   width: 100%; /* Full width of the grid column */
+  scroll-snap-align: start;
+  scroll-snap-type: y mandatory; /* Enable scroll snap */
+  overflow-y: scroll; /* Enable vertical scrolling */
 }
+
+.fluid-columns {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(200px, 100%), 1fr)
+  ); /* Adapts the grid columns to fit as many items as possible while maintaining a minimum width. */
+  gap: 1rem;
+}
+
 .grid-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area while preserving aspect ratio */
+}
+
+.grid-item.card {
   background-color: var(--card);
   padding: 1rem;
   border-radius: 8px;
-  width: 100%;
-  height: 100%;
+}
+
+.grid-item img {
+  width: 100%; /* Ensures the image takes full width of the parent */
+  height: auto; /* Keeps the image aspect ratio */
+  display: block; /* Remove inline space below the image */
 }

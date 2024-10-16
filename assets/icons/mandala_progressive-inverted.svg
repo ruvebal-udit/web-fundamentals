@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1"
+  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 713.92 458.79">
+  <rect x="1.59" y="1.29" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="65.36" y="65.08" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <g>
+    <rect x="129.11" y="1.29" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="192.89" y="1.31" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="192.89" y="65.08" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="129.11" y="65.06" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  </g>
+  <path d="M138.58,57.69s0,.02,0,.02" stroke-width="0"/>
+  <g>
+    <rect x="256.68" y="1.28" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="320.46" y="1.3" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="320.46" y="65.07" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="256.68" y="65.05" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  </g>
+  <rect x="261.46" y="6.08" width="63.78" height="63.78" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M266.15,57.68s0,.02,0,.02" stroke-width="0"/>
+  <g>
+    <rect x="1.57" y="128.85" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="65.34" y="128.86" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="65.34" y="192.64" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="1.56" y="192.62" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  </g>
+  <circle cx="38.22" cy="165.52" r="37.5" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="6.34" y="133.64" width="63.78" height="63.78" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M11.03,185.24s0,.02,0,.03" stroke-width="0"/>
+  <g>
+    <rect x="129.14" y="128.85" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="192.92" y="128.86" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="192.91" y="192.64" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="129.13" y="192.61" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  </g>
+  <circle cx="165.79" cy="165.52" r="37.5" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="133.91" y="133.64" width="63.78" height="63.78" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M138.6,185.24s0,.02,0,.02" stroke-width="0"/>
+  <path d="M192.39,192.4c0-7.42-2.98-14.13-7.79-18.99s-11.45-7.87-18.79-7.87-13.98,3.01-18.79,7.87c-4.81,4.86-7.78,11.58-7.78,18.99" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  <path d="M139.25,138.67c0,7.42,2.97,14.13,7.78,19,4.81,4.86,11.45,7.87,18.79,7.87s13.98-3.01,18.79-7.87c4.81-4.86,7.79-11.58,7.79-19" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  <path d="M648.99,11.48c7.42,0,14.13,2.97,19,7.78,4.86,4.81,7.87,11.45,7.87,18.79s-3.01,13.98-7.87,18.79c-4.86,4.81-11.58,7.78-19,7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  <path d="M702.71,64.63c-7.42,0-14.13-2.97-18.99-7.78-4.86-4.81-7.87-11.45-7.87-18.79s3.01-13.98,7.87-18.79c4.86-4.81,11.58-7.78,18.99-7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  <g>
+    <path d="M521.74,64.92c0-7.42,2.97-14.13,7.78-18.99,4.81-4.86,11.45-7.87,18.79-7.87s13.98,3.01,18.79,7.87c4.81,4.86,7.78,11.58,7.78,18.99" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M521.46,11.48c7.42,0,14.13,2.97,19,7.78,4.86,4.81,7.87,11.45,7.87,18.79s-3.01,13.98-7.87,18.79c-4.86,4.81-11.58,7.78-19,7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M575.19,64.63c-7.42,0-14.13-2.97-18.99-7.78-4.86-4.81-7.87-11.45-7.87-18.79s3.01-13.98,7.87-18.79c4.86-4.81,11.58-7.78,18.99-7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M574.88,11.19c0,7.42-2.97,14.13-7.78,18.99-4.81,4.86-11.45,7.87-18.79,7.87s-13.98-3.01-18.79-7.87c-4.81-4.86-7.78-11.58-7.78-18.99" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  </g>
+  <circle cx="420.78" cy="38.03" r="37.5" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M447.96,57.76s0,.02,0,.02" stroke-width="0"/>
+  <g>
+    <path d="M394.17,64.92c0-7.42,2.98-14.13,7.79-18.99,4.81-4.86,11.45-7.87,18.79-7.87s13.98,3.01,18.79,7.87c4.81,4.86,7.78,11.58,7.78,18.99" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M393.89,11.47c7.42,0,14.13,2.97,18.99,7.78,4.86,4.81,7.87,11.45,7.87,18.79s-3.01,13.98-7.87,18.79c-4.86,4.81-11.58,7.78-18.99,7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M447.62,64.62c-7.42,0-14.13-2.97-18.99-7.78-4.86-4.81-7.87-11.45-7.87-18.79s3.01-13.98,7.87-18.79c4.86-4.81,11.58-7.78,18.99-7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M447.31,11.18c0,7.42-2.97,14.13-7.78,18.99-4.81,4.86-11.45,7.87-18.79,7.87s-13.98-3.01-18.79-7.87c-4.81-4.86-7.79-11.58-7.79-18.99" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  </g>
+  <circle cx="675.89" cy="165.59" r="37.5" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="643.98" y="133.72" width="63.78" height="63.78" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <g>
+    <path d="M649.29,192.48c0-7.42,2.97-14.13,7.78-19,4.81-4.86,11.45-7.87,18.79-7.87s13.98,3.01,18.79,7.87c4.81,4.86,7.78,11.58,7.78,19" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M649.01,139.03c7.42,0,14.13,2.97,19,7.78,4.86,4.81,7.87,11.45,7.87,18.79s-3.01,13.98-7.87,18.79c-4.86,4.81-11.58,7.78-19,7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M702.73,192.19c-7.42,0-14.13-2.97-18.99-7.78-4.86-4.81-7.87-11.45-7.87-18.79s3.01-13.98,7.87-18.79c4.86-4.81,11.58-7.78,18.99-7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M702.43,138.75c0,7.42-2.97,14.13-7.79,18.99-4.81,4.86-11.45,7.87-18.79,7.87s-13.98-3.01-18.79-7.87c-4.81-4.86-7.78-11.58-7.78-18.99" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  </g>
+  <rect x="511.63" y="128.94" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="575.41" y="192.69" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M510.82,165.59c0,20.71,16.79,37.5,37.5,37.5s37.5-16.79,37.5-37.5-16.79-37.5-37.5-37.5-37.5,16.79-37.5,37.5Z" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="516.41" y="133.72" width="63.78" height="63.78" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M575.51,185.32s0,.02,0,.02" stroke-width="0"/>
+  <g>
+    <path d="M521.72,192.48c0-7.42,2.98-14.13,7.79-18.99s11.45-7.87,18.79-7.87,13.98,3.01,18.79,7.87,7.78,11.58,7.78,18.99" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M521.44,139.03c7.42,0,14.13,2.97,18.99,7.78,4.86,4.81,7.87,11.45,7.87,18.79s-3.01,13.98-7.87,18.79c-4.86,4.81-11.58,7.78-18.99,7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M575.16,192.18c-7.42,0-14.13-2.97-18.99-7.78-4.86-4.81-7.87-11.45-7.87-18.79s3.01-13.98,7.87-18.79c4.86-4.81,11.58-7.78,18.99-7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M574.86,138.75c0,7.42-2.97,14.13-7.78,18.99-4.81,4.86-11.45,7.87-18.79,7.87s-13.98-3.01-18.79-7.87c-4.81-4.86-7.79-11.58-7.79-18.99" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  </g>
+  <rect x="128.95" y="320.3" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="192.73" y="256.51" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <circle cx="165.6" cy="293.2" r="37.5" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="133.73" y="261.3" width="63.78" height="63.78" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M138.42,273.48s0-.02,0-.03" stroke-width="0"/>
+  <path d="M192.48,319.76c-7.42,0-14.13-2.97-19-7.78-4.86-4.81-7.87-11.45-7.87-18.79s3.01-13.98,7.87-18.79c4.86-4.81,11.58-7.78,19-7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  <path d="M138.76,266.61c7.42,0,14.13,2.97,18.99,7.78,4.86,4.81,7.87,11.45,7.87,18.79s-3.01,13.98-7.87,18.79c-4.86,4.81-11.58,7.78-18.99,7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  <path d="M75.53,293.2c0-20.71-16.79-37.5-37.5-37.5S.53,272.49.53,293.2s16.79,37.5,37.5,37.5,37.5-16.79,37.5-37.5Z" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="6.16" y="261.3" width="63.78" height="63.78" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M10.85,273.47s0-.02,0-.02" stroke-width="0"/>
+  <rect x="6.16" y="388.86" width="63.78" height="63.78" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M10.85,401.04s0-.02,0-.03" stroke-width="0"/>
+  <rect x="128.94" y="447.86" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="192.72" y="384.07" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <circle cx="165.59" cy="420.75" r="37.5" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="133.72" y="388.85" width="63.78" height="63.78" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M138.41,401.03s0-.02,0-.03" stroke-width="0"/>
+  <g>
+    <rect x="256.5" y="447.86" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="320.28" y="447.85" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="320.28" y="384.07" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="256.5" y="384.09" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  </g>
+  <circle cx="293.15" cy="420.76" r="37.5" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="261.28" y="388.86" width="63.78" height="63.78" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M265.97,401.04s0-.02,0-.03" stroke-width="0"/>
+  <path d="M320.04,447.32c-7.42,0-14.13-2.97-19-7.78-4.86-4.81-7.87-11.45-7.87-18.79s3.01-13.98,7.87-18.79c4.86-4.81,11.58-7.78,19-7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  <path d="M266.31,394.17c7.42,0,14.13,2.97,18.99,7.78,4.86,4.81,7.87,11.45,7.87,18.79s-3.01,13.98-7.87,18.79c-4.86,4.81-11.58,7.78-18.99,7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  <g>
+    <rect x="575.49" y="320.05" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="511.71" y="320.04" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="511.72" y="256.26" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="575.5" y="256.29" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  </g>
+  <g>
+    <path d="M521.81,266.07c0,7.42,2.97,14.13,7.78,19,4.81,4.86,11.45,7.87,18.79,7.87s13.98-3.01,18.79-7.87c4.81-4.86,7.78-11.58,7.78-19" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M521.53,319.51c7.42,0,14.13-2.97,19-7.78,4.86-4.81,7.87-11.45,7.87-18.79s-3.01-13.98-7.87-18.79c-4.86-4.81-11.58-7.78-19-7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M575.25,266.36c-7.42,0-14.13,2.97-18.99,7.78-4.86,4.81-7.87,11.45-7.87,18.79s3.01,13.98,7.87,18.79c4.86,4.81,11.58,7.78,18.99,7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M574.95,319.8c0-7.42-2.97-14.13-7.79-18.99-4.81-4.86-11.45-7.87-18.79-7.87s-13.98,3.01-18.79,7.87c-4.81,4.86-7.78,11.58-7.78,18.99" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  </g>
+  <rect x="639.28" y="320.04" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="703.07" y="256.28" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M702.82,266.36c-7.42,0-14.13,2.97-18.99,7.78s-7.87,11.45-7.87,18.79,3.01,13.98,7.87,18.79c4.86,4.81,11.58,7.78,18.99,7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  <path d="M702.52,319.8c0-7.42-2.97-14.13-7.79-18.99-4.81-4.86-11.45-7.87-18.79-7.87s-13.98,3.01-18.79,7.87c-4.81,4.86-7.78,11.58-7.78,18.99" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  <rect x="639.28" y="447.6" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <rect x="703.07" y="383.85" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <g>
+    <rect x="575.5" y="447.61" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="511.72" y="447.59" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="511.73" y="383.82" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="575.51" y="383.84" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  </g>
+  <path d="M575.6,400.78s0-.02,0-.02" stroke-width="0"/>
+  <path d="M575.26,393.91c-7.42,0-14.13,2.97-18.99,7.78-4.86,4.81-7.87,11.45-7.87,18.79s3.01,13.98,7.87,18.79c4.86,4.81,11.58,7.78,18.99,7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  <path d="M574.96,447.35c0-7.42-2.97-14.13-7.78-18.99-4.81-4.86-11.45-7.87-18.79-7.87s-13.98,3.01-18.79,7.87c-4.81,4.86-7.79,11.58-7.79,18.99" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  <g>
+    <rect x="447.94" y="447.61" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="384.16" y="447.6" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="384.17" y="383.82" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+    <rect x="447.95" y="383.84" width="9.57" height="9.57" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  </g>
+  <circle cx="420.86" cy="420.51" r="37.5" fill="none" stroke="#FFF" stroke-width="1.06"/>
+  <path d="M448.04,400.79s0-.02,0-.03" stroke-width="0"/>
+  <g>
+    <path d="M394.25,393.63c0,7.42,2.98,14.13,7.79,19,4.81,4.86,11.45,7.87,18.79,7.87s13.98-3.01,18.79-7.87c4.81-4.86,7.78-11.58,7.78-19" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M393.98,447.07c7.42,0,14.13-2.97,18.99-7.78,4.86-4.81,7.87-11.45,7.87-18.79s-3.01-13.98-7.87-18.79c-4.86-4.81-11.58-7.78-18.99-7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M447.7,393.92c-7.42,0-14.13,2.97-18.99,7.78-4.86,4.81-7.87,11.45-7.87,18.79s3.01,13.98,7.87,18.79c4.86,4.81,11.58,7.78,18.99,7.78" fill="none" stroke="#FFF" stroke-width="1.15"/>
+    <path d="M447.4,447.36c0-7.42-2.97-14.13-7.78-18.99-4.81-4.86-11.45-7.87-18.79-7.87s-13.98,3.01-18.79,7.87c-4.81,4.86-7.79,11.58-7.79,18.99" fill="none" stroke="#FFF" stroke-width="1.15"/>
+  </g>
+  <g>
+    <rect x="285.94" y="154.05" width="19.13" height="19.13" fill="none" stroke="#FFF" stroke-width="1.42"/>
+    <rect x="413.5" y="154.07" width="19.13" height="19.14" fill="none" stroke="#FFF" stroke-width="1.42"/>
+    <rect x="413.49" y="281.63" width="19.13" height="19.13" fill="none" stroke="#FFF" stroke-width="1.42"/>
+    <rect x="285.93" y="281.59" width="19.13" height="19.13" fill="none" stroke="#FFF" stroke-width="1.42"/>
+  </g>
+  <circle cx="359.24" cy="227.39" r="75" transform="translate(-59.67 154.78) rotate(-22.5)" fill="none" stroke="#FFF" stroke-width="1.42"/>
+  <rect x="295.49" y="163.63" width="127.56" height="127.56" fill="none" stroke="#FFF" stroke-width="1.42"/>
+  <path d="M304.87,266.84s0,.03,0,.05" stroke-width="0"/>
+  <g>
+    <path d="M412.45,281.16c0-14.84-5.95-28.27-15.57-37.99-9.62-9.72-22.91-15.73-37.58-15.73s-27.96,6.01-37.58,15.73c-9.62,9.72-15.57,23.15-15.57,37.99" fill="none" stroke="#FFF" stroke-width="1.42"/>
+    <path d="M413,174.27c-14.84,0-28.27,5.95-37.99,15.57-9.72,9.62-15.74,22.91-15.74,37.58s6.01,27.96,15.74,37.58c9.72,9.62,23.15,15.57,37.99,15.57" fill="none" stroke="#FFF" stroke-width="1.42"/>
+    <path d="M305.55,280.57c14.83,0,28.27-5.95,37.99-15.56,9.72-9.62,15.74-22.91,15.74-37.58s-6.01-27.96-15.74-37.58c-9.72-9.62-23.15-15.57-37.99-15.57" fill="none" stroke="#FFF" stroke-width="1.42"/>
+    <path d="M306.16,173.69c0,14.83,5.95,28.27,15.57,37.99,9.62,9.72,22.91,15.73,37.58,15.73s27.96-6.01,37.58-15.73c9.62-9.72,15.57-23.15,15.57-37.99" fill="none" stroke="#FFF" stroke-width="1.42"/>
+  </g>
+</svg>
