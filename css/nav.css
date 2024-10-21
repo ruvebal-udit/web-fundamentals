@@ -138,6 +138,6 @@ footer .nav-items li a {
 }
 
 .nav-menu-btn:checked ~ .nav-menu .nav-menu-icon:after {
-    transform: rotate(45deg); /* Rotate the bottom line to complete the "X" */
+       transform: rotate(45deg); /* Rotate the bottom line to complete the "X" */
     top: 0; /* Move the bottom line to the center */
 }

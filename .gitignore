@@ -1,1 +1,5 @@
 .DS_Store
+node_modules
+/assets/images/*
+.prettierignore
+.vscode/

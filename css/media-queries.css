@@ -4,131 +4,125 @@
   https://www.w3.org/TR/mediaqueries-3/
 */
 
+/* Mobile Portrait */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+	body {
+		font-size: 1rem;
+	}
 
+	/* Navbar */
+	/* EndOf Navbar */
+} /* EndOf MobilePortrait */
 
+/* Mobile Landscape */
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+	body {
+		font-size: 1.2rem;
+	}
+	/* Navbar */
+	/* EndOf Navbar */
+}
 
-  /* Mobile Portrait */
-  @media only screen and (max-width: 600px) and (orientation: portrait) {
-    body {
-      font-size: 1rem;
-    }
+/* Tablet Portrait */
+@media only screen and (min-width: 601px) and (max-width: 1200px) and (orientation: portrait) {
+	body {
+		font-size: 1.4rem;
+	}
+	/* Navbar */
+	.nav-menu {
+		display: none; /* Hide hamburger icon on desktop */
+	}
 
-    /* Navbar */
-    /* EndOf Navbar */    
+	header .nav-items {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		position: static;
+	}
 
-  } /* EndOf MobilePortrait */
-   
-  
-  /* Mobile Landscape */
-  @media only screen and (max-width: 800px) and (orientation: landscape) {
-    body {
-      font-size: 1.2rem;
-    }
-    /* Navbar */
-    /* EndOf Navbar */   
-  }
-  
-  /* Tablet Portrait */
-  @media only screen and (min-width: 601px) and (max-width: 1200px) and (orientation: portrait) {
-    body {
-      font-size: 1.4rem;
-    }
-    /* Navbar */
-    .nav-menu {
-      display: none; /* Hide hamburger icon on desktop */
-  }
+	header .nav-items li {
+		border: none;
+	}
 
-  header .nav-items {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      position: static;
-  }
+	header .nav-items li a {
+		padding: 20px 30px;
+	} /* EndOf Navbar */
+}
 
-  header .nav-items li {
-      border: none;
-  }
+/* Tablet Landscape */
+@media only screen and (min-width: 801px) and (max-width: 1200px) and (orientation: landscape) {
+	body {
+		font-size: 1.6rem;
+	}
+	/* Navbar */
+	.nav-menu {
+		display: none; /* Hide hamburger icon on desktop */
+	}
 
-  header .nav-items li a {
-      padding: 20px 30px;
-  } /* EndOf Navbar */   
-  }
-  
-  /* Tablet Landscape */
-  @media only screen and (min-width: 801px) and (max-width: 1200px) and (orientation: landscape) {
-    body {
-      font-size: 1.6rem;
-    }
-    /* Navbar */
-    .nav-menu {
-      display: none; /* Hide hamburger icon on desktop */
-  }
+	header .nav-items {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		position: static;
+	}
 
-  header .nav-items {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      position: static;
-  }
+	header .nav-items li {
+		border: none;
+	}
 
-  header .nav-items li {
-      border: none;
-  }
+	header .nav-items li a {
+		padding: 20px 30px;
+	} /* EndOf Navbar */
+}
 
-  header .nav-items li a {
-      padding: 20px 30px;
-  }/* EndOf Navbar */  
-  }
-  
-  /* Small Desktop */
-  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
-    body {
-      font-size: 1.8rem;
-    }
-    /* Navbar */
-    .nav-menu {
-      display: none; /* Hide hamburger icon on desktop */
-  }
+/* Small Desktop */
+@media only screen and (min-width: 1201px) and (max-width: 1600px) {
+	body {
+		font-size: 1.8rem;
+	}
+	/* Navbar */
+	.nav-menu {
+		display: none; /* Hide hamburger icon on desktop */
+	}
 
-  header .nav-items {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      position: static;
-  }
+	header .nav-items {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		position: static;
+	}
 
-  header .nav-items li {
-      border: none;
-  }
+	header .nav-items li {
+		border: none;
+	}
 
-  header .nav-items li a {
-      padding: 20px 30px;
-  } /* EndOf Navbar */  
-  }
-  
-  /* Large Desktop */
-  @media only screen and (min-width: 1601px) {
-    body {
-      font-size: 2rem;
-    }
-    /* Navbar */
-    .nav-menu {
-      display: none; /* Hide hamburger icon on desktop */
-  }
+	header .nav-items li a {
+		padding: 20px 30px;
+	} /* EndOf Navbar */
+}
 
-  header .nav-items {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      position: static;
-  }
+/* Large Desktop */
+@media only screen and (min-width: 1601px) {
+	body {
+		font-size: 2rem;
+	}
+	/* Navbar */
+	.nav-menu {
+		display: none; /* Hide hamburger icon on desktop */
+	}
 
-  header .nav-items li {
-      border: none;
-  }
+	header .nav-items {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		position: static;
+	}
 
-  header .nav-items li a {
-      padding: 20px 30px;
-  }/* EndOf Navbar */ 
-  }
-  
+	header .nav-items li {
+		border: none;
+	}
+
+	header .nav-items li a {
+		padding: 20px 30px;
+	} /* EndOf Navbar */
+}
