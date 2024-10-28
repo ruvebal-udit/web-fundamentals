@@ -90,17 +90,14 @@
 	/* Center the background */
 }
 
-#parallax2 .slide__bg {
-	/*filter: invert(1) brightness(0.8) contrast(1.2); */
-	/* Invert colors and adjust brightness and contrast */
-	background-image: url("../assets/icons/mandala_progressive-inverted.svg");
-	/* Path to your SVG */
+#typography .slide__bg {
+	background: linear-gradient(to bottom right,
+			var(--primary),
+			var(--secondary));
 	background-size: cover;
-	/* Change to cover for better scaling */
-	background-repeat: repeat;
-	/* Avoid repeating for a cleaner look */
+	background-repeat: no-repeat;
 	background-position: center;
-	/* Center the background */
+	filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2));
 }
 
 .slide-item {

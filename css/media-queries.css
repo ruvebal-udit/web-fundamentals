@@ -5,32 +5,21 @@
 */
 
 /* Mobile Portrait */
-@media only screen and (max-width: 600px) and (orientation: portrait) {
-	body {
-		font-size: 1rem;
-	}
+@media only screen and (max-width: 600px) and (orientation: portrait) {}
 
-	/* Navbar */
-	/* EndOf Navbar */
-} /* EndOf MobilePortrait */
+/* EndOf MobilePortrait */
 
 /* Mobile Landscape */
-@media only screen and (max-width: 800px) and (orientation: landscape) {
-	body {
-		font-size: 1.2rem;
-	}
-	/* Navbar */
-	/* EndOf Navbar */
-}
+@media only screen and (max-width: 800px) and (orientation: landscape) {}
 
 /* Tablet Portrait */
 @media only screen and (min-width: 601px) and (max-width: 1200px) and (orientation: portrait) {
-	body {
-		font-size: 1.4rem;
-	}
+
+
 	/* Navbar */
 	.nav-menu {
-		display: none; /* Hide hamburger icon on desktop */
+		display: none;
+		/* Hide hamburger icon on desktop */
 	}
 
 	header .nav-items {
@@ -46,17 +35,19 @@
 
 	header .nav-items li a {
 		padding: 20px 30px;
-	} /* EndOf Navbar */
+	}
+
+	/* EndOf Navbar */
 }
 
 /* Tablet Landscape */
 @media only screen and (min-width: 801px) and (max-width: 1200px) and (orientation: landscape) {
-	body {
-		font-size: 1.6rem;
-	}
+
+
 	/* Navbar */
 	.nav-menu {
-		display: none; /* Hide hamburger icon on desktop */
+		display: none;
+		/* Hide hamburger icon on desktop */
 	}
 
 	header .nav-items {
@@ -72,17 +63,18 @@
 
 	header .nav-items li a {
 		padding: 20px 30px;
-	} /* EndOf Navbar */
+	}
+
+	/* EndOf Navbar */
 }
 
 /* Small Desktop */
 @media only screen and (min-width: 1201px) and (max-width: 1600px) {
-	body {
-		font-size: 1.8rem;
-	}
+
 	/* Navbar */
 	.nav-menu {
-		display: none; /* Hide hamburger icon on desktop */
+		display: none;
+		/* Hide hamburger icon on desktop */
 	}
 
 	header .nav-items {
@@ -98,17 +90,19 @@
 
 	header .nav-items li a {
 		padding: 20px 30px;
-	} /* EndOf Navbar */
+	}
+
+	/* EndOf Navbar */
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 1601px) {
-	body {
-		font-size: 2rem;
-	}
+
+
 	/* Navbar */
 	.nav-menu {
-		display: none; /* Hide hamburger icon on desktop */
+		display: none;
+		/* Hide hamburger icon on desktop */
 	}
 
 	header .nav-items {
@@ -124,5 +118,7 @@
 
 	header .nav-items li a {
 		padding: 20px 30px;
-	} /* EndOf Navbar */
+	}
+
+	/* EndOf Navbar */
 }

@@ -1,14 +1,29 @@
 /* Set the CSS variable based on an estimated height */
 :root {
-  --header-height: 80px; /* Estimate the height */
-  --footer-height: 68px; /* Set the footer height to match the header height */
+  --header-height: 80px;
+  --footer-height: 68px;
+
+  --text-xs: clamp(0.875rem, 1vw + 0.5rem, 1.2rem);
+  --text-base: clamp(1rem, 2vw + 1rem, 2rem);
+  --text-lg: clamp(1.25rem, 2.5vw + 1.25rem, 2.5rem);
+  --text-xl: clamp(1.5rem, 3vw + 1rem, 3rem);
+  --text-2xl: clamp(2rem, 4vw + 1.5rem, 5rem);
+  --text-3xl: clamp(2.5rem, 5vw + 2rem, 6rem);
+
+  --line-height-xs: clamp(1.2em, 1vw + 1.2em, 1.4em);
+  --line-height-base: clamp(1.4em, 1.5vw + 1.4em, 1.6em);
+  --line-height-lg: clamp(1.5em, 1.8vw + 1.5em, 1.8em);
+  --line-height-xl: clamp(1.6em, 2vw + 1.6em, 1.9em);
+  --line-height-2xl: clamp(1.8em, 2.5vw + 1.8em, 2.2em);
+  --line-height-3xl: clamp(2em, 3vw + 2em, 2.5em);
+
 }
 
-/* Basic reset for consistent margins and paddings */
-
-* {
-  margin: 0;
-  padding: 0;
+/* All elements (and their pseudo-elements) are sized so that
+   padding and borders don’t add to the element’s total size. */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -22,9 +37,12 @@ body {
   min-height: 100vh;
   background-color: var(--background);
   color: var(--secondary-foreground);
-
   justify-content: center;
   align-items: center;
+  font-size: var(--text-base);
+  /* scale the font size smoothly between 1rem (small screens) and 2rem (large desktops), with a dynamic adjustment in between. */
+  line-height: var(--line-height-base);
+  /* Responsive line height */
 }
 
 /*  When the body has display: flex;
@@ -35,20 +53,30 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 1fr; /* One column taking full width */
-  grid-template-rows: 1fr; /* One rows, each taking full height */
-  height: calc(
-    100vh - var(--header-height) - var(--footer-height)
-  ); /* The viewport minus the header and footer heights */
-  width: 100%; /* Full width */
-  gap: 1rem; /* Optional, adds space between rows/columns */
-  position: fixed; /* Fixed positioning */
-  top: var(--header-height); /* Position it below the header */
-  left: 0; /* Ensure it's aligned to the left */
-  right: 0; /* Ensure it's aligned to the right */
-  overflow-y: auto; /* Enable scrolling for content */
-  scroll-snap-type: y mandatory; /* Enable snapping in the vertical direction */
-  scroll-behavior: smooth; /* Enable smooth scrolling */
+  grid-template-columns: 1fr;
+  /* One column taking full width */
+  grid-template-rows: 1fr;
+  /* One rows, each taking full height */
+  height: calc(100vh - var(--header-height) - var(--footer-height));
+  /* The viewport minus the header and footer heights */
+  width: 100%;
+  /* Full width */
+  gap: 1rem;
+  /* Optional, adds space between rows/columns */
+  position: fixed;
+  /* Fixed positioning */
+  top: var(--header-height);
+  /* Position it below the header */
+  left: 0;
+  /* Ensure it's aligned to the left */
+  right: 0;
+  /* Ensure it's aligned to the right */
+  overflow-y: auto;
+  /* Enable scrolling for content */
+  scroll-snap-type: y mandatory;
+  /* Enable snapping in the vertical direction */
+  scroll-behavior: smooth;
+  /* Enable smooth scrolling */
 }
 
 header,
@@ -59,7 +87,7 @@ footer {
   background-color: var(--secondary);
   color: var(--secondary-foreground);
   gap: 10px;
-  width: 100%; /* Make the header and footer take full width */
+  width: 100%;
   z-index: 10;
 }
 
@@ -85,14 +113,50 @@ footer div {
   display: block;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  color: var(--destructive);
+
+/* Headings */
+h1 {
+  color: var(--foreground);
+  font-size: var(--text-2xl);
+  /* Very large display text (Hero headers) */
+  line-height: var(--line-height-2xl);
+  /* Responsive line height */
+  margin-bottom: 1rem;
 }
 
+h2 {
+  color: var(--primary-foreground);
+  font-size: var(--text-xl);
+  /* Large text for main headings */
+  line-height: var(--line-height-xl);
+  /* Responsive line height */
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  color: var(--destructive);
+  font-size: var(--text-lg);
+  /* Medium heading text */
+  line-height: var(--line-height-lg);
+  /* Responsive line height */
+  margin-bottom: 0.75rem;
+}
+
+/* Small Text (e.g., captions or footnotes) */
+.small-text {
+  font-size: var(--text-xs);
+  /* Smaller for captions or footnotes */
+  line-height: var(--line-height-xs);
+  /* Responsive line height */
+}
+
+/* Links */
 a {
+  font-size: var(--text-base);
+  /* Same as body text for readability */
+  line-height: var(--line-height-base);
+  /* Responsive line height for links */
+  text-decoration: none;
   color: var(--muted-foreground);
 }
 
@@ -114,13 +178,16 @@ blockquote {
 cite {
   display: block;
   margin-top: 10px;
-  font-size: 0.9em;
+  font-size: var(--text-base);
   color: var(--primary);
 }
 
 p {
-  margin: 15px 0;
-  line-height: 1.8;
+  font-size: var(--text-base);
+  /* Smaller text for body paragraphs */
+  line-height: var(--line-height-base);
+  /* Responsive line height */
+  margin-bottom: 1rem;
 }
 
 .highlight {
@@ -128,7 +195,6 @@ p {
 }
 
 .header-container h1 {
-  font-size: 2.5em;
   color: var(--destructive);
   margin: 0;
   padding-bottom: 20px;
@@ -181,4 +247,34 @@ p {
 
 .final-section a:hover {
   color: var(--accent);
+}
+
+/* Style the pre element */
+pre {
+  background: #333;
+  color: #f8f8f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+/* Code Container Styling */
+.code-container {
+  display: flex;
+  background-color: #333;
+  color: #f8f8f2;
+  border-radius: 8px;
+  padding: 0.75rem;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  cursor: text;
+  user-select: text;
+  box-sizing: border-box;
+}
+
+.code-content {
+  font-family: monospace;
+  white-space: pre-wrap;
 }

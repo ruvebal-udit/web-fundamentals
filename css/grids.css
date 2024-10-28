@@ -1,47 +1,103 @@
+/* Grid Container Adjustments */
 .grid-container {
   display: grid;
-  flex: 1;
-  /* Make sure each container takes the full available space */
-  box-sizing: border-box;
-  /* Ensures padding and borders are included in the element’s total width and height, so the layout remains predictable. */
-  padding: 1rem;
   height: calc(100vh - var(--header-height) - var(--footer-height) - 1rem);
-  /* Full height of the grid row  MINUS HEADER FOOTER AND GAP */
+  padding: 1rem;
   width: 100%;
-  /* Full width of the grid column */
   scroll-snap-align: start;
   scroll-snap-type: y mandatory;
-  /* Enable scroll snap */
-  overflow-y: scroll;
-  /* Enable vertical scrolling */
+  overflow: hidden;
 }
 
+/* Title Section */
+.slide .title {
+  min-width: 100%;
+  margin-top: 0.5rem;
+  padding: 1.7rem;
+  text-align: center;
+}
+
+/* Fluid Columns Adjustments */
 .fluid-columns {
-  grid-template-columns: repeat(auto-fit,
-      minmax(min(200px, 100%), 1fr));
-  /* Adapts the grid columns to fit as many items as possible while maintaining a minimum width. */
-  gap: 1rem;
-}
-
-.grid-item {
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 0.33rem;
+  overflow-y: auto;
+  padding: 0.5rem;
   height: 100%;
-  object-fit: cover;
-  /* Cover the area while preserving aspect ratio */
+  width: 100%;
 }
 
+/* Grid Item Styles */
 .grid-item.card {
   background-color: var(--card);
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.grid-item img,
-.grid-item iframe {
-  width: 100%;
-  /* Ensures the image takes full width of the parent */
-  height: 100%;
-  /* Keeps the image aspect ratio */
-  display: block;
-  /* Remove inline space below the image */
+.grid-item h2 {
+  margin: 0 0 0.5rem;
+}
+
+.grid-item p {
+  margin: 0.5rem 0;
+}
+
+
+/* Ensure text fits within the code container */
+.code-container[contenteditable="true"] {
+  outline: none;
+}
+
+/* Styling for Monospace Fonts (Remains the same) */
+.grid-item:nth-child(12n+1) {
+  font-family: 'Fira Code', monospace;
+}
+
+.grid-item:nth-child(12n+2) {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.grid-item:nth-child(12n+3) {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.grid-item:nth-child(12n+4) {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.grid-item:nth-child(12n+5) {
+  font-family: 'Inconsolata', monospace;
+}
+
+.grid-item:nth-child(12n+6) {
+  font-family: 'Courier Prime', monospace;
+}
+
+.grid-item:nth-child(12n+7) {
+  font-family: 'Anonymous Pro', monospace;
+}
+
+.grid-item:nth-child(12n+8) {
+  font-family: 'Liberation Mono', monospace;
+}
+
+.grid-item:nth-child(12n+9) {
+  font-family: 'DejaVu Sans Mono', monospace;
+}
+
+.grid-item:nth-child(12n+10) {
+  font-family: 'Hack', monospace;
+}
+
+.grid-item:nth-child(12n+11) {
+  font-family: 'Droid Sans Mono', monospace;
+}
+
+.grid-item:nth-child(12n+12) {
+  font-family: 'Cascadia Code', monospace;
 }
