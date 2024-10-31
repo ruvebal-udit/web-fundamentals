@@ -1,23 +1,30 @@
-(function () {
-    "use strict";
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all elements with the .typewriter class
+    const typewriterElements = document.querySelectorAll('.typewriter');
 
-    // Function to handle scroll event
-    window.addEventListener('scroll', () => {
-        const slides = document.querySelectorAll('.slide');
-        slides.forEach(slide => {
-            const rect = slide.getBoundingClientRect();
-            const offset = rect.top * 0.01; // Adjust for parallax speed
-            const slideBg = slide.querySelector('.slide__bg');
+    if ('IntersectionObserver' in window) {
+        // Create a single observer instance with higher threshold
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    console.log(`Animating: ${element.id}`); // Log to confirm individual animation
 
-            if (slideBg) {
-                slideBg.style.transform = `translateY(${offset}px)`;
-            }
-        });
-    });
+                    // Apply a staggered delay based on the element's index
+                    setTimeout(() => {
+                        element.classList.add('animate');
+                    }, index * 500); // Adjust delay as needed (e.g., 500ms per element)
 
-    // Window load event
-    window.addEventListener("load", function () {
-        // Site loader or any initialization code can go here
-        console.log('Page fully loaded');
-    });
-})();
+                    // Stop observing the element after animating
+                    observer.unobserve(element);
+                }
+            });
+        }, { threshold: 0.9 }); // Use a high threshold to require most of the element to be in view
+
+        // Observe each .typewriter element individually
+        typewriterElements.forEach(el => observer.observe(el));
+    } else {
+        // Fallback for unsupported browsers
+        typewriterElements.forEach(el => el.classList.add('animate'));
+    }
+});

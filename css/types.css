@@ -1,0 +1,16 @@
+@import url('https://fonts.cdnfonts.com/css/data-70');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+@font-face {
+    font-family: 'OCR-A';
+    src: url('../assets/fonts/OCRA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OCR-B';
+    src: url('../assets/fonts/OCR-B.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

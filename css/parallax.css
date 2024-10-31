@@ -10,19 +10,18 @@
 
 /* Wrapper that applies the perspective */
 .parallax {
-	perspective: 1000px;
+	perspective: 1500px;
 	/* Increased perspective for more pronounced parallax */
 	height: calc(100vh - var(--header-height) - var(--footer-height));
 	/* The viewport minus the header and footer heights */
-	overflow: hidden;
 	/* Hide overflow for clean edges */
 	position: relative;
 	/* Necessary for absolutely positioned children */
 	scroll-snap-align: start;
 	scroll-snap-type: y mandatory;
 	/* Enable scroll snap */
-	overflow-y: scroll;
-	/* Enable vertical scrolling */
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 .slides {
@@ -45,49 +44,33 @@
 	align-items: center;
 	justify-items: center;
 	transform-style: preserve-3d;
-	/* Preserve 3D transformations for children */
 	scroll-snap-align: start;
-	/* Snap each slide to the start of the viewport */
 	height: 100%;
 	width: 100%;
-	/* Ensure full width */
 	overflow: hidden;
-	/* Hide overflow for parallax effect */
 	transition: transform 1.2s ease-in-out;
-	/* Smooth transition for scaling */
 }
 
 .slide__bg {
 	width: 100%;
-	/* Full width */
 	height: 100%;
-	/* Full height */
 	position: absolute;
-	/* Positioning to cover the entire slide */
 	top: 0;
 	left: 0;
-	z-index: -1;
-	/* Ensure background stays behind content */
-	transform: translateZ(0) scale(1);
-	transition: transform 0.8s ease-out;
-	/* Smooth transition for background movement */
+	z-index: -9;
+	background-size: cover;
+	background-repeat: repeat;
+	background-position: center;
 }
 
-#parallax1:target .slide__bg,
 #parallax2:target .slide__bg {
 	animation: animateTransform 7s ease-in-out forwards;
 	/* Increased scale for a more pronounced parallax */
 }
 
-#parallax1 .slide__bg {
-	background-image: url("../assets/icons/mandala_progressive.svg");
-	/* Path to your SVG */
-	background-size: cover;
-	/* Change to cover for better scaling */
-	background-repeat: repeat;
-	/* Avoid repeating for a cleaner look */
-	background-position: center;
-	/* Center the background */
+#parallax2 .slide__bg {
+	transform: translateZ(0) scale(1);
+	transition: transform 0.8s ease-out;
 }
 
 #typography .slide__bg {
@@ -122,3 +105,83 @@
 	padding-bottom: 2rem;
 	/* Increased padding for better spacing */
 }
+
+
+.layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+/* Layer styling with greater depth effect */
+.layer[data-depth="1"] {
+	mix-blend-mode: multiply;
+	opacity: 0.7;
+	transform: translateZ(30px) scale(1.1);
+	animation: parallaxScroll1 20s infinite alternate ease-in-out;
+}
+
+.layer[data-depth="2"] {
+	mix-blend-mode: screen;
+	/* Adds a visible blend */
+	opacity: 0.5;
+	transform: translateZ(15px) scale(1.05);
+	animation: parallaxScroll2 15s infinite alternate ease-in-out;
+}
+
+.layer[data-depth="3"] {
+	z-index: -2;
+	mix-blend-mode: overlay;
+	/* Darker effect on top */
+	opacity: 0.6;
+	transform: translateZ(5px) scale(1);
+	animation: parallaxScroll3 10s infinite alternate ease-in-out;
+}
+
+/* Keyframes for each layer’s movement, Fibonacci-based and double-axis */
+/* Keyframes for each layer’s movement with opacity animation */
+@keyframes parallaxScroll1 {
+	0% {
+		transform: translateZ(0) translateX(0) scale(1.618);
+		opacity: 1;
+		/* Fully visible at the start */
+	}
+
+	100% {
+		transform: translateZ(-13px) translateX(-8px) scale(1.382);
+		opacity: 0.7;
+		/* Fade slightly as it moves */
+	}
+}
+
+@keyframes parallaxScroll2 {
+	0% {
+		transform: translateX(-21px) translateY(-13px) scale(1.618);
+		opacity: 0.8;
+	}
+
+	100% {
+		transform: translateX(0) translateY(0) scale(1);
+		opacity: 0.5;
+		/* Fade more as it moves */
+	}
+}
+
+@keyframes parallaxScroll3 {
+	0% {
+		transform: translateY(0) translateZ(0) scale(0.786);
+		opacity: 0.6;
+		/* Start with a lower opacity */
+	}
+
+	100% {
+		transform: translateY(-34px) translateZ(-21px) scale(1);
+		opacity: 0.3;
+		/* Become more transparent as it moves */
+	}
+}
+

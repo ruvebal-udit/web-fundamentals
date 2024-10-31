@@ -1,7 +1,9 @@
 @import "reset.css";
 @import "theme.css";
+@import "types.css";
 @import "base.css";
 @import "grids.css";
 @import "nav.css";
 @import "parallax.css";
+@import "typewriter.css";
 @import "media-queries.css";

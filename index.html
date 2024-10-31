@@ -16,6 +16,11 @@
         <meta name="apple-mobile-web-app-title" content="ruvebal-udit-advanced_web_design-and_web_applications" />
         <link rel="manifest" href="/manifest.json" />
 
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
             <!-- Futurist Style Fonts -->
             <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
@@ -76,7 +81,7 @@
                 <ul class="nav-items">
                     <li><a href="#parallax1">Home</a></li>
                     <li><a href="#parallax2">About</a></li>
-                    <li><a href="#section5">Contact</a></li>
+                    <li><a href="#typography">Typography</a></li>
                 </ul>
             </nav>
         </header>
@@ -85,62 +90,13 @@
  <main>
     <!-- First Parallax Section -->
     <div class="parallax" id="parallax1">
-        <div class="slide__bg"></div>
-        <div class="slides">
+        <div class="slide__bg layer" style="background-image: url('https://ik.imagekit.io/ruvebal/glitched-background/RGB.png');"></div>
+        <div class="slide__bg layer" data-depth="1" style="background-image: url('https://ik.imagekit.io/ruvebal/glitched-background/R.png');"></div>
+        <div class="slide__bg layer" data-depth="2" style="background-image: url('https://ik.imagekit.io/ruvebal/glitched-background/G.png');"></div>
+        <div class="slide__bg layer" data-depth="3" style="background-image: url('https://ik.imagekit.io/ruvebal/glitched-background/B.png');"></div>
+    <div class="slides">
             <div class="slide grid-container fluid-columns" id="section1" aria-label="First Parallax Section">
-
-                <div class="grid-item card slide-item">
-                    <h2>Grid Item 1</h2>
-                    <p>This is the content for the first grid item.</p>
-                </div>
-                <div class="grid-item card slide-item">
-                    <h2>Grid Item 2</h2>
-                    <p>This is the content for the second grid item.</p>
-                </div>
-                <div class="grid-item card slide-item">
-                    <h2>Grid Item 3</h2>
-                    <p>This is the content for the third grid item.</p>
-                </div>
-                <div class="grid-item card slide-item">
-                    <h2>Grid Item 4</h2>
-                    <p>This is the content for the fourth grid item.</p>
-                </div>
-                <div class="grid-item card slide-item">
-                    <h2>Grid Item 5</h2>
-                    <p>This is the content for the fifth grid item.</p>
-                </div>
-                <div class="grid-item card slide-item">
-                    <h2>Grid Item 6</h2>
-                    <p>This is the content for the sixth grid item.</p>
-                </div>
-
-            </div>
-
-            <div class="slide grid-container fluid-columns" id="section2" aria-label="Second Parallax Section">
-                <div class="grid-item card slide-item">
-                    <h2>Grid Item 7</h2>
-                    <p>This is the content for the seventh grid item.</p>
-                </div>
-                <div class="grid-item card slide-item">
-                    <h2>Grid Item 8</h2>
-                    <p>This is the content for the eighth grid item.</p>
-                </div>
-                <div class="grid-item card slide-item">
-                    <h2>Grid Item 9</h2>
-                    <p>This is the content for the ninth grid item.</p>
-                </div>
-                <div class="grid-item card slide-item">
-                    <h2>Grid Item 10</h2>
-                    <p>This is the content for the tenth grid item.</p>
-                </div>
-                <div class="grid-item card slide-item">
-                    <h2>Grid Item 11</h2>
-                    <p>This is the content for the fifth grid item.</p>
-                </div>
-                <div class="grid-item card slide-item">
-                    <h2>Grid Item 12</h2>
-                    <p>This is the content for the sixth grid item.</p>
-                </div>
+                <img class="responsive-image" src="./assets/icons/mandala_progressive-inverted.svg" alt="Description of the SVG">
             </div>
         </div>
     </div>
@@ -153,63 +109,63 @@
         <!-- Futurist Style Section -->
         <div class="slide grid-container" id="section3" aria-label="Third Parallax Section">
             <div class="collection-title">
-                <h2>Futurist Style</h2>
+                <h2 class="typewriter" id="typewriter-futurist">Futurist Style</h2>
             </div>
             <div class="fluid-columns">
                 <div class="grid-item card slide-item" style="font-family: 'Exo 2', sans-serif;">
                     <h2>Exo 2</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Exo+2&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Exo+2&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Audiowide', sans-serif;">
                     <h2>Audiowide</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Audiowide&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Audiowide&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Bungee', sans-serif;">
                     <h2>Bungee</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Bungee&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Bungee&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Major Mono Display', monospace;">
                     <h2>Major Mono Display</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Major+Mono+Display&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Major+Mono+Display&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Monoton', sans-serif;">
                     <h2>Monoton</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Monoton&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Monoton&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Orbitron', sans-serif;">
                     <h2>Orbitron</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Russo One', sans-serif;">
                     <h2>Russo One</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Zilla Slab Highlight', serif;">
                     <h2>Zilla Slab Highlight</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
             </div>
@@ -218,63 +174,63 @@
         <!-- Bauhaus and Bauhaus-like Section -->
         <div class="slide grid-container" id="section4" aria-label="Fourth Parallax Section">
             <div class="collection-title">
-                <h2>Bauhaus and Bauhaus-like</h2>
+                <h2 class="typewriter" id="typewriter-bauhaus">Bauhaus and Bauhaus-like</h2>
             </div>
             <div class="fluid-columns">
                 <div class="grid-item card slide-item" style="font-family: 'Josefin Sans', sans-serif;">
                     <h2>Josefin Sans</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Josefin+Sans&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Josefin+Sans&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Poppins', sans-serif;">
                     <h2>Poppins</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Orbitron', sans-serif;">
                     <h2>Orbitron</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Fugaz One', sans-serif;">
                     <h2>Fugaz One</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Fugaz+One&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Fugaz+One&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Raleway', sans-serif;">
                     <h2>Raleway</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Spartan', sans-serif;">
                     <h2>Spartan</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Spartan&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Spartan&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Vidaloka', serif;">
                     <h2>Vidaloka</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Vidaloka&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Vidaloka&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Bauhaus 93', sans-serif;">
                     <h2>Bauhaus 93</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://www.fontspace.com/bauhaus-93-font-f7216&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://www.fontspace.com/bauhaus-93-font-f7216&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
             </div>
@@ -283,63 +239,63 @@
         <!-- Classical Computer Graphics Section -->
         <div class="slide grid-container" id="section5" aria-label="Fifth Parallax Section">
             <div class="collection-title">
-                <h2>Classical Computer Graphics</h2>
+                <h2 class="typewriter" id="typewriter-graphics">Classical Computer Graphics</h2>
             </div>
             <div class="fluid-columns">
                 <div class="grid-item card slide-item" style="font-family: 'Press Start 2P', monospace;">
                     <h2>Press Start 2P</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'VT323', monospace;">
                     <h2>VT323</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=VT323&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=VT323&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Roboto Mono', monospace;">
                     <h2>Roboto Mono</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Pixel', monospace;">
                     <h2>Pixel</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://www.dafont.com/pixel.font&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://www.dafont.com/pixel.font&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Fira Code', monospace;">
                     <h2>Fira Code</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Fira+Code&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Fira+Code&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Inconsolata', monospace;">
                     <h2>Inconsolata</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inconsolata&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inconsolata&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'Liberation Mono', monospace;">
                     <h2>Liberation Mono</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://fontlibrary.org/en/font/liberation-mono&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://fontlibrary.org/en/font/liberation-mono&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
                 <div class="grid-item card slide-item" style="font-family: 'DejaVu Sans Mono', monospace;">
                     <h2>DejaVu Sans Mono</h2>
                     <p class="code-snippet">The quick brown fox jumps over the lazy dog.</p>
                     <div class="code-container" contenteditable="true">
-                        <code class="code-content small-text">&lt;link href=&quot;https://dejavu-fonts.github.io/&quot; rel=&quot;stylesheet&quot;&gt;</code>
+                        <pre><code class="code-content small-text">&lt;link href=&quot;https://dejavu-fonts.github.io/&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
                     </div>
                 </div>
             </div>

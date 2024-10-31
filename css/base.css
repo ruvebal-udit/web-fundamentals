@@ -1,5 +1,5 @@
-/* Set the CSS variable based on an estimated height */
 :root {
+  /* Set the CSS variable based on an estimated height */
   --header-height: 80px;
   --footer-height: 68px;
 
@@ -9,6 +9,10 @@
   --text-xl: clamp(1.5rem, 3vw + 1rem, 3rem);
   --text-2xl: clamp(2rem, 4vw + 1.5rem, 5rem);
   --text-3xl: clamp(2.5rem, 5vw + 2rem, 6rem);
+
+  /* Line heights set in em are relative to the font size of their immediate container
+     while rem scale with the root font size (default 16px). 
+     This means they scale directly with the font size, ensuring proportional spacing within elements. */
 
   --line-height-xs: clamp(1.2em, 1vw + 1.2em, 1.4em);
   --line-height-base: clamp(1.4em, 1.5vw + 1.4em, 1.6em);
@@ -33,7 +37,7 @@ body {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   min-height: 100vh;
   background-color: var(--background);
   color: var(--secondary-foreground);
@@ -113,7 +117,6 @@ footer div {
   display: block;
 }
 
-
 /* Headings */
 h1 {
   color: var(--foreground);
@@ -122,15 +125,18 @@ h1 {
   line-height: var(--line-height-2xl);
   /* Responsive line height */
   margin-bottom: 1rem;
+  font-weight: 900;
 }
 
 h2 {
+  font-family: 'OCR-A';
   color: var(--primary-foreground);
   font-size: var(--text-xl);
   /* Large text for main headings */
   line-height: var(--line-height-xl);
   /* Responsive line height */
   margin-bottom: 0.75rem;
+  font-weight: 700;
 }
 
 h3 {
@@ -140,14 +146,19 @@ h3 {
   line-height: var(--line-height-lg);
   /* Responsive line height */
   margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: var(--text-base);
+  font-weight: 300;
 }
 
 /* Small Text (e.g., captions or footnotes) */
 .small-text {
   font-size: var(--text-xs);
-  /* Smaller for captions or footnotes */
   line-height: var(--line-height-xs);
-  /* Responsive line height */
+  font-weight: 100;
 }
 
 /* Links */
@@ -183,6 +194,7 @@ cite {
 }
 
 p {
+  font-family: 'OCR-B';
   font-size: var(--text-base);
   /* Smaller text for body paragraphs */
   line-height: var(--line-height-base);
@@ -277,4 +289,19 @@ pre {
 .code-content {
   font-family: monospace;
   white-space: pre-wrap;
+}
+
+.collection-title {
+  font-variant-caps: all-small-caps;
+}
+
+.responsive-image {
+  width: 100%;
+  /* Full width of the container */
+  height: 100%;
+  /* Full height of the container */
+  object-fit: cover;
+  /* Ensures image covers container without changing aspect ratio */
+  object-position: center;
+  /* Centers the image within the container */
 }
