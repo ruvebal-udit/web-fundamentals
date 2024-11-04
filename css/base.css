@@ -2,7 +2,7 @@
   /* Set the CSS variable based on an estimated height */
   --header-height: 80px;
   --footer-height: 68px;
-
+  --text-2xs: clamp(0.75rem, 0.8vw + 0.4rem, 1rem);
   --text-xs: clamp(0.875rem, 1vw + 0.5rem, 1.2rem);
   --text-base: clamp(1rem, 2vw + 1rem, 2rem);
   --text-lg: clamp(1.25rem, 2.5vw + 1.25rem, 2.5rem);
@@ -13,14 +13,13 @@
   /* Line heights set in em are relative to the font size of their immediate container
      while rem scale with the root font size (default 16px). 
      This means they scale directly with the font size, ensuring proportional spacing within elements. */
-
+  --line-height-2xs: clamp(1.1em, 0.8vw + 1.1em, 1.2em);
   --line-height-xs: clamp(1.2em, 1vw + 1.2em, 1.4em);
   --line-height-base: clamp(1.4em, 1.5vw + 1.4em, 1.6em);
   --line-height-lg: clamp(1.5em, 1.8vw + 1.5em, 1.8em);
   --line-height-xl: clamp(1.6em, 2vw + 1.6em, 1.9em);
   --line-height-2xl: clamp(1.8em, 2.5vw + 1.8em, 2.2em);
   --line-height-3xl: clamp(2em, 3vw + 2em, 2.5em);
-
 }
 
 /* All elements (and their pseudo-elements) are sized so that
@@ -37,7 +36,7 @@ body {
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   min-height: 100vh;
   background-color: var(--background);
   color: var(--secondary-foreground);
@@ -129,7 +128,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'OCR-A';
+  font-family: "OCR-A";
   color: var(--primary-foreground);
   font-size: var(--text-xl);
   /* Large text for main headings */
@@ -150,56 +149,80 @@ h3 {
 }
 
 h4 {
-  font-size: var(--text-base);
+  font-size: var(--text-xm);
   font-weight: 300;
 }
 
 /* Small Text (e.g., captions or footnotes) */
 .small-text {
-  font-size: var(--text-xs);
-  line-height: var(--line-height-xs);
+  font-size: var(--text-2xs);
+  line-height: var(--line-height-2xs);
   font-weight: 100;
 }
 
 /* Links */
-a {
-  font-size: var(--text-base);
-  /* Same as body text for readability */
-  line-height: var(--line-height-base);
-  /* Responsive line height for links */
-  text-decoration: none;
-  color: var(--muted-foreground);
+a,
+a:active,
+a:visited {
+  text-decoration: underline;
+  color: inherit;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 article {
   margin-bottom: 40px;
-  background-color: var(--accent);
+  background-color: var(--card);
   padding: 20px 40px;
   border-radius: 10px;
   color: var(--destructive);
+  background-color: var(--foreground);
 }
 
 blockquote {
-  background-color: var(--foreground);
-  border-left: 10px solid var(--muted);
-  margin: 20px 0;
-  padding: 10px 20px;
+  position: relative;
+  padding-left: 0.25em; /* Adds space between text and border */
+  border-left: 5px solid var(--border); /* Left border */
+  margin: 1em 0 0 calc(0.25em + 5px * -1);
 }
 
+p,
+cite,
+li,
+figcaption {
+  font-family: "OCR-B";
+  font-size: var(--text-2xs);
+  line-height: var(--line-height-2xs);
+  margin-bottom: 1rem;
+  letter-spacing: -0.2em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 1em; /* Adds space for the hyphen */
+}
+
+article ul li::before {
+  content: "—"; /* Inserts hyphen before each list item */
+  position: absolute;
+  left: 0;
+  color: var(--accent); /* Color of the hyphen */
+  font-weight: bold;
+}
 cite {
+  text-align: left;
   display: block;
   margin-top: 10px;
-  font-size: var(--text-base);
   color: var(--primary);
-}
-
-p {
-  font-family: 'OCR-B';
-  font-size: var(--text-base);
-  /* Smaller text for body paragraphs */
-  line-height: var(--line-height-base);
-  /* Responsive line height */
-  margin-bottom: 1rem;
 }
 
 .highlight {

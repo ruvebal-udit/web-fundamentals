@@ -1,164 +1,166 @@
 /* Navbar Styles */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Logo (Nav Icon) */
 .nav-icon {
-    order: -1;
-    width: 40px;
-    height: auto;
-    margin-left: 1rem;
+  order: -1;
+  width: 40px;
+  height: auto;
+  margin-left: 1rem;
 }
 
 .nav-icon img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Mobile Menu Toggle Button */
 .nav-menu-btn {
-    display: none;
-    /* Hide the checkbox toggle */
+  display: none;
+  /* Hide the checkbox toggle */
 }
 
 /* Hamburger Menu Icon */
 .nav-menu {
-    display: inline-block;
-    cursor: pointer;
-    padding: 28px 20px;
-    user-select: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 28px 20px;
+  user-select: none;
 }
 
 .nav-menu .nav-menu-icon {
-    background-color: var(--background);
-    display: block;
-    height: 2px;
-    width: 18px;
-    position: relative;
-    transition: background 0.2s ease-out;
+  background-color: var(--background);
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background 0.2s ease-out;
 }
 
 .nav-menu .nav-menu-icon:before,
 .nav-menu .nav-menu-icon:after {
-    content: '';
-    background-color: var(--background);
-    height: 2px;
-    width: 18px;
-    position: absolute;
-    transition: all 0.2s ease-out;
+  content: "";
+  background-color: var(--background);
+  height: 2px;
+  width: 18px;
+  position: absolute;
+  transition: all 0.2s ease-out;
 }
 
 .nav-menu .nav-menu-icon:before {
-    top: -6px;
+  top: -6px;
 }
 
 .nav-menu .nav-menu-icon:after {
-    top: 6px;
+  top: 6px;
 }
 
 /* Mobile Menu (Hidden by Default) */
 header .nav-items {
-    display: none;
-    background-color: var(--secondary);
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: right;
-    position: absolute;
-    top: 100%;
-    left: 0;
+  display: none;
+  background-color: var(--secondary);
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 
 header .nav-items li {
-    border-bottom: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+
 }
 
+
 header .nav-items li a {
-    font-size: clamp(1rem, 1.8vw + 1rem, 1.8rem);
-    /* Slightly larger for navigation clarity */
-    line-height: clamp(1.3, 1.3vw + 1.3, 1.5);
-    /* Responsive line height for navbar links */
-    padding: 0.5rem 1rem;
+  font-size: var(--text-xs);
+  /* Slightly larger for navigation clarity */
+  line-height: clamp(1.3, 1.3vw + 1.3, 1.5);
+  /* Responsive line height for navbar links */
+  padding: 0.5rem 1rem;
 }
 
 /* Show Mobile Menu when Checkbox is Checked */
-.nav-menu-btn:checked~.nav-items {
-    display: flex;
+.nav-menu-btn:checked ~ .nav-items {
+  display: flex;
 }
 
 /* Animate Hamburger Icon into an "X" */
-.nav-menu-btn:checked~.nav-menu .nav-menu-icon {
-    background: transparent;
+.nav-menu-btn:checked ~ .nav-menu .nav-menu-icon {
+  background: transparent;
 }
 
-.nav-menu-btn:checked~.nav-menu .nav-menu-icon:before {
-    transform: rotate(-45deg);
-    top: 0;
+.nav-menu-btn:checked ~ .nav-menu .nav-menu-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
 }
 
-.nav-menu-btn:checked~.nav-menu .nav-menu-icon:after {
-    transform: rotate(45deg);
-    top: 0;
+.nav-menu-btn:checked ~ .nav-menu .nav-menu-icon:after {
+  transform: rotate(45deg);
+  top: 0;
 }
 
 /* Footer Styles */
 footer .nav-items {
-    display: flex;
-    background-color: var(--secondary);
-    flex-direction: row;
-    justify-content: flex-end;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: right;
+  display: flex;
+  background-color: var(--secondary);
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: right;
 }
 
 footer .nav-items li {
-    font-size: calc(1em - 0.5rem);
+  font-size: calc(1em - 0.5rem);
 }
 
 footer .nav-items li a {
-    display: block;
-    padding: 20px;
-    font-size: clamp(0.875rem, 1.3vw + 0.875rem, 1.2rem);
-    /* Smaller text for footer */
-    line-height: clamp(1.4, 1.2vw + 1.4, 1.6);
-    /* Responsive line height */
+  display: block;
+  padding: 20px;
+  font-size: clamp(0.875rem, 1.3vw + 0.875rem, 1.2rem);
+  /* Smaller text for footer */
+  line-height: clamp(1.4, 1.2vw + 1.4, 1.6);
+  /* Responsive line height */
 }
 
 /**/
 
 /* Show Mobile Menu when Checkbox is Checked */
-.nav-menu-btn:checked~.nav-items {
-    display: flex;
-    /* Display the menu when the checkbox is checked */
+.nav-menu-btn:checked ~ .nav-items {
+  display: flex;
+  /* Display the menu when the checkbox is checked */
 }
 
 /* Animate the Hamburger Icon into an "X" when clicked */
-.nav-menu-btn:checked~.nav-menu .nav-menu-icon {
-    background: transparent;
-    /* Remove the middle line of the hamburger icon */
+.nav-menu-btn:checked ~ .nav-menu .nav-menu-icon {
+  background: transparent;
+  /* Remove the middle line of the hamburger icon */
 }
 
-.nav-menu-btn:checked~.nav-menu .nav-menu-icon:before {
-    transform: rotate(-45deg);
-    /* Rotate the top line to form part of the "X" */
-    top: 0;
-    /* Move the top line to the center */
+.nav-menu-btn:checked ~ .nav-menu .nav-menu-icon:before {
+  transform: rotate(-45deg);
+  /* Rotate the top line to form part of the "X" */
+  top: 0;
+  /* Move the top line to the center */
 }
 
-.nav-menu-btn:checked~.nav-menu .nav-menu-icon:after {
-    transform: rotate(45deg);
-    /* Rotate the bottom line to complete the "X" */
-    top: 0;
-    /* Move the bottom line to the center */
+.nav-menu-btn:checked ~ .nav-menu .nav-menu-icon:after {
+  transform: rotate(45deg);
+  /* Rotate the bottom line to complete the "X" */
+  top: 0;
+  /* Move the bottom line to the center */
 }
