@@ -79,9 +79,7 @@ header .nav-items {
 
 header .nav-items li {
   border-bottom: 1px solid #f4f4f4;
-
 }
-
 
 header .nav-items li a {
   font-size: var(--text-xs);

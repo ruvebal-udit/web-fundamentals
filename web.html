@@ -1,697 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Evolution of the Web and Related Technologies</title>
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>The Evolution of the Web and Related Technologies</title>
+		<link rel="stylesheet" href="./css/index.css" />
+	</head>
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <a href="#" class="nav-icon">
-          <img src="assets/icons/scroll_triangle_down_dark.svg" alt="Logo" />
-        </a>
-        <input class="nav-menu-btn" type="checkbox" id="nav-menu-btn" />
-        <label class="nav-menu" for="nav-menu-btn">
-          <span class="nav-menu-icon"></span>
-        </label>
-        <ul class="nav-items">
-          <li><a href="#theweb">The Web</a></li>
-          <li><a href="#parallax2">HTML</a></li>
-          <li><a href="#pwa">PWAs</a></li>
-          <li><a href="#pwa">Networking</a></li>
-          <li><a href="#pwa">APIs</a></li>
-          <li><a href="#pwa">Responsiveness</a></li>
-          <li><a href="#pwa">Version Control</a></li>
-          <li><a href="../">↵ Back</a></li>
-        </ul>
-      </nav>
-    </header>
+	<body>
+		<header>
+			<nav class="navbar">
+				<a href="#" class="nav-icon">
+					<img src="assets/icons/scroll_triangle_down_dark.svg" alt="Logo" />
+				</a>
+				<input class="nav-menu-btn" type="checkbox" id="nav-menu-btn" />
+				<label class="nav-menu" for="nav-menu-btn">
+					<span class="nav-menu-icon"></span>
+				</label>
+				<ul class="nav-items">
+					<li><a href="./">↵ Back</a></li>
+				</ul>
+			</nav>
+		</header>
 
-    <main>
-      <!--   -->
-      <div class="parallax">
-        <div class="slide__bg"></div>
-        <div class="slides">
-          <!--  Section -->
-          <div
-            class="slide grid-container"
-            id="theweb"
-            aria-label="First Parallax Section"
-          >
-            <div class="collection-title">
-              <h2>The Web</h2>
-            </div>
+		<!-- Toggle checkbox for Sidebar -->
+		<input type="checkbox" id="sidebar-toggle" hidden />
+		<label class="sidebar-toggle-btn" for="sidebar-toggle">☰ TOC</label>
+		<div class="grid">
+			<!-- Sidebar TOC -->
+			<aside class="toc">
+				<h6>Table of Contents</h6>
+				<ul>
+					<li><a href="#theweb">The Web</a></li>
+					<li><a href="#html">HTML</a></li>
+					<li><a href="#pwa">PWAs</a></li>
+					<li><a href="#networking">Networking</a></li>
+					<li><a href="#apis">APIs</a></li>
+					<li><a href="#responsiveness">Responsiveness</a></li>
+					<li><a href="#versioncontrol">Version Control</a></li>
+					<li><a href="https://www.zotero.org/groups/5649080/ruvebal-web/library" target="_blank">Bibliography</a></li>
+				</ul>
+			</aside>
+			<!-- Main Content Area with Grid Layout -->
+			<main>
+				<!--   -->
+				<div class="parallax">
+					<div class="slide__bg"></div>
+					<div class="slides">
+						<!--  Section -->
+						<div class="slide grid-container" id="theweb" aria-label="First Parallax Section">
+							<div class="collection-title">
+								<h2>The Web</h2>
+							</div>
 
-            <div class="fluid-columns">
-              <article>
-                <h4>The Web</h4>
-                <blockquote>
-                  <p>
-                    The web —a complex system of interconnected components which
-                    has become a global repository of vast distributed
-                    heterogeneous data and services. The web has metamorphosed
-                    through generations from web 1.0 —which allows for published
-                    contents to be searched and read (read only), through web
-                    2.0 — which allows for dynamism and collaborations (read and
-                    write) to web 3.0 — which extends collaboration by allowing
-                    machine participation (read, write, and execute). Web 3.0,
-                    also referred to as the semantic web, became incumbent as a
-                    result of the need to efficiently and effectively exploit
-                    the massive information and services on the web.
-                  </p>
-                </blockquote>
-                <cite
-                  >(<a
-                    href="https://www.zotero.org/groups/5649080/ruvebal-web/search/Bhushan/titleCreatorYear/items/BPKVM6GD/attachment/ZCRCRJE4/reader"
-                    target="_blank"
-                    >Debnath, &amp; Bhushan 2023</a
-                  >, p. 2)</cite
-                >
+							<div class="fluid-columns">
+								<article>
+									<h4>The Web</h4>
+									<blockquote>
+										<p>
+											The
+											<em>World Wide Web</em>
+											(
+											<em>WWW</em>
+											, or simply
+											<em>Web</em>
+											) is an information space in which the items of interest, referred to as resources, are identified by global
+											identifiers called Uniform Resource Identifiers (URI).
+										</p>
+										<figure>
+											<img
+												src="https://www.whatismyip.com/static/6c8b2ff91a63e448541800241d914a57/uri-vs-url.webp"
+												alt="What is a URI vs a URL"
+												style="width: 100%; height: auto" />
+										</figure>
+										<br />
+										<p>
+											The Web makes use of a single global identification system: the URI. URIs are a cornerstone of Web
+											architecture, providing identification that is common across the Web.
+										</p>
+										<p>
+											By design a URI identifies one resource. We do not limit the scope of what might be a resource. The term
+											"resource" is used in a general sense for whatever might be identified by a URI. It is conventional on the
+											hypertext Web to describe Web pages, images, product catalogs, etc. as “resources”. The distinguishing
+											characteristic of these resources is that all of their essential characteristics can be conveyed in a
+											message. We identify this set as “information resources.”
+										</p>
+									</blockquote>
+									<cite>
+										(
+										<a href="https://www.zotero.org/groups/5649080/ruvebal-web/items/V4IUSSHY/item-list" target="_blank">
+											Jacobs y Walsh 2004
+										</a>
+										)
+									</cite>
 
-                <figure>
-                  <img
-                    src="https://lh5.googleusercontent.com/3_0pLzWVs4WhNkvNdbXRcKfnLb6ESXqnqRHtvi5XKlD3t2W869M3K8eRCpkf_MMplqWYhoxLukSRLhTrF4lsQce507SuIdNNfbkib1keCi9tzdzh7jmk1KTrDHJEMpnQEarqZowNWWYI8tu5hA"
-                    alt="Google API Diagram"
-                    style="width: 100%; height: auto"
-                  />
-                  <figcaption>
-                    Source:
-                    <a href="https://www.google.com/" target="_blank"
-                      >Google API Diagram</a
-                    >
-                  </figcaption>
-                </figure>
-              </article>
+									<blockquote>
+										<p>
+											The web —a complex system of interconnected components which has become a global repository of vast
+											distributed heterogeneous data and services. The web has metamorphosed through generations from web 1.0
+											—which allows for published contents to be searched and read (read only), through web 2.0 — which allows for
+											dynamism and collaborations (read and write) to web 3.0 — which extends collaboration by allowing machine
+											participation (read, write, and execute). Web 3.0, also referred to as the semantic web, became incumbent as
+											a result of the need to efficiently and effectively exploit the massive information and services on the web.
+										</p>
+									</blockquote>
+									<cite>
+										(
+										<a
+											href="https://www.zotero.org/groups/5649080/ruvebal-web/search/Bhushan/titleCreatorYear/items/BPKVM6GD/attachment/ZCRCRJE4/reader"
+											target="_blank">
+											Debnath, &amp; Bhushan 2023
+										</a>
+										, p. 2)
+									</cite>
 
-              <article>
-                <h4>The Birth of the Web</h4>
-                <blockquote>
-                  <p>
-                    Back in 1989, at CERN (the scientific research laboratory
-                    near Geneva, Switzerland), Tim Berners-Lee presented a
-                    proposal for an information management system that would
-                    enable the sharing of knowledge and resources over a
-                    computer network. We now know this system as the worldwide
-                    web (the web).
-                  </p>
-                </blockquote>
-                <cite>(Shklar &amp; Rosen 2012, p. 1.1)</cite>
-              </article>
+									<figure>
+										<img
+											src="https://lh5.googleusercontent.com/3_0pLzWVs4WhNkvNdbXRcKfnLb6ESXqnqRHtvi5XKlD3t2W869M3K8eRCpkf_MMplqWYhoxLukSRLhTrF4lsQce507SuIdNNfbkib1keCi9tzdzh7jmk1KTrDHJEMpnQEarqZowNWWYI8tu5hA"
+											alt="Google API Diagram"
+											style="width: 100%; height: auto" />
+										<figcaption>
+											Source:
+											<a href="https://www.google.com/" target="_blank">Google API Diagram</a>
+										</figcaption>
+									</figure>
+								</article>
 
-              <article>
-                <h4>Web 3.0</h4>
-                <blockquote>
-                  <p>
-                    Web 2.0 is a harking back to the web as a network for
-                    presenting personal hyperlinked information. Information
-                    flow on the web is no longer one way, from the web site to
-                    the surfer.
-                  </p>
-                </blockquote>
-                <cite>(Shklar &amp; Rosen 2012, p. 1.4)</cite>
+								<article>
+									<h4>The Birth of the Web</h4>
+									<blockquote>
+										<p>
+											Back in 1989, at CERN (the scientific research laboratory near Geneva, Switzerland), Tim Berners-Lee
+											presented a proposal for an information management system that would enable the sharing of knowledge and
+											resources over a computer network. We now know this system as the worldwide web (the web).
+										</p>
+									</blockquote>
+									<cite>(Shklar &amp; Rosen 2012, p. 1.1)</cite>
+								</article>
 
-                <figure>
-                  <img
-                    src="https://media.licdn.com/dms/image/D5612AQE9ugOv0MKi0w/article-cover_image-shrink_720_1280/0/1690083431823?e=2147483647&v=beta&t=-uT_OsETczmI38w29953QDjBapCcgVPw9Y4E_X0zqrY"
-                    alt="Article Cover Image"
-                    style="width: 100%; height: auto"
-                  />
-                  <figcaption>
-                    Source:
-                    <a href="https://www.linkedin.com/" target="_blank"
-                      >LinkedIn - Article Cover Image</a
-                    >
-                  </figcaption>
-                </figure>
+								<article>
+									<h4>Web 3.0</h4>
+									<blockquote>
+										<p>
+											Web 2.0 is a harking back to the web as a network for presenting personal hyperlinked information.
+											Information flow on the web is no longer one way, from the web site to the surfer.
+										</p>
+									</blockquote>
+									<cite>(Shklar &amp; Rosen 2012, p. 1.4)</cite>
 
-                <blockquote>
-                  <p>
-                    In 2006, the concept of Web 3.0 was introduced during the
-                    Technet Summit. Jerry Yang, the founder of Yahoo,
-                    acknowledged the hardware and software challenges associated
-                    with Web 2.0 and proposed the need for a new, truly
-                    inclusive web platform. He believed that the power of the
-                    web had reached a critical point and called for a web
-                    vehicle that would bridge the gap between professional, and
-                    semi-professional users, and consumers, encouraging
-                    collaborative web interactions and network effects. This new
-                    generation of web business and applications became known as
-                    Web 3.0.
-                  </p>
-                </blockquote>
+									<figure>
+										<img
+											src="https://media.licdn.com/dms/image/D5612AQE9ugOv0MKi0w/article-cover_image-shrink_720_1280/0/1690083431823?e=2147483647&v=beta&t=-uT_OsETczmI38w29953QDjBapCcgVPw9Y4E_X0zqrY"
+											alt="Article Cover Image"
+											style="width: 100%; height: auto" />
+										<figcaption>
+											Source:
+											<a href="https://www.linkedin.com/" target="_blank">LinkedIn - Article Cover Image</a>
+										</figcaption>
+									</figure>
 
-                <blockquote>
-                  <p>
-                    Since then, influential figures in the internet community,
-                    including Google CEO Eric Schmidt and Nifty founder Reed
-                    Hastings, have contributed to the discourse surrounding Web
-                    3.0. Tech entrepreneur and investor Chris Dixon has
-                    described Web 3.0 as an internet for both builders and
-                    users, where digital assets play a crucial role in
-                    connecting them.
-                  </p>
-                  <p>
-                    However, there is no universally accepted definition of Web
-                    3.0.Web 3.0 represents the tangible manifestation of current
-                    technology trends moving towards a new level of maturity.
-                    These trends include the internet, network computing, open
-                    technologies, open identities, intelligent networks,
-                    distributed databases, intelligent applications, and more.
-                  </p>
-                </blockquote>
-                <cite>(Cheng 2024, 17-18)</cite>
-              </article>
+									<blockquote>
+										<p>
+											In 2006, the concept of Web 3.0 was introduced during the Technet Summit. Jerry Yang, the founder of Yahoo,
+											acknowledged the hardware and software challenges associated with Web 2.0 and proposed the need for a new,
+											truly inclusive web platform. He believed that the power of the web had reached a critical point and called
+											for a web vehicle that would bridge the gap between professional, and semi-professional users, and consumers,
+											encouraging collaborative web interactions and network effects. This new generation of web business and
+											applications became known as Web 3.0.
+										</p>
+									</blockquote>
 
-              <article>
-                <h4>History of the World Wide Web</h4>
-                <blockquote>
-                  <p>
-                    Way back during Christmas 1990, Sir Tim Berners-Lee and his
-                    team at CERN built all the tools necessary for a working
-                    web. They created HTTP, HTML, and the world's first web
-                    browser, called WorldWideWeb. The web pages that the first
-                    browser could run were simple plain-text pages with
-                    hyperlinks. In fact, those first web pages are still online
-                    and available to view today.
-                  </p>
-                </blockquote>
-                <cite>(Hume &amp; Osmani 2018, p. 27)</cite>
-              </article>
+									<blockquote>
+										<p>
+											Since then, influential figures in the internet community, including Google CEO Eric Schmidt and Nifty
+											founder Reed Hastings, have contributed to the discourse surrounding Web 3.0. Tech entrepreneur and investor
+											Chris Dixon has described Web 3.0 as an internet for both builders and users, where digital assets play a
+											crucial role in connecting them.
+										</p>
+										<p>
+											However, there is no universally accepted definition of Web 3.0.Web 3.0 represents the tangible manifestation
+											of current technology trends moving towards a new level of maturity. These trends include the internet,
+											network computing, open technologies, open identities, intelligent networks, distributed databases,
+											intelligent applications, and more.
+										</p>
+									</blockquote>
+									<cite>(Cheng 2024, 17-18)</cite>
+								</article>
 
-              <article>
-                <h4>Semantic Web</h4>
-                <blockquote>
-                  <p>
-                    Semantic Web technologies are a set of standards and
-                    protocols aimed at enhancing the meaning and understanding
-                    of data on the World Wide Web. Unlike traditional web
-                    technologies that primarily focus on the presentation of
-                    information, Semantic Web technologies aim to enable
-                    machines to comprehend the semantics or meaning of data,
-                    facilitating more intelligent data processing and
-                    interaction. At its core, the Semantic Web is based on the
-                    principles of annotating data with metadata that describe
-                    its meaning and relationships in a machine-readable format.
-                    This metadata enables automated reasoning, inference, and
-                    integration of disparate data sources, thereby enabling more
-                    sophisticated applications and services.
-                  </p>
-                </blockquote>
-                <cite>(Ortiz-Rodriguez et al. 2024, pp. 12-13)</cite>
+								<article>
+									<h4>History of the World Wide Web</h4>
+									<blockquote>
+										<p>
+											Way back during Christmas 1990, Sir Tim Berners-Lee and his team at CERN built all the tools necessary for a
+											working web. They created HTTP, HTML, and the world's first web browser, called WorldWideWeb. The web pages
+											that the first browser could run were simple plain-text pages with hyperlinks. In fact, those first web pages
+											are still online and available to view today.
+										</p>
+									</blockquote>
+									<cite>(Hume &amp; Osmani 2018, p. 27)</cite>
+								</article>
 
-                <figure>
-                  <img
-                    src="https://www.w3.org/2001/12/semweb-fin/current-vs-sw.png"
-                    alt="Current Web vs Semantic Web Diagram"
-                    style="width: 100%; height: auto"
-                  />
-                  <figcaption>
-                    Source:
-                    <a href="https://www.w3.org/" target="_blank"
-                      >W3C - Current Web vs Semantic Web Diagram</a
-                    >
-                  </figcaption>
-                </figure>
+								<article>
+									<h4>Semantic Web</h4>
+									<blockquote>
+										<p>
+											Semantic Web technologies are a set of standards and protocols aimed at enhancing the meaning and
+											understanding of data on the World Wide Web. Unlike traditional web technologies that primarily focus on the
+											presentation of information, Semantic Web technologies aim to enable machines to comprehend the semantics or
+											meaning of data, facilitating more intelligent data processing and interaction. At its core, the Semantic Web
+											is based on the principles of annotating data with metadata that describe its meaning and relationships in a
+											machine-readable format. This metadata enables automated reasoning, inference, and integration of disparate
+											data sources, thereby enabling more sophisticated applications and services.
+										</p>
+									</blockquote>
+									<cite>(Ortiz-Rodriguez et al. 2024, pp. 12-13)</cite>
 
-                <blockquote>
-                  <p>
-                    In addition to the classic “Web of documents” and the
-                    ontologies, the paradigm of publication, linking, and
-                    consumption of data has evolved to support a “Web of data”,
-                    whose main goal is generating a global Linked Data ecosystem
-                    known as Linked Open Data cloud (LOD cloud), which enables
-                    the computers to do more useful work and to develop systems
-                    that can support trusted interactions over the network. In
-                    this sense, the Web of data enables developing vertical
-                    applications that may bring forward specific and sometimes
-                    highly non-trivial use cases, focusing to provide solutions
-                    to problems of different industries, such as Health Care and
-                    Life Sciences, eGovernment, and Energy, to mention but a
-                    few, in order to improve collaboration, research and
-                    development, and innovation adoption through Semantic Web
-                    technology.
-                  </p>
-                </blockquote>
-                <cite>(Alor-Hernández 2019, p. v)</cite>
-              </article>
-            </div>
-          </div>
+									<figure>
+										<img
+											src="https://www.w3.org/2001/12/semweb-fin/current-vs-sw.png"
+											alt="Current Web vs Semantic Web Diagram"
+											style="width: 100%; height: auto" />
+										<figcaption>
+											Source:
+											<a href="https://www.w3.org/" target="_blank">W3C - Current Web vs Semantic Web Diagram</a>
+										</figcaption>
+									</figure>
 
-          <!--  Section -->
-          <div
-            class="slide grid-container"
-            id="html"
-            aria-label="Third Parallax Section"
-          >
-            <div class="collection-title">
-              <h2>HTML</h2>
-            </div>
+									<blockquote>
+										<p>
+											In addition to the classic “Web of documents” and the ontologies, the paradigm of publication, linking, and
+											consumption of data has evolved to support a “Web of data”, whose main goal is generating a global Linked
+											Data ecosystem known as Linked Open Data cloud (LOD cloud), which enables the computers to do more useful
+											work and to develop systems that can support trusted interactions over the network. In this sense, the Web of
+											data enables developing vertical applications that may bring forward specific and sometimes highly
+											non-trivial use cases, focusing to provide solutions to problems of different industries, such as Health Care
+											and Life Sciences, eGovernment, and Energy, to mention but a few, in order to improve collaboration, research
+											and development, and innovation adoption through Semantic Web technology.
+										</p>
+									</blockquote>
+									<cite>(Alor-Hernández 2019, p. v)</cite>
+								</article>
+							</div>
+						</div>
 
-            <div class="fluid-columns">
-              <article>
-                <h4>HTML</h4>
-                <blockquote>
-                  <p>
-                    HTML IS THE unifying language of the World Wide Web. Using
-                    just the simple tags it contains, the human race has created
-                    an astoundingly diverse network of hyperlinked documents.
-                    HTML5 is the latest iteration of this lingua franca. While
-                    it is the most ambitious change to our common tongue, this
-                    isn't the first time that HTML has been updated. The
-                    language has been evolving from the start.
-                  </p>
-                </blockquote>
+						<!--  Section -->
+						<div class="slide grid-container" id="html" aria-label="Third Parallax Section">
+							<div class="collection-title">
+								<h2>HTML</h2>
+							</div>
 
-                <figure>
-                  <img
-                    src="https://qph.cf2.quoracdn.net/main-qimg-d6669176601357c5b45e963dd938d30d-pjlq"
-                    alt="Quora Image Example"
-                    style="width: 100%; height: auto"
-                  />
-                  <figcaption>
-                    Source:
-                    <a href="https://www.quora.com/" target="_blank"
-                      >Quora - Image Example</a
-                    >
-                  </figcaption>
-                </figure>
+							<div class="fluid-columns">
+								<article>
+									<h4>HTML</h4>
+									<blockquote>
+										<p>
+											HTML IS THE unifying language of the World Wide Web. Using just the simple tags it contains, the human race
+											has created an astoundingly diverse network of hyperlinked documents. HTML5 is the latest iteration of this
+											lingua franca. While it is the most ambitious change to our common tongue, this isn't the first time that
+											HTML has been updated. The language has been evolving from the start.
+										</p>
+									</blockquote>
 
-                <blockquote>
-                  <p>
-                    As with the web itself, the HyperText Markup Language was
-                    the brainchild of Sir Tim Berners-Lee. In 1991, he wrote a
-                    document called “HTML Tags” in which he proposed fewer than
-                    two dozen elements that could be used for writing web pages.
-                  </p>
-                </blockquote>
+									<figure>
+										<img
+											src="https://qph.cf2.quoracdn.net/main-qimg-d6669176601357c5b45e963dd938d30d-pjlq"
+											alt="Quora Image Example"
+											style="width: 100%; height: auto" />
+										<figcaption>
+											Source:
+											<a href="https://www.quora.com/" target="_blank">Quora - Image Example</a>
+										</figcaption>
+									</figure>
 
-                <blockquote>
-                  <p>
-                    Sir Tim didn't come up with the idea of using tags
-                    consisting of words between angle brackets; those kinds of
-                    tags already existed in the SGML (Standard Generalized
-                    Markup Language) format. Rather than inventing a new
-                    standard, Sir Tim saw the benefit of building on top of what
-                    already existed—a trend that can still be seen in the
-                    development of HTML5.
-                  </p>
-                </blockquote>
-                <cite>(Keith 2016, 5-6)</cite>
-              </article>
-            </div>
-          </div>
+									<blockquote>
+										<p>
+											As with the web itself, the HyperText Markup Language was the brainchild of Sir Tim Berners-Lee. In 1991, he
+											wrote a document called “HTML Tags” in which he proposed fewer than two dozen elements that could be used for
+											writing web pages.
+										</p>
+									</blockquote>
 
-          <!--  Section -->
-          <div
-            class="slide grid-container"
-            id="pwa"
-            aria-label="Fourth Parallax Section"
-          >
-            <div class="collection-title">
-              <h2>Progressive Web Applications</h2>
-            </div>
+									<blockquote>
+										<p>
+											Sir Tim didn't come up with the idea of using tags consisting of words between angle brackets; those kinds of
+											tags already existed in the SGML (Standard Generalized Markup Language) format. Rather than inventing a new
+											standard, Sir Tim saw the benefit of building on top of what already existed—a trend that can still be seen
+											in the development of HTML5.
+										</p>
+									</blockquote>
+									<cite>(Keith 2016, 5-6)</cite>
+								</article>
+							</div>
+						</div>
 
-            <div class="fluid-columns">
-              <article>
-                <h4>Progressive Web Applications (PWAs)</h4>
-                <blockquote>
-                  <p>
-                    A Progressive Web App (PWA) is a web app that leverages
-                    special browser capabilities that enable the app to act more
-                    like a native or mobile app when running on capable
-                    browsers. That's it, that's all that needs to be said.
-                  </p>
-                </blockquote>
-                <cite>(Wargo 2020, p. 18)</cite>
+						<!--  Section -->
+						<div class="slide grid-container" id="pwa" aria-label="Fourth Parallax Section">
+							<div class="collection-title">
+								<h2>Progressive Web Applications</h2>
+							</div>
 
-                <figure>
-                  <img
-                    src="https://images.contentstack.io/v3/assets/bltb1a38d5d52a9d1a1/blt2a4948584af06782/65d73662dbbd5bc81f8c7945/14_pwa.png?width=544&auto=webp&format=pjpg&disable=upscale&quality=100&dpr=2"
-                    alt="PWA Diagram"
-                    style="width: 100%; height: auto"
-                  />
-                  <figcaption>
-                    Source:
-                    <a href="https://www.contentstack.com/" target="_blank"
-                      >Contentstack - PWA Diagram</a
-                    >
-                  </figcaption>
-                </figure>
+							<div class="fluid-columns">
+								<article>
+									<h4>Progressive Web Applications (PWAs)</h4>
+									<blockquote>
+										<p>
+											A Progressive Web App (PWA) is a web app that leverages special browser capabilities that enable the app to
+											act more like a native or mobile app when running on capable browsers. That's it, that's all that needs to be
+											said.
+										</p>
+									</blockquote>
+									<cite>(Wargo 2020, p. 18)</cite>
 
-                <blockquote>
-                  <p>
-                    What is a 'web application?' It is a client-server
-                    application that uses a web browser as its client program.
-                  </p>
-                </blockquote>
-                <cite>(Shklar &amp; Rosen 2012, p. 1.3)</cite>
+									<figure>
+										<img
+											src="https://images.contentstack.io/v3/assets/bltb1a38d5d52a9d1a1/blt2a4948584af06782/65d73662dbbd5bc81f8c7945/14_pwa.png?width=544&auto=webp&format=pjpg&disable=upscale&quality=100&dpr=2"
+											alt="PWA Diagram"
+											style="width: 100%; height: auto" />
+										<figcaption>
+											Source:
+											<a href="https://www.contentstack.com/" target="_blank">Contentstack - PWA Diagram</a>
+										</figcaption>
+									</figure>
 
-                <blockquote>
-                  <p>
-                    Major browser vendors have been working together to improve
-                    the way we build for the web and have created a new set of
-                    features that give web developers the ability to create
-                    fast, reliable, and engaging websites. A PWA should be all
-                    of these things:
-                  </p>
+									<blockquote>
+										<p>
+											What is a 'web application?' It is a client-server application that uses a web browser as its client program.
+										</p>
+									</blockquote>
+									<cite>(Shklar &amp; Rosen 2012, p. 1.3)</cite>
 
-                  <ul>
-                    <li>Responsive</li>
-                    <li>Connectivity-independent</li>
-                    <li>Interactive with a feel like a native app's</li>
-                    <li>Always up-to-date</li>
-                    <li>Safe</li>
-                    <li>Discoverable</li>
-                    <li>Re-engageable</li>
-                    <li>Installable</li>
-                    <li>Linkable</li>
-                  </ul>
-                </blockquote>
-                <cite>(Hume &amp; Osmani 2018, pp. 34-35)</cite>
+									<blockquote>
+										<p>
+											Major browser vendors have been working together to improve the way we build for the web and have created a
+											new set of features that give web developers the ability to create fast, reliable, and engaging websites. A
+											PWA should be all of these things:
+										</p>
 
-                <blockquote>
-                  <p>
-                    PWAs point to a file known as a manifest file that contains
-                    information about the website, including its icons,
-                    background screen, colors, and default orientation. […] A
-                    PWA should also be able to work offline. Using Service
-                    Workers, you can selectively cache parts of your site to
-                    provide an offline experience.
-                  </p>
-                </blockquote>
-                <cite>(Hume &amp; Osmani 2018, pp. 24-25)</cite>
+										<ul>
+											<li>Responsive</li>
+											<li>Connectivity-independent</li>
+											<li>Interactive with a feel like a native app's</li>
+											<li>Always up-to-date</li>
+											<li>Safe</li>
+											<li>Discoverable</li>
+											<li>Re-engageable</li>
+											<li>Installable</li>
+											<li>Linkable</li>
+										</ul>
+									</blockquote>
+									<cite>(Hume &amp; Osmani 2018, pp. 34-35)</cite>
 
-                <figure>
-                  <img
-                    src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*Dlr1sdN1idUXk9MKImD0Mw.png"
-                    alt="GraphQL API Query Diagram"
-                    style="width: 100%; height: auto"
-                  />
-                  <figcaption>
-                    Source:
-                    <a
-                      href="https://medium.com/@yourhandle/graphql-a-paradigm-shift-in-api-querying"
-                      target="_blank"
-                      >Medium - GraphQL API Query Diagram</a
-                    >
-                  </figcaption>
-                </figure>
-              </article>
-            </div>
-          </div>
+									<blockquote>
+										<p>
+											PWAs point to a file known as a manifest file that contains information about the website, including its
+											icons, background screen, colors, and default orientation. […] A PWA should also be able to work offline.
+											Using Service Workers, you can selectively cache parts of your site to provide an offline experience.
+										</p>
+									</blockquote>
+									<cite>(Hume &amp; Osmani 2018, pp. 24-25)</cite>
 
-          <!--  Section -->
-          <div
-            class="slide grid-container"
-            id="networking"
-            aria-label="Fifth Parallax Section"
-          >
-            <div class="collection-title">
-              <h2>Networking</h2>
-            </div>
+									<figure>
+										<img
+											src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*Dlr1sdN1idUXk9MKImD0Mw.png"
+											alt="GraphQL API Query Diagram"
+											style="width: 100%; height: auto" />
+										<figcaption>
+											Source:
+											<a href="https://medium.com/@yourhandle/graphql-a-paradigm-shift-in-api-querying" target="_blank">
+												Medium - GraphQL API Query Diagram
+											</a>
+										</figcaption>
+									</figure>
+								</article>
+							</div>
+						</div>
 
-            <div class="fluid-columns">
-              <article>
-                <h4>TCP/IP and OSI Model</h4>
-                <blockquote>
-                  <p>
-                    OSI Network Architecture 7 Layers Model Open Systems
-                    Interconnection (OSI) model is a reference model developed
-                    by ISO (International Organization for Standardization) in
-                    1984, as a conceptual framework of standards for
-                    communication in the network across different equipment and
-                    applications by different vendors. It is now considered the
-                    primary architectural model for inter-computing and
-                    internetworking communications. Most of the network
-                    communication protocols used today have a structure based on
-                    the OSI model.
-                  </p>
-                </blockquote>
-                <cite>(Network Protocols Handbook 2007)</cite>
+						<!--  Section -->
+						<div class="slide grid-container" id="networking" aria-label="Fifth Parallax Section">
+							<div class="collection-title">
+								<h2>Networking</h2>
+							</div>
 
-                <blockquote>
-                  <p>
-                    The TCP/IP Protocol Suite. TCP/IP, the protocol on which the
-                    Internet is built, is not a single protocol but rather an
-                    entire suite of related protocols. TCP is even older than
-                    Ethernet. It was first conceived in 1969 by the Department
-                    of Defense. For more on the history of TCP/IP, see the
-                    sidebar, “The fascinating story of TCP/IP,” later in this
-                    chapter. Currently, the Internet Engineering Task Force
-                    (IETF) manages the TCP/IP protocol suite.
-                  </p>
-                </blockquote>
+							<div class="fluid-columns">
+								<article>
+									<h4>TCP/IP and OSI Model</h4>
+									<blockquote>
+										<p>
+											OSI Network Architecture 7 Layers Model Open Systems Interconnection (OSI) model is a reference model
+											developed by ISO (International Organization for Standardization) in 1984, as a conceptual framework of
+											standards for communication in the network across different equipment and applications by different vendors.
+											It is now considered the primary architectural model for inter-computing and internetworking communications.
+											Most of the network communication protocols used today have a structure based on the OSI model.
+										</p>
+									</blockquote>
+									<cite>(Network Protocols Handbook 2007)</cite>
 
-                <blockquote>
-                  <p>
-                    The TCP/IP suite is based on a four-layer model of
-                    networking similar to the seven-layer OSI model. Figure 1-7
-                    shows how the TCP/IP model matches up with the OSI model and
-                    where some of the key TCP/IP protocols fit into the model.
-                    As you can see, the lowest layer of the model, the network
-                    interface layer, corresponds to the OSI model's physical and
-                    data link layers. TCP/IP can run over a wide variety of
-                    network interface layer protocols, including Ethernet, as
-                    well as other protocols, such as token ring and FDDI (an
-                    older standard for fiber-optic networks). The application
-                    layer of the TCP/IP model corresponds to the upper three
-                    layers of the OSI model — the session, presentation, and
-                    application layers. Many protocols can be used at this
-                    level. A few of the most popular are HTTP, FTP, Telnet,
-                    SMTP, DNS, and SNMP.
-                  </p>
-                </blockquote>
+									<blockquote>
+										<p>
+											The TCP/IP Protocol Suite. TCP/IP, the protocol on which the Internet is built, is not a single protocol but
+											rather an entire suite of related protocols. TCP is even older than Ethernet. It was first conceived in 1969
+											by the Department of Defense. For more on the history of TCP/IP, see the sidebar, “The fascinating story of
+											TCP/IP,” later in this chapter. Currently, the Internet Engineering Task Force (IETF) manages the TCP/IP
+											protocol suite.
+										</p>
+									</blockquote>
 
-                <figure>
-                  <img
-                    src="https://www.simplilearn.com/ice9/free_resources_article_thumb/TCP_Model_7.png"
-                    alt="TCP/IP Model Diagram"
-                    style="width: 100%; height: auto"
-                  />
-                  <figcaption>
-                    Source:
-                    <a
-                      href="https://www.simplilearn.com/tutorials/cyber-security-tutorial/what-is-tcp-ip-model"
-                      target="_blank"
-                      >Simplilearn - TCP/IP Model</a
-                    >
-                  </figcaption>
-                </figure>
+									<blockquote>
+										<p>
+											The TCP/IP suite is based on a four-layer model of networking similar to the seven-layer OSI model. Figure
+											1-7 shows how the TCP/IP model matches up with the OSI model and where some of the key TCP/IP protocols fit
+											into the model. As you can see, the lowest layer of the model, the network interface layer, corresponds to
+											the OSI model's physical and data link layers. TCP/IP can run over a wide variety of network interface layer
+											protocols, including Ethernet, as well as other protocols, such as token ring and FDDI (an older standard for
+											fiber-optic networks). The application layer of the TCP/IP model corresponds to the upper three layers of the
+											OSI model — the session, presentation, and application layers. Many protocols can be used at this level. A
+											few of the most popular are HTTP, FTP, Telnet, SMTP, DNS, and SNMP.
+										</p>
+									</blockquote>
+									<cite>(Lowe 2021, p. 141)</cite>
 
-                <cite>(Lowe 2021, p. 141)</cite>
-              </article>
-            </div>
-          </div>
+									<figure>
+										<img
+											src="https://www.simplilearn.com/ice9/free_resources_article_thumb/TCP_Model_7.png"
+											alt="TCP/IP Model Diagram"
+											style="width: 100%; height: auto" />
+										<figcaption>
+											Source:
+											<a href="https://www.simplilearn.com/tutorials/cyber-security-tutorial/what-is-tcp-ip-model" target="_blank">
+												Simplilearn - TCP/IP Model
+											</a>
+										</figcaption>
+									</figure>
+								</article>
+							</div>
+						</div>
 
-          <!--  Section -->
-          <div
-            class="slide grid-container"
-            id="apis"
-            aria-label="Sixth Parallax Section"
-          >
-            <div class="collection-title">
-              <h2>Application Programming Interfaces</h2>
-            </div>
+						<!--  Section -->
+						<div class="slide grid-container" id="apis" aria-label="Sixth Parallax Section">
+							<div class="collection-title">
+								<h2>Application Programming Interfaces</h2>
+							</div>
 
-            <div class="fluid-columns">
-              <article>
-                <h4>APIs and GraphQL</h4>
-                <blockquote>
-                  <p>
-                    In the dynamic landscape of modern web development, APIs
-                    (Application Programming Interfaces) play a pivotal role,
-                    enabling seamless communication between different software
-                    components and services. […] As the backbone of modern web
-                    applications, APIs are essential for connecting diverse
-                    systems, enabling developers to harness the power of
-                    third-party services, and fostering interoperability. […]
-                    REST (Representational State Transfer) is a fundamental
-                    architectural style that underpins many of the APIs that we
-                    interact with daily. The client-server model is at the heart
-                    of REST, defining clear roles and responsibilities for both
-                    clients and servers. APIs also encourage modularity,
-                    reusability, and collaboration among development teams.
-                    Rather than building everything from scratch, developers can
-                    focus on their core competencies and utilize APIs to handle
-                    specialized tasks such as payment processing,
-                    authentication, geolocation, and more.
-                  </p>
-                </blockquote>
-                <cite>(Selvaraj 2024, pp. 1-4)</cite>
+							<div class="fluid-columns">
+								<article>
+									<h4>APIs and GraphQL</h4>
+									<blockquote>
+										<p>
+											In the dynamic landscape of modern web development, APIs (Application Programming Interfaces) play a pivotal
+											role, enabling seamless communication between different software components and services. […] As the backbone
+											of modern web applications, APIs are essential for connecting diverse systems, enabling developers to harness
+											the power of third-party services, and fostering interoperability. […] REST (Representational State Transfer)
+											is a fundamental architectural style that underpins many of the APIs that we interact with daily. The
+											client-server model is at the heart of REST, defining clear roles and responsibilities for both clients and
+											servers. APIs also encourage modularity, reusability, and collaboration among development teams. Rather than
+											building everything from scratch, developers can focus on their core competencies and utilize APIs to handle
+											specialized tasks such as payment processing, authentication, geolocation, and more.
+										</p>
+									</blockquote>
+									<cite>(Selvaraj 2024, pp. 1-4)</cite>
 
-                <figure>
-                  <img
-                    src="https://restfulapi.net/wp-content/uploads/what-is-rest-api.png"
-                    alt="REST API Diagram"
-                    style="width: 100%; height: auto"
-                  />
-                  <figcaption>
-                    Source:
-                    <a href="https://restfulapi.net/" target="_blank"
-                      >RESTful API - What is REST API</a
-                    >
-                  </figcaption>
-                </figure>
+									<figure>
+										<img
+											src="https://restfulapi.net/wp-content/uploads/what-is-rest-api.png"
+											alt="REST API Diagram"
+											style="width: 100%; height: auto" />
+										<figcaption>
+											Source:
+											<a href="https://restfulapi.net/" target="_blank">RESTful API - What is REST API</a>
+										</figcaption>
+									</figure>
 
-                <blockquote>
-                  <p>
-                    GraphQL: A Paradigm Shift in API Querying. GraphQL is a
-                    query language and runtime for APIs that enables clients to
-                    precisely request the data they need, reducing over-fetching
-                    and minimizing round-trips to the server. Its key advantages
-                    include: Efficiency: Clients control the data they receive,
-                    eliminating unnecessary data transfers. Flexibility: A
-                    single GraphQL endpoint allows for complex queries and
-                    mutations. Strong typing: A schema defines the available
-                    types and operations, leading to clear and validated
-                    documentation.
-                  </p>
-                </blockquote>
-                <cite>(Selvaraj 2024, pp. 496-497)</cite>
+									<blockquote>
+										<p>
+											GraphQL: A Paradigm Shift in API Querying. GraphQL is a query language and runtime for APIs that enables
+											clients to precisely request the data they need, reducing over-fetching and minimizing round-trips to the
+											server. Its key advantages include: Efficiency: Clients control the data they receive, eliminating
+											unnecessary data transfers. Flexibility: A single GraphQL endpoint allows for complex queries and mutations.
+											Strong typing: A schema defines the available types and operations, leading to clear and validated
+											documentation.
+										</p>
+									</blockquote>
+									<cite>(Selvaraj 2024, pp. 496-497)</cite>
 
-                <figure>
-                  <img
-                    src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2022/10/21/Fig1-how-graphql-works.png"
-                    alt="How GraphQL Works Diagram"
-                    style="width: 100%; height: auto"
-                  />
-                  <figcaption>
-                    Source:
-                    <a
-                      href="https://aws.amazon.com/blogs/mobile/how-graphql-works/"
-                      target="_blank"
-                      >AWS - How GraphQL Works</a
-                    >
-                  </figcaption>
-                </figure>
-              </article>
-            </div>
-          </div>
+									<figure>
+										<img
+											src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2022/10/21/Fig1-how-graphql-works.png"
+											alt="How GraphQL Works Diagram"
+											style="width: 100%; height: auto" />
+										<figcaption>
+											Source:
+											<a href="https://aws.amazon.com/blogs/mobile/how-graphql-works/" target="_blank">AWS - How GraphQL Works</a>
+										</figcaption>
+									</figure>
+								</article>
+							</div>
+						</div>
 
-          <!--  Section -->
-          <div
-            class="slide grid-container"
-            id="responsiveness"
-            aria-label="Sixth Parallax Section"
-          >
-            <div class="collection-title">
-              <h2>Responsiveness</h2>
-            </div>
+						<!--  Section -->
+						<div class="slide grid-container" id="responsiveness" aria-label="Sixth Parallax Section">
+							<div class="collection-title">
+								<h2>Responsiveness</h2>
+							</div>
 
-            <div class="fluid-columns">
-              <article>
-                <h4>Responsive Web Design</h4>
-                <blockquote>
-                  <p>
-                    Responsive Web Design (RWD) is a strategy for providing
-                    appropriate layouts to devices based on the size of the
-                    viewport (browser window). The key to Responsive Web Design
-                    is serving a single HTML document (with one URL) to all
-                    devices, but applying different style sheets based on the
-                    screen size in order to provide the most optimized layout
-                    for that device.
-                  </p>
-                </blockquote>
-                <cite>(Niederst Robbins 2018, 40)</cite>
+							<div class="fluid-columns">
+								<article>
+									<h4>Responsive Web Design</h4>
+									<blockquote>
+										<p>
+											Responsive Web Design (RWD) is a strategy for providing appropriate layouts to devices based on the size of
+											the viewport (browser window). The key to Responsive Web Design is serving a single HTML document (with one
+											URL) to all devices, but applying different style sheets based on the screen size in order to provide the
+											most optimized layout for that device.
+										</p>
+									</blockquote>
+									<cite>(Niederst Robbins 2018, 40)</cite>
 
-                <blockquote>
-                  <p>
-                    In 2010, Ethan Marcotte gave name to another, more flexible
-                    solution in his article “Responsive Web Design”
-                    (alistapart.com/article/responsive-webdesign), which has
-                    since become a cornerstone of modern web design. In this
-                    chapter, I will follow the “ingredients” for RWD that Ethan
-                    outlines in his book Responsive Web Design (A Book Apart).
-                  </p>
-                  <p>The technique has three core components:</p>
-                  <ul>
-                    <li>
-                      A flexible grid Rather than remaining at a static width,
-                      responsive sites use methods that allow them to squeeze
-                      and flow into the available browser space.
-                    </li>
-                    <li>
-                      Flexible images Images and other embedded media need to be
-                      able to scale to fit their containing elements.
-                    </li>
-                    <li>
-                      CSS media queries Media queries give us a way to deliver
-                      sets of rules only to devices that meet certain criteria,
-                      such as width and orientation.
-                    </li>
-                  </ul>
-                  <p>
-                    To this list of ingredients, I would add the viewport meta
-                    element, which makes the width of the web page match the
-                    width of the screen. That's where we'll begin our tour of
-                    the mechanics of RWD.
-                  </p>
-                </blockquote>
-                <cite>(Niederst Robbins 2018, 487)</cite>
+									<blockquote>
+										<p>
+											In 2010, Ethan Marcotte gave name to another, more flexible solution in his article “Responsive Web Design”
+											(alistapart.com/article/responsive-webdesign), which has since become a cornerstone of modern web design. In
+											this chapter, I will follow the “ingredients” for RWD that Ethan outlines in his book Responsive Web Design
+											(A Book Apart).
+										</p>
+										<p>The technique has three core components:</p>
+										<ul>
+											<li>
+												A flexible grid Rather than remaining at a static width, responsive sites use methods that allow them to
+												squeeze and flow into the available browser space.
+											</li>
+											<li>
+												Flexible images Images and other embedded media need to be able to scale to fit their containing elements.
+											</li>
+											<li>
+												CSS media queries Media queries give us a way to deliver sets of rules only to devices that meet certain
+												criteria, such as width and orientation.
+											</li>
+										</ul>
+										<p>
+											To this list of ingredients, I would add the viewport meta element, which makes the width of the web page
+											match the width of the screen. That's where we'll begin our tour of the mechanics of RWD.
+										</p>
+									</blockquote>
+									<cite>(Niederst Robbins 2018, 487)</cite>
 
-                <blockquote>
-                  <p>
-                    We can make the page more mobile friendly by adding this
-                    snippet in the <code>&lt;head&gt;</code>:
-                    <code
-                      >&lt;meta name="viewport"
-                      content="width=device-width,initial-scale=1.0" /
-                      &gt;</code
-                    >
-                  </p>
-                  <p>
-                    This viewport meta tag is the non-standard but de facto way
-                    of telling the browser how to render the page. Although
-                    introduced to the web by Apple, rather than a standard
-                    process, it remains essential for responsive web design.
-                  </p>
-                </blockquote>
-                <cite>(Frain 2022, 12)</cite>
-              </article>
-            </div>
-          </div>
+									<blockquote>
+										<p>
+											We can make the page more mobile friendly by adding this snippet in the
+											<code>&lt;head&gt;</code>
+											:
+										</p>
+										<!-- prettier-ignore -->
+										<pre><code>&lt;meta name="viewport" content="width=device-width,initial-scale=1.0" /&gt;</code></pre>
 
-          <!--  Section -->
-          <div
-            class="slide grid-container"
-            id="versioncontrol"
-            aria-label="Sixth Parallax Section"
-          >
-            <div class="collection-title">
-              <h2>Version Control</h2>
-            </div>
+										<p>
+											This viewport meta tag is the non-standard but de facto way of telling the browser how to render the page.
+											Although introduced to the web by Apple, rather than a standard process, it remains essential for responsive
+											web design.
+										</p>
+									</blockquote>
+									<cite>(Frain 2022, 12)</cite>
+								</article>
+							</div>
+						</div>
 
-            <div class="fluid-columns">
-              <article>
-                <h4>Git</h4>
-                <blockquote>
-                  <p>
-                    Git is a technology that can be used to track changes to a
-                    project and to help multiple people to collaborate on a
-                    project. At a basic level, a project version controlled by
-                    Git consists of a folder with files in it, and Git tracks
-                    the changes that are made to the files in the project. This
-                    allows you to save different versions of the work you're
-                    doing, which is why we call Git a version control system.
-                  </p>
-                  <p>
-                    Git was created by Linus Torvalds to version control the
-                    work done on a large software development project called the
-                    Linux kernel. However, since Git can track changes to all
-                    sorts of files, it can be used for a wide variety of
-                    projects.
-                  </p>
+						<!--  Section -->
+						<div class="slide grid-container" id="versioncontrol" aria-label="Sixth Parallax Section">
+							<div class="collection-title">
+								<h2>Version Control</h2>
+							</div>
 
-                  <cite>(Skoulikari 2023, 17)</cite>
-                </blockquote>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  </body>
+							<div class="fluid-columns">
+								<article>
+									<h4>Git</h4>
+									<blockquote>
+										<p>
+											Git is a technology that can be used to track changes to a project and to help multiple people to collaborate
+											on a project. At a basic level, a project version controlled by Git consists of a folder with files in it,
+											and Git tracks the changes that are made to the files in the project. This allows you to save different
+											versions of the work you're doing, which is why we call Git a version control system.
+										</p>
+										<p>
+											Git was created by Linus Torvalds to version control the work done on a large software development project
+											called the Linux kernel. However, since Git can track changes to all sorts of files, it can be used for a
+											wide variety of projects.
+										</p>
+
+										<cite>(Skoulikari 2023, 17)</cite>
+									</blockquote>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
 </html>

@@ -1,0 +1,33 @@
+:root {
+	/* Set the CSS variable based on an estimated height */
+	--header-height: 80px;
+	--footer-height: 68px;
+	--text-2xs: clamp(0.75rem, 0.8vw + 0.4rem, 1rem);
+	--text-xs: clamp(0.875rem, 1vw + 0.5rem, 1.2rem);
+	--text-base: clamp(1rem, 2vw + 1rem, 2rem);
+	--text-lg: clamp(1.25rem, 2.5vw + 1.25rem, 2.5rem);
+	--text-xl: clamp(1.5rem, 3vw + 1rem, 3rem);
+	--text-2xl: clamp(2rem, 4vw + 1.5rem, 5rem);
+	--text-3xl: clamp(2.5rem, 5vw + 2rem, 6rem);
+
+	/* Line heights set in em are relative to the font size of their immediate container
+     while rem scale with the root font size (default 16px). 
+     This means they scale directly with the font size, ensuring proportional spacing within elements. */
+	--line-height-2xs: clamp(1.1em, 0.8vw + 1.1em, 1.2em);
+	--line-height-xs: clamp(1.2em, 1vw + 1.2em, 1.4em);
+	--line-height-base: clamp(1.4em, 1.5vw + 1.4em, 1.6em);
+	--line-height-lg: clamp(1.5em, 1.8vw + 1.5em, 1.8em);
+	--line-height-xl: clamp(1.6em, 2vw + 1.6em, 1.9em);
+	--line-height-2xl: clamp(1.8em, 2.5vw + 1.8em, 2.2em);
+	--line-height-3xl: clamp(2em, 3vw + 2em, 2.5em);
+
+	--border-radius: 8px;
+}
+
+/* All elements (and their pseudo-elements) are sized so that
+   padding and borders don’t add to the element’s total size. */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}

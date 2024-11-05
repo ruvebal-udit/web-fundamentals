@@ -5,20 +5,22 @@
 */
 
 /* Mobile Portrait */
-@media only screen and (max-width: 600px) and (orientation: portrait) {}
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+}
 .responsive-image {
 	transform: rotate(90deg);
 }
 /* EndOf MobilePortrait */
 
 /* Mobile Landscape */
-@media only screen and (max-width: 800px) and (orientation: landscape) {}
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+}
 
 /* Tablet Portrait */
 @media only screen and (min-width: 601px) and (max-width: 1200px) and (orientation: portrait) {
 	.responsive-image {
-        transform: rotate(90deg);
-    }
+		transform: rotate(90deg);
+	}
 
 	/* Navbar */
 	.nav-menu {
@@ -42,12 +44,30 @@
 	}
 
 	/* EndOf Navbar */
+
+	.grid {
+		grid-template-columns: 250px 1fr;
+		grid-template-areas: 'sidebar content';
+	}
+
+	main.grid {
+		grid-template-columns: 1fr;
+		grid-template-areas: 'content';
+	}
+
+	.toc {
+		position: relative;
+		transform: translateX(0);
+		box-shadow: none;
+	}
+
+	.sidebar-toggle-btn {
+		display: none;
+	}
 }
 
 /* Tablet Landscape */
 @media only screen and (min-width: 801px) and (max-width: 1200px) and (orientation: landscape) {
-
-
 	/* Navbar */
 	.nav-menu {
 		display: none;
@@ -70,11 +90,30 @@
 	}
 
 	/* EndOf Navbar */
+
+	.grid {
+		grid-template-columns: 250px 1fr;
+		grid-template-areas: 'sidebar content';
+	}
+
+	main.grid {
+		grid-template-columns: 1fr;
+		grid-template-areas: 'content';
+	}
+
+	.toc {
+		position: relative;
+		transform: translateX(0);
+		box-shadow: none;
+	}
+
+	.sidebar-toggle-btn {
+		display: none;
+	}
 }
 
 /* Small Desktop */
 @media only screen and (min-width: 1201px) and (max-width: 1600px) {
-
 	/* Navbar */
 	.nav-menu {
 		display: none;
@@ -97,12 +136,30 @@
 	}
 
 	/* EndOf Navbar */
+
+	.grid {
+		grid-template-columns: 250px 1fr;
+		grid-template-areas: 'sidebar content';
+	}
+
+	main.grid {
+		grid-template-columns: 1fr;
+		grid-template-areas: 'content';
+	}
+
+	.toc {
+		position: relative;
+		transform: translateX(0);
+		box-shadow: none;
+	}
+
+	.sidebar-toggle-btn {
+		display: none;
+	}
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 1601px) {
-
-
 	/* Navbar */
 	.nav-menu {
 		display: none;
@@ -125,4 +182,24 @@
 	}
 
 	/* EndOf Navbar */
+
+	.grid {
+		grid-template-columns: 250px 1fr;
+		grid-template-areas: 'sidebar content';
+	}
+
+	main.grid {
+		grid-template-columns: 1fr;
+		grid-template-areas: 'content';
+	}
+
+	.toc {
+		position: relative;
+		transform: translateX(0);
+		box-shadow: none;
+	}
+
+	.sidebar-toggle-btn {
+		display: none;
+	}
 }
