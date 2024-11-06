@@ -5,13 +5,17 @@ body {
 
 body {
 	font-family: 'Helvetica Neue', sans-serif;
-	min-height: 100vh;
-	background-color: var(--background);
-	color: var(--secondary-foreground);
 	justify-content: center;
 	align-items: center;
-	font-size: var(--text-base);
-	line-height: var(--line-height-base);
+	font-size: var(--text-sm);
+	line-height: var(--line-height-sm);
+}
+
+.theme {
+	min-height: 100vh;
+	transition: color 0.3s, background-color 0.3s;
+	background-color: var(--background);
+	color: var(--secondary-foreground);
 }
 
 /*  When the body has display: flex;
@@ -129,9 +133,13 @@ em {
 	font-style: italic;
 }
 
+strong {
+	font-weight: 700;
+}
+
 p {
 	margin-bottom: 1rem;
-	color: #333;
+	color: var(--black);
 }
 
 article {
@@ -151,15 +159,22 @@ blockquote {
 }
 
 p,
-cite,
 li,
 figcaption,
 pre {
-	font-family: 'OCR-B';
+	font-family: 'adobe-caslon-pro';
+	font-size: var(--text-xs);
+	line-height: var(--line-height-xs);
+	margin-bottom: 1rem;
+}
+
+figcaption,
+cite {
+	font-family: 'adobe-caslon-pro';
 	font-size: var(--text-2xs);
 	line-height: var(--line-height-2xs);
-	margin-bottom: 1rem;
-	letter-spacing: -0.2em;
+	margin-bottom: 2.5rem;
+	margin-top: 1rem;
 }
 
 ul {
@@ -193,7 +208,7 @@ cite {
 	text-align: left;
 	display: block;
 	margin-top: 10px;
-	color: var(--primary);
+	color: var(--primary-foreground);
 }
 
 .highlight {
@@ -252,7 +267,7 @@ pre {
 	color: #f8f8f2;
 	padding: 10px;
 	border-radius: var(--border-radius);
-	margin: 0;
+	margin: 0 0 1.5rem 0;
 	overflow: auto;
 	white-space: pre-wrap;
 }

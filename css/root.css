@@ -22,6 +22,43 @@
 	--line-height-3xl: clamp(2em, 3vw + 2em, 2.5em);
 
 	--border-radius: 8px;
+
+	/* Combinations */
+
+	.card {
+		background-color: var(--card);
+		color: var(--card-foreground);
+	}
+
+	.popover {
+		background-color: var(--popover);
+		color: var(--popover-foreground);
+	}
+
+	.primary {
+		background-color: var(--primary);
+		color: var(--primary-foreground);
+	}
+
+	.secondary {
+		background-color: var(--secondary);
+		color: var(--secondary-foreground);
+	}
+
+	.muted {
+		background-color: var(--muted);
+		color: var(--muted-foreground);
+	}
+
+	.accent {
+		background-color: var(--accent);
+		color: var(--accent-foreground);
+	}
+
+	.destructive {
+		background-color: var(--destructive);
+		color: var(--destructive-foreground);
+	}
 }
 
 /* All elements (and their pseudo-elements) are sized so that

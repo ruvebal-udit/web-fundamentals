@@ -1,0 +1,85 @@
+/* Default Theme - Purple */
+:root {
+  --black: hsla(318, 15%, 10%, 0.97);
+  --white: hsla(291, 20%, 95%, 0.97);
+
+  --background: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --foreground: hsla(50, 90%, 36%, 1); /* #B39909 */
+
+  --card: hsla(303, 50%, 43%, 0.9); /* #A6369F */
+  --card-foreground: hsla(50, 100%, 54%, 0.9); /* #FFDC19 */
+
+  --popover: hsla(303, 47%, 39%, 0.8); /* #963590 */
+  --popover-foreground: hsla(213, 100%, 35%, 0.8); /* #0050B3 */
+
+  --primary: hsla(307, 45%, 50%, 0.75); /* #B946AB */
+  --primary-foreground: hsla(22, 90%, 36%, 0.75); /* #B34A09 */
+
+  --secondary: hsla(291, 46%, 42%, 0.69); /* #923AA0 */
+  --secondary-foreground: hsla(22, 100%, 54%, 0.69); /* #FF7119 */
+
+  --muted: hsla(307, 45%, 50%, 0.75); /* #B946AB */
+  --muted-foreground: hsla(318, 58%, 38%, 1); /* #9B2978 */
+
+  --accent: hsla(291, 46%, 42%, 0.69); /* #923AA0 */
+  --accent-foreground: hsla(50, 100%, 54%, 0.9); /* #FFDC19 */
+
+  --destructive: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --destructive-foreground: hsla(213, 100%, 35%, 0.8); /* #0050B3 */
+
+  --border: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --input: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --ring: hsla(307, 45%, 50%, 0.75); /* #B946AB */
+}
+
+/* Alternate Theme - Indigo */
+#theme-toggle:checked ~ * {
+  --black: hsla(213, 15%, 10%, 0.97);
+  --white: hsla(201, 20%, 95%, 0.97);
+
+  --background: hsla(213, 100%, 18%, 1); /* #00295E */
+  --foreground: hsla(1, 60%, 49%, 1); /* #C93532 */
+
+  --card: hsla(215, 100%, 26%, 0.9); /* #003889 */
+  --card-foreground: hsla(1, 91%, 86%, 0.9); /* #FCBFBD */
+
+  --popover: hsla(212, 100%, 35%, 0.8); /* #0051B3 */
+  --popover-foreground: hsla(303, 47%, 39%, 0.8); /* #963590 */
+
+  --primary: hsla(204, 100%, 38%, 0.75); /* #0073C5 */
+  --primary-foreground: hsla(50, 100%, 54%, 0.75); /* #FFDC19 */
+
+  --secondary: hsla(201, 59%, 66%, 0.69); /* #78B9DD */
+  --secondary-foreground: hsla(50, 90%, 36%, 0.69); /* #B39909 */
+
+  --muted: hsla(204, 100%, 38%, 0.75); /* #0073C5 */
+  --muted-foreground: hsla(213, 100%, 18%, 1); /* #00295E */
+
+  --accent: hsla(201, 59%, 66%, 0.69); /* #78B9DD */
+  --accent-foreground: hsla(1, 60%, 49%, 0.9); /* #C93532 */
+
+  --destructive: hsla(1, 60%, 49%, 1); /* #C93532 */
+  --destructive-foreground: hsla(303, 47%, 39%, 0.8); /* #963590 */
+
+  --border: hsla(1, 60%, 49%, 1); /* #C93532 */
+  --input: hsla(213, 100%, 18%, 1); /* #00295E */
+  --ring: hsla(204, 100%, 38%, 0.75); /* #0073C5 */
+}
+
+/* Button Styling */
+.theme-toggle-button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: var(--foreground);
+  color: var(--background);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle-button:before {
+  content: '🌞'; /* Light mode icon */
+}
+
+#theme-toggle:checked + .theme-toggle-button:before {
+  content: '🌜'; /* Dark mode icon */
+}
