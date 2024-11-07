@@ -399,12 +399,12 @@
 										<cite>(Network Protocols Handbook 2007)</cite>
 
 										<blockquote>
+											<p><strong>The TCP/IP Protocol Suite</strong></p>
 											<p>
-												The TCP/IP Protocol Suite. TCP/IP, the protocol on which the Internet is built, is not a single protocol but
-												rather an entire suite of related protocols. TCP is even older than Ethernet. It was first conceived in 1969
-												by the Department of Defense. For more on the history of TCP/IP, see the sidebar, “The fascinating story of
-												TCP/IP,” later in this chapter. Currently, the Internet Engineering Task Force (IETF) manages the TCP/IP
-												protocol suite.
+												TCP/IP, the protocol on which the Internet is built, is not a single protocol but rather an entire suite of
+												related protocols. TCP is even older than Ethernet. It was first conceived in 1969 by the Department of
+												Defense. For more on the history of TCP/IP, see the sidebar, “The fascinating story of TCP/IP,” later in
+												this chapter. Currently, the Internet Engineering Task Force (IETF) manages the TCP/IP protocol suite.
 											</p>
 										</blockquote>
 
@@ -436,6 +436,30 @@
 												</a>
 											</figcaption>
 										</figure>
+
+										<blockquote>
+											<p><strong>The Transport Layer</strong></p>
+											<p>
+												TCP (Transmission Control Protocol), is a reliable connection-oriented protocol that allows a byte stream
+												originating on one machine to be delivered without error on any other machine in the internet. It segments
+												the incoming byte stream into discrete messages and passes each one on to the internet layer. At the
+												destination, the receiving TCP process reassembles the received messages into the output stream.
+											</p>
+											<p><strong>The Application Layer</strong></p>
+											<p>
+												On top of the transport layer is the application layer. It contains all the higher- level protocols. The
+												early ones included virtual terminal (TELNET), file transfer (FTP), and electronic mail (SMTP). Many other
+												protocols have been added to these over the years. Some important ones that we will study, shown in Fig.
+												1-34, include the Domain Name System (DNS), for mapping host names onto their network addresses, HTTP, the
+												protocol for fetching pages on the World Wide Web, and RTP, the protocol for delivering real-time media such
+												as voice or movies.
+											</p>
+
+											<figure>
+												<img src="./assets/images/web/tcpip.png" alt="The TCP/IP model" style="width: 100%; height: auto" />
+											</figure>
+										</blockquote>
+										<cite>(Tanenbaum, Feamster &amp; Wetherall 2021)</cite>
 									</article>
 									<article>
 										<h4>TCP/IP Clients and Ports</h4>
