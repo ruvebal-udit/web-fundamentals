@@ -1,9 +1,11 @@
 :root {
-	/* Set the CSS variable based on an estimated height */
+	/* CSS Custom Properties */
 	--header-height: 80px;
 	--footer-height: 68px;
 	--aside-width: clamp(11rem, 10vw + 1.5rem, 19rem);
 	--gap: 0.33rem;
+	--border-radius: 8px;
+
 	--text-2xs: clamp(0.75rem, 0.8vw + 0.4rem, 1rem);
 	--text-xs: clamp(0.875rem, 1vw + 0.5rem, 1.2rem);
 	--text-base: clamp(1rem, 2vw + 1rem, 2rem);
@@ -15,52 +17,14 @@
 	/* Line heights set in em are relative to the font size of their immediate container
      while rem scale with the root font size (default 16px). 
      This means they scale directly with the font size, ensuring proportional spacing within elements. */
-	--line-height-2xs: clamp(1.1em, 0.8vw + 1.1em, 1.2em);
-	--line-height-xs: clamp(1.2em, 1vw + 1.2em, 1.4em);
-	--line-height-base: clamp(1.4em, 1.5vw + 1.4em, 1.6em);
-	--line-height-lg: clamp(1.5em, 1.8vw + 1.5em, 1.8em);
-	--line-height-xl: clamp(1.6em, 2vw + 1.6em, 1.9em);
-	--line-height-2xl: clamp(1.8em, 2.5vw + 1.8em, 2.2em);
-	--line-height-3xl: clamp(2em, 3vw + 2em, 2.5em);
 
-	--border-radius: 8px;
-
-	/* Combinations */
-
-	.card {
-		background-color: var(--card);
-		color: var(--card-foreground);
-	}
-
-	.popover {
-		background-color: var(--popover);
-		color: var(--popover-foreground);
-	}
-
-	.primary {
-		background-color: var(--primary);
-		color: var(--primary-foreground);
-	}
-
-	.secondary {
-		background-color: var(--secondary);
-		color: var(--secondary-foreground);
-	}
-
-	.muted {
-		background-color: var(--muted);
-		color: var(--muted-foreground);
-	}
-
-	.accent {
-		background-color: var(--accent);
-		color: var(--accent-foreground);
-	}
-
-	.destructive {
-		background-color: var(--destructive);
-		color: var(--destructive-foreground);
-	}
+	--line-height-2xs: clamp(1.1rem, 0.8vw + 1.1em, 1.2rem);
+	--line-height-xs: clamp(1.2rem, 1vw + 1.2em, 1.4rem);
+	--line-height-base: clamp(1.4rem, 1.5vw + 1.4em, 1.6rem);
+	--line-height-lg: clamp(1.5rem, 1.8vw + 1.5em, 1.8rem);
+	--line-height-xl: clamp(1.6rem, 2vw + 1.6em, 1.9rem);
+	--line-height-2xl: clamp(1.8rem, 2.5vw + 1.8em, 2.2rem);
+	--line-height-3xl: clamp(2rem, 3vw + 2em, 2.5rem);
 }
 
 /* All elements (and their pseudo-elements) are sized so that

@@ -2,7 +2,7 @@
 /* Default Mode */
 /* My Tyrian Purple Mode */
 :root {
-	--toggle-shape: '\25B2'; /* Unicode for filled triangle */
+	--toggle-shape: '\25D0'; /* Unicode for filled triangle */
 
 	--black: hsla(318, 15%, 10%, 0.97);
 	--white: hsla(291, 20%, 95%, 0.97);
@@ -39,7 +39,7 @@
 #theme-toggle:checked ~ * {
 	/* Background Colors - INDIGO Tyrian Shellfish */
 	/* Foreground Colors - COMPUND-PURPLE Tyrian Shellfish */
-	--toggle-shape: '\25A1'; /* Outlined Square for Dark Mode */
+	--toggle-shape: '\25D1'; /* Outlined Square for Dark Mode */
 
 	--black: hsla(213, 15%, 10%, 0.97);
 	--white: hsla(201, 20%, 95%, 0.97);
