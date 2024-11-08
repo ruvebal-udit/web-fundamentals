@@ -79,11 +79,11 @@ h1 {
 }
 
 h2 {
-	font-family: 'OCR-A';
+	/*font-family: 'OCR-A';*/
 	color: var(--primary-foreground);
 	font-size: var(--text-xl);
 	/* Large text for main headings */
-	line-height: var(--line-height-xl);
+	line-height: var(--line-height-2xl);
 	/* Responsive line height */
 	margin-bottom: 0.75rem;
 	font-weight: 700;
@@ -293,8 +293,8 @@ pre {
 
 .collection-title {
 	font-variant-caps: all-small-caps;
-	margin-bottom: 2rem;
-	margin-top: 2rem;
+	padding-bottom: 2rem;
+	padding-top: 2rem;
 }
 
 .responsive-image {
