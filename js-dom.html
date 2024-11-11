@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM Manipulation Examples</title>
+		<style>
+			/* Style for Class Manipulation Example */
+			.highlight {
+				color: red;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Example 1: Adding, Modifying, and Removing Elements -->
+		<h2>1. Adding, Modifying, and Removing Elements</h2>
+		<div id="container">Hello!</div>
+		<button onclick="addElement()">Add Element</button>
+		<button onclick="removeElement()">Remove Element</button>
+
+		<!-- Example 2: Changing Attributes and Styles -->
+		<h2>2. Changing Attributes and Styles</h2>
+		<img id="myImage" src="old-image.jpg" alt="Old Image" style="width: 100px" />
+		<button onclick="changeAttributes()">Change Image</button>
+
+		<!-- Example 3: Event Handling -->
+		<h2>3. Event Handling</h2>
+		<button id="myButton">Click Me!</button>
+		<p id="message"></p>
+
+		<!-- Example 4: Traversing the DOM -->
+		<h2>4. Traversing the DOM</h2>
+		<div id="parent">
+			<p>First child</p>
+			<p>Second child</p>
+		</div>
+		<button onclick="changeSecondChild()">Change Second Child</button>
+
+		<!-- Example 5: Class Manipulation -->
+		<h2>5. Class Manipulation</h2>
+		<p id="text">Hover over me!</p>
+
+		<!-- Example 6: Real-time Data Update -->
+		<h2>6. Real-time Data Update</h2>
+		<button onclick="fetchData()">Fetch Data</button>
+		<p id="dataDisplay">No data yet</p>
+
+		<script>
+			// Example 1: Adding, Modifying, and Removing Elements
+			function addElement() {
+				const newElement = document.createElement('p');
+				newElement.textContent = 'This is a new paragraph.';
+				document.getElementById('container').appendChild(newElement);
+			}
+
+			function removeElement() {
+				const container = document.getElementById('container');
+				if (container.lastChild) {
+					container.removeChild(container.lastChild);
+				}
+			}
+
+			// Example 2: Changing Attributes and Styles
+			function changeAttributes() {
+				const img = document.getElementById('myImage');
+				img.src = 'new-image.jpg';
+				img.alt = 'New Image';
+				img.style.width = '200px';
+			}
+
+			// Example 3: Event Handling
+			document.getElementById('myButton').addEventListener('click', function () {
+				document.getElementById('message').textContent = 'Button was clicked!';
+			});
+
+			// Example 4: Traversing the DOM
+			function changeSecondChild() {
+				const parent = document.getElementById('parent');
+				const secondChild = parent.children[1]; // Access second child
+				secondChild.textContent = 'This is the modified second child';
+			}
+
+			// Example 5: Class Manipulation
+			const text = document.getElementById('text');
+			text.addEventListener('mouseenter', () => {
+				text.classList.add('highlight');
+			});
+			text.addEventListener('mouseleave', () => {
+				text.classList.remove('highlight');
+			});
+
+			// Example 6: Real-time Data Update
+			function fetchData() {
+				// Simulating data fetching with a setTimeout
+				setTimeout(() => {
+					document.getElementById('dataDisplay').textContent = 'New data from server!';
+				}, 1000); // Fetches data after 1 second
+			}
+		</script>
+	</body>
+</html>

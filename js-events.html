@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JavaScript Event Examples</title>
+	</head>
+	<body>
+		<h1>JavaScript Event Examples</h1>
+
+		<!-- Mouse Events -->
+		<h2>Mouse Events</h2>
+		<button id="clickButton">Click Me</button>
+		<button id="dblclickButton">Double-Click Me</button>
+		<div id="mouseArea" style="border: 1px solid #000; padding: 20px; width: 200px; height: 100px">
+			Move your mouse here
+		</div>
+		<p id="mouseEventOutput"></p>
+
+		<!-- Keyboard Events -->
+		<h2>Keyboard Events</h2>
+		<input type="text" id="textInput" placeholder="Type something" />
+		<p id="keyboardEventOutput"></p>
+
+		<!-- Form Events -->
+		<h2>Form Events</h2>
+		<input type="text" id="focusInput" placeholder="Focus on me" />
+		<input type="text" id="changeInput" placeholder="Change my value" />
+		<form id="submitForm">
+			<input type="text" placeholder="Submit the form" />
+			<button type="submit">Submit</button>
+		</form>
+		<p id="formEventOutput"></p>
+
+		<!-- Window Events -->
+		<h2>Window Events</h2>
+		<p>Resize or scroll the window to see events in action.</p>
+		<p id="windowEventOutput"></p>
+
+		<!-- Touch Events (for touch devices) -->
+		<h2>Touch Events</h2>
+		<div id="touchArea" style="border: 1px solid #000; padding: 20px; width: 200px; height: 100px">
+			Touch here (on touch devices)
+		</div>
+		<p id="touchEventOutput"></p>
+
+		<!-- Media Events -->
+		<h2>Media Events</h2>
+		<video id="media" width="300" controls>
+			<source src="https://ik.imagekit.io/ruvebal/sample-video.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+		<p id="mediaEventOutput"></p>
+
+		<script>
+			// Helper function to display messages
+			function displayMessage(id, message) {
+				document.getElementById(id).textContent = message;
+			}
+
+			// Mouse Events
+			document.getElementById('clickButton').addEventListener('click', () => {
+				console.log('Button clicked');
+				displayMessage('mouseEventOutput', 'Button clicked');
+			});
+
+			// Double-click event
+			document.getElementById('dblclickButton').addEventListener('dblclick', () => {
+				console.log('Button double-clicked');
+				displayMessage('mouseEventOutput', 'Button double-clicked');
+			});
+
+			const mouseArea = document.getElementById('mouseArea');
+			mouseArea.addEventListener('mousedown', () => displayMessage('mouseEventOutput', 'Mouse down'));
+			mouseArea.addEventListener('mouseup', () => displayMessage('mouseEventOutput', 'Mouse up'));
+			mouseArea.addEventListener('mouseover', () => displayMessage('mouseEventOutput', 'Mouse over element'));
+			mouseArea.addEventListener('mouseout', () => displayMessage('mouseEventOutput', 'Mouse out of element'));
+			mouseArea.addEventListener('mousemove', () => displayMessage('mouseEventOutput', 'Mouse moving over element'));
+
+			// Keyboard Events
+			const textInput = document.getElementById('textInput');
+			textInput.addEventListener('keydown', (event) => displayMessage('keyboardEventOutput', `Key down: ${event.key}`));
+			textInput.addEventListener('keyup', (event) => displayMessage('keyboardEventOutput', `Key up: ${event.key}`));
+			textInput.addEventListener('keypress', (event) =>
+				displayMessage('keyboardEventOutput', `Key pressed: ${event.key}`)
+			);
+
+			// Form Events
+			const focusInput = document.getElementById('focusInput');
+			focusInput.addEventListener('focus', () => displayMessage('formEventOutput', 'Input focused'));
+			focusInput.addEventListener('blur', () => displayMessage('formEventOutput', 'Input lost focus'));
+
+			const changeInput = document.getElementById('changeInput');
+			changeInput.addEventListener('change', () => displayMessage('formEventOutput', 'Input value changed'));
+
+			const submitForm = document.getElementById('submitForm');
+			submitForm.addEventListener('submit', (event) => {
+				event.preventDefault(); // Prevents the form from submitting
+				displayMessage('formEventOutput', 'Form submitted');
+			});
+
+			// Window Events
+			window.addEventListener('load', () => displayMessage('windowEventOutput', 'Document fully loaded'));
+			window.addEventListener('resize', () => {
+				const width = window.innerWidth;
+				const height = window.innerHeight;
+				displayMessage('windowEventOutput', `Window resized: ${width}px x ${height}px`);
+			});
+
+			// Scroll Event with Pixel Measurement
+			window.addEventListener('scroll', () => {
+				const scrollX = window.scrollX;
+				const scrollY = window.scrollY;
+				displayMessage('windowEventOutput', `Window scrolled to X: ${scrollX}px, Y: ${scrollY}px`);
+			});
+
+			// Touch Events
+			const touchArea = document.getElementById('touchArea');
+			touchArea.addEventListener('touchstart', () => displayMessage('touchEventOutput', 'Touch start'));
+			touchArea.addEventListener('touchmove', () => displayMessage('touchEventOutput', 'Touch move'));
+			touchArea.addEventListener('touchend', () => displayMessage('touchEventOutput', 'Touch end'));
+
+			// Media Events
+			const media = document.getElementById('media');
+			media.addEventListener('play', () => displayMessage('mediaEventOutput', 'Media playing'));
+			media.addEventListener('pause', () => displayMessage('mediaEventOutput', 'Media paused'));
+			media.addEventListener('ended', () => displayMessage('mediaEventOutput', 'Media playback ended'));
+		</script>
+	</body>
+</html>
