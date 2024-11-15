@@ -7,9 +7,6 @@
 /* Mobile Portrait */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
 }
-.responsive-image {
-	transform: rotate(90deg);
-}
 /* EndOf MobilePortrait */
 
 /* Mobile Landscape */
@@ -18,10 +15,6 @@
 
 /* Tablet Portrait */
 @media only screen and (min-width: 601px) and (max-width: 1200px) and (orientation: portrait) {
-	.responsive-image {
-		transform: rotate(90deg);
-	}
-
 	/* Navbar */
 	.nav-menu {
 		display: none;

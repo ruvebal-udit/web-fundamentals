@@ -304,6 +304,4 @@ pre {
 	/* Full height of the container */
 	object-fit: cover;
 	/* Ensures image covers container without changing aspect ratio */
-	object-position: center;
-	/* Centers the image within the container */
 }

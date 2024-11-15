@@ -85,6 +85,7 @@ main.grid {
 	scroll-snap-align: start;
 	scroll-snap-type: y mandatory;
 	overflow-y: auto;
+	place-items: center;
 }
 
 /* Title Section */
@@ -93,6 +94,17 @@ main.grid {
 	margin-top: 0.5rem;
 	padding: 1.7rem;
 	text-align: center;
+}
+
+/* Single column */
+.single-column {
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 0.5rem;
+	overflow-y: auto;
+	max-height: 100%;
+	scrollbar-color: var(--accent) var(--accent-foreground);
+	scrollbar-width: auto;
 }
 
 /* Fluid Columns Adjustments */
