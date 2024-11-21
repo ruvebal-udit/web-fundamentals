@@ -5,62 +5,64 @@
 SVG (Scalable Vector Graphics) animations offer a powerful way to create dynamic and interactive graphics for the web. They can animate shapes, paths, gradients, and other SVG-specific attributes using CSS, JavaScript, or libraries like GSAP. Below is an updated explanation of the techniques, emphasizing **browser compatibility** and how GSAP helps overcome limitations.
 
 ---
-Yes, you're correct. Since **CSS animations** cannot reliably animate SVG-specific attributes like `r`, `cx`, or `cy` across all browsers (especially Firefox), it’s better to update this section to reflect the use of **GSAP** for consistency and compatibility.
-
-Here’s the updated explanation for **CSS Animation on SVG**, rewritten to use **GSAP**:
-
----
 
 ### **1. GSAP Animation on SVG (Replaces CSS Animation)**
 
 #### **What It Is**:
+
 GSAP (GreenSock Animation Platform) is a powerful JavaScript library for animating SVG elements. It provides cross-browser support and overcomes limitations of CSS animations, especially for animating SVG-specific attributes (`r`, `cx`, `cy`, etc.).
 
 #### **How It Works**:
+
 1. Include the GSAP library.
 2. Use GSAP's `to`, `from`, or `fromTo` methods to animate SVG attributes.
 3. Target SVG elements using their IDs or classes.
 
 #### **Example**:
+
 Animating a circle's size using its radius (`r`):
+
 ```javascript
-gsap.to("#circle", {
+gsap.to('#circle', {
 	duration: 2, // Animation duration
 	attr: { r: 40 }, // Animate the radius
 	yoyo: true, // Reverse the animation on completion
 	repeat: -1, // Infinite looping
-	ease: "easeInOut", // Smooth easing function
+	ease: 'easeInOut', // Smooth easing function
 });
 ```
 
 #### **Key Points**:
+
 - Works seamlessly for **all SVG attributes**, including `r`, `cx`, and `cy`.
 - Provides cross-browser compatibility, including Firefox.
 - Supports complex easing, infinite loops, and reversing animations (`yoyo`).
 
 #### **Browser Compatibility**:
+
 - Fully supported across **Chrome, Edge, Firefox, and Safari**.
 
 #### ** Example**:
+
 ```html
 <section>
-    <h2>1. GSAP Animation on SVG</h2>
-    <p>Animating the radius of a circle using GSAP for cross-browser compatibility.</p>
-    <svg width="100" height="100">
-        <circle id="circle" cx="50" cy="50" r="20" fill="blue"></circle>
-    </svg>
+	<h2>1. GSAP Animation on SVG</h2>
+	<p>Animating the radius of a circle using GSAP for cross-browser compatibility.</p>
+	<svg width="100" height="100">
+		<circle id="circle" cx="50" cy="50" r="20" fill="blue"></circle>
+	</svg>
 
-    <!-- Include GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script>
-        gsap.to("#circle", {
-            duration: 2,
-            attr: { r: 40 },
-            yoyo: true,
-            repeat: -1,
-            ease: "power1.inOut"
-        });
-    </script>
+	<!-- Include GSAP -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script>
+		gsap.to('#circle', {
+			duration: 2,
+			attr: { r: 40 },
+			yoyo: true,
+			repeat: -1,
+			ease: 'power1.inOut',
+		});
+	</script>
 </section>
 ```
 
@@ -68,14 +70,17 @@ gsap.to("#circle", {
 
 ### **Why Replace CSS Animation with GSAP?**
 
-1. **Cross-Browser Reliability**: 
+1. **Cross-Browser Reliability**:
+
    - Firefox does not support CSS animations for SVG attributes like `r`, `cx`, or `cy`.
    - GSAP solves this issue by animating these attributes programmatically.
 
 2. **Advanced Features**:
+
    - GSAP supports complex animations with features like `yoyo`, `repeat`, `stagger`, and precise easing.
 
 3. **Performance**:
+
    - GSAP is optimized for animations, ensuring smooth transitions without performance degradation, even in complex scenarios.
 
 4. **Future-Proof**:
