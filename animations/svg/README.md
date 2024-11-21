@@ -2,7 +2,7 @@
 
 [https://ruvebal-udit.github.io/web-fundamentals/animations/svg/](https://ruvebal-udit.github.io/web-fundamentals/animations/svg/)
 
-SVG (Scalable Vector Graphics) animations offer a powerful way to create dynamic and interactive graphics for the web. They can animate shapes, paths, gradients, and other SVG-specific attributes using CSS, JavaScript, or libraries like GSAP. Below is an updated explanation of the techniques, emphasizing **browser compatibility** and how GSAP helps overcome limitations.
+SVG (Scalable Vector Graphics) animations offer a powerful way to create dynamic and interactive graphics for the web. They can animate shapes, paths, gradients, and other SVG-specific attributes using CSS, JavaScript, or libraries like GSAP. Below is an explanation of the techniques, emphasizing **browser compatibility** and how GSAP helps overcome limitations.
 
 ---
 
@@ -21,28 +21,6 @@ GSAP (GreenSock Animation Platform) is a powerful JavaScript library for animati
 #### **Example**:
 
 Animating a circle's size using its radius (`r`):
-
-```javascript
-gsap.to('#circle', {
-	duration: 2, // Animation duration
-	attr: { r: 40 }, // Animate the radius
-	yoyo: true, // Reverse the animation on completion
-	repeat: -1, // Infinite looping
-	ease: 'easeInOut', // Smooth easing function
-});
-```
-
-#### **Key Points**:
-
-- Works seamlessly for **all SVG attributes**, including `r`, `cx`, and `cy`.
-- Provides cross-browser compatibility, including Firefox.
-- Supports complex easing, infinite loops, and reversing animations (`yoyo`).
-
-#### **Browser Compatibility**:
-
-- Fully supported across **Chrome, Edge, Firefox, and Safari**.
-
-#### ** Example**:
 
 ```html
 <section>
@@ -65,6 +43,16 @@ gsap.to('#circle', {
 	</script>
 </section>
 ```
+
+#### **Key Points**:
+
+- Works seamlessly for **all SVG attributes**, including `r`, `cx`, and `cy`.
+- Provides cross-browser compatibility, including Firefox.
+- Supports complex easing, infinite loops, and reversing animations (`yoyo`).
+
+#### **Browser Compatibility**:
+
+- Fully supported across **Chrome, Edge, Firefox, and Safari**.
 
 ---
 
