@@ -1,5 +1,7 @@
 ### **CSS3 Animation Basics Explained**
 
+[https://ruvebal-udit.github.io/web-fundamentals/animations/css/](https://ruvebal-udit.github.io/web-fundamentals/animations/css/)
+
 CSS3 animations enable web developers and designers to create smooth, dynamic visual effects directly in CSS, eliminating the need for JavaScript in many cases. Below is a breakdown of the basic concepts and techniques used in the provided HTML file.
 
 ---

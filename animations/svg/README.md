@@ -1,4 +1,6 @@
-### **Updated Comprehensive Explanation of SVG Animation Techniques**
+### **Comprehensive Explanation of SVG Animation Techniques**
+
+[https://ruvebal-udit.github.io/web-fundamentals/animations/svg/](https://ruvebal-udit.github.io/web-fundamentals/animations/svg/)
 
 SVG (Scalable Vector Graphics) animations offer a powerful way to create dynamic and interactive graphics for the web. They can animate shapes, paths, gradients, and other SVG-specific attributes using CSS, JavaScript, or libraries like GSAP. Below is an updated explanation of the techniques, emphasizing **browser compatibility** and how GSAP helps overcome limitations.
 
