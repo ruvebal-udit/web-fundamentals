@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS3 Animation Examples</title>
+		<style>
+			/* General body styling for layout and appearance */
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 20px;
+				background-color: #f0f0f0;
+				color: #333;
+			}
+
+			/* Section and example container styling */
+			section {
+				margin-bottom: 50px;
+			}
+			h2 {
+				margin-bottom: 20px;
+			}
+			.example {
+				margin: 20px 0;
+				padding: 20px;
+				text-align: center;
+				border: 1px solid #ddd;
+				background: #fff;
+				border-radius: 10px;
+			}
+
+			/* 1. Transition Example */
+			/* Smoothly change background color on hover */
+			.transition-box {
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				margin: auto;
+				transition: background-color 0.5s ease; /* Define the transition */
+			}
+			.transition-box:hover {
+				background-color: red; /* Change to red when hovered */
+			}
+
+			/* 2. Keyframes Example */
+			/* Define a sliding animation */
+			@keyframes slideIn {
+				from {
+					transform: translateX(-200%);
+				} /* Start off-screen */
+				to {
+					transform: translateX(0);
+				} /* End in the original position */
+			}
+			.keyframe-box {
+				width: 100px;
+				height: 100px;
+				background-color: green;
+				margin: auto;
+				animation: slideIn 1s ease; /* Apply the keyframes animation */
+			}
+
+			/* 3. Transformations Example */
+			/* Rotate and scale element on hover */
+			.transform-box:hover {
+				transform: rotate(45deg) scale(1.2); /* Rotate and grow */
+				transition: transform 0.5s; /* Smooth transformation */
+			}
+			.transform-box {
+				width: 100px;
+				height: 100px;
+				background-color: purple;
+				margin: auto;
+			}
+
+			/* 4. Infinite Animation Example */
+			/* Define a continuous spinning animation */
+			@keyframes spin {
+				from {
+					transform: rotate(0deg);
+				} /* Start position */
+				to {
+					transform: rotate(360deg);
+				} /* Complete a full spin */
+			}
+			.infinite-box {
+				width: 100px;
+				height: 100px;
+				background-color: orange;
+				margin: auto;
+				animation: spin 2s linear infinite; /* Infinite spinning */
+			}
+
+			/* 5. Text Animation Example */
+			/* Create glowing text */
+			@keyframes textGlow {
+				0%,
+				100% {
+					text-shadow: 0 0 10px blue;
+				} /* Glow starts and ends weak */
+				50% {
+					text-shadow: 0 0 20px cyan;
+				} /* Glow intensifies */
+			}
+			.text-animation {
+				font-size: 24px;
+				animation: textGlow 1.5s ease-in-out infinite; /* Infinite glow animation */
+			}
+
+			/* 6. Background Animation Example */
+			/* Animate background gradient movement */
+			@keyframes backgroundMove {
+				from {
+					background-position: 0 0;
+				} /* Start position */
+				to {
+					background-position: 200% 0;
+				} /* End position for animation */
+			}
+			.background-animation {
+				width: 200px;
+				height: 100px;
+				margin: auto;
+				background: linear-gradient(90deg, red, yellow, green, blue); /* Gradient */
+				background-size: 200% 100%; /* Make gradient larger than container */
+				animation: backgroundMove 3s linear infinite; /* Infinite animation */
+			}
+
+			/* 7. Staggered Animation Example */
+			/* Define animation for staggered effect */
+			@keyframes stagger {
+				from {
+					opacity: 0;
+					transform: translateY(20px);
+				} /* Hidden and offset */
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				} /* Visible and aligned */
+			}
+			.staggered div {
+				width: 50px;
+				height: 50px;
+				margin: 5px auto;
+				background-color: teal;
+				animation: stagger 1s ease-in; /* Apply the stagger animation */
+				display: inline-block;
+			}
+			/* Delay each child's animation */
+			.staggered div:nth-child(1) {
+				animation-delay: 0s;
+			}
+			.staggered div:nth-child(2) {
+				animation-delay: 0.2s;
+			}
+			.staggered div:nth-child(3) {
+				animation-delay: 0.4s;
+			}
+
+			/* 8. Morphing Shape Example */
+			/* Animate shape morphing */
+			@keyframes morph {
+				0% {
+					border-radius: 0%;
+				} /* Start with square */
+				50% {
+					border-radius: 50%;
+				} /* Morph into circle */
+				100% {
+					border-radius: 0%;
+				} /* Back to square */
+			}
+			.morph-box {
+				width: 100px;
+				height: 100px;
+				background-color: crimson;
+				margin: auto;
+				animation: morph 2s infinite ease-in-out; /* Infinite morphing */
+			}
+		</style>
+	</head>
+	<body>
+		<h1>CSS3 Animation Examples</h1>
+
+		<section>
+			<h2>1. Transition</h2>
+			<!-- Smoothly change background color on hover -->
+			<div class="example">
+				<div class="transition-box"></div>
+			</div>
+		</section>
+
+		<section>
+			<h2>2. Keyframes</h2>
+			<!-- Use keyframes to animate sliding -->
+			<div class="example">
+				<div class="keyframe-box"></div>
+			</div>
+		</section>
+
+		<section>
+			<h2>3. Transformations</h2>
+			<!-- Rotate and scale an element on hover -->
+			<div class="example">
+				<div class="transform-box"></div>
+			</div>
+		</section>
+
+		<section>
+			<h2>4. Infinite Animation</h2>
+			<!-- Create an infinitely spinning box -->
+			<div class="example">
+				<div class="infinite-box"></div>
+			</div>
+		</section>
+
+		<section>
+			<h2>5. Text Animation</h2>
+			<!-- Add a glowing effect to text -->
+			<div class="example">
+				<div class="text-animation">Glowing Text</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>6. Background Animation</h2>
+			<!-- Animate a moving gradient background -->
+			<div class="example">
+				<div class="background-animation"></div>
+			</div>
+		</section>
+
+		<section>
+			<h2>7. Staggered Animation</h2>
+			<!-- Animate child elements with delays -->
+			<div class="example staggered">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</section>
+
+		<section>
+			<h2>8. Morphing Shape</h2>
+			<!-- Morph a square into a circle and back -->
+			<div class="example">
+				<div class="morph-box"></div>
+			</div>
+		</section>
+	</body>
+</html>

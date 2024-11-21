@@ -36,6 +36,8 @@
 	--ring: hsla(307, 45%, 50%, 0.75); /* #B946AB */
 }
 /* My Tyrian Indigo Mode */
+/*  Reminder: ~ (general sibling combinator)  */
+
 #theme-toggle:checked ~ * {
 	/* Background Colors - INDIGO Tyrian Shellfish */
 	/* Foreground Colors - COMPUND-PURPLE Tyrian Shellfish */
