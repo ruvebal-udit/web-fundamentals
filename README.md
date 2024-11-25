@@ -12,6 +12,15 @@ You can view the live site at: [https://ruvebal-udit.github.io/web-fundamentals/
 - **Fast Loading**: Optimized for performance.
 - **Customizable**: Easy to modify and expand.
 
+## Aims
+
+- **Objective**: What do we want to accomplish with our web project
+- **Structure**: SPA, several pages linked in an index.
+- **Design lines**: Aesthetics
+- **strategies**: Storytellings, narratives
+- **intuitions**: Those things you dont't know why but you are sure you wat to include
+
+
 ## Technologies Used
 
 - HTML5
