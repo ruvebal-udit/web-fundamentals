@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sticky Headers Without JS</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #f5f5f5;
+			}
+
+			/* Content container */
+			.content {
+				height: 200vh; /* Double the viewport height for scrolling */
+				padding: 20px;
+			}
+
+			/* Section styling */
+			.section {
+				position: relative;
+				height: 300px; /* Ensures scrolling works */
+				margin: 50px 0;
+				border: 1px solid #ccc;
+				background-color: #fff;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			/* Sticky header styling */
+			.sticky {
+				position: sticky;
+				top: 20px; /* Sticks 20px below the top of the viewport */
+				padding: 10px;
+				background: #669966;
+				color: white;
+				font-weight: bold;
+				text-align: center;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+				transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			/* Highlight the active sticky header */
+			.sticky:focus-within,
+			.sticky:hover {
+				background-color: #1b5e20; /* Darker green */
+				transform: scale(1.1); /* Zoom-in effect */
+			}
+
+			/* Focus visual feedback */
+			.sticky:focus {
+				outline: 2px solid #1b5e20; /* Green outline */
+				box-shadow: 0 0 10px rgba(27, 94, 32, 0.5); /* Glow effect */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<!-- Section 1 -->
+			<div class="section">
+				<div class="sticky" tabindex="0">Sticky Header 1</div>
+				<p>Scroll down to observe each sticky header. Hover or focus to see the zoom effect.</p>
+			</div>
+
+			<!-- Section 2 -->
+			<div class="section">
+				<div class="sticky" tabindex="0">Sticky Header 2</div>
+				<p>This header behaves independently as you scroll.</p>
+			</div>
+
+			<!-- Section 3 -->
+			<div class="section">
+				<div class="sticky" tabindex="0">Sticky Header 3</div>
+				<p>Experiment with hover or keyboard focus to highlight the sticky header.</p>
+			</div>
+		</div>
+	</body>
+</html>
