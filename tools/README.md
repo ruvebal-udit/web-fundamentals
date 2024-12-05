@@ -252,6 +252,33 @@ Prettier is a code formatter that ensures consistent formatting.
    - Search for `Editor: Format On Save`.
    - Check the box to enable it.
 
+#### **Configure Prettier for Specific Languages**
+
+You can explicitly set Prettier as the formatter for CSS, JavaScript, and HTML files by adding the following settings to your settings.json file:
+
+Open the Command Palette:
+
+    Press Ctrl + Shift + P (Windows/Linux) or Cmd + Shift + P (macOS).
+
+Type and select Preferences: Open Settings (JSON).
+Add or update the following settings:
+
+```json
+{
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}
+```
+
 #### **Optional Prettier Config File:**
 
 - Students can create a `.prettierrc` file in their project to customize formatting:
@@ -260,6 +287,7 @@ Prettier is a code formatter that ensures consistent formatting.
   	"semi": true,
   	"singleQuote": true,
   	"tabWidth": 2,
+  	"useTabs": false,
   	"trailingComma": "es5"
   }
   ```
@@ -282,13 +310,21 @@ HTMLHint is a linter for detecting issues in HTML code.
 
    ```json
    {
+   	"doctype-first": true,
    	"tagname-lowercase": true,
    	"attr-lowercase": true,
    	"attr-value-double-quotes": true,
-   	"doctype-first": true,
+   	"tag-pair": true,
+   	"alt-require": true,
    	"id-unique": true,
    	"src-not-empty": true,
-   	"tag-pair": true
+   	"href-not-empty": true,
+   	"space-tab-mixed-disabled": true,
+   	"head-script-disabled": true,
+   	"inline-style-disabled": true,
+   	"inline-script-disabled": true,
+   	"csslint": true,
+   	"htmlhint-max-errors": 50
    }
    ```
 
