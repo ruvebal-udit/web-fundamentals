@@ -1,386 +1,389 @@
 # Table of Contents
 
-1. **Purpose of Formatting (Prettier) and Linting (HTMLHint)**
+1. **The Purpose of Formatting and Linting in Development**
 
-   - 1.1. Prettier: Code Formatting
-     - Purpose of Prettier
-     - Prettier Example
-   - 1.2. HTMLHint: Code Linting
-     - Purpose of HTMLHint
-     - HTMLHint Example
-   - 1.3. How Prettier and HTMLHint Complement Each Other
-     - Focus Areas
-     - Workflow Synergy
-     - Automation and Quality
-     - Error Prevention
-   - 1.4. Scenario: Working Together
-     - Before Prettier and HTMLHint
-     - Final Code After Fixes
-   - 1.5. Why Both Are Necessary
+   - 1.1. What Is Formatting?
+     - Key Benefits of Formatting
+     - Examples of Formatting
+   - 1.2. What Is Linting?
+     - Key Benefits of Linting
+     - Examples of Linting
+   - 1.3. How Formatting and Linting Complement Each Other
+   - 1.4. Why Use Formatting and Linting Together?
 
-2. **Step-by-Step Guide for Students to Install and Configure Prettier and HTMLHint in Visual Studio Code**
+2. **Step-by-Step Guide for Students to Install and Configure Tools**
    - 2.1. Install Prettier
-     - Steps
-     - Configuration
-     - Optional Prettier Config File
+     - Definition and Purpose of Prettier
+     - Option 1: Configure Prettier Using VS Code
+     - Option 2: Configure Prettier Using npx CLI
    - 2.2. Install HTMLHint
-     - Steps
-     - Configuration
-   - 2.3. Test the Setup
-   - 2.4. Verify Extensions Are Working
-   - 2.5. Encourage Best Practices
+     - Definition and Purpose of HTMLHint
+     - Option 1: Configure HTMLHint Using VS Code
+     - Option 2: Configure HTMLHint Using npx CLI
+   - 2.3. Install Stylelint
+     - Definition and Purpose of Stylelint
+     - Option 1: Configure Stylelint Using VS Code
+     - Option 2: Configure Stylelint Using npx CLI
+   - 2.4. Install ESLint
+     - Definition and Purpose of ESLint
+     - Option 1: Configure ESLint Using VS Code
+     - Option 2: Configure ESLint Using npx CLI
+   - 2.5. Test the Setup
    - 2.6. Troubleshooting
 
 ---
 
-# **Purpose of Formatting (Prettier) and Linting (HTMLHint)**
+# **1. The Purpose of Formatting and Linting in Development**
 
-Formatting and linting are essential practices in software development to maintain **readable, consistent, and error-free code**. While they serve different purposes, they complement each other to improve the quality and maintainability of a codebase.
+In modern web development, **formatting** and **linting** play complementary roles in maintaining clean, consistent, and error-free code. These practices are essential for improving code quality, collaboration, and maintainability.
 
-### **1.1 Prettier: Code Formatting**
+#### **1.1. What Is Formatting?**
 
-**Prettier** is a **code formatter** that automatically enforces consistent styling in your code. It focuses purely on formatting without checking for potential bugs or enforcing coding standards beyond style.
+Formatting refers to organizing and structuring code in a consistent and visually appealing manner. It ensures the code is easy to read, write, and understand, both for the original developer and for others working on the same project.
 
-#### **Purpose of Prettier:**
+##### **Key Benefits of Formatting:**
 
-- **Consistent Code Style**:
-
-  - Ensures all developers on a team write code in the same style, regardless of personal preferences.
-  - Example: Converts single quotes to double quotes, ensures consistent indentation, and enforces line wrapping.
-
-- **Increased Readability**:
-
-  - Formats code to make it clean and easy to read for humans, reducing cognitive load.
-  - Example: Properly aligning elements in HTML or function arguments in JavaScript.
-
+- **Readability**:
+  - Properly formatted code is easier to navigate, reducing the cognitive load on developers.
+- **Consistency**:
+  - Uniform styling helps teams maintain the same coding standards across files.
 - **Automation**:
+  - Automated formatting tools save time by eliminating the need for manual formatting.
 
-  - Removes the need for manual code formatting by applying rules automatically when saving a file or running a command.
+##### **Examples of Formatting:**
 
-- **Avoiding Arguments About Style**:
-  - By adhering to a predefined style guide, Prettier eliminates debates over formatting choices in a team setting.
-
-#### **Prettier Example:**
-
-**Before Formatting:**
-
-```html
-<html>
-	<head>
-		<title>Test</title>
-	</head>
-	<body>
-		<h1>Hello World</h1>
-	</body>
-</html>
-```
-
-**After Formatting:**
-
-```html
-<html>
-	<head>
-		<title>Test</title>
-	</head>
-	<body>
-		<h1>Hello World</h1>
-	</body>
-</html>
-```
+- Ensuring consistent indentation and spacing.
+- Enforcing a standard for line breaks, brackets, and quotes.
+- Aligning elements in HTML or properties in CSS for better visual structure.
 
 ---
 
-### **1.2. HTMLHint: Code Linting**
+#### **1.2. What Is Linting?**
 
-**HTMLHint** is a **code linter** that identifies and enforces best practices for writing HTML. It flags errors, warnings, or deviations from coding standards that may cause bugs or inconsistencies.
+Linting involves analyzing code to detect potential errors, enforce coding standards, and encourage best practices. A linter reviews the codebase and highlights problematic patterns or violations, ensuring that it adheres to predefined guidelines.
 
-#### **Purpose of HTMLHint:**
+##### **Key Benefits of Linting:**
 
-- **Error Detection**:
+- **Error Prevention**:
+  - Identifies common errors like missing closing tags, unused variables, or invalid syntax.
+- **Standards Enforcement**:
+  - Encourages adherence to coding conventions and project-specific rules.
+- **Code Quality**:
+  - Improves the overall reliability and maintainability of the code.
 
-  - Highlights common errors like missing tags, invalid attributes, or duplicate IDs.
-  - Example: Detects a missing `alt` attribute in an `<img>` tag.
+##### **Examples of Linting:**
 
-- **Enforcing Standards**:
-
-  - Ensures that code adheres to web development standards and best practices.
-  - Example: Flags uppercase tag names, which are non-compliant with HTML5 standards.
-
-- **Improved Accessibility**:
-
-  - Encourages practices that improve the accessibility of websites.
-  - Example: Ensures all `<img>` tags include `alt` attributes.
-
-- **Avoiding Browser Inconsistencies**:
-  - Helps avoid potential rendering issues by ensuring valid and clean HTML structure.
-
-#### **HTMLHint Example:**
-
-**HTML with Issues:**
-
-```html
-<HTML>
-  <HEAD>
-    <TITLE>Test Page</Title>
-  </Head>
-  <body>
-    <h1>Welcome</h2>
-    <img src="image.jpg">
-  </body>
-</HTML>
-```
-
-**HTMLHint Flags:**
-
-- Tag `<HTML>` should be lowercase.
-- Tag `<HEAD>` should be lowercase.
-- `<TITLE>` and `<h1>` tags are improperly closed.
-- `<img>` tag is missing the `alt` attribute.
+- Highlighting invalid HTML attributes or tags.
+- Detecting JavaScript syntax errors, such as undeclared variables.
+- Enforcing best practices in CSS, like avoiding duplicate selectors.
 
 ---
 
-### **1.3. How Prettier and HTMLHint Complement Each Other**
+#### **1.3. How Formatting and Linting Complement Each Other**
 
-1. **Focus Areas**:
+While formatting ensures the code looks consistent and is easy to read, linting ensures the code works correctly and adheres to standards.
 
-   - **Prettier** focuses on **styling** the code (indentation, spacing, alignment).
-   - **HTMLHint** focuses on **validity** and **best practices** (errors, missing attributes, semantic correctness).
+- **Formatting Focuses on**:
 
-2. **Workflow Synergy**:
+  - **How the code looks.**
+  - E.g., Indentation, line breaks, and spacing.
 
-   - **Prettier** ensures the code looks clean and consistent.
-   - **HTMLHint** ensures the code is written correctly and adheres to standards.
-
-3. **Automation and Quality**:
-
-   - With Prettier, developers don’t have to worry about manual formatting.
-   - HTMLHint catches logical or structural issues that Prettier doesn't address.
-
-4. **Error Prevention**:
-   - **Prettier Example**: Aligns a closing `</body>` tag properly for readability.
-   - **HTMLHint Example**: Flags missing closing tags altogether.
+- **Linting Focuses on**:
+  - **What the code does.**
+  - E.g., Correctness, validity, and best practices.
 
 ---
 
-### **1.4. Scenario: Working Together**
+### **1.4. Why Use Formatting and Linting Together?**
 
-#### **Before Prettier and HTMLHint:**
+By combining formatting and linting tools, developers can ensure their code is both clean and functional:
 
-```html
-<HTML>
-  <Head>
-    <title>Test Page</Title>
-  </head>
-  <body>
-    <h1>Welcome to My Page</h2>
-    <img src="example.jpg">
-  </body>
-</HTML>
-```
-
-- **Prettier Fixes**:
-
-  - Reformats the document for better readability.
-
-  ```html
-  <html>
-  	<head>
-  		<title>Test Page</title>
-  	</head>
-  	<body>
-  		<h1>Welcome to My Page</h1>
-  		<img src="example.jpg" />
-  	</body>
-  </html>
-  ```
-
-- **HTMLHint Flags Remaining Issues**:
-  - Alerts:
-    - Tag `<h1>` and `<h2>` mismatch.
-    - Missing `alt` attribute in `<img>`.
-
-#### **Final Code After Fixes:**
-
-```html
-<html>
-	<head>
-		<title>Test Page</title>
-	</head>
-	<body>
-		<h1>Welcome to My Page</h1>
-		<img src="example.jpg" alt="example image" />
-	</body>
-</html>
-```
-
-### **1.5. Why Both Are Necessary**
-
-- **Prettier**: Focuses on **how** the code looks.
-- **HTMLHint**: Focuses on **what** the code does and if it’s correct.
-
-Together, they ensure **clean, readable, and error-free HTML code**, resulting in better collaboration, reduced bugs, and a smoother development workflow.
+- **Improves Collaboration**:
+  - Consistent formatting and adherence to standards make it easier for teams to work together.
+- **Reduces Debugging Time**:
+  - Early detection of issues through linting prevents bugs from going unnoticed.
+- **Boosts Productivity**:
+  - Automated tools handle repetitive tasks, allowing developers to focus on more complex problems.
 
 ---
 
-# **Step-by-Step Guide for Students to Install and Configure Prettier and HTMLHint in Visual Studio Code**
+# **2. Step-by-Step Guide for Students to Install and Configure Tools**
 
-How to install and set up **Prettier** and **HTMLHint** in Visual Studio Code for code formatting and linting:
+Here’s an improved version of **Section 2**, which includes instructions for configuring tools using both **Visual Studio Code (VS Code)** extensions and **npx CLI commands**. This way, students can choose their preferred method based on their comfort level.
+
+---
+
+## **2. Step-by-Step Guide for Students to Install and Configure Tools**
+
+---
 
 ### **2.1. Install Prettier**
 
-Prettier is a code formatter that ensures consistent formatting.
+**Prettier** is a code formatter that ensures consistent styling across your codebase automatically.
 
-#### **Steps:**
+#### **Definition and Purpose of Prettier**
 
-1. Open Visual Studio Code.
-2. Go to the **Extensions Marketplace**:
-   - Click the **Extensions icon** on the left sidebar or press `Ctrl + Shift + X` (`Cmd + Shift + X` on macOS).
-3. Search for **"Prettier - Code formatter"**.
-4. Click **Install**.
+- **Definition**: Prettier is an opinionated code formatter that enforces a consistent style by parsing your code and reprinting it with its own rules, considering maximum line length and other settings.
+- **Purpose**:
+  - **Consistency**: Ensures all files in a project follow the same style.
+  - **Readability**: Makes code easier to read and understand.
+  - **Automation**: Eliminates manual formatting, saving time and effort.
 
-#### **Configuration:**
+#### **Option 1: Configure Prettier Using VS Code**
 
-1. Open the **Settings**:
-   - Press `Ctrl + ,` (Windows/Linux) or `Cmd + ,` (macOS).
-2. Search for "Default Formatter."
-3. Set the default formatter to **Prettier**:
+1. Install the **Prettier - Code formatter** extension:
 
+   - Open **VS Code**.
+   - Go to the Extensions Marketplace (`Ctrl + Shift + X` / `Cmd + Shift + X`).
+   - Search for **"Prettier - Code formatter"** and click **Install**.
+
+2. Configure Prettier:
+
+   - Open **Settings** (`Ctrl + ,` / `Cmd + ,`).
    - Search for `Editor: Default Formatter`.
-   - Select `esbenp.prettier-vscode` from the dropdown.
+   - Set the value to **"esbenp.prettier-vscode"**.
+   - Enable **Format on Save**:
+     - Search for `Editor: Format On Save` and check the box.
 
-4. Enable Format on Save:
-   - Search for `Editor: Format On Save`.
-   - Check the box to enable it.
+3. Test Prettier:
+   - Open a file with inconsistent formatting.
+   - Save the file and verify that Prettier formats it automatically.
 
-#### **Configure Prettier for Specific Languages**
+#### **Option 2: Configure Prettier Using npx CLI**
 
-You can explicitly set Prettier as the formatter for CSS, JavaScript, and HTML files by adding the following settings to your settings.json file:
+1. Install Prettier:
 
-Open the Command Palette:
+   - Run the following command to install Prettier locally:
+     ```bash
+     npm install prettier --save-dev
+     ```
 
-    Press Ctrl + Shift + P (Windows/Linux) or Cmd + Shift + P (macOS).
+2. Create a Prettier configuration file:
 
-Type and select Preferences: Open Settings (JSON).
-Add or update the following settings:
+   - Add a `.prettierrc` file to your project with custom settings, e.g.:
+     ```json
+     {
+     	"semi": true,
+     	"singleQuote": true,
+     	"tabWidth": 2
+     }
+     ```
 
-```json
-{
-	"editor.formatOnSave": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[css]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[html]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
-}
-```
+3. Add a `.prettierignore` file:
 
-#### **Optional Prettier Config File:**
+   - Specify files or folders to exclude from formatting, e.g.:
+     ```plaintext
+     node_modules/
+     dist/
+     ```
 
-- Students can create a `.prettierrc` file in their project to customize formatting:
-  ```json
-  {
-  	"semi": true,
-  	"singleQuote": true,
-  	"tabWidth": 2,
-  	"useTabs": false,
-  	"trailingComma": "es5"
-  }
-  ```
+4. Test Prettier:
+   - Format files directly from the terminal:
+     ```bash
+     npx prettier --write "src/**/*.js"
+     ```
 
 ---
 
 ### **2.2. Install HTMLHint**
 
-HTMLHint is a linter for detecting issues in HTML code.
+**HTMLHint** is a static code analysis tool specifically for HTML files.
 
-#### **Steps:**
+#### **Definition and Purpose of HTMLHint**
 
-1. Go to the **Extensions Marketplace** in Visual Studio Code.
-2. Search for **"HTMLHint"**.
-3. Click **Install**.
+- **Definition**: HTMLHint is a linter for HTML that identifies syntax errors, enforces coding standards, and helps improve the quality of HTML code.
+- **Purpose**:
+  - **Error Detection**: Flags issues like missing tags, invalid attributes, or duplicate IDs.
+  - **Standards Compliance**: Ensures HTML adheres to best practices and coding standards.
+  - **Accessibility**: Encourages practices like using `alt` attributes for images.
 
-#### **Configuration:**
+#### **Option 1: Configure HTMLHint Using VS Code**
 
-1. Create an `.htmlhintrc` file in the project root directory for custom rules:
+1. Install the **HTMLHint** extension:
+
+   - Open **VS Code**.
+   - Go to the Extensions Marketplace and search for **"HTMLHint"**.
+   - Click **Install**.
+
+2. Configure HTMLHint:
+
+   - Use the default rules provided by the extension or create a `.htmlhintrc` file in your project root (see Option 2 below).
+
+3. Test HTMLHint:
+   - Open an HTML file with issues and verify that the Problems tab in VS Code shows warnings or errors.
+
+#### **Option 2: Configure HTMLHint Using npx CLI**
+
+1. Install HTMLHint locally:
+
+   - Run the following command:
+     ```bash
+     npm install htmlhint --save-dev
+     ```
+
+2. Create an HTMLHint configuration file:
+
+   - Add a `.htmlhintrc` file to the root of your project:
+     ```json
+     {
+     	"tagname-lowercase": true,
+     	"attr-lowercase": true,
+     	"attr-value-double-quotes": true,
+     	"doctype-first": true,
+     	"id-unique": true,
+     	"src-not-empty": true,
+     	"tag-pair": true
+     }
+     ```
+
+3. Test HTMLHint:
+   - Use the terminal to lint an HTML file:
+     ```bash
+     npx htmlhint src/index.html
+     ```
+
+---
+
+### **2.3. Install Stylelint**
+
+**Stylelint** is a CSS linter that enforces consistent styling and detects errors in stylesheets.
+
+#### **Definition and Purpose of Stylelint**
+
+- **Definition**: Stylelint is a modern CSS linter that enforces consistent styling and catches errors in your stylesheets.
+- **Purpose**:
+  - **Error Detection**: Identifies invalid CSS properties and syntax errors.
+  - **Consistent Styling**: Ensures CSS adheres to a consistent format.
+  - **Maintainability**: Promotes clean, structured CSS.
+
+#### **Option 1: Configure Stylelint Using VS Code**
+
+1. Install the **Stylelint** extension:
+
+   - Open **VS Code**.
+   - Go to the Extensions Marketplace and search for **"Stylelint"**.
+   - Click **Install**.
+
+2. Use the extension’s default settings or create a configuration file (see Option 2 below).
+
+#### **Option 2: Configure Stylelint Using npx CLI**
+
+1. Install Stylelint:
+
+   ```bash
+   npm install stylelint stylelint-config-standard stylelint-config-prettier --save-dev
+   ```
+
+2. Create a `.stylelintrc.json` file:
 
    ```json
    {
-   	"doctype-first": true,
-   	"tagname-lowercase": true,
-   	"attr-lowercase": true,
-   	"attr-value-double-quotes": true,
-   	"tag-pair": true,
-   	"alt-require": true,
-   	"id-unique": true,
-   	"src-not-empty": true,
-   	"href-not-empty": true,
-   	"space-tab-mixed-disabled": true,
-   	"head-script-disabled": true,
-   	"inline-style-disabled": true,
-   	"inline-script-disabled": true,
-   	"csslint": true,
-   	"htmlhint-max-errors": 50
+   	"extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+   	"rules": {
+   		"indentation": 2,
+   		"string-quotes": "double"
+   	}
    }
    ```
 
-2. Optionally, add global rules to the user settings:
-   - Open **Settings**.
-   - Search for `HTMLHint`.
-   - Add custom rules if needed.
+3. Test Stylelint:
+   - Run Stylelint to check your CSS files:
+     ```bash
+     npx stylelint "src/**/*.css"
+     ```
+   - Fix issues automatically:
+     ```bash
+     npx stylelint "src/**/*.css" --fix
+     ```
 
 ---
 
-### **2.3. Test the Setup**
+### **2.4. Install ESLint**
 
-1. **Prettier:**
+**ESLint** is a JavaScript linter that enforces coding conventions and catches bugs.
 
-   - Open an HTML, CSS, or JavaScript file.
-   - Save the file and observe automatic formatting.
-   - Run `Format Document` manually by pressing `Shift + Alt + F` (Windows) or `Shift + Option + F` (macOS).
+#### **Definition and Purpose of ESLint**
 
-2. **HTMLHint:**
-   - Open an HTML file with issues (e.g., missing closing tags or improper attribute cases).
-   - Check for underlined warnings or errors in the editor.
-   - View detailed issues in the **Problems** tab (usually at the bottom of VS Code).
+- **Definition**: ESLint is a static analysis tool for JavaScript that identifies problematic patterns and enforces coding standards.
+- **Purpose**:
+  - **Error Detection**: Highlights syntax errors and potential bugs.
+  - **Consistency**: Ensures JavaScript code adheres to standards.
+  - **Customizability**: Provides flexible configuration for project-specific needs.
+
+#### **Option 1: Configure ESLint Using VS Code**
+
+1. Install the **ESLint** extension:
+
+   - Open **VS Code**.
+   - Go to the Extensions Marketplace and search for **"ESLint"**.
+   - Click **Install**.
+
+2. Use the default settings provided by the extension or configure ESLint (see Option 2 below).
+
+#### **Option 2: Configure ESLint Using npx CLI**
+
+1. Install ESLint:
+
+   ```bash
+   npm install eslint --save-dev
+   ```
+
+2. Initialize ESLint:
+
+   - Run the following command to create a configuration file:
+     ```bash
+     npx eslint --init
+     ```
+   - Follow the prompts to configure ESLint for your project.
+
+3. Create an `.eslintrc.json` file:
+
+   ```json
+   {
+   	"env": {
+   		"browser": true,
+   		"es2021": true
+   	},
+   	"extends": "eslint:recommended",
+   	"parserOptions": {
+   		"ecmaVersion": 12,
+   		"sourceType": "module"
+   	},
+   	"rules": {
+   		"semi": ["error", "always"],
+   		"quotes": ["error", "single"]
+   	}
+   }
+   ```
+
+4. Test ESLint:
+   - Use the terminal to lint JavaScript files:
+     ```bash
+     npx eslint "src/**/*.js"
+     ```
+   - Fix issues automatically:
+     ```bash
+     npx eslint "src/**/*.js" --fix
+     ```
 
 ---
 
-### **2.4. Verify Extensions Are Working**
+### **2.5. Test the Setup**
 
-- Use a simple HTML file to test both Prettier and HTMLHint:
-  ```html
-  <!DOCTYPE html>
-  <html>
-  	<head>
-  		<title>Test Page</title>
-  	</head>
-  	<body>
-  		<h1>Hello World</h1>
-  		<img src="" />
-  	</body>
-  </html>
-  ```
-- Prettier will format the file, and HTMLHint will flag issues like:
-  - Incorrect capitalization of tags (`Head`, `Title`).
-  - Missing `alt` attribute in the `<img>` tag.
-
----
-
-### **2.5. Encourage Best Practices**
-
-- Ensure students understand the purpose of formatting (Prettier) and linting (HTMLHint).
-- Show them how to fix issues flagged by HTMLHint manually.
+- Create sample files for HTML, CSS, and JavaScript with intentional errors.
+- Test each tool to ensure it works as expected:
+  - Prettier should format code.
+  - HTMLHint should flag HTML issues.
+  - Stylelint should catch CSS errors.
+  - ESLint should highlight JavaScript problems.
 
 ---
 
 ### **2.6. Troubleshooting**
 
-- If Prettier or HTMLHint doesn’t work:
-  - Check the file association (ensure the file is recognized as HTML, CSS, or JavaScript).
-  - Ensure there are no conflicting extensions (e.g., other formatters or linters).
-  - Verify that `Editor: Format On Save` is enabled.
+1. Ensure extensions are installed in Visual Studio Code.
+2. Verify configuration files (`.prettierrc`, `.htmlhintrc`, `.stylelintrc.json`, `.eslintrc.json`) are correctly set up.
+3. Restart Visual Studio Code to apply changes.
+4. Run CLI commands for detailed error messages (e.g., `npx eslint`, `npx stylelint`).
+
+---
