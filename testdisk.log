@@ -1,0 +1,111 @@
+
+
+Wed Dec 11 15:59:28 2024
+Command line: TestDisk
+
+TestDisk 7.2, Data Recovery Utility, February 2024
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Darwin, kernel 23.6.0 (Darwin Kernel Version 23.6.0: Mon Jul 29 21:13:00 PDT 2024; root:xnu-10063.141.2~1/RELEASE_X86_64) x86_64
+Compiler: GCC 4.2
+ext2fs lib: none, ntfs lib: none, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+Hard disk list
+Disk /dev/disk2 - 2000 GB / 1863 GiB - 3907029168 sectors (RO), sector size=512
+Disk /dev/disk3 - 1500 GB / 1397 GiB - 2930210816 sectors (RO), sector size=512
+Disk /dev/disk4 - 2000 GB / 1862 GiB - 3906963456 sectors (RO), sector size=512
+Disk /dev/disk5 - 1000 GB / 931 GiB - 1953458176 sectors, sector size=512
+Disk /dev/disk6 - 1000 GB / 931 GiB - 1953458176 sectors (RO), sector size=512
+Disk /dev/disk7 - 1000 GB / 931 GiB - 1953525168 sectors (RO), sector size=512
+Disk /dev/rdisk2 - 2000 GB / 1863 GiB - 3907029168 sectors (RO), sector size=512
+Disk /dev/rdisk3 - 1500 GB / 1397 GiB - 2930210816 sectors (RO), sector size=512
+Disk /dev/rdisk4 - 2000 GB / 1862 GiB - 3906963456 sectors (RO), sector size=512
+Disk /dev/rdisk5 - 1000 GB / 931 GiB - 1953458176 sectors, sector size=512
+Disk /dev/rdisk6 - 1000 GB / 931 GiB - 1953458176 sectors (RO), sector size=512
+Disk /dev/rdisk7 - 1000 GB / 931 GiB - 1953525168 sectors (RO), sector size=512
+
+Partition table type (auto): EFI GPT
+Media is opened in read-only.
+Partition table type (auto): EFI GPT
+Media is opened in read-only.
+Disk /dev/disk4 - 2000 GB / 1862 GiB (RO)
+Partition table type: EFI GPT
+
+Analyse Disk /dev/disk4 - 2000 GB / 1862 GiB - 3906963456 sectors (RO)
+hdr_size=92
+hdr_lba_self=1
+hdr_lba_alt=3906963455 (expected 3906963455)
+hdr_lba_start=34
+hdr_lba_end=3906963422
+hdr_lba_table=2
+hdr_entries=128
+hdr_entsz=128
+Current partition structure:
+ 1 P EFI System                    40     409639     409600 [EFI System Partition]
+ 2 P Mac HFS                   409640  976511615  976101976
+ 3 P Mac Boot               976511616  977781151    1269536 [Recovery HD]
+ 4 P Mac HFS                977781152 2930906151 1953125000
+ 5 P Mac HFS               2931168296 3906701271  975532976
+
+search_part()
+Disk /dev/disk4 - 2000 GB / 1862 GiB - 3906963456 sectors (RO)
+FAT32 at 40/0/1
+check_FAT: Unusual media descriptor (0xf0!=0xf8)
+FAT1 : 32-3182
+FAT2 : 3183-6333
+start_rootdir : 6334 root cluster : 2
+Data : 6334-409599
+sectors : 409600
+cluster_size : 1
+no_of_cluster : 403266 (2 - 403267)
+fat_length 3151 calculated 3151
+heads/cylinder 16 (FAT) != 1 (HD)
+sect/track 32 (FAT) != 1 (HD)
+
+FAT32 at 40/0/1
+     EFI System                    40     409639     409600 [EFI System Partition] [EFI]
+     FAT32, blocksize=512, 209 MB / 200 MiB
+
+HFS+ magic value at 409640/0/1
+
+HFS+ magic value at 409640/0/1
+part_size 977109368
+     Mac HFS                   409640  977519007  977109368
+     HFS+ blocksize=4096 + Backup, 500 GB / 465 GiB
+
+HFS+ magic value at 977781152/0/1
+
+HFS+ magic value at 977781152/0/1
+part_size 1953125000
+     Mac HFS                977781152 2930906151 1953125000
+     HFS+ blocksize=4096 + Backup, 1000 GB / 931 GiB
+
+HFS+ magic value at 2931168296/0/1
+
+HFS+ magic value at 2931168296/0/1
+part_size 975532976
+     Mac HFS               2931168296 3906701271  975532976
+     HFS+ blocksize=4096 + Backup, 499 GB / 465 GiB
+
+Results
+   P EFI System                    40     409639     409600 [EFI System Partition] [EFI]
+     FAT32, blocksize=512, 209 MB / 200 MiB
+   P Mac HFS                   409640  977519007  977109368
+     HFS+ blocksize=4096 + Backup, 500 GB / 465 GiB
+   P Mac HFS                977781152 2930906151 1953125000
+     HFS+ blocksize=4096 + Backup, 1000 GB / 931 GiB
+   P Mac HFS               2931168296 3906701271  975532976
+     HFS+ blocksize=4096 + Backup, 499 GB / 465 GiB
+
+interface_write()
+ 1 P EFI System                    40     409639     409600 [EFI System Partition] [EFI]
+ 2 P Mac HFS                   409640  977519007  977109368
+ 3 P Mac HFS                977781152 2930906151 1953125000
+ 4 P Mac HFS               2931168296 3906701271  975532976
+
+interface_write()
+ 1 P EFI System                    40     409639     409600 [EFI System Partition] [EFI]
+ 2 P Mac HFS                   409640  977519007  977109368
+ 3 P Mac HFS                977781152 2930906151 1953125000
+ 4 P Mac HFS               2931168296 3906701271  975532976
+SIGINT detected! PhotoRec has been killed.
+SIGINT detected! PhotoRec has been killed.
