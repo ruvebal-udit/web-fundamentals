@@ -9,16 +9,17 @@
 3. [Pasos para configurar el entorno de desarrollo](#pasos-para-configurar-el-entorno-de-desarrollo)
    - [Instalar Visual Studio Code](#1-instalar-visual-studio-code)
    - [Instalar Git](#2-instalar-git)
-   - [Crear un archivo `index.html` con Copilot](#3-crear-un-archivo-indexhtml-con-copilot)
-   - [Conectar Visual Studio Code con GitHub](#4-conectar-visual-studio-code-con-github)
+   - [Crear un repositorio en GitHub y clonarlo en Visual Studio Code](#3-crear-un-repositorio-en-github-y-clonarlo-en-visual-studio-code)
+   - [Crear un archivo `index.html` en el repositorio clonado](#4-crear-un-archivo-indexhtml-en-el-repositorio-clonado)
    - [Desarrollo local con Live Server](#5-desarrollo-local-con-live-server)
    - [Desarrollo Live con GitHub Pages](#6-desarrollo-en-vivo-con-github-pages)
-4. [Glosario de conceptos](#glosario-de-conceptos)
+4. [Flujo diario de trabajo](#flujo-diario-de-trabajo)
+5. [Glosario de conceptos](#glosario-de-conceptos)
    - [Términos del sistema](#términos-del-sistema)
    - [Términos de red](#términos-de-red)
    - [Términos de Git y repositorios](#términos-de-git-y-repositorios)
-5. [Apéndice: Instalando Homebrew en macOS](#apéndice-instalando-homebrew-en-macos)
-6. [Referencias finales](#referencias-finales)
+6. [Apéndice: Instalando Homebrew en macOS](#apéndice-instalando-homebrew-en-macos)
+7. [Referencias finales](#referencias-finales)
 
 ---
 
@@ -76,9 +77,12 @@ Aprender este flujo de trabajo ayuda a adoptar prácticas profesionales y sentar
 2. Ejecuta el instalador y sigue las instrucciones.
 3. Usa **Git Bash** como tu terminal predeterminada. Esto viene incluido con Git.
 4. Verifica la instalación abriendo Git Bash y ejecutando:
+
    ```bash
    git --version
    ```
+
+   **Nota importante**: Durante la instalación y uso de Git en terminal, tu contraseña no será visible al escribirla. Esto es un comportamiento esperado para mayor seguridad.
 
 #### **Instalación en macOS**
 
@@ -86,7 +90,6 @@ Aprender este flujo de trabajo ayuda a adoptar prácticas profesionales y sentar
 
    - Homebrew es un gestor de paquetes para macOS. Los detalles de instalación están en el [apéndice](#apéndice-instalando-homebrew-en-macos).
    - Nota: Este proceso descarga las **Xcode Command Line Tools**, que pueden ocupar mucho espacio y tardar bastante tiempo.
-   - Después de instalar Homebrew, asegúrate de agregarlo al path ejecutando los comandos indicados al final de la instalación (detallados en el apéndice).
 
 2. **Instala Git usando Homebrew**:
    ```bash
@@ -99,20 +102,40 @@ Aprender este flujo de trabajo ayuda a adoptar prácticas profesionales y sentar
 
 ---
 
-### **3. Crear un archivo `index.html` con Copilot**
+### **3. Crear un repositorio en GitHub y clonarlo en Visual Studio Code**
 
-#### **Instala GitHub Copilot en VS Code**
+#### **Desde la web de GitHub**
 
-1. Ve a la pestaña de Extensiones en VS Code.
-2. Busca **"GitHub Copilot"** e instálalo.
-3. Inicia sesión con tu cuenta de GitHub.
+1. Inicia sesión en tu cuenta de GitHub.
+2. Haz clic en el botón **New** para crear un nuevo repositorio.
+3. Asigna un nombre al repositorio (por ejemplo, `mi-proyecto-web`).
+4. Elige la configuración pública o privada según tu preferencia.
+5. No añadas ningún archivo inicial (como `README.md`).
+6. Haz clic en **Create repository**.
 
-#### **Genera una estructura HTML**
+#### **Clonar el repositorio en VS Code**
 
-1. Crea un nuevo archivo llamado `index.html`.
-2. Usa Copilot para generar la estructura básica:
-   - Escribe `!` y presiona **Tab**. Copilot generará el boilerplate.
-   - Personalízalo para incluir elementos semánticos:
+1. Copia la URL del repositorio (HTTPS o SSH).
+2. Abre VS Code y ve a **Source Control**.
+3. Haz clic en **Clone Repository** e introduce la URL copiada.
+4. Selecciona una carpeta local donde deseas guardar el repositorio.
+
+**Nota**: Internamente, VS Code ejecuta el comando equivalente:
+
+```bash
+git clone <URL-del-repositorio>
+```
+
+Además, VS Code realiza un **pull** automático al abrir un repositorio clonado para sincronizar cualquier cambio remoto.
+
+---
+
+### **4. Crear un archivo `index.html` en el repositorio clonado**
+
+1. Crea un archivo nuevo llamado `index.html` en el repositorio.
+2. Escribe la estructura HTML básica utilizando **GitHub Copilot**:
+   - Escribe `!` y presiona **Tab** para generar el boilerplate HTML.
+   - Personaliza el archivo, por ejemplo:
      ```html
      <!DOCTYPE html>
      <html lang="es">
@@ -122,45 +145,18 @@ Aprender este flujo de trabajo ayuda a adoptar prácticas profesionales y sentar
      		<title>Mi Sitio Web</title>
      	</head>
      	<body>
-     		<header>
-     			<h1>Bienvenido a Mi Sitio Web</h1>
-     		</header>
-     		<nav>
-     			<ul>
-     				<li><a href="#about">Sobre mí</a></li>
-     				<li><a href="#contact">Contacto</a></li>
-     			</ul>
-     		</nav>
-     		<main>
-     			<section id="about">
-     				<h2>Sobre mí</h2>
-     				<p>Esta es una introducción simple.</p>
-     			</section>
-     		</main>
-     		<footer>
-     			<p>© 2025 Mi Sitio Web</p>
-     		</footer>
+     		<h1>Bienvenido a Mi Sitio Web</h1>
      	</body>
      </html>
      ```
 
 ---
 
-### **4. Conectar Visual Studio Code con GitHub**
-
-1. Ve a la pestaña **Source Control** (el icono con forma de rama) en VS Code.
-2. Haz clic en **Initialize Repository** para empezar a rastrear cambios con Git.
-3. Publica tu repositorio local en GitHub:
-   - Haz clic en el botón **Publish to GitHub**.
-   - Inicia sesión en GitHub y sigue las instrucciones para crear un nuevo repositorio.
-
----
-
 ### **5. Desarrollo local con Live Server**
 
 1. Abre tu proyecto en VS Code.
-2. Haz clic derecho en tu archivo `index.html` y selecciona **Open with Live Server**.
-3. Abre Chrome y navega a la URL proporcionada por Live Server (normalmente `http://127.0.0.1:5500`).
+2. Haz clic derecho en el archivo `index.html` y selecciona **Open with Live Server**.
+3. Abre el navegador y navega a `http://127.0.0.1:5500`.
 
 #### **Usar las DevTools de Chrome**
 
@@ -169,26 +165,89 @@ Aprender este flujo de trabajo ayuda a adoptar prácticas profesionales y sentar
 3. Marca la opción **Disable Cache** para asegurarte de que el navegador siempre cargue la versión más reciente de tu proyecto.
 4. Observa los cambios en tiempo real mientras actualizas tu código.
 
+5. Abre tu proyecto en VS Code.
+6. Haz clic derecho en el archivo `index.html` y selecciona **Open with Live Server**.
+7. Abre el navegador y navega a `http://127.0.0.1:5500`.
+
 ---
 
 ### **6. Desarrollo Live con GitHub Pages**
 
-1. **Haz un commit de los cambios**:
+1. Haz un **commit** de los cambios:
 
-   - En la pestaña Source Control, selecciona los archivos haciendo clic en el botón `+`.
-   - Escribe un mensaje de commit (por ejemplo, “Initial commit”) y haz clic en el check para confirmar.
+   - En la pestaña **Source Control**, selecciona los archivos y haz clic en el botón `+`.
+   - Escribe un mensaje de commit (por ejemplo, "Initial commit") y haz clic en el check.
 
-2. **Sube los cambios a GitHub**:
+2. **Push** los cambios al repositorio remoto:
 
-   - Una vez confirmado el commit, haz clic en **Sync Changes** para subir los cambios al repositorio remoto.
+   - Haz clic en **Sync Changes**.
 
-3. **Activa GitHub Pages**:
-   - En GitHub, ve a **Settings** > **Pages** en tu repositorio.
-   - Selecciona la rama (por ejemplo, `main`) y guarda los cambios.
-   - Tu sitio estará en vivo en:  
-     `https://tu-usuario.github.io/tu-repositorio/`
+   **Comandos equivalentes**:
+
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push
+   ```
+
+3. Activa GitHub Pages:
+   - En GitHub, ve a **Settings** > **Pages**.
+   - Selecciona la rama y guarda los cambios.
+   - Tu sitio estará en vivo en: `https://tu-usuario.github.io/tu-repositorio/`.
 
 ---
+
+## **Flujo diario de trabajo**
+
+### **Pasos para el desarrollo diario**
+
+1. **Actualiza tu repositorio local**:
+
+   - Abre VS Code y ve a la pestaña **Source Control**.
+   - Haz clic en **Pull** para traer los últimos cambios del repositorio remoto.
+
+   **Comando equivalente:**
+
+   ```bash
+   git pull
+   ```
+
+2. **Realiza cambios en tu código**:
+
+   - Edita los archivos necesarios en el proyecto.
+   - Guarda los cambios.
+
+3. **Previsualiza los cambios localmente**:
+
+   - Usa **Live Server** para ver los cambios en tiempo real.
+
+4. **Haz un commit de tus cambios**:
+
+   - Ve a **Source Control**, selecciona los archivos modificados y haz clic en el botón `+`.
+   - Escribe un mensaje de commit describiendo los cambios y haz clic en el check.
+
+   **Comandos equivalentes:**
+
+   ```bash
+   git add .
+   git commit -m "Descripción de los cambios"
+   ```
+
+5. **Sube los cambios al repositorio remoto**:
+
+   - Haz clic en **Sync Changes**.
+
+   **Comando equivalente:**
+
+   ```bash
+   git push
+   ```
+
+6. **Revisa tu sitio en GitHub Pages** (si está habilitado).
+   - Asegúrate de que los cambios se reflejen correctamente.
+
+---
+
 
 ## **Glosario de conceptos**
 
