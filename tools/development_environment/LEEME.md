@@ -70,35 +70,102 @@ Aprender este flujo de trabajo ayuda a adoptar prácticas profesionales y sentar
 
 ### **2. Instalar Git**
 
+---
+
 #### **Instalación en Windows**
 
-1. Descarga el instalador de Git:  
-   **https://git-scm.com/download/win**
-2. Ejecuta el instalador y sigue las instrucciones.
-3. Usa **Git Bash** como tu terminal predeterminada. Esto viene incluido con Git.
-4. Verifica la instalación abriendo Git Bash y ejecutando:
+1. **Descarga el instalador de Git:**  
+   [https://git-scm.com/download/win](https://git-scm.com/download/win)
 
-   ```bash
-   git --version
-   ```
+2. **Ejecuta el instalador:**
 
-   **Nota importante**: Durante la instalación y uso de Git en terminal, tu contraseña no será visible al escribirla. Esto es un comportamiento esperado para mayor seguridad.
+   - Haz clic en el archivo descargado y sigue las instrucciones del asistente de instalación.
+   - Durante la instalación, se recomienda seleccionar **Git Bash** como terminal predeterminada.
+
+3. **Verifica la instalación:**
+
+   - Abre **Git Bash** desde el menú de inicio.
+   - Escribe el siguiente comando para confirmar la instalación:
+     ```bash
+     git --version
+     ```
+
+4. **Configura tu nombre y email para Git:**  
+   Después de instalar Git, es importante configurar tu identidad para registrar correctamente tus contribuciones.
+
+   - **Configura tu nombre:**  
+     Ejecuta este comando, reemplazando `Tu Nombre` por tu nombre real:
+
+     ```bash
+     git config --global user.name "Tu Nombre"
+     ```
+
+   - **Configura tu email:**  
+     Ejecuta este comando, reemplazando `tu.email@example.com` por tu dirección de correo electrónico:
+
+     ```bash
+     git config --global user.email "tu.email@example.com"
+     ```
+
+   - **Verifica la configuración:**  
+     Ejecuta el siguiente comando para comprobar que los datos se guardaron correctamente:
+     ```bash
+     git config --global --list
+     ```
+     El resultado debería mostrar algo similar a:
+     ```
+     user.name=Tu Nombre
+     user.email=tu.email@example.com
+     ```
+
+5. **Nota importante:**
+   - Durante la instalación y uso de Git en la terminal, tu contraseña no será visible al escribirla. Esto es un comportamiento normal para mejorar la seguridad.
+
+---
 
 #### **Instalación en macOS**
 
-1. **Instala Homebrew** (requerido para instalar Git):
+1. **Instala Homebrew (si no lo tienes):**
 
-   - Homebrew es un gestor de paquetes para macOS. Los detalles de instalación están en el [apéndice](#apéndice-instalando-homebrew-en-macos).
-   - Nota: Este proceso descarga las **Xcode Command Line Tools**, que pueden ocupar mucho espacio y tardar bastante tiempo.
+   - Abre la **Terminal** y ejecuta el siguiente comando para instalar Homebrew:
+     ```bash
+     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+     ```
+   - Homebrew es un gestor de paquetes que facilita la instalación de software en macOS.
+   - Al instalar Homebrew, se descargarán automáticamente las **Xcode Command Line Tools**, lo cual puede tardar varios minutos.
 
-2. **Instala Git usando Homebrew**:
-   ```bash
-   brew install git
-   ```
-3. Verifica la instalación:
-   ```bash
-   git --version
-   ```
+2. **Instala Git usando Homebrew:**
+
+   - Una vez instalado Homebrew, ejecuta:
+     ```bash
+     brew install git
+     ```
+
+3. **Verifica la instalación:**
+
+   - Escribe el siguiente comando para comprobar que Git se ha instalado correctamente:
+     ```bash
+     git --version
+     ```
+
+4. **Configura tu nombre y email para Git:**
+
+   - **Configura tu nombre:**
+
+     ```bash
+     git config --global user.name "Tu Nombre"
+     ```
+
+   - **Configura tu email:**
+
+     ```bash
+     git config --global user.email "tu.email@example.com"
+     ```
+
+   - **Verifica la configuración:**
+     ```bash
+     git config --global --list
+     ```
 
 ---
 
@@ -247,7 +314,6 @@ Además, VS Code realiza un **pull** automático al abrir un repositorio clonado
    - Asegúrate de que los cambios se reflejen correctamente.
 
 ---
-
 
 ## **Glosario de conceptos**
 
