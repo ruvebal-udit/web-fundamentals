@@ -1,321 +1,271 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>The Evolution of the Web and Related Technologies</title>
-		<link rel="stylesheet" href="../css/index.css" />
-	</head>
-	<body>
-		<div class="theme">
-			<header>
-				<nav class="navbar">
-					<a href="#" class="nav-icon">
-						<img src="assets/icons/scroll_triangle_down_dark.svg" alt="Logo" />
-					</a>
-					<label for="theme-toggle" class="theme-toggle-button">Toggle Theme</label>
-					<input class="nav-menu-btn" type="checkbox" id="nav-menu-btn" />
-					<label class="nav-menu" for="nav-menu-btn">
-						<span class="nav-menu-icon"></span>
-					</label>
-					<ul class="nav-items">
-						<li><a href="./">&#8617; Back</a></li>
-					</ul>
-				</nav>
-			</header>
-
-			<!-- Sidebar Table of Contents -->
-			<input type="checkbox" id="sidebar-toggle" hidden />
-			<label class="sidebar-toggle-btn" for="sidebar-toggle">&#9776; TOC</label>
-			<div class="grid">
-				<aside class="toc">
-					<h6>Table of Contents</h6>
-					<ul>
-						<li><a href="#introduction">Introduction</a></li>
-						<li><a href="#early-internet">1. Early Internet Foundations (1970s)</a></li>
-						<li><a href="#domain-name-system">2. Domain Name System (DNS) (1980s)</a></li>
-						<li><a href="#world-wide-web">3. World Wide Web and Web Standards Formation (1990s)</a></li>
-						<li><a href="#browser-evolution">4. Browser Evolution and JavaScript (1995-2000s)</a></li>
-						<li><a href="#xhtml-standards">5. XHTML and the Early Standards Battle (2000s)</a></li>
-						<li><a href="#whatwg-formation">6. Formation of WHATWG (2004)</a></li>
-						<li><a href="#modern-web-apis">7. HTTP, WebSockets, and Web APIs (2010s)</a></li>
-						<li><a href="#html5-css3">8. Transition to HTML5 and CSS3 (2014 - Present)</a></li>
-						<li><a href="#web3">9. Web 3.0 and Decentralization (2020s)</a></li>
-						<li><a href="#glossary">Glossary</a></li>
-					</ul>
-				</aside>
-
-				<!-- Main Content Area -->
-				<main>
-					<section id="introduction">
-						<h2>The Evolution of the Web</h2>
-						<p>
-							The web has undergone significant transformations since its creation. This document outlines key milestones in
-							the development of technologies like TCP/IP, DNS, HTTP, HTML, CSS, and more.
-						</p>
-					</section>
-
-					<section id="early-internet">
-						<h2>1. Early Internet Foundations (1970s)</h2>
-						<p>
-							In 1974,
-							<span>Vinton Cerf</span>
-							and
-							<span>Bob Kahn</span>
-							introduced
-							<acronym title="Transmission Control Protocol/Internet Protocol">TCP/IP</acronym>
-							, a protocol that became the backbone of the internet. Learn more:
-							<a href="https://tools.ietf.org/html/rfc675">RFC 675</a>
-							.
-						</p>
-					</section>
-
-					<section id="domain-name-system">
-						<h2>2. Domain Name System (DNS) (1980s)</h2>
-						<p>
-							The DNS was developed in 1984 by
-							<span>Paul Mockapetris</span>
-							to provide human-readable domain names. Relevant RFCs:
-							<a href="https://www.rfc-editor.org/rfc/rfc1034.html">RFC 1034</a>
-							and
-							<a href="https://www.rfc-editor.org/rfc/rfc1035.html">RFC 1035</a>
-							.
-						</p>
-					</section>
-
-					<section id="world-wide-web">
-						<h2>3. World Wide Web and Web Standards Formation (1990s)</h2>
-						<p>
-							<span>Tim Berners-Lee</span>
-							created the World Wide Web in 1991, introducing
-							<acronym title="HyperText Markup Language">HTML</acronym>
-							,
-							<acronym title="HyperText Transfer Protocol">HTTP</acronym>
-							, and URLs. HTTP/1.0 was specified in
-							<a href="https://www.rfc-editor.org/rfc/rfc1945.html">RFC 1945</a>
-							. The
-							<span>W3C</span>
-							was established in 1994 to maintain web standards. Official site:
-							<a href="https://www.w3.org/">W3C</a>
-							.
-						</p>
-						<p>
-							In 1996,
-							<acronym title="Cascading Style Sheets">CSS1</acronym>
-							was introduced to separate content and presentation. See
-							<a href="https://www.w3.org/TR/REC-CSS1/">CSS1 Specification</a>
-							.
-						</p>
-					</section>
-
-					<section id="browser-evolution">
-						<h2>4. Browser Evolution and JavaScript (1995 - 2000s)</h2>
-						<h3>Browser Development Timeline:</h3>
-						<ul>
-							<li>
-								<strong>Netscape Navigator</strong>
-								(1994): Early leader in web browsing, introduced JavaScript.
-							</li>
-							<li>
-								<strong>Internet Explorer</strong>
-								(1995): Dominated the market in the late 1990s.
-							</li>
-							<li>
-								<strong>Mozilla Firefox</strong>
-								(2004): Promoted open standards.
-							</li>
-							<li>
-								<strong>Google Chrome</strong>
-								(2008): Focused on performance with the V8 JavaScript engine.
-							</li>
-						</ul>
-						<h3>JavaScript Creation (1995):</h3>
-						<p>
-							Created by
-							<span>Brendan Eich</span>
-							at Netscape and standardized as
-							<acronym title="ECMAScript">ES</acronym>
-							by
-							<span>ECMA International</span>
-							in 1997. Current standard:
-							<a href="https://tc39.es/ecma262/">ECMAScript 2022</a>
-							.
-						</p>
-					</section>
-
-					<section id="xhtml-standards">
-						<h2>5. XHTML and the Early Standards Battle (2000s)</h2>
-						<p>
-							In 2000, W3C promoted
-							<acronym title="Extensible HyperText Markup Language">XHTML</acronym>
-							1.0 to enforce stricter, XML-compliant syntax. Specification:
-							<a href="https://www.w3.org/TR/xhtml1/">XHTML 1.0</a>
-							. However, developers faced challenges with browser inconsistencies, leading to the formation of the
-							<span>WHATWG</span>
-							in 2004.
-						</p>
-					</section>
-
-					<section id="whatwg-formation">
-						<h2>6. Formation of WHATWG (2004)</h2>
-						<p>
-							The
-							<span>WHATWG</span>
-							was formed to address real-world web development needs. The HTML5 specification, now maintained by WHATWG,
-							unified web standards. Specification:
-							<a href="https://html.spec.whatwg.org/">HTML Standard</a>
-							.
-						</p>
-					</section>
-
-					<section id="modern-web-apis">
-						<h2>7. HTTP, WebSockets, and Web APIs (2010s)</h2>
-						<ul>
-							<li>
-								<strong>HTTP/2</strong>
-								(2015): Enhanced performance with multiplexing and server push. See
-								<a href="https://www.rfc-editor.org/rfc/rfc7540.html">RFC 7540</a>
-								.
-							</li>
-							<li>
-								<strong>WebSockets</strong>
-								(2011): Real-time, bidirectional communication. See
-								<a href="https://www.rfc-editor.org/rfc/rfc6455.html">RFC 6455</a>
-								.
-							</li>
-							<li>
-								<strong>Fetch API</strong>
-								:
-								<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">MDN Documentation</a>
-							</li>
-							<li>
-								<strong>WebRTC</strong>
-								:
-								<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">MDN Documentation</a>
-							</li>
-							<li>
-								<strong>WebGL</strong>
-								:
-								<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">MDN Documentation</a>
-							</li>
-						</ul>
-					</section>
-
-					<section id="html5-css3">
-						<h2>8. Transition to HTML5 and CSS3 (2014 - Present)</h2>
-						<p>
-							<acronym title="HyperText Markup Language">HTML5</acronym>
-							became a
-							<span>W3C</span>
-							recommendation in 2014, improving multimedia support and semantic structure. The development of HTML5 marked a
-							shift towards semantic web practices and better multimedia integration.
-						</p>
-						<p>
-							<acronym title="Cascading Style Sheets">CSS3</acronym>
-							introduced a modular approach to styling, enabling advanced features such as:
-						</p>
-						<ul>
-							<li>Animations</li>
-							<li>Grid and Flexbox layouts</li>
-							<li>Responsive design</li>
-						</ul>
-						<p>
-							Learn more about CSS3:
-							<a href="https://www.w3.org/Style/CSS/specs.en.html">CSS Specifications</a>
-							.
-						</p>
-					</section>
-
-					<section id="web3">
-						<h2>9. Web 3.0 and Decentralization (2020s)</h2>
-						<p>
-							Web 3.0 emphasizes a decentralized web where users have control over their data and identity. This paradigm shift
-							aims to promote transparency and user autonomy through various core technologies, including:
-						</p>
-						<ul>
-							<li>
-								<strong>Blockchain:</strong>
-								Enables trustless transactions.
-							</li>
-							<li>
-								<strong>InterPlanetary File System (IPFS):</strong>
-								A distributed data storage system. Learn more:
-								<a href="https://ipfs.tech/">IPFS Documentation</a>
-								.
-							</li>
-							<li>
-								<strong>Decentralized Applications (dApps):</strong>
-								Applications built on blockchain technologies.
-							</li>
-						</ul>
-						<p>
-							The
-							<span>Semantic Web</span>
-							further supports Web 3.0 with linked data technologies. Learn more from the
-							<span>W3C</span>
-							:
-							<a href="https://www.w3.org/standards/semanticweb/">Semantic Web Standards</a>
-							.
-						</p>
-						<h3>Current Challenges</h3>
-						<ul>
-							<li>Scalability of blockchain solutions</li>
-							<li>Interoperability between different decentralized systems</li>
-							<li>Addressing privacy and data security concerns</li>
-						</ul>
-					</section>
-
-					<section id="glossary" class="glossary">
-						<h2>Glossary</h2>
-						<dl>
-							<dt><span>TCP/IP</span></dt>
-							<dd>
-								The foundational protocol suite for internet communication, enabling data exchange between devices on a network.
-								Learn more:
-								<a href="https://en.wikipedia.org/wiki/TCP/IP">Wikipedia - TCP/IP</a>
-								.
-							</dd>
-							<dt><span>DNS</span></dt>
-							<dd>
-								The system that resolves human-readable domain names to machine-readable IP addresses. Learn more:
-								<a href="https://en.wikipedia.org/wiki/Domain_Name_System">Wikipedia - DNS</a>
-								.
-							</dd>
-							<dt><acronym title="HyperText Transfer Protocol">HTTP</acronym></dt>
-							<dd>
-								The protocol used for transferring web pages and resources over the internet. Learn more:
-								<a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Wikipedia - HTTP</a>
-								.
-							</dd>
-							<dt><acronym title="HyperText Markup Language">HTML</acronym></dt>
-							<dd>
-								The standard language for creating and structuring web pages. Learn more:
-								<a href="https://en.wikipedia.org/wiki/HTML">Wikipedia - HTML</a>
-								.
-							</dd>
-							<dt><acronym title="Cascading Style Sheets">CSS</acronym></dt>
-							<dd>
-								A style sheet language used for describing the presentation and layout of web documents. Learn more:
-								<a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">Wikipedia - CSS</a>
-								.
-							</dd>
-							<dt><span>WebSockets</span></dt>
-							<dd>
-								A protocol providing full-duplex communication channels over a single TCP connection. Learn more:
-								<a href="https://en.wikipedia.org/wiki/WebSocket">Wikipedia - WebSockets</a>
-								.
-							</dd>
-							<dt><span>Web 3.0</span></dt>
-							<dd>
-								An emerging concept focused on decentralization, blockchain technology, and user data control. Learn more:
-								<a href="https://en.wikipedia.org/wiki/Web3">Wikipedia - Web 3.0</a>
-								.
-							</dd>
-						</dl>
-					</section>
-				</main>
-			</div>
-		</div>
-		<script src="../js/index.js"></script>
-	</body>
-</html>
+<h2
+id="expanded-timeline-of-internet-and-web-technologies"><strong>Expanded
+Timeline of Internet and Web Technologies</strong></h2>
+<hr />
+<h3 id="s-early-internet-foundations"><strong>1. 1970s – Early Internet
+Foundations</strong></h3>
+<ul>
+<li><strong>TCP/IP Protocol Development</strong> (1974):
+<ul>
+<li>Developed by <strong>Vinton Cerf</strong> and <strong>Bob
+Kahn</strong>.</li>
+<li>Enables communication between computers across a global
+network.</li>
+<li><strong>First RFCs:</strong> RFC 675:
+https://tools.ietf.org/html/rfc675</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="s-domain-name-system-dns"><strong>2. 1980s – Domain Name System
+(DNS)</strong></h3>
+<ul>
+<li><strong>DNS Development</strong> (1984):<br />
+Replaces static host files, allowing domain-to-IP address mapping.<br />
+<strong>Key RFCs:</strong> RFC 1034 and RFC 1035:
+<ul>
+<li>https://www.rfc-editor.org/rfc/rfc1034.html</li>
+<li>https://www.rfc-editor.org/rfc/rfc1035.html</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="s-world-wide-web-and-web-standards-formation"><strong>3. 1990s –
+World Wide Web and Web Standards Formation</strong></h3>
+<ul>
+<li><strong>World Wide Web</strong> (1991):
+<ul>
+<li>Introduced by <strong>Tim Berners-Lee</strong> at CERN.</li>
+<li>Core technologies: <strong>HTML</strong>, <strong>HTTP</strong>, and
+<strong>URLs</strong>.</li>
+</ul></li>
+</ul>
+<h4 id="regulatory-evolution-formation-of-w3c-1994"><strong>Regulatory
+Evolution: Formation of W3C (1994)</strong></h4>
+<ul>
+<li><p><strong>World Wide Web Consortium (W3C)</strong> established by
+Tim Berners-Lee to develop and maintain web standards.</p></li>
+<li><p>Early focus: HTML, CSS, and web accessibility.</p></li>
+<li><p>Official site: https://www.w3.org/</p></li>
+<li><p><strong>HTML 2.0 and HTTP/1.0</strong>:</p>
+<ul>
+<li>RFC 1945 (HTTP/1.0):<br />
+https://www.rfc-editor.org/rfc/rfc1945.html</li>
+</ul></li>
+<li><p><strong>CSS1</strong> (1996):</p>
+<ul>
+<li>Allows separation of content and styling.</li>
+<li>Specification: https://www.w3.org/TR/REC-CSS1/</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="browser-evolution-and-javascript-1995---2000s"><strong>4.
+Browser Evolution and JavaScript (1995 - 2000s)</strong></h3>
+<h4 id="browser-development-timeline"><strong>Browser Development
+Timeline:</strong></h4>
+<ol type="1">
+<li><p><strong>Netscape Navigator</strong> (1994):</p>
+<ul>
+<li>Early leader in web browsing; introduced
+<strong>JavaScript</strong>.</li>
+</ul></li>
+<li><p><strong>Internet Explorer</strong> (1995):</p>
+<ul>
+<li>Dominated the browser market in the late 1990s.</li>
+</ul></li>
+<li><p><strong>Mozilla Firefox</strong> (2004):</p>
+<ul>
+<li>Open-source browser promoting web standards.</li>
+</ul></li>
+<li><p><strong>Google Chrome</strong> (2008):</p>
+<ul>
+<li>Introduced V8 JavaScript engine and focus on performance, dominating
+by 2010s.</li>
+</ul></li>
+</ol>
+<h4 id="javascript-creation-1995"><strong>JavaScript Creation
+(1995)</strong></h4>
+<ul>
+<li>Developed by <strong>Brendan Eich</strong> at Netscape to enable
+dynamic interactions on web pages.</li>
+<li>Standardized as <strong>ECMAScript (ES)</strong> in
+<strong>1997</strong> by <strong>ECMA International</strong>.</li>
+<li>Current standard: <strong>ECMAScript 2022</strong>.<br />
+Documentation: https://tc39.es/ecma262/</li>
+</ul>
+<hr />
+<h3 id="xhtml-and-the-early-standards-battle-2000s"><strong>5. XHTML and
+the Early Standards Battle (2000s)</strong></h3>
+<ul>
+<li><p><strong>XHTML 1.0</strong> (2000):</p>
+<ul>
+<li>W3C promoted strict XML-compliant HTML to reduce browser
+inconsistencies.</li>
+<li>Specification: https://www.w3.org/TR/xhtml1/</li>
+</ul></li>
+<li><p><strong>Browser Inconsistencies and Backlash</strong>:</p>
+<ul>
+<li>Developers faced difficulties due to strict syntax enforcement.</li>
+<li>Emergence of alternative approaches, including
+<strong>WHATWG</strong> (Web Hypertext Application Technology Working
+Group) in <strong>2004</strong>.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="formation-of-whatwg-2004"><strong>6. Formation of WHATWG
+(2004)</strong></h3>
+<ul>
+<li><p><strong>Goals</strong>:</p>
+<ul>
+<li>Address slow updates and developer needs ignored by W3C.</li>
+<li>Focus on <strong>HTML5</strong> with real-world web development
+practices.</li>
+</ul></li>
+<li><p><strong>HTML5 Evolution</strong>:</p>
+<ul>
+<li>Specification maintained by <strong>WHATWG</strong>:<br />
+https://html.spec.whatwg.org/</li>
+<li>W3C and WHATWG cooperated until 2019, when <strong>W3C stopped
+independently developing HTML</strong>.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="http-websockets-and-web-apis-2010s"><strong>7. HTTP, WebSockets,
+and Web APIs (2010s)</strong></h3>
+<ul>
+<li><p><strong>HTTP/2</strong> (2015):</p>
+<ul>
+<li>Introduced multiplexing, header compression, and server push for
+better performance.</li>
+<li>RFC 7540: https://www.rfc-editor.org/rfc/rfc7540.html</li>
+</ul></li>
+<li><p><strong>WebSockets</strong> (2011):</p>
+<ul>
+<li>Enables real-time, bidirectional communication between a client and
+server.</li>
+<li>RFC 6455: https://www.rfc-editor.org/rfc/rfc6455.html</li>
+</ul></li>
+<li><p><strong>Modern JavaScript APIs</strong>:</p>
+<ul>
+<li>APIs for web applications became standardized:
+<ul>
+<li><strong>Fetch API</strong> (for HTTP requests):
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API</li>
+<li><strong>WebRTC</strong> (for real-time media):
+https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API</li>
+<li><strong>WebGL</strong> (for 3D graphics):
+https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="transition-to-html5-and-css3-2014---present"><strong>8.
+Transition to HTML5 and CSS3 (2014 - Present)</strong></h3>
+<ul>
+<li><p><strong>HTML5</strong> (2014 W3C Recommendation):</p>
+<ul>
+<li>Unified web standards under <strong>WHATWG</strong> and
+<strong>W3C</strong> partnership.</li>
+<li>Introduced native support for multimedia and semantic tags.</li>
+</ul></li>
+<li><p><strong>CSS3</strong>:</p>
+<ul>
+<li>CSS modular approach with advanced features (animations, grid,
+flexbox).</li>
+<li>Current specifications:
+https://www.w3.org/Style/CSS/specs.en.html</li>
+</ul></li>
+<li><p><strong>HTTP/3</strong> (2020):</p>
+<ul>
+<li>Built on <strong>QUIC</strong> protocol for low-latency, secure
+connections.</li>
+<li>RFC 9000: https://www.rfc-editor.org/rfc/rfc9000.html</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="web-3.0-and-decentralization-2020s"><strong>9. Web 3.0 and
+Decentralization (2020s)</strong></h3>
+<ul>
+<li><p><strong>Web 3.0</strong>:</p>
+<ul>
+<li>A decentralized web where users control their data and
+identity.</li>
+<li>Core technologies:
+<ul>
+<li><strong>Blockchain</strong> for trustless transactions.</li>
+<li><strong>InterPlanetary File System (IPFS)</strong> for distributed
+data storage: https://ipfs.tech/</li>
+<li><strong>Decentralized Apps (dApps)</strong> for various
+services.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Semantic Web</strong>:</p>
+<ul>
+<li>Advanced data sharing through <strong>linked data</strong>
+technologies (supported by W3C).<br />
+Documentation: https://www.w3.org/standards/semanticweb/</li>
+</ul></li>
+<li><p><strong>Current Challenges</strong>:</p>
+<ul>
+<li>Scalability, interoperability between blockchains, and privacy
+concerns.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="summary-of-technologies-and-concepts"><strong>10. Summary of
+Technologies and Concepts</strong></h3>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 31%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Technology</strong></th>
+<th><strong>Key Role</strong></th>
+<th><strong>Specification Links</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TCP/IP</strong></td>
+<td>Core communication protocol</td>
+<td>https://tools.ietf.org/html/rfc675</td>
+</tr>
+<tr>
+<td><strong>DNS</strong></td>
+<td>Domain resolution</td>
+<td>https://www.rfc-editor.org/rfc/rfc1035.html</td>
+</tr>
+<tr>
+<td><strong>HTTP</strong></td>
+<td>Web page communication</td>
+<td>https://www.rfc-editor.org/rfc/rfc7540.html (HTTP/2)</td>
+</tr>
+<tr>
+<td><strong>HTML5</strong></td>
+<td>Web content structure</td>
+<td>https://html.spec.whatwg.org/</td>
+</tr>
+<tr>
+<td><strong>CSS3</strong></td>
+<td>Styling and layout</td>
+<td>https://www.w3.org/Style/CSS/specs.en.html</td>
+</tr>
+<tr>
+<td><strong>JavaScript</strong></td>
+<td>Dynamic web interactions</td>
+<td>https://tc39.es/ecma262/</td>
+</tr>
+<tr>
+<td><strong>WebSockets</strong></td>
+<td>Real-time communication</td>
+<td>https://www.rfc-editor.org/rfc/rfc6455.html</td>
+</tr>
+<tr>
+<td><strong>Web 3.0</strong></td>
+<td>Decentralized and semantic web</td>
+<td>https://web3.foundation/</td>
+</tr>
+</tbody>
+</table>
+<hr />
