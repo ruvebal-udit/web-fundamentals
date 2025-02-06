@@ -1,7 +1,3 @@
-Here's an **updated and expanded timeline**, incorporating the **regulatory evolution** (W3C to WHATWG), **browser development**, **JavaScript**, **WebSockets**, and **modern web APIs**.
-
----
-
 ## **Expanded Timeline of Internet and Web Technologies**
 
 ---
