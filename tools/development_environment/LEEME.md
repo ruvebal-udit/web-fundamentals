@@ -1,6 +1,6 @@
 # **Guía para Configurar un Entorno de Desarrollo Web para Estudiantes**
 
----
+### **Rubén Vega Balbás PhD <ruben.vega@udit.es>**
 
 ## **Índice**
 
