@@ -1,0 +1,296 @@
+<h1 id="desarrollo-web-con-html-organización-y-buenas-prácticas">👌
+Desarrollo Web con HTML – Organización y Buenas Prácticas</h1>
+<h2 id="reminder-html5-como-estándar-actual">🔹 Reminder: HTML5 como
+estándar actual</h2>
+<p>HTML5 es la versión más reciente y estandarizada del lenguaje de
+marcado HTML. Define la estructura y contenido de las páginas web de
+manera más eficiente, flexible y accesible. <strong>Todas las prácticas
+en este curso están alineadas con la especificación oficial de
+HTML5:</strong></p>
+<p>🔗 <strong>Especificación HTML5 – WHATWG</strong>: <a
+href="https://html.spec.whatwg.org/">https://html.spec.whatwg.org/</a></p>
+<hr />
+<h2 id="nota-previa-por-qué-usamos-mdn-como-referencia">🔹 Nota previa:
+¿Por qué usamos MDN como referencia?</h2>
+<p>En este curso, utilizaremos <strong>MDN Web Docs</strong> como
+referencia principal para HTML, CSS y JavaScript. <strong>MDN (Mozilla
+Developer Network)</strong> es una de las fuentes más confiables para
+desarrolladores web, ya que:</p>
+<p>👉 Está mantenida por <strong>Mozilla</strong>, una organización sin
+fines de lucro que impulsa estándares abiertos.<br />
+👉 Se actualiza constantemente con las mejores prácticas y
+compatibilidad con navegadores.<br />
+👉 Proporciona documentación clara, ejemplos y explicaciones
+detalladas.</p>
+<p>🔗 <strong>Referencias clave:</strong></p>
+<ul>
+<li><strong>HTML básico – MDN</strong>: <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML">https://developer.mozilla.org/en-US/docs/Web/HTML</a></li>
+<li><strong>CSS – MDN</strong>: <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a></li>
+<li><strong>Meta tags SEO – MDN</strong>: <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta</a></li>
+</ul>
+<hr />
+<h2 id="estructura-de-proyecto">🔹 1. Estructura de Proyecto</h2>
+<p>Antes de escribir código HTML, organizaremos nuestra estructura de
+archivos y carpetas para mantener ordenado el proyecto.</p>
+<p>📂 <strong>Estructura recomendada:</strong></p>
+<pre><code>/proyecto-web
+│── index.html
+│── css/
+│   └── index.css
+│── assets/
+│   ├── images/
+│   └── icons/
+│       └── favicon.svg
+│── js/
+│   └── main.js</code></pre>
+<p>👉 <strong>Explicación:</strong></p>
+<ul>
+<li><strong>css/</strong> → Contendrá hojas de estilo.</li>
+<li><strong>assets/</strong> → Almacén de imágenes e íconos.</li>
+<li><strong>js/</strong> → Archivos JavaScript (si los
+necesitamos).</li>
+<li><strong>index.html</strong> → Punto de entrada del sitio web.
+<ul>
+<li>💡 <strong>Nota:</strong> <code>index.html</code> también será el
+archivo por defecto servido si se solicita un directorio.</li>
+</ul></li>
+</ul>
+<p>🛠️ <strong>Ejercicio práctico:</strong></p>
+<ol type="1">
+<li>Crear esta estructura en <strong>Visual Studio Code</strong>.</li>
+<li>Crear un archivo <code>index.html</code>.</li>
+<li>Usar <strong>Copilot</strong> para autocompletar la estructura de
+<code>index.css</code> (📄 <strong>Ver Anexo: Uso de Copilot en
+VSC</strong>).</li>
+</ol>
+<hr />
+<h2 id="estructura-html-y-valor-de-index.html">🔹 2. Estructura HTML y
+valor de <code>index.html</code></h2>
+<p>💡 <strong>El archivo <code>index.html</code> es clave en la
+web</strong> porque es el archivo predeterminado que se carga cuando
+visitamos un sitio sin especificar una página (por ejemplo,
+<code>https://midominio.com/</code>).</p>
+<p>🛠️ <strong>Ejercicio práctico:</strong></p>
+<ol type="1">
+<li><p>Abrir <code>index.html</code> y agregar esta estructura base:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">&quot;es&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a> <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>     <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">&quot;UTF-8&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>     <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;viewport&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>     <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Mi Primera Página Web<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a> <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>     <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>¡Hola, mundo!<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a> <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div></li>
+<li><p>Guardar y visualizar con <strong>Live Server</strong> en
+VSC.</p></li>
+<li><p>Usar <strong>Copilot</strong> para completar la estructura
+semántica de la página.</p></li>
+</ol>
+<p>🔗 <strong>MDN - Estructura HTML</strong>: <a
+href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML</a></p>
+<h2 id="meta-tags-para-seo"><strong>3️⃣ Meta Tags para SEO</strong></h2>
+<h3 id="qué-es-seo-y-por-qué-es-importante"><strong>🔹 ¿Qué es SEO y por
+qué es importante?</strong></h3>
+<p>SEO (<strong>Search Engine Optimization</strong>, Optimización para
+Motores de Búsqueda) es un conjunto de técnicas para mejorar la
+visibilidad de un sitio web en buscadores como Google. Los <strong>meta
+tags</strong> en HTML ayudan a los motores de búsqueda a comprender el
+contenido de una página y a indexarla correctamente.</p>
+<h3 id="meta-tags-esenciales"><strong>🔹 Meta Tags
+esenciales</strong></h3>
+<p>Ejemplo de <strong>meta tags básicos</strong> para mejorar el
+SEO:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;description&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;Aprende HTML y desarrollo web con las mejores prácticas.&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;keywords&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;HTML, CSS, desarrollo web, SEO, accesibilidad&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;author&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;Tu Nombre&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;robots&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;index, follow&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div>
+<p>🔹 <strong>Explicación de cada meta tag:</strong></p>
+<ul>
+<li><strong><code>description</code></strong> → Descripción breve del
+contenido de la página. Aparece en los resultados de búsqueda.</li>
+<li><strong><code>keywords</code></strong> → Palabras clave relevantes
+(ya no es un factor importante para Google, pero sigue siendo
+útil).</li>
+<li><strong><code>author</code></strong> → Nombre del autor del
+contenido.</li>
+<li><strong><code>robots</code></strong> → Indica a los buscadores si
+deben indexar y seguir los enlaces de la página.</li>
+</ul>
+<p>🛠 <strong>Ejercicio práctico:</strong></p>
+<ol type="1">
+<li>Añadir estos meta tags en <code>&lt;head&gt;</code>.</li>
+<li>Usar la herramienta <strong>“Inspeccionar” (F12) → Elements →
+Head”</strong> para ver si están cargando correctamente.</li>
+</ol>
+<p>🔗 <strong>MDN - Meta Tags SEO</strong>: <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta</a></p>
+<hr />
+<h2 id="el-body-y-la-estructura-semántica"><strong>4️⃣ El
+<code>&lt;body&gt;</code> y la estructura semántica</strong></h2>
+<h3 id="qué-es-html-semántico-y-por-qué-es-importante"><strong>🔹 ¿Qué
+es HTML semántico y por qué es importante?</strong></h3>
+<p>El <strong>HTML semántico</strong> utiliza etiquetas con significado,
+lo que hace que el código sea más accesible, fácil de entender y mejor
+para SEO.</p>
+<p>📌 <strong>Tim Berners-Lee</strong>, creador de la web, introdujo el
+concepto de <strong>Web Semántica</strong>, que busca estructurar el
+contenido para que sea comprensible tanto por humanos como por máquinas.
+En palabras de W3C:</p>
+<blockquote>
+<p><em>“The Semantic Web is about making links meaningful, enabling
+software agents to locate and understand information more
+effectively.”</em><br />
+<strong>(La Web Semántica trata de hacer que los enlaces sean
+significativos, permitiendo que los agentes de software localicen y
+comprendan la información de manera más efectiva.)</strong></p>
+</blockquote>
+<h3 id="estructura-semántica-recomendada"><strong>🔹 Estructura
+semántica recomendada</strong></h3>
+<p>Ejemplo correcto de estructura HTML semántica:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Mi Página Web<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">nav</span><span class="dt">&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;#&quot;</span><span class="dt">&gt;</span>Inicio<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;#&quot;</span><span class="dt">&gt;</span>Contacto<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">nav</span><span class="dt">&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">main</span><span class="dt">&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">section</span><span class="dt">&gt;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Sobre Nosotros<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Bienvenido a nuestra página.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">main</span><span class="dt">&gt;</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">footer</span><span class="dt">&gt;</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span><span class="dv">&amp;copy;</span> 2025 Mi Web<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">footer</span><span class="dt">&gt;</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>🔹 <strong>Explicación de cada etiqueta:</strong></p>
+<ul>
+<li><strong><code>&lt;header&gt;</code></strong> → Encabezado principal
+con título y navegación.</li>
+<li><strong><code>&lt;nav&gt;</code></strong> → Agrupa los enlaces de
+navegación del sitio.</li>
+<li><strong><code>&lt;main&gt;</code></strong> → Contenido principal de
+la página (solo debe haber uno por documento).</li>
+<li><strong><code>&lt;section&gt;</code></strong> → Agrupa contenido
+relacionado dentro de la página.</li>
+<li><strong><code>&lt;footer&gt;</code></strong> → Contiene información
+secundaria como derechos de autor y enlaces adicionales.</li>
+</ul>
+<p>🔗 <strong>MDN - HTML Semántico</strong>: <a
+href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">https://developer.mozilla.org/en-US/docs/Glossary/Semantics</a></p>
+<hr />
+<h2 id="inserción-de-recursos-multimedia"><strong>5️⃣ Inserción de
+Recursos Multimedia</strong></h2>
+<h3 id="cargar-imágenes-y-videos-desde-local"><strong>📌 5.1 Cargar
+imágenes y videos desde local</strong></h3>
+<p>Ejemplo con imágenes dentro de <code>assets/images/</code>:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;assets/images/foto.jpg&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Descripción de la imagen&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div>
+<p>Ejemplo con video en <code>assets/videos/</code>:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">video</span><span class="ot"> controls</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">source</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;assets/videos/video.mp4&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;video/mp4&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    Tu navegador no soporta la etiqueta de video.</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">video</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>🛠 <strong>Ejercicio práctico:</strong></p>
+<ol type="1">
+<li>Subir una imagen a <code>assets/images/</code>.</li>
+<li>Insertarla en HTML con la etiqueta <code>&lt;img&gt;</code>.</li>
+<li>Cargar un video local y probarlo en el navegador.</li>
+</ol>
+<p>🔗 <strong>MDN - Imágenes en HTML</strong>: <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img</a><br />
+🔗 <strong>MDN - Video en HTML</strong>: <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video</a></p>
+<hr />
+<h3
+id="por-qué-no-almacenar-archivos-grandes-o-binarios-en-github"><strong>📌
+5.2 Por qué no almacenar archivos grandes o binarios en
+GitHub</strong></h3>
+<p>📌 <strong>GitHub no está diseñado para almacenar archivos grandes o
+binarios.</strong><br />
+Razones principales:</p>
+<ul>
+<li><strong>Límites de almacenamiento</strong>: GitHub limita el tamaño
+de los archivos y repositorios.</li>
+<li><strong>Problemas de rendimiento</strong>: Archivos grandes hacen
+que <code>git pull</code> y <code>git clone</code> sean más lentos.</li>
+<li><strong>Alternativa recomendada</strong>: Usar un <strong>CDN o
+servicio de almacenamiento externo</strong> (ejemplo: ImageKit.io,
+Cloudinary, Firebase Storage).</li>
+</ul>
+<hr />
+<h3 id="insertar-imágenes-vía-api-ejemplo-imagekit.io"><strong>📌 5.3
+Insertar imágenes vía API (ejemplo: ImageKit.io)</strong></h3>
+<p>Para cargar imágenes optimizadas desde un servicio externo:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://ik.imagekit.io/tu_usuario/imagen.jpg&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Imagen externa&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div>
+<p>🛠 <strong>Ejercicio práctico:</strong></p>
+<ol type="1">
+<li>Crear una cuenta en <strong><a
+href="https://imagekit.io/">https://imagekit.io/</a></strong>.</li>
+<li>Subir una imagen y obtener la URL.</li>
+<li>Insertarla en HTML.</li>
+</ol>
+<p>🔗 <strong>MDN - Carga de imágenes remotas</strong>: <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes</a></p>
+<hr />
+<h2 id="anexo-uso-de-copilot-en-vsc"><strong>Anexo: Uso de Copilot en
+VSC</strong></h2>
+<p>📌 <strong>Cómo instalar y configurar Copilot en Visual Studio
+Code:</strong></p>
+<ol type="1">
+<li><strong>Abrir Visual Studio Code.</strong></li>
+<li><strong>Ir a la pestaña de Extensiones
+(<code>Ctrl + Shift + X</code>).</strong></li>
+<li><strong>Buscar “GitHub Copilot”</strong> e instalar la extensión
+oficial.</li>
+<li><strong>Iniciar sesión en GitHub</strong> cuando lo solicite.</li>
+<li><strong>Activar Copilot en archivos HTML y CSS:</strong>
+<ul>
+<li>Ir a <strong>Configuración (<code>Ctrl + ,</code>)</strong>.</li>
+<li>Buscar <code>Copilot: Enable</code> y asegurarse de que está
+activado para HTML y CSS.</li>
+</ul></li>
+</ol>
+<p>📌 <strong>Ejemplo de uso en HTML:</strong></p>
+<ul>
+<li>Escribir <code>&lt;header&gt;</code> y Copilot sugerirá la
+estructura completa.</li>
+<li>Escribir <code>nav&gt;ul&gt;li*3</code> y aceptar la sugerencia para
+generar una lista automáticamente.</li>
+</ul>
+<p>📌 <strong>Ejemplo de uso en CSS:</strong></p>
+<ul>
+<li>Escribir <code>body {</code> y Copilot completará con propiedades de
+diseño comunes.</li>
+</ul>
+<p>🛠 <strong>Ejercicio práctico:</strong></p>
+<ol type="1">
+<li>Escribir una estructura HTML y ver cómo Copilot sugiere
+etiquetas.</li>
+<li>Usar Copilot para autocompletar estilos en
+<code>css/index.css</code>.</li>
+</ol>
+<p>🔗 <strong>GitHub Copilot - Documentación Oficial</strong>: <a
+href="https://github.com/features/copilot">https://github.com/features/copilot</a></p>
+<hr />
+<p>✅ <strong>Resultado esperado:</strong><br />
+Los estudiantes podrán estructurar correctamente documentos HTML,
+incluir favicons, mejorar SEO con meta tags, aplicar estilos con CSS y
+gestionar imágenes de manera eficiente.</p>
