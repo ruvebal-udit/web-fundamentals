@@ -63,6 +63,8 @@ Antes de escribir código HTML, organizaremos nuestra estructura de archivos y c
 
 💡 **El archivo `index.html` es clave en la web** porque es el archivo predeterminado que se carga cuando visitamos un sitio sin especificar una página (por ejemplo, `https://midominio.com/`).
 
+💡 \*\*Asimismo `index.html` también es el archivo que el servidor web dará como respuesta por defecto cuando se solicite el directorio que lo contiene. Si se requiere `https://midominio.com/mipagina` se resolverá `https://midominio.com/mipagina/index.html`.
+
 🛠️ **Ejercicio práctico:**
 
 1. Abrir `index.html` y agregar esta estructura base:
@@ -225,6 +227,101 @@ Para cargar imágenes optimizadas desde un servicio externo:
 3. Insertarla en HTML.
 
 🔗 **MDN - Carga de imágenes remotas**: [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes)
+
+---
+
+## 📌 6: Crear `css/index.css` con `@import` de `main.css` y un CSS Reset
+
+### 🎯 **Objetivos:**
+
+- Aprender a estructurar correctamente las hojas de estilo CSS separando configuraciones globales y específicas.
+- Asegurar una base uniforme en todos los navegadores con un **CSS Reset**.
+
+### 🛠 **Método:**
+
+✅ Crear un archivo `css/index.css` como punto de entrada de estilos.  
+✅ Usar `@import` para enlazar **un CSS Reset** antes de `main.css`, asegurando coherencia cross-browser.  
+✅ Usar `@import` para enlazar `main.css` y organizar los estilos.  
+✅ Asegurar que `index.css` está correctamente vinculado en el `<head>` de `index.html`.
+
+### 📌 **¿Qué es un CSS Reset y por qué usarlo?**
+
+Cada navegador tiene estilos por defecto que pueden variar y causar inconsistencias en el diseño de una web.  
+Un **CSS Reset** elimina estos estilos predeterminados y proporciona una base limpia y neutral, asegurando que los elementos HTML se vean igual en **Chrome, Firefox, Edge, Safari y otros navegadores**.
+
+El más utilizado es el de **Eric Meyer**, disponible en:  
+`http://meyerweb.com/eric/tools/css/reset/`
+
+### 📌 **Código para `css/index.css`**
+
+```css
+@import url('http://meyerweb.com/eric/tools/css/reset/reset.css'); /* CSS Reset para compatibilidad entre navegadores */
+@import url('main.css'); /* Estilos principales */
+```
+
+### 📌 **Código para `css/main.css`**
+
+```css
+/* Estilos básicos */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3 {
+	color: #333;
+}
+```
+
+### 📌 **Cómo vincular `index.css` en `index.html`**
+
+```html
+<head>
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+```
+
+---
+
+## 📌 Paso 7: Crear un Paquete de Favicons con Recursos Online e Indexarlo en el `<head>`
+
+### 🎯 **Objetivos:**
+
+- Generar un conjunto de favicons optimizados y configurarlos correctamente en el sitio web.
+- Asegurar que los favicons sean legibles en tamaños pequeños y que mantengan su identidad visual.
+
+### 🛠 **Método:**
+
+✅ Usar un generador de favicons en línea como **Real Favicon Generator**:  
+ `https://realfavicongenerator.net/`  
+✅ Subir un logo en formato **SVG o PNG (mínimo 512x512 píxeles)** y descargar el paquete generado.  
+✅ Incluir los favicons en la carpeta `assets/icons/`.  
+✅ Insertar las etiquetas en el `<head>` de `index.html`.
+
+### 📌 **Consideraciones de Diseño para Favicons**
+
+🔹 **Tamaño del texto**: Si el logo incluye texto, asegúrate de que sea legible a **16x16 píxeles**, que es el tamaño mínimo de un favicon. Es preferible **no incluir texto** o reducirlo a un símbolo reconocible.  
+🔹 **Detalles del icono**: Evitar elementos muy finos o detallados, ya que pueden perderse en tamaños pequeños.  
+🔹 **Contraste**: Usar colores contrastantes para que el ícono se distinga bien en fondos oscuros y claros.  
+🔹 **Pruebas**: Verificar cómo se ve el favicon en distintos dispositivos y navegadores antes de implementarlo.
+
+### 📌 **Código para Vincular Favicons en `index.html`**
+
+```html
+<head>
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+	<link rel="manifest" href="assets/icons/site.webmanifest" />
+	<meta name="theme-color" content="#ffffff" />
+</head>
+```
+
+🔗 **Referencia completa sobre favicons en MDN:**  
+`https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/icon`
 
 ---
 

@@ -73,6 +73,11 @@ valor de <code>index.html</code></h2>
 web</strong> porque es el archivo predeterminado que se carga cuando
 visitamos un sitio sin especificar una página (por ejemplo,
 <code>https://midominio.com/</code>).</p>
+<p>💡 **Asimismo <code>index.html</code> también es el archivo que el
+servidor web dará como respuesta por defecto cuando se solicite el
+directorio que lo contiene. Si se requiere
+<code>https://midominio.com/mipagina</code> se resolverá
+<code>https://midominio.com/mipagina/index.html</code>.</p>
 <p>🛠️ <strong>Ejercicio práctico:</strong></p>
 <ol type="1">
 <li><p>Abrir <code>index.html</code> y agregar esta estructura base:</p>
@@ -249,6 +254,109 @@ href="https://imagekit.io/">https://imagekit.io/</a></strong>.</li>
 </ol>
 <p>🔗 <strong>MDN - Carga de imágenes remotas</strong>: <a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes</a></p>
+<hr />
+<h2 id="crear-cssindex.css-con-import-de-main.css-y-un-css-reset">📌 6:
+Crear <code>css/index.css</code> con <code>@import</code> de
+<code>main.css</code> y un CSS Reset</h2>
+<h3 id="objetivos">🎯 <strong>Objetivos:</strong></h3>
+<ul>
+<li>Aprender a estructurar correctamente las hojas de estilo CSS
+separando configuraciones globales y específicas.</li>
+<li>Asegurar una base uniforme en todos los navegadores con un
+<strong>CSS Reset</strong>.</li>
+</ul>
+<h3 id="método">🛠 <strong>Método:</strong></h3>
+<p>✅ Crear un archivo <code>css/index.css</code> como punto de entrada
+de estilos.<br />
+✅ Usar <code>@import</code> para enlazar <strong>un CSS Reset</strong>
+antes de <code>main.css</code>, asegurando coherencia
+cross-browser.<br />
+✅ Usar <code>@import</code> para enlazar <code>main.css</code> y
+organizar los estilos.<br />
+✅ Asegurar que <code>index.css</code> está correctamente vinculado en
+el <code>&lt;head&gt;</code> de <code>index.html</code>.</p>
+<h3 id="qué-es-un-css-reset-y-por-qué-usarlo">📌 <strong>¿Qué es un CSS
+Reset y por qué usarlo?</strong></h3>
+<p>Cada navegador tiene estilos por defecto que pueden variar y causar
+inconsistencias en el diseño de una web.<br />
+Un <strong>CSS Reset</strong> elimina estos estilos predeterminados y
+proporciona una base limpia y neutral, asegurando que los elementos HTML
+se vean igual en <strong>Chrome, Firefox, Edge, Safari y otros
+navegadores</strong>.</p>
+<p>El más utilizado es el de <strong>Eric Meyer</strong>, disponible
+en:<br />
+<code>http://meyerweb.com/eric/tools/css/reset/</code></p>
+<h3 id="código-para-cssindex.css">📌 <strong>Código para
+<code>css/index.css</code></strong></h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">&#39;http://meyerweb.com/eric/tools/css/reset/reset.css&#39;</span><span class="fu">)</span><span class="op">;</span> <span class="co">/* CSS Reset para compatibilidad entre navegadores */</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">&#39;main.css&#39;</span><span class="fu">)</span><span class="op">;</span> <span class="co">/* Estilos principales */</span></span></code></pre></div>
+<h3 id="código-para-cssmain.css">📌 <strong>Código para
+<code>css/main.css</code></strong></h3>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Estilos básicos */</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>body {</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-family</span><span class="ch">:</span> <span class="dv">Arial</span><span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">#f4f4f4</span><span class="op">;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">margin</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">padding</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>h1<span class="op">,</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>h2<span class="op">,</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>h3 {</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">#333</span><span class="op">;</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="cómo-vincular-index.css-en-index.html">📌 <strong>Cómo vincular
+<code>index.css</code> en <code>index.html</code></strong></h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;css/index.css&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span></code></pre></div>
+<hr />
+<h2
+id="paso-7-crear-un-paquete-de-favicons-con-recursos-online-e-indexarlo-en-el-head">📌
+Paso 7: Crear un Paquete de Favicons con Recursos Online e Indexarlo en
+el <code>&lt;head&gt;</code></h2>
+<h3 id="objetivos-1">🎯 <strong>Objetivos:</strong></h3>
+<ul>
+<li>Generar un conjunto de favicons optimizados y configurarlos
+correctamente en el sitio web.</li>
+<li>Asegurar que los favicons sean legibles en tamaños pequeños y que
+mantengan su identidad visual.</li>
+</ul>
+<h3 id="método-1">🛠 <strong>Método:</strong></h3>
+<p>✅ Usar un generador de favicons en línea como <strong>Real Favicon
+Generator</strong>:<br />
+<code>https://realfavicongenerator.net/</code><br />
+✅ Subir un logo en formato <strong>SVG o PNG (mínimo 512x512
+píxeles)</strong> y descargar el paquete generado.<br />
+✅ Incluir los favicons en la carpeta <code>assets/icons/</code>.<br />
+✅ Insertar las etiquetas en el <code>&lt;head&gt;</code> de
+<code>index.html</code>.</p>
+<h3 id="consideraciones-de-diseño-para-favicons">📌
+<strong>Consideraciones de Diseño para Favicons</strong></h3>
+<p>🔹 <strong>Tamaño del texto</strong>: Si el logo incluye texto,
+asegúrate de que sea legible a <strong>16x16 píxeles</strong>, que es el
+tamaño mínimo de un favicon. Es preferible <strong>no incluir
+texto</strong> o reducirlo a un símbolo reconocible.<br />
+🔹 <strong>Detalles del icono</strong>: Evitar elementos muy finos o
+detallados, ya que pueden perderse en tamaños pequeños.<br />
+🔹 <strong>Contraste</strong>: Usar colores contrastantes para que el
+ícono se distinga bien en fondos oscuros y claros.<br />
+🔹 <strong>Pruebas</strong>: Verificar cómo se ve el favicon en
+distintos dispositivos y navegadores antes de implementarlo.</p>
+<h3 id="código-para-vincular-favicons-en-index.html">📌 <strong>Código
+para Vincular Favicons en <code>index.html</code></strong></h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;icon&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;image/png&quot;</span><span class="ot"> sizes</span><span class="op">=</span><span class="st">&quot;32x32&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;assets/icons/favicon-32x32.png&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;apple-touch-icon&quot;</span><span class="ot"> sizes</span><span class="op">=</span><span class="st">&quot;180x180&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;assets/icons/apple-touch-icon.png&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;manifest&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;assets/icons/site.webmanifest&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;theme-color&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;#ffffff&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>🔗 <strong>Referencia completa sobre favicons en MDN:</strong><br />
+<code>https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/icon</code></p>
 <hr />
 <h2 id="anexo-uso-de-copilot-en-vsc"><strong>Anexo: Uso de Copilot en
 VSC</strong></h2>
