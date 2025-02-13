@@ -186,11 +186,9 @@ Ejemplo correcto de estructura HTML semántica:
 
 ## **5️⃣ Inserción de Recursos Multimedia**
 
----
-
 ### **📌 IMPORTANTE ¿Por qué no almacenar archivos grandes o binarios en GitHub?**
 
-📌 **GitHub no está diseñado para almacenar archivos grandes o binarios.**  
+ **GitHub no está diseñado para almacenar archivos grandes o binarios.**  
 Razones principales:
 
 - **Límites de almacenamiento**: GitHub limita el tamaño de los archivos y repositorios.
@@ -215,10 +213,11 @@ Ejemplo con video en `assets/videos/`:
 ```
 
 Ejemplo con audio en `assets/audios/`:
+- **Tendrás que asegurarte de añadir el directorio assets/audios para el siguiente ejemplo.**
 
 ```html
 <audio controls>
-	<source src="./assets/audios.mp3" type="audio/mp3" />
+	<source src="./assets/audios/ejemplo.mp3" type="audio/mp3" />
 	Tu navegador no soporta la etiqueta de audio.
 </audio>
 ```
