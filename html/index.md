@@ -31,31 +31,44 @@ Antes de escribir código HTML, organizaremos nuestra estructura de archivos y c
 📂 **Estructura recomendada:**
 
 ```
-/proyecto-web
+proyecto-web/
 │── index.html
 │── css/
 │   └── index.css
 │── assets/
 │   ├── images/
-│   └── icons/
-│       └── favicon.svg
+│   ├── icons/
+│   │   └── favicon.svg
+│   └── videos/
 │── js/
 │   └── main.js
+
 ```
 
 👉 **Explicación:**
 
 - **css/** → Contendrá hojas de estilo.
-- **assets/** → Almacén de imágenes e íconos.
-- **js/** → Archivos JavaScript (si los necesitamos).
+- **assets/** → Almacén de media.
+- **js/** → Archivos JavaScript.
 - **index.html** → Punto de entrada del sitio web.
-  - 💡 **Nota:** `index.html` también será el archivo por defecto servido si se solicita un directorio.
 
-🛠️ **Ejercicio práctico:**
+🛠️ **Manos a la obra:**
 
-1. Crear esta estructura en **Visual Studio Code**.
-2. Crear un archivo `index.html`.
-3. Usar **Copilot** para autocompletar la estructura de `index.css` (📄 **Ver Anexo: Uso de Copilot en VSC**).
+Puedes usar `Right-Clic` + `New Folder` y `Right-Clic` + `New File` en **VSC**
+o ejecutar tres comandos para crear la estructura de directorios en la **BASH Terminal**:
+
+```bash
+cd ~/proyecto-web
+mkdir -p ./css ./assets/images ./assets/icons ./assets/videos ./js
+touch ./{index.html,css/index.css,assets/icons/favicon.svg,js/main.js}
+```
+
+### **Explicación:**
+
+- `cd ~/proyecto-web` → Cambia al directorio proyecto-web dentro del directorio del usuario (~).
+- `mkdir -p` → permite crear múltiples directorios anidados sin errores si ya existen. Con -p se crean los directrios intermedios que se requieran.
+- `touch` → Crea los archivos vacíos si no existen.
+  Se usa {} para especificar múltiples rutas con una sola expresión.
 
 ---
 
@@ -67,7 +80,7 @@ Antes de escribir código HTML, organizaremos nuestra estructura de archivos y c
 
 🛠️ **Ejercicio práctico:**
 
-1. Abrir `index.html` y agregar esta estructura base:
+1. Abrir `index.html` en el **VSC** y agregar esta estructura base:
    ```html
    <!DOCTYPE html>
    <html lang="es">
@@ -81,10 +94,8 @@ Antes de escribir código HTML, organizaremos nuestra estructura de archivos y c
    	</body>
    </html>
    ```
-2. Guardar y visualizar con **Live Server** en VSC.
-3. Usar **Copilot** para completar la estructura semántica de la página.
-
-🔗 **MDN - Estructura HTML**: [https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
+2. Puedes usar **Copilot** para completar la estructura semántica de la página.
+3. Guardar y visualizar con **Live Server** en VSC.
 
 ## **3️⃣ Meta Tags para SEO**
 
@@ -169,9 +180,22 @@ Ejemplo correcto de estructura HTML semántica:
 
 🔗 **MDN - HTML Semántico**: [https://developer.mozilla.org/en-US/docs/Glossary/Semantics](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
 
+🔗 **MDN - Web semántica**: [https://developer.mozilla.org/en-US/curriculum/core/semantic-html/](https://developer.mozilla.org/en-US/curriculum/core/semantic-html/)
+
 ---
 
 ## **5️⃣ Inserción de Recursos Multimedia**
+
+---
+
+### **📌 IMPORTANTE ¿Por qué no almacenar archivos grandes o binarios en GitHub?**
+
+📌 **GitHub no está diseñado para almacenar archivos grandes o binarios.**  
+Razones principales:
+
+- **Límites de almacenamiento**: GitHub limita el tamaño de los archivos y repositorios.
+- **Problemas de rendimiento**: Archivos grandes hacen que `git pull` y `git clone` sean más lentos.
+- **Alternativa recomendada**: Usar un **CDN o servicio de almacenamiento externo** (ejemplo: ImageKit.io, Cloudinary, Firebase Storage).
 
 ### **📌 5.1 Cargar imágenes y videos desde local**
 
@@ -190,6 +214,15 @@ Ejemplo con video en `assets/videos/`:
 </video>
 ```
 
+Ejemplo con audio en `assets/audios/`:
+
+```html
+<audio controls>
+	<source src="./assets/audios.mp3" type="audio/mp3" />
+	Tu navegador no soporta la etiqueta de audio.
+</audio>
+```
+
 🛠 **Ejercicio práctico:**
 
 1. Subir una imagen a `assets/images/`.
@@ -201,18 +234,7 @@ Ejemplo con video en `assets/videos/`:
 
 ---
 
-### **📌 5.2 Por qué no almacenar archivos grandes o binarios en GitHub**
-
-📌 **GitHub no está diseñado para almacenar archivos grandes o binarios.**  
-Razones principales:
-
-- **Límites de almacenamiento**: GitHub limita el tamaño de los archivos y repositorios.
-- **Problemas de rendimiento**: Archivos grandes hacen que `git pull` y `git clone` sean más lentos.
-- **Alternativa recomendada**: Usar un **CDN o servicio de almacenamiento externo** (ejemplo: ImageKit.io, Cloudinary, Firebase Storage).
-
----
-
-### **📌 5.3 Insertar imágenes vía API (ejemplo: ImageKit.io)**
+### **📌 5.2 Insertar imágenes vía API (ejemplo: ImageKit.io)**
 
 Para cargar imágenes optimizadas desde un servicio externo:
 
