@@ -1,135 +1,235 @@
-<h1
-id="introducción-a-css3-y-guía-teórico-práctica-de-iniciación-al-estilado-web">Introducción
-a CSS3 y Guía Teórico-Práctica de Iniciación al Estilado Web</h1>
+<h1 id="introducción-a-css3-y-guía-teórico-práctica-de-iniciación-al-estilado-web">
+	Introducción a CSS3 y Guía Teórico-Práctica de Iniciación al Estilado Web
+</h1>
 <h2 id="introducción-a-css3">1. Introducción a CSS3</h2>
-<p>CSS3 (Cascading Style Sheets, nivel 3) es el estándar actual para
-definir la presentación y el diseño de páginas web. Su desarrollo está
-regulado por el W3C (<a href="https://www.w3.org/Style/CSS/">World Wide
-Web Consortium</a>), asegurando la compatibilidad y evolución del
-lenguaje. Puedes consultar la especificación oficial aquí:</p>
+<p>
+	CSS3 (Cascading Style Sheets, nivel 3) es el estándar actual para definir la presentación y el diseño de páginas web.
+	Su desarrollo está regulado por el W3C (
+	<a href="https://www.w3.org/Style/CSS/">World Wide Web Consortium</a>
+	), asegurando la compatibilidad y evolución del lenguaje. Puedes consultar la especificación oficial aquí:
+</p>
 <ul>
-<li><strong>Especificación oficial</strong>: <a
-href="https://www.w3.org/TR/css/">https://www.w3.org/TR/css/</a></li>
-<li><strong>Documentación de MDN Web Docs</strong>: <a
-href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a></li>
-<li><strong>Validador de CSS del W3C</strong>: <a
-href="https://jigsaw.w3.org/css-validator/">https://jigsaw.w3.org/css-validator/</a></li>
+	<li>
+		<strong>Especificación oficial</strong>
+		:
+		<a href="https://www.w3.org/TR/css/">https://www.w3.org/TR/css/</a>
+	</li>
+	<li>
+		<strong>Documentación de MDN Web Docs</strong>
+		:
+		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a>
+	</li>
+	<li>
+		<strong>Validador de CSS del W3C</strong>
+		:
+		<a href="https://jigsaw.w3.org/css-validator/">https://jigsaw.w3.org/css-validator/</a>
+	</li>
 </ul>
-<p>A diferencia de HTML, CSS no define la estructura de los documentos,
-sino su apariencia. Su sintaxis comparte características con lenguajes
-de programación gracias a conceptos como <span class="citation"
-data-cites="functions">@functions</span>, <span class="citation"
-data-cites="keyframes">@keyframes</span>, calc(), var(), entre otros,
-permitiendo estilos dinámicos y reutilizables.</p>
-<h2
-id="historia-y-la-revolución-de-css3-en-el-diseño-de-interfaces-ui">2.
-Historia y la Revolución de CSS3 en el Diseño de Interfaces (UI)</h2>
-<p>CSS fue propuesto en 1996 y ha evolucionado hasta CSS3, que marcó un
-punto de inflexión en el diseño de interfaces de usuario (UI) al
-introducir herramientas que permitieron separar completamente la
-presentación de la estructura del contenido.</p>
-<p>Gracias a innovaciones como Flexbox, Grid, transiciones, animaciones
-y variables personalizadas, los diseñadores dejaron de depender de
-imágenes estáticas y trucos con tablas para maquetar páginas web. La
-posibilidad de crear diseños responsivos sin necesidad de JavaScript
-revolucionó la accesibilidad y la experiencia de usuario, permitiendo
-interfaces más fluidas, adaptables y atractivas. Además, la adopción de
-efectos avanzados como sombras, filtros y tipografías personalizadas
-hizo que las aplicaciones web pudieran competir visualmente con el
-diseño gráfico tradicional, impulsando la evolución del diseño digital
-moderno.</p>
-<h2 id="sintaxis-de-selectores-y-reglas-en-css">3. Sintaxis de
-Selectores y Reglas en CSS</h2>
-<p>CSS utiliza una sintaxis basada en reglas, donde cada regla se
-compone de un selector y un bloque de declaraciones. Un selector indica
-a qué elementos se aplicará el estilo, mientras que el bloque de
-declaraciones contiene las propiedades y valores que definirán su
-apariencia.</p>
+<p>
+	A diferencia de HTML, CSS no define la estructura de los documentos, sino su apariencia. Su sintaxis comparte
+	características con lenguajes de programación gracias a conceptos como
+	<span class="citation" data-cites="functions">@functions</span>
+	,
+	<span class="citation" data-cites="keyframes">@keyframes</span>
+	, calc(), var(), entre otros, permitiendo estilos dinámicos y reutilizables.
+</p>
+<h2 id="historia-y-la-revolución-de-css3-en-el-diseño-de-interfaces-ui">
+	2. Historia y la Revolución de CSS3 en el Diseño de Interfaces (UI)
+</h2>
+<p>
+	CSS fue propuesto en 1996 y ha evolucionado hasta CSS3, que marcó un punto de inflexión en el diseño de interfaces de
+	usuario (UI) al introducir herramientas que permitieron separar completamente la presentación de la estructura del
+	contenido.
+</p>
+<p>
+	Gracias a innovaciones como Flexbox, Grid, transiciones, animaciones y variables personalizadas, los diseñadores
+	dejaron de depender de imágenes estáticas y trucos con tablas para maquetar páginas web. La posibilidad de crear
+	diseños responsivos sin necesidad de JavaScript revolucionó la accesibilidad y la experiencia de usuario, permitiendo
+	interfaces más fluidas, adaptables y atractivas. Además, la adopción de efectos avanzados como sombras, filtros y
+	tipografías personalizadas hizo que las aplicaciones web pudieran competir visualmente con el diseño gráfico
+	tradicional, impulsando la evolución del diseño digital moderno.
+</p>
+<h2 id="sintaxis-de-selectores-y-reglas-en-css">3. Sintaxis de Selectores y Reglas en CSS</h2>
+<p>
+	CSS utiliza una sintaxis basada en reglas, donde cada regla se compone de un selector y un bloque de declaraciones. Un
+	selector indica a qué elementos se aplicará el estilo, mientras que el bloque de declaraciones contiene las propiedades
+	y valores que definirán su apariencia.
+</p>
 <p>Ejemplo de sintaxis:</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>selector {</span>
+<div class="sourceCode" id="cb1">
+	<pre
+		class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>selector {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    propiedad<span class="ch">:</span> <span class="dv">valor</span><span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+</div>
 <h3 id="selectores-básicos">Selectores Básicos</h3>
 <ul>
-<li><strong>Por elemento:</strong> <code>h1 { color: blue; }</code> →
-Aplica a todos los <code>&lt;h1&gt;</code>.</li>
-<li><strong>Por clase:</strong>
-<code>.callToAction { font-weight: bold; }</code> → Aplica a todos los
-elementos con <code>class="callToAction"</code>.</li>
-<li><strong>Por ID:</strong> <code>#titulo { font-size: 24px; }</code> →
-Aplica solo al elemento con <code>id="titulo"</code>.</li>
+	<li>
+		<strong>Por elemento:</strong>
+		<code>h1 { color: blue; }</code>
+		→ Aplica a todos los
+		<code>&lt;h1&gt;</code>
+		.
+	</li>
+	<li>
+		<strong>Por clase:</strong>
+		<code>.callToAction { font-weight: bold; }</code>
+		→ Aplica a todos los elementos con
+		<code>class="callToAction"</code>
+		.
+	</li>
+	<li>
+		<strong>Por ID:</strong>
+		<code>#titulo { font-size: 24px; }</code>
+		→ Aplica solo al elemento con
+		<code>id="titulo"</code>
+		.
+	</li>
 </ul>
 <h3 id="selectores-avanzados">Selectores Avanzados</h3>
 <ul>
-<li><strong>Descendiente:</strong>
-<code>article p { color: gray; }</code> → Aplica a todos los
-<code>&lt;p&gt;</code> dentro de <code>&lt;article&gt;</code>.</li>
-<li><strong>Hijo directo:</strong>
-<code>nav &gt; ul { margin: 0; }</code> → Aplica solo a
-<code>&lt;ul&gt;</code> dentro de <code>&lt;nav&gt;</code>.</li>
-<li><strong>Primer hijo:</strong>
-<code>p:first-child { text-transform: uppercase; }</code> → Aplica al
-primer <code>&lt;p&gt;</code> dentro de su contenedor.</li>
-<li><strong>Pseudoclases dinámicas:</strong>
-<code>button:hover { background-color: red; }</code> → Aplica cuando el
-usuario pasa el cursor.</li>
+	<li>
+		<strong>Descendiente:</strong>
+		<code>article p { color: gray; }</code>
+		→ Aplica a todos los
+		<code>&lt;p&gt;</code>
+		dentro de
+		<code>&lt;article&gt;</code>
+		.
+	</li>
+	<li>
+		<strong>Hijo directo:</strong>
+		<code>nav &gt; ul { margin: 0; }</code>
+		→ Aplica solo a
+		<code>&lt;ul&gt;</code>
+		dentro de
+		<code>&lt;nav&gt;</code>
+		.
+	</li>
+	<li>
+		<strong>Primer hijo:</strong>
+		<code>p:first-child { text-transform: uppercase; }</code>
+		→ Aplica al primer
+		<code>&lt;p&gt;</code>
+		dentro de su contenedor.
+	</li>
+	<li>
+		<strong>Pseudoclases dinámicas:</strong>
+		<code>button:hover { background-color: red; }</code>
+		→ Aplica cuando el usuario pasa el cursor.
+	</li>
 </ul>
-<h3 id="pseudoclases-dinámicas-en-css">Pseudoclases Dinámicas en
-CSS</h3>
-<p>Las pseudoclases dinámicas permiten modificar el estilo de los
-elementos según la interacción del usuario:</p>
+<h3 id="pseudoclases-dinámicas-en-css">Pseudoclases Dinámicas en CSS</h3>
+<p>Las pseudoclases dinámicas permiten modificar el estilo de los elementos según la interacción del usuario:</p>
 <ul>
-<li><code>:hover</code> → Se activa cuando el usuario pasa el cursor
-sobre un elemento.</li>
-<li><code>:focus</code> → Se activa cuando el elemento está enfocado
-(por ejemplo, en un input).</li>
-<li><code>:active</code> → Se activa cuando el usuario mantiene
-presionado un elemento.</li>
-<li><code>:visited</code> → Se aplica a enlaces ya visitados.</li>
-<li><code>:checked</code> → Se activa en inputs tipo checkbox o radio
-cuando están seleccionados.</li>
-<li><code>:disabled</code> → Se aplica a elementos de formulario
-deshabilitados.</li>
+	<li>
+		<code>:hover</code>
+		→ Se activa cuando el usuario pasa el cursor sobre un elemento.
+	</li>
+	<li>
+		<code>:focus</code>
+		→ Se activa cuando el elemento está enfocado (por ejemplo, en un input).
+	</li>
+	<li>
+		<code>:active</code>
+		→ Se activa cuando el usuario mantiene presionado un elemento.
+	</li>
+	<li>
+		<code>:visited</code>
+		→ Se aplica a enlaces ya visitados.
+	</li>
+	<li>
+		<code>:checked</code>
+		→ Se activa en inputs tipo checkbox o radio cuando están seleccionados.
+	</li>
+	<li>
+		<code>:disabled</code>
+		→ Se aplica a elementos de formulario deshabilitados.
+	</li>
 </ul>
 <h2 id="potencial-y-ámbito-de-css">4. Potencial y Ámbito de CSS</h2>
-<p>CSS no solo permite estilizar texto y estructuras básicas, sino que
-es una herramienta poderosa para diseño gráfico avanzado,
-incluyendo:</p>
+<p>
+	CSS no solo permite estilizar texto y estructuras básicas, sino que es una herramienta poderosa para diseño gráfico
+	avanzado, incluyendo:
+</p>
 <ul>
-<li><strong>Diseño responsivo</strong> con <code>@media</code>
-queries.</li>
-<li><strong>Estilización dinámica</strong> mediante <code>:hover</code>,
-<code>:focus</code>, <code>:nth-child()</code>, etc.</li>
-<li><strong>Uso de variables y funciones personalizadas</strong>
-(<code>var()</code>, <code>calc()</code>, <code>clamp()</code>).</li>
-<li><strong>Efectos visuales avanzados</strong> como sombras
-(<code>box-shadow</code>, <code>text-shadow</code>), filtros
-(<code>filter</code>), y animaciones (<code>@keyframes</code>).</li>
-<li><strong>Diseño experimental y NetArt</strong> con propiedades
-avanzadas de tipografía, blending modes, clipping, y efectos 3D.</li>
+	<li>
+		<strong>Diseño responsivo</strong>
+		con
+		<code>@media</code>
+		queries.
+	</li>
+	<li>
+		<strong>Estilización dinámica</strong>
+		mediante
+		<code>:hover</code>
+		,
+		<code>:focus</code>
+		,
+		<code>:nth-child()</code>
+		, etc.
+	</li>
+	<li>
+		<strong>Uso de variables y funciones personalizadas</strong>
+		(
+		<code>var()</code>
+		,
+		<code>calc()</code>
+		,
+		<code>clamp()</code>
+		).
+	</li>
+	<li>
+		<strong>Efectos visuales avanzados</strong>
+		como sombras (
+		<code>box-shadow</code>
+		,
+		<code>text-shadow</code>
+		), filtros (
+		<code>filter</code>
+		), y animaciones (
+		<code>@keyframes</code>
+		).
+	</li>
+	<li>
+		<strong>Diseño experimental y NetArt</strong>
+		con propiedades avanzadas de tipografía, blending modes, clipping, y efectos 3D.
+	</li>
 </ul>
 <h3 id="algunas-referencias">🎨 Algunas referencias</h3>
 <ul>
-<li><a href="http://www.csszengarden.com/">CSS Zen Garden</a></li>
-<li><a href="https://anatravasos.com/">Ana Travasos</a> → Artista que
-explora interactividad y diseño gráfico con CSS3 y SVG.</li>
-<li><a href="https://labs.jensimmons.com/">Jen Simmons</a> → Evangelista
-de CSS Grid y diseño web moderno.</li>
-<li><a href="https://chriscoyier.net/">Chris Coyier</a> → Fundador de
-CSS-Tricks, un recurso esencial para aprender CSS.</li>
-<li><a href="https://www.cssdesignawards.com/">CSS Design Awards</a> →
-Premian la innovación en el uso de CSS y diseño gráfico digital.</li>
+	<li><a href="http://www.csszengarden.com/">CSS Zen Garden</a></li>
+	<li>
+		<a href="https://anatravasos.com/">Ana Travasos</a>
+		→ Artista que explora interactividad y diseño gráfico con CSS3 y SVG.
+	</li>
+	<li>
+		<a href="https://labs.jensimmons.com/">Jen Simmons</a>
+		→ Evangelista de CSS Grid y diseño web moderno.
+	</li>
+	<li>
+		<a href="https://chriscoyier.net/">Chris Coyier</a>
+		→ Fundador de CSS-Tricks, un recurso esencial para aprender CSS.
+	</li>
+	<li>
+		<a href="https://www.cssdesignawards.com/">CSS Design Awards</a>
+		→ Premian la innovación en el uso de CSS y diseño gráfico digital.
+	</li>
 </ul>
-<h2 id="ejemplo-práctico-con-selectores">5. Ejemplo Práctico con
-Selectores</h2>
-<p>Asumimos que el estudiante ya tiene un <code>index.html</code> que
-importa <code>css/index.css</code>, el cual a su vez importa
-<code>css/main.css</code>.</p>
-<h3 id="estructura-html-de-referencia">📌 Estructura HTML de
-Referencia</h3>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<h2 id="ejemplo-práctico-con-selectores">5. Ejemplo Práctico con Selectores</h2>
+<p>
+	Asumimos que el estudiante ya tiene un
+	<code>index.html</code>
+	que importa
+	<code>css/index.css</code>
+	, el cual a su vez importa
+	<code>css/main.css</code>
+	.
+</p>
+<h3 id="estructura-html-de-referencia">📌 Estructura HTML de Referencia</h3>
+<div class="sourceCode" id="cb2">
+	<pre
+		class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">&quot;es&quot;</span><span class="dt">&gt;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">&quot;UTF-8&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
@@ -165,11 +265,16 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Envíanos un mensaje.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
-<h3 id="estilos-css-cssmain.css">🎨 Estilos CSS
-(<code>css/main.css</code>)</h3>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* 📌 Estilos por elementos */</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre>
+</div>
+<h3 id="estilos-css-cssmain.css">
+	🎨 Estilos CSS (
+	<code>css/main.css</code>
+	)
+</h3>
+<div class="sourceCode" id="cb3">
+	<pre
+		class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* 📌 Estilos por elementos */</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>body {</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-family</span><span class="ch">:</span> <span class="dv">Arial</span><span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">margin</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
@@ -246,90 +351,178 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#c
 <span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>h2 {</span>
 <span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>    <span class="kw">animation</span><span class="ch">:</span> <span class="dv">fadeIn 1</span><span class="dt">s</span> <span class="dv">ease-in-out</span><span class="op">;</span></span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<h2 id="explicación-de-los-selectores-avanzados">Explicación de los
-Selectores Avanzados</h2>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+</div>
+<h2 id="explicación-de-los-selectores-avanzados">Explicación de los Selectores Avanzados</h2>
 <ul>
-<li><code>#inicio</code> → Aplica un estilo solo al enlace con ID
-“inicio”.</li>
-<li><code>nav ul li a:hover</code> → Cambia el fondo al pasar el
-mouse.</li>
-<li><code>nav ul li:first-child a</code> → Aplica borde amarillo al
-primer elemento.</li>
-<li><code>nav ul li:nth-child(even) a</code> → Aplica estilo itálico a
-elementos pares.</li>
-<li><code>section:target</code> → Resalta la sección cuando es el
-destino de un enlace.</li>
-<li><code>@keyframes fadeIn</code> → Aplica una animación de aparición a
-los títulos.</li>
+	<li>
+		<code>#inicio</code>
+		→ Aplica un estilo solo al enlace con ID “inicio”.
+	</li>
+	<li>
+		<code>nav ul li a:hover</code>
+		→ Cambia el fondo al pasar el mouse.
+	</li>
+	<li>
+		<code>nav ul li:first-child a</code>
+		→ Aplica borde amarillo al primer elemento.
+	</li>
+	<li>
+		<code>nav ul li:nth-child(even) a</code>
+		→ Aplica estilo itálico a elementos pares.
+	</li>
+	<li>
+		<code>section:target</code>
+		→ Resalta la sección cuando es el destino de un enlace.
+	</li>
+	<li>
+		<code>@keyframes fadeIn</code>
+		→ Aplica una animación de aparición a los títulos.
+	</li>
 </ul>
 <h2 id="explicación-de-la-animación">Explicación de la animación</h2>
-<p>El selector <code>:target</code> permite aplicar estilos a un
-elemento cuando es referenciado en la URL. En este ejemplo, si hacemos
-clic en un enlace que apunta a una sección, esta se resaltará con un
-color de fondo distinto.</p>
-<p>Además, la animación <code>fadeIn</code> hace que los títulos
-<code>&lt;h2&gt;</code> aparezcan con un efecto de desvanecimiento al
-cargar la página.</p>
+<p>
+	El selector
+	<code>:target</code>
+	permite aplicar estilos a un elemento cuando es referenciado en la URL. En este ejemplo, si hacemos clic en un enlace
+	que apunta a una sección, esta se resaltará con un color de fondo distinto.
+</p>
+<p>
+	Además, la animación
+	<code>fadeIn</code>
+	hace que los títulos
+	<code>&lt;h2&gt;</code>
+	aparezcan con un efecto de desvanecimiento al cargar la página.
+</p>
 <h2 id="conclusión">6. Conclusión</h2>
-<p>CSS3 es una herramienta extremadamente poderosa que permite no solo
-mejorar la estética, sino crear experiencias interactivas sin necesidad
-de JavaScript. Con un uso avanzado de selectores y pseudo-clases, es
-posible lograr interfaces dinámicas y estilizadas que respondan al
-usuario de forma eficiente.</p>
-<h3 id="ejemplos-destacados-de-interacción-con-css3">🎨 <strong>Ejemplos
-Destacados de Interacción con CSS3</strong></h3>
+<p>
+	CSS3 es una herramienta extremadamente poderosa que permite no solo mejorar la estética, sino crear experiencias
+	interactivas sin necesidad de JavaScript. Con un uso avanzado de selectores y pseudo-clases, es posible lograr
+	interfaces dinámicas y estilizadas que respondan al usuario de forma eficiente.
+</p>
+<h3 id="ejemplos-destacados-de-interacción-con-css3">
+	🎨
+	<strong>Ejemplos Destacados de Interacción con CSS3</strong>
+</h3>
 <ol type="1">
-<li><p><strong>CSS Zen Garden</strong> - Una colección de estilos
-completamente distintos aplicados a un mismo HTML.<br />
-🔗 <a
-href="http://www.csszengarden.com/">http://www.csszengarden.com/</a></p></li>
-<li><p><strong>Only CSS: Dropdown Navigation</strong> - Menú desplegable
-solo con CSS.<br />
-🔗 <a
-href="https://codepen.io/philhoyt/pen/ujHzd">https://codepen.io/philhoyt/pen/ujHzd</a></p></li>
-<li><p><strong>Pure CSS Tooltips</strong> - Uso de <code>:hover</code>
-para mostrar tooltips sin JS.<br />
-🔗 <a
-href="https://css-tricks.com/css-only-tooltips/">https://css-tricks.com/css-only-tooltips/</a></p></li>
-<li><p><strong>CSS Grid &amp; Flexbox Playground</strong> -
-Experimentación con Grid y Flexbox.<br />
-🔗 <a
-href="https://cssgridgarden.com/">https://cssgridgarden.com/</a><br />
-🔗 <a
-href="https://flexboxfroggy.com/">https://flexboxfroggy.com/</a></p></li>
-<li><p><strong>Puros Menús Desplegables con CSS</strong> - Ejemplo de
-submenús animados sin JS.<br />
-🔗 <a
-href="https://codepen.io/simoberny/pen/JjoPbwr">https://codepen.io/simoberny/pen/JjoPbwr</a></p></li>
-<li><p><strong>CSS Perspective Cards</strong> - Tarjetas con efecto de
-rotación en 3D sin JS.<br />
-🔗 <a
-href="https://codepen.io/nxworld/pen/ZYNOBZ">https://codepen.io/nxworld/pen/ZYNOBZ</a></p></li>
-<li><p><strong>CSS-Only Modal</strong> - Un modal interactivo sin una
-sola línea de JavaScript.<br />
-🔗 <a
-href="https://codepen.io/davidkpiano/pen/YqJjgO">https://codepen.io/davidkpiano/pen/YqJjgO</a></p></li>
-<li><p><strong>Puro CSS3 Loading Animations</strong> - Animaciones de
-carga avanzadas sin JS.<br />
-🔗 <a
-href="https://projects.verou.me/css3patterns/">https://projects.verou.me/css3patterns/</a></p></li>
-<li><p><strong>Efectos Hover con <code>:hover</code> y
-<code>:focus</code></strong> - Transiciones suaves sin necesidad de
-JavaScript.<br />
-🔗 <a
-href="https://codepen.io/suez/pen/RwWjYGz">https://codepen.io/suez/pen/RwWjYGz</a></p></li>
-<li><p><strong>NetArt con CSS3: Ana Travasos</strong> - Experimentación
-de CSS puro con arte digital.<br />
-🔗 <a
-href="https://anatravasos.com/">https://anatravasos.com/</a></p></li>
+	<li>
+		<p>
+			<strong>CSS Zen Garden</strong>
+			- Una colección de estilos completamente distintos aplicados a un mismo HTML.
+			<br />
+			🔗
+			<a href="http://www.csszengarden.com/">http://www.csszengarden.com/</a>
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Only CSS: Dropdown Navigation</strong>
+			- Menú desplegable solo con CSS.
+			<br />
+			🔗
+			<a href="https://codepen.io/philhoyt/pen/ujHzd">https://codepen.io/philhoyt/pen/ujHzd</a>
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Pure CSS Tooltips</strong>
+			- Uso de
+			<code>:hover</code>
+			para mostrar tooltips sin JS.
+			<br />
+			🔗
+			<a href="https://css-tricks.com/css-only-tooltips/">https://css-tricks.com/css-only-tooltips/</a>
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>CSS Grid &amp; Flexbox Playground</strong>
+			- Experimentación con Grid y Flexbox.
+			<br />
+			🔗
+			<a href="https://cssgridgarden.com/">https://cssgridgarden.com/</a>
+			<br />
+			🔗
+			<a href="https://flexboxfroggy.com/">https://flexboxfroggy.com/</a>
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Puros Menús Desplegables con CSS</strong>
+			- Ejemplo de submenús animados sin JS.
+			<br />
+			🔗
+			<a href="https://codepen.io/simoberny/pen/JjoPbwr">https://codepen.io/simoberny/pen/JjoPbwr</a>
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>CSS Perspective Cards</strong>
+			- Tarjetas con efecto de rotación en 3D sin JS.
+			<br />
+			🔗
+			<a href="https://codepen.io/nxworld/pen/ZYNOBZ">https://codepen.io/nxworld/pen/ZYNOBZ</a>
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>CSS-Only Modal</strong>
+			- Un modal interactivo sin una sola línea de JavaScript.
+			<br />
+			🔗
+			<a href="https://codepen.io/davidkpiano/pen/YqJjgO">https://codepen.io/davidkpiano/pen/YqJjgO</a>
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Puro CSS3 Loading Animations</strong>
+			- Animaciones de carga avanzadas sin JS.
+			<br />
+			🔗
+			<a href="https://projects.verou.me/css3patterns/">https://projects.verou.me/css3patterns/</a>
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>
+				Efectos Hover con
+				<code>:hover</code>
+				y
+				<code>:focus</code>
+			</strong>
+			- Transiciones suaves sin necesidad de JavaScript.
+			<br />
+			🔗
+			<a href="https://codepen.io/suez/pen/RwWjYGz">https://codepen.io/suez/pen/RwWjYGz</a>
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>NetArt con CSS3: Ana Travasos</strong>
+			- Experimentación de CSS puro con arte digital.
+			<br />
+			🔗
+			<a href="https://anatravasos.com/">https://anatravasos.com/</a>
+		</p>
+	</li>
 </ol>
-<h3 id="ejemplo-extra-de-interacción-css-only">🔥 <strong>Ejemplo Extra
-de Interacción CSS-Only</strong></h3>
-<p>Si buscas inspiración más avanzada, echa un vistazo a este desafío de
-<strong>Awwwards</strong> sobre CSS interactivo:<br />
-🔗 <a
-href="https://www.awwwards.com/inspiration/">https://www.awwwards.com/inspiration/</a></p>
-<p>📌 <strong>Todos estos ejemplos muestran cómo se pueden lograr
-experiencias interactivas avanzadas únicamente con CSS3, sin necesidad
-de JavaScript.</strong> ¡Explóralos y experimenta con ellos! 🚀</p>
+<h3 id="ejemplo-extra-de-interacción-css-only">
+	🔥
+	<strong>Ejemplo Extra de Interacción CSS-Only</strong>
+</h3>
+<p>
+	Si buscas inspiración más avanzada, echa un vistazo a este desafío de
+	<strong>Awwwards</strong>
+	sobre CSS interactivo:
+	<br />
+	🔗
+	<a href="https://www.awwwards.com/awwwards/collections/css-js-animations/">https://www.awwwards.com/inspiration/</a>
+</p>
+<p>
+	📌
+	<strong>
+		Todos estos ejemplos muestran cómo se pueden lograr experiencias interactivas avanzadas únicamente con CSS3, sin
+		necesidad de JavaScript.
+	</strong>
+	¡Explóralos y experimenta con ellos! 🚀
+</p>

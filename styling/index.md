@@ -254,6 +254,6 @@ CSS3 es una herramienta extremadamente poderosa que permite no solo mejorar la e
 ### 🔥 **Ejemplo Extra de Interacción CSS-Only**
 
 Si buscas inspiración más avanzada, echa un vistazo a este desafío de **Awwwards** sobre CSS interactivo:  
-🔗 [https://www.awwwards.com/inspiration/](https://www.awwwards.com/inspiration/)
+🔗 [https://www.awwwards.com/awwwards/collections/css-js-animations/](https://www.awwwards.com/inspiration/)
 
 📌 **Todos estos ejemplos muestran cómo se pueden lograr experiencias interactivas avanzadas únicamente con CSS3, sin necesidad de JavaScript.** ¡Explóralos y experimenta con ellos! 🚀
