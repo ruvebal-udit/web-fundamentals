@@ -3,21 +3,21 @@
 Un **Pull Request (PR)** permite proponer cambios en un repositorio público, generalmente para contribuir a un proyecto de código abierto. Para hacer esto, necesitamos **crear un "fork"** del repositorio original, hacer cambios en él y luego enviar esos cambios como un PR.
 
 ---
+
 Fork y Clone: Diferencias
 
 ✏️ Fork:
 
-    Función de GitHub para crear una copia de un repositorio remoto.
-    La réplica es independiente del original.
-    Puedes modificarla sin permiso del propietario original.
+Función de GitHub para crear una copia de un repositorio remoto.
+La réplica es independiente del original.
+Puedes modificarla sin permiso del propietario original.
 
 ✏️ Clone:
 
-    Crea una copia local de un repositorio remoto.
-    Usa el comando git clone <URL>.
-    Mantiene una conexión con el repositorio remoto.
+Crea una copia local de un repositorio remoto.
+Usa el comando git clone <URL>.
+Mantiene una conexión con el repositorio remoto.
 
-    
 ## **🔹 Paso 1: Forkear el Repositorio en GitHub**
 
 🔹 **(Después de loguearte con tu user en GitHub)**
@@ -197,4 +197,5 @@ git push origin main
 | 8️⃣ Mantener fork    | `git fetch upstream && git merge`           | Terminal en VSC                      |
 
 ---
+
 [https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)

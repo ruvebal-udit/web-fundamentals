@@ -1,0 +1,236 @@
+<h1 id="guía-cómo-hacer-un-pull-request-desde-un-fork-en-github">📌
+<strong>Guía: Cómo Hacer un Pull Request desde un Fork en
+GitHub</strong></h1>
+<p>Un <strong>Pull Request (PR)</strong> permite proponer cambios en un
+repositorio público, generalmente para contribuir a un proyecto de
+código abierto. Para hacer esto, necesitamos <strong>crear un
+“fork”</strong> del repositorio original, hacer cambios en él y luego
+enviar esos cambios como un PR.</p>
+<hr />
+<p>Fork y Clone: Diferencias</p>
+<p>✏️ Fork:</p>
+<p>Función de GitHub para crear una copia de un repositorio remoto. La
+réplica es independiente del original. Puedes modificarla sin permiso
+del propietario original.</p>
+<p>✏️ Clone:</p>
+<p>Crea una copia local de un repositorio remoto. Usa el comando git
+clone <URL>. Mantiene una conexión con el repositorio remoto.</p>
+<h2 id="paso-1-forkear-el-repositorio-en-github"><strong>🔹 Paso 1:
+Forkear el Repositorio en GitHub</strong></h2>
+<p>🔹 <strong>(Después de loguearte con tu user en GitHub)</strong></p>
+<ol type="1">
+<li>Ir al repositorio en GitHub (ejemplo:
+<code>https://github.com/original-owner/repo</code>).</li>
+<li>Hacer clic en el botón <strong>Fork</strong> (ubicado en la parte
+superior derecha).</li>
+<li>Esperar a que se cree la copia del repositorio en nuestra cuenta
+(ejemplo: <code>https://github.com/tu-usuario/repo</code>).</li>
+</ol>
+<hr />
+<h2 id="paso-2-clonar-el-repositorio-forkeado"><strong>🔹 Paso 2: Clonar
+el Repositorio Forkeado</strong></h2>
+<h3 id="método-cli-línea-de-comandos"><strong>🖥️ Método CLI (Línea de
+Comandos)</strong></h3>
+<p>Abrir una terminal y ejecutar:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/tu-usuario/repo.git</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> repo</span></code></pre></div>
+<h3 id="método-gui-visual-studio-code"><strong>🖥️ Método GUI (Visual
+Studio Code)</strong></h3>
+<ol type="1">
+<li>Abrir <strong>Visual Studio Code</strong>.</li>
+<li>Presionar <code>Ctrl + Shift + P</code> (Windows/Linux) o
+<code>Cmd + Shift + P</code> (Mac) para abrir la barra de comandos.</li>
+<li>Escribir <strong>“Git: Clone”</strong> y seleccionar la opción.</li>
+<li>Pegar la URL del repositorio
+(<code>https://github.com/tu-usuario/repo.git</code>).</li>
+<li>Elegir una carpeta para guardar el repositorio y abrirlo en
+VSC.</li>
+</ol>
+<hr />
+<h2
+id="paso-3-agregar-el-repositorio-original-como-upstream-opcional"><strong>🔹
+Paso 3: Agregar el Repositorio Original como “Upstream”
+(Opcional)</strong></h2>
+<p>Esto permite mantener sincronizado nuestro fork con el repositorio
+original. Es necesario si quieres:</p>
+<ul>
+<li>✅ Mantener tu fork actualizado con el repositorio original.</li>
+<li>✅ Hacer múltiples contribuciones sin errores de
+sincronización.</li>
+<li>✅ Evitar conflictos cuando el repositorio original recibe muchas
+actualizaciones.</li>
+</ul>
+<p>No es necesarios si solo planeas:</p>
+<ul>
+<li>✅ Hacer un cambio puntual en un fork sin preocuparte por
+actualizaciones futuras.</li>
+<li>✅ Crear una nueva rama basada en el estado actual de tu fork.</li>
+<li>✅ Enviar un PR rápido sin sincronizar tu fork con cambios recientes
+del repo original.</li>
+</ul>
+<h3 id="método-cli"><strong>🖥️ Método CLI</strong></h3>
+<p>Ejecutar:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add upstream https://github.com/original-owner/repo.git</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span>  <span class="co"># Verificamos que el upstream se agregó correctamente</span></span></code></pre></div>
+<h3 id="método-gui"><strong>🖥️ Método GUI</strong></h3>
+<ol type="1">
+<li>Abrir <strong>Visual Studio Code</strong>.</li>
+<li>Ir a la pestaña <strong>Fuente Control (Source
+Control)</strong>.</li>
+<li>Abrir el terminal dentro de VSC (<code>Ctrl + ñ</code> en
+Windows/Linux, <code>Cmd + ñ</code> en Mac).</li>
+<li>Ejecutar el mismo comando de CLI arriba.</li>
+</ol>
+<hr />
+<h2 id="paso-4-crear-una-nueva-rama-para-los-cambios"><strong>🔹 Paso 4:
+Crear una Nueva Rama para los Cambios</strong></h2>
+<p>Siempre es recomendable trabajar en una nueva rama en lugar de
+modificar <code>main</code>.</p>
+<h3 id="método-cli-1"><strong>🖥️ Método CLI</strong></h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> nombre-de-la-rama</span></code></pre></div>
+<p><em>(Ejemplo:
+<code>git checkout -b fix-typo-documentation</code>)</em></p>
+<h3 id="método-gui-1"><strong>🖥️ Método GUI</strong></h3>
+<ol type="1">
+<li>En Visual Studio Code, hacer clic en la parte inferior izquierda
+donde aparece la rama actual (<code>main</code>).</li>
+<li>Seleccionar <strong>“Crear nueva rama”</strong>.</li>
+<li>Escribir el nombre de la nueva rama
+(<code>fix-typo-documentation</code>).</li>
+<li>Cambiará automáticamente a la nueva rama.</li>
+</ol>
+<hr />
+<h2 id="paso-5-hacer-cambios-en-el-código"><strong>🔹 Paso 5: Hacer
+Cambios en el Código</strong></h2>
+<p>Realizar los cambios necesarios en los archivos.</p>
+<hr />
+<h2 id="paso-6-confirmar-commit-y-enviar-los-cambios-push"><strong>🔹
+Paso 6: Confirmar (Commit) y Enviar los Cambios (Push)</strong></h2>
+<h3 id="método-cli-2"><strong>🖥️ Método CLI</strong></h3>
+<ol type="1">
+<li><p>Ver los cambios pendientes:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div></li>
+<li><p>Agregar los archivos modificados:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span></code></pre></div></li>
+<li><p>Hacer un commit con un mensaje descriptivo:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Corrige error tipográfico en la documentación&quot;</span></span></code></pre></div></li>
+<li><p>Enviar la nueva rama a GitHub:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin nombre-de-la-rama</span></code></pre></div></li>
+</ol>
+<h3 id="método-gui-2"><strong>🖥️ Método GUI</strong></h3>
+<ol type="1">
+<li>Ir a la pestaña <strong>Source Control</strong> en VSC.</li>
+<li>Ver la lista de archivos modificados.</li>
+<li>Hacer clic en <code>+</code> para agregarlos o usar
+<code>git add .</code>.</li>
+<li>Escribir un mensaje de commit y hacer clic en <code>✔</code> o usar
+<code>git commit -m "mensaje"</code>.</li>
+<li>Hacer clic en <strong>Push</strong> para enviar los cambios a
+GitHub.</li>
+</ol>
+<hr />
+<h2 id="paso-7-crear-el-pull-request-en-github"><strong>🔹 Paso 7: Crear
+el Pull Request en GitHub</strong></h2>
+<p>🔹 <strong>(Logueado con tu user en gitHub))</strong></p>
+<ol type="1">
+<li>Ir a GitHub
+(<code>https://github.com/tu-usuario/repoforkeado</code>).</li>
+<li>Veremos un mensaje diciendo que se subió una nueva rama y un botón
+<strong>“Compare &amp; Pull Request”</strong>. Hacer clic en él.</li>
+<li>Revisar los cambios y escribir un título y descripción del PR.</li>
+<li>Seleccionar la rama de origen (ejemplo:
+<code>fix-typo-documentation</code>) y la rama de destino
+(<code>main</code> del repositorio original).</li>
+<li>Hacer clic en <strong>Create Pull Request</strong>.</li>
+</ol>
+<hr />
+<h2 id="paso-8-mantener-el-fork-actualizado"><strong>🔹 Paso 8: Mantener
+el Fork Actualizado</strong></h2>
+<p>Si el repositorio original cambia, debemos actualizar nuestro fork.
+🔥 Ojo, esto es ó´lo posible si has definido el Upstream en el paso
+3.</p>
+<h3 id="método-cli-3"><strong>🖥️ Método CLI</strong></h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch upstream</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge upstream/main</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div>
+<h3 id="método-gui-3"><strong>🖥️ Método GUI</strong></h3>
+<ol type="1">
+<li>Cambiar a la rama <code>main</code> en VSC.</li>
+<li>Abrir terminal y ejecutar los mismos comandos de arriba.</li>
+<li>Hacer clic en <strong>Push</strong>.</li>
+</ol>
+<hr />
+<h2 id="conclusión"><strong>🚀 Conclusión</strong></h2>
+<p>✅ <strong>Crear una rama nueva antes de modificar
+código.</strong><br />
+✅ <strong>Sincronizar con el repositorio original
+(upstream).</strong><br />
+✅ <strong>Usar commits claros y descriptivos.</strong><br />
+✅ <strong>Hacer pull requests organizados.</strong></p>
+<hr />
+<h2 id="resumen-en-una-tabla"><strong>📌 Resumen en una
+Tabla</strong></h2>
+<table>
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 43%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paso</th>
+<th>CLI</th>
+<th>Visual Studio Code (GUI)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1️⃣ Forkear repo</td>
+<td>GitHub web</td>
+<td>GitHub web</td>
+</tr>
+<tr>
+<td>2️⃣ Clonar repo</td>
+<td><code>git clone</code></td>
+<td><code>Git: Clone</code> en la barra de comandos</td>
+</tr>
+<tr>
+<td>3️⃣ Agregar upstream</td>
+<td><code>git remote add upstream</code></td>
+<td>Terminal en VSC</td>
+</tr>
+<tr>
+<td>4️⃣ Crear rama</td>
+<td><code>git checkout -b rama</code></td>
+<td>Crear nueva rama en VSC</td>
+</tr>
+<tr>
+<td>5️⃣ Hacer cambios</td>
+<td>Editar archivos</td>
+<td>Editar archivos en VSC</td>
+</tr>
+<tr>
+<td>6️⃣ Commit &amp; Push</td>
+<td><code>git add . &amp;&amp; git commit -m "" &amp;&amp; git push</code></td>
+<td>Usar <code>✔</code> y luego <code>Push</code></td>
+</tr>
+<tr>
+<td>7️⃣ Crear PR</td>
+<td>GitHub web</td>
+<td>GitHub web</td>
+</tr>
+<tr>
+<td>8️⃣ Mantener fork</td>
+<td><code>git fetch upstream &amp;&amp; git merge</code></td>
+<td>Terminal en VSC</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a
+href="https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project">https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project</a></p>
