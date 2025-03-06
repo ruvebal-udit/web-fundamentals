@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Guía Completa de CSS3 Flexbox y Grid</title>
+		<author>Prf. Rubén Vega Balbás, phD @ udit.es</author>
+		<script>
+			// Set the countdown time (in seconds)
+			let countdownTime = 8; // 5-second countdown
+			let url = 'https://github.com/ruvebal-udit/web-fundamentals/blob/main/styling/flex-grid/index.md'; // The URL to redirect to
+
+			// Function to update the countdown timer
+			function updateTimer() {
+				const timerElement = document.getElementById('countdown');
+				timerElement.textContent = countdownTime; // Display the current countdown value
+				if (countdownTime <= 0) {
+					// Redirect when countdown reaches 0
+					window.location.href = url;
+				} else {
+					countdownTime--;
+					setTimeout(updateTimer, 1000); // Call updateTimer again after 1 second
+				}
+			}
+
+			// Initialize the countdown when the page loads
+			window.onload = function () {
+				updateTimer();
+			};
+		</script>
+	</head>
+
+	<body>
+		<h1>Recurso pedagógico redirigido</h1>
+		<p>
+			Para mantener este recurso pedagógico dinámicamente actualizado
+			<strong>Guía Completa de CSS3 Flexbox y Grid</strong>
+			by
+			<strong>Rubén Vega Balbás, phD</strong>
+			@
+			<a href="https://udit.es/">udit.es</a>
+			esta página será redirigida en
+			<span id="countdown">8</span>
+			segundos.
+		</p>
+		<p>
+			Si el recurso no se carga automáticamente, haz clic en el siguiente enlace:
+			<a href="https://github.com/ruvebal-udit/web-fundamentals/blob/main/styling/flex-grid/index.md">
+				https://github.com/ruvebal-udit/web-fundamentals/blob/main/styling/flex-grid/index.md
+			</a>
+			.
+		</p>
+	</body>
+</html>
