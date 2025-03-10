@@ -91,6 +91,12 @@ En la práctica, **¿cómo incorporamos fuentes en un sitio web usando CSS3?** E
 
 - **Uso de proveedores de fuentes (Google Fonts, Adobe Fonts, etc.):** Otra forma muy popular de añadir tipografías es mediante servicios en línea que las alojan y proveen. **Google Fonts**, por ejemplo, ofrece una enorme biblioteca de fuentes de uso libre. Basta con incluir un enlace `<link>` en el HTML apuntando a la fuente deseada en Google Fonts, o usar `@import` en CSS, y ya podremos usar esa fuente sin alojar los archivos nosotros. **Adobe Fonts** (antes Typekit) es otro servicio, incluido con Creative Cloud, que permite usar fuentes comerciales fácilmente mediante carga remota. La ventaja de estos proveedores es la simplicidad y el rendimiento optimizado (suelen servir archivos comprimidos y adaptados a cada navegador). Además, solucionan en gran medida los temas de licenciamiento, ya que las fuentes vienen con permiso para uso web dentro de la plataforma.
 
+### WOFF
+
+El formato WOFF, en particular **WOFF 2.0**, es fundamental para la web moderna, ya que equilibra **rendimiento, accesibilidad y calidad estética**. La dependencia de **Google Fonts** en WOFF demuestra su importancia como el formato **de facto** para la distribución eficiente de tipografía web, convirtiéndolo en una piedra angular del diseño web **responsivo y optimizado**.
+
+WOFF significa **Web Open Font Format**, un formato de fuente desarrollado específicamente para su uso en sitios web. Es, en esencia, una versión comprimida de otros formatos tipográficos comunes (como **TrueType** o **OpenType**), diseñada para **reducir el tamaño de los archivos y optimizar la carga de fuentes en la web sin comprometer la calidad**.
+
 ### 3.1 Uso de Google Fonts
 
 **Importancia de Google Fonts:** desde su lanzamiento en 2010, democratizó el uso de tipografías web personalizadas por ser gratuito y fácil, y hoy es una referencia obligada; una gran parte de los sitios web actuales incorpora fuentes desde Google Fonts. Servicios como este (o Fontshare, CDN de **Font Awesome** para iconos tipográficos, etc.) evitan alojar archivos y brindan una gran variedad de estilos listos para usar.
@@ -490,7 +496,187 @@ Tras implementar estas secciones, al abrir la página veremos dos bloques muy di
 
 Finalmente, recuerda guardar todos los cambios, hacer commit en Git (`git add -A`, `git commit -m "Implementación completa"`) y _push_ al repositorio de GitHub. Así tendrás un código funcional y versionado que puedes compartir con colegas o profesores para revisión.
 
-## 6. Recursos y Referencias
+# 6. Responsive Typography
+
+## 6.1. Introducción
+
+La **tipografía responsiva** es una técnica clave en el diseño web moderno que permite adaptar el tamaño de las fuentes a diferentes dispositivos y tamaños de pantalla, asegurando legibilidad y una experiencia de usuario óptima. En este apartado, exploraremos las unidades de medida más utilizadas, técnicas avanzadas como `clamp()`, y ejercicios prácticos para aplicar estos conceptos.
+
+---
+
+## 6.2. Unidades para Tipografía Responsiva
+
+### 6.2.1. Unidades Relativas
+Las unidades relativas permiten que el tamaño de la tipografía **se ajuste de forma escalable** dependiendo de su contexto.
+
+#### 🔹 **`em` (Relative to Parent)**
+- El tamaño de fuente se ajusta en relación con el elemento padre.
+- Útil cuando queremos que los elementos anidados mantengan proporciones coherentes.
+- **Ejemplo:**
+  ```css
+  body { font-size: 16px; }
+  p { font-size: 1.5em; } /* 1.5 veces el tamaño del padre (16px * 1.5 = 24px) */
+  ```
+
+#### 🔹 **`rem` (Relative to Root)**
+- Relativo al tamaño de fuente del elemento raíz `<html>`.
+- Más consistente que `em` en estructuras anidadas.
+- **Ejemplo:**
+  ```css
+  html { font-size: 16px; }
+  h1 { font-size: 2rem; } /* 2 veces el tamaño del `html` (16px * 2 = 32px) */
+  ```
+
+✅ **Ventaja de `rem` sobre `em`**: Permite establecer tamaños globales más predecibles sin depender de la jerarquía de elementos.
+
+---
+
+### 6.2.2. Unidades Basadas en el Viewport
+Estas unidades escalan dinámicamente según el tamaño de la ventana del navegador.
+
+#### 🔹 **`vw` (Viewport Width)**
+- Relativo al ancho del viewport. `1vw` equivale al 1% del ancho de la pantalla.
+- Ideal para hacer que la tipografía se ajuste proporcionalmente a la pantalla.
+- **Ejemplo:**
+  ```css
+  h1 { font-size: 5vw; } /* 5% del ancho de la ventana */
+  ```
+
+#### 🔹 **`vh` (Viewport Height)**
+- Similar a `vw`, pero basado en la altura de la pantalla.
+- No tan utilizado para fuentes, pero útil en algunos layouts.
+- **Ejemplo:**
+  ```css
+  .banner-text { font-size: 10vh; } /* 10% de la altura del viewport */
+  ```
+
+✅ **Ventaja**: Escala de manera fluida sin necesidad de media queries.
+
+---
+
+### 6.2.3. Función `clamp()` para Tipografía Flexible
+
+#### 📌 **¿Qué es `clamp()`?**
+La función `clamp()` en CSS permite establecer un tamaño mínimo, un valor flexible basado en el viewport y un tamaño máximo. **Esto la convierte en una de las mejores herramientas para tipografía responsiva.**
+
+#### 🔹 **Ejemplo:**
+```css
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem); /* Mínimo 1.5rem, máximo 3rem, escalando con 4vw */
+}
+```
+
+✅ **Ventaja**: No requiere media queries y ajusta el tamaño de manera fluida.
+
+📌 **Referencia:** [Documentación de `clamp()` en MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp)
+
+---
+
+## 6.3. Técnicas para Tipografía Responsiva
+
+### 6.3.1. Tipografía Fluida con Variables CSS
+
+Usar `clamp()` junto con **variables CSS** permite gestionar tamaños de fuente escalables de manera eficiente.
+
+#### 🔹 **Ejemplo de tipografía fluida:**
+```css
+:root {
+  --text-xs: clamp(0.875rem, 1vw + 0.5rem, 1.2rem);
+  --text-base: clamp(1rem, 2vw + 1rem, 2rem);
+  --text-lg: clamp(1.25rem, 2.5vw + 1.25rem, 2.5rem);
+  --text-xl: clamp(1.5rem, 3vw + 1rem, 3rem);
+  --text-2xl: clamp(2rem, 4vw + 1.5rem, 5rem);
+  --text-3xl: clamp(2.5rem, 5vw + 2rem, 6rem);
+}
+
+h1 {
+  font-size: var(--text-3xl);
+}
+```
+✅ **Ventaja**: Se pueden reutilizar variables CSS en distintos elementos, manteniendo coherencia y escalabilidad.
+
+📌 **Herramienta recomendada:** [Modern Fluid Typography Tool](https://modern-fluid-typography.vercel.app/)
+
+---
+
+## 6.4. Ejercicios Prácticos
+
+### 🏗️ **Ejercicio 1: Aplicar `em` y `rem`**
+1. Crea un archivo `typographies.css` e inclúyelo en tu `index.css` con:
+   ```css
+   @import "typographies.css";
+   ```
+2. Define el tamaño base del `body` en 16px.
+3. Usa `em` y `rem` para modificar los tamaños de `h1`, `h2` y `p`.
+
+```css
+body {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2rem; /* 32px */
+}
+
+h2 {
+  font-size: 1.5em; /* 24px si el padre es 16px */
+}
+
+p {
+  font-size: 1rem; /* 16px */
+}
+```
+
+✅ **Objetivo**: Observar cómo `em` y `rem` afectan los elementos.
+
+---
+
+### 🏗️ **Ejercicio 2: Crear una Cabecera Responsiva con `clamp()`**
+1. Define una variable CSS para el tamaño de `h1` utilizando `clamp()`.
+2. Aplica la variable a `h1` y observa cómo cambia según el tamaño de la ventana.
+
+```css
+:root {
+  --title-size: clamp(1.5rem, 5vw, 4rem);
+}
+
+h1 {
+  font-size: var(--title-size);
+}
+```
+
+✅ **Objetivo**: Entender cómo `clamp()` permite escalar fuentes de manera fluida.
+
+---
+
+### 🏗️ **Ejercicio 3: Tipografía Fluida con Variables CSS**
+1. Crea una serie de variables CSS con `clamp()` para diferentes tamaños de texto.
+2. Aplícalas a distintos elementos (`h1`, `p`, `button`).
+
+```css
+:root {
+  --text-sm: clamp(0.875rem, 1vw + 0.5rem, 1.2rem);
+  --text-md: clamp(1rem, 2vw + 1rem, 2rem);
+  --text-lg: clamp(1.5rem, 3vw + 1rem, 3rem);
+}
+
+h1 {
+  font-size: var(--text-lg);
+}
+
+p {
+  font-size: var(--text-md);
+}
+
+button {
+  font-size: var(--text-sm);
+}
+```
+
+✅ **Objetivo**: Aprender a gestionar tamaños de fuente usando variables y `clamp()`.
+
+--
+## 7. Recursos y Referencias
 
 Para profundizar en tipografía web, a continuación se listan recursos recomendados, incluyendo bibliografía, artículos en línea y ejemplos de código abiertos:
 
