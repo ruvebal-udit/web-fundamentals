@@ -12,7 +12,7 @@ Un ejemplo emblemático es la fuente _Universal_ de Herbert Bayer, un experiment
 
 Con la llegada de la era digital, se produjeron cambios radicales. La invención del ordenador personal en los años 80 marcó la transición de técnicas analógicas (metal, fotocomposición) a la **tipografía digital**
 
-###**OCR**
+### **OCR**
 
 Inicialmente, la tipografía en pantallas se limitaba a unas pocas fuentes preinstaladas, pero pronto surgió la necesidad de fuentes diseñadas específicamente para máquinas. Por ejemplo, fuentes como **OCR-A** (introducida en 1966) fueron desarrolladas para reconocimiento óptico de caracteres: sus trazos gruesos y formas sencillas buscaban ser perfectamente legibles por computadoras de la época ([OCR B Alternativas | FontShop](https://www.myfonts.com/es/pages/fontshop-fontlists-ocr-b-alternatives?srsltid=AfmBOor_QvpuUOG6hoFcr0VdV6-7RgVuEDGDTcC1VUMTa2ySnmjchBPc#:~:text=OCR%20A%20y%20OCR%20B,Asociaci%C3%B3n%20Europea%20de%20Fabricantes%20de)). 
 
@@ -24,7 +24,7 @@ No despierta la misma sensación un texto en **Helvetica** que en **Comic Sans**
 
 Además, una buena tipografía mejora la **accesibilidad**: textos legibles facilitan la comprensión a todos los usuarios, incluyendo personas con baja visión o dislexia. Por ejemplo, se ha demostrado que las fuentes sans-serif de trazos simples suelen considerarse más accesibles en pantalla para personas con dificultades de lectura, ya que las serifas muy detalladas pueden resultar confusas en tamaños pequeños ([Tipografía web accesible: Diseño, aplicación y tecnicismos | Myfonts](https://www.myfonts.com/es/a/font/content/accessible-web-typography-design-application-and-technicalities?srsltid=AfmBOooAjxtisA-ozluOSkQry5GVZkd6jI5hxB9l876XU4Z_3bCBqZlI#:~:text=Serif%20vs%20sans%3A%20Nuestra%20investigaci%C3%B3n,entornos%20de%20renderizado%20m%C3%A1s%20duros)).
 
-###**Massimo Vignelli**
+### **Massimo Vignelli**
 
 Un referente clave en la historia del diseño tipográfico es **Massimo Vignelli**, conocido por su enfoque purista y minimalista. Vignelli sostenía que no era necesario usar muchas tipografías distintas, sino elegir unas pocas _muy buenas_ y emplearlas consistentemente: _«No es que no crea en la tipografía, es que no creo que haya muchas tipografías buenas»_ ([Ensayo Helvética - FOROALFA](https://foroalfa.org/articulos/ensayo-helvetica?srsltid=AfmBOorgB2ET8S2Ajy3obY2xQkJ_DwAmGAdUUBnYe4llGkrcFehRQFTs#:~:text=acuerdo%20con%20Vignelli%20cuando%20dice,que%20haya%20muchas%20tipograf%C3%ADas%20buenas%C2%BB)). 
 
@@ -216,7 +216,7 @@ a:hover {
 }
 ```
 
-Aquí la propiedad `transition` en el enlace indica que cualquier cambio en la propiedad `color` tomará 0.3 segundos con una curva de aceleración suave. Así, al activar `:hover` (cuando el cursor entra en el enlace) y cambiar el color a rosa fuerte, este cambio ocurre gradualmente en vez de inmediato ([Mejora Tu Sitio Web Con Animaciones CSS - DreamHost](https://www.dreamhost.com/blog/es/mejora-tu-sitio-web-animaciones-css/#:~:text=Las%20transiciones%20CSS%20te%20permiten,elegantes%20con%20un%20esfuerzo%20m%C3%ADnimo)). El resultado es un **efecto de hover suave** que realza la experiencia. Podemos hacer lo mismo con `font-size` (por ejemplo, que el texto aumente ligeramente de tamaño al pasar el cursor), con `letter-spacing` (separar letras sutilmente para destacar un elemento al enfocarlo), con `text-shadow` (aparecer una sombra o resplandor) y más. Las **transiciones CSS** son ideales para animaciones simples de estado, pues requieren poco código y añaden dinamismo. Otro ejemplo: un botón con clase `.btn` al que en hover le queremos agregar una sombra y desplazar un poco hacia arriba:
+Aquí la propiedad `transition` en el enlace indica que cualquier cambio en la propiedad `color` tomará 0.3 segundos con una curva de aceleración suave. Así, al activar `:hover` (cuando el cursor entra en el enlace) y cambiar el color a rosa fuerte, este cambio ocurre gradualmente en vez de inmediato. El resultado es un **efecto de hover suave** que realza la experiencia. Podemos hacer lo mismo con `font-size` (por ejemplo, que el texto aumente ligeramente de tamaño al pasar el cursor), con `letter-spacing` (separar letras sutilmente para destacar un elemento al enfocarlo), con `text-shadow` (aparecer una sombra o resplandor) y más. Las **transiciones CSS** son ideales para animaciones simples de estado, pues requieren poco código y añaden dinamismo. Otro ejemplo: un botón con clase `.btn` al que en hover le queremos agregar una sombra y desplazar un poco hacia arriba:
 
 ```css
 .btn {
