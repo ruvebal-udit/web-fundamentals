@@ -1,6 +1,6 @@
 # Guía Didáctica de Tipografía Web con CSS3
 
-![Fonts Matter](https://www.reddit.com/r/funny/comments/977s8h/font_matters/#lightbox "Fonts MAtter")
+![Fonts Matter](https://i.redd.it/38jjcgaqu1g11.jpg "Fonts MAtter")
 
 ## 1. Introducción: Historia y Contexto
 
