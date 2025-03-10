@@ -2,6 +2,11 @@
 
 ![Fonts Matter](https://i.redd.it/38jjcgaqu1g11.jpg "Fonts MAtter")
 
+
+>Typography in the decentralized and immersive web is more than just arranging letters— it's about creating visual impact, establishing trust, enhancing usability, and offering a unique user experience in a world that prioritizes user control, immersion, and open standards. The right typography choices can significantly impact how information is perceived, engaged with, and trusted in this rapidly evolving digital space.
+
+[The new web typography](https://www.zotero.org/groups/5649080/ruvebal-web/items/M9Q8BXZX/library)
+
 ## 1. Introducción: Historia y Contexto
 
 La **tipografía** ha evolucionado enormemente desde la era de la Bauhaus hasta la actualidad digital. En la escuela **Bauhaus** (1919-1933), se promovía un diseño funcional y minimalista, privilegiando tipografías **sans-serif** simples para enfatizar la forma y legibilidad sobre la ornamentación
