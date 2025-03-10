@@ -1,14 +1,16 @@
 # Guía Didáctica de Tipografía Web con CSS3
 
+![Fonts Matter]([/assets/img/MarineGEO_logo.png](https://www.reddit.com/r/funny/comments/977s8h/font_matters/#lightbox) "Fonts Matter")
+
 ## 1. Introducción: Historia y Contexto
 
 La **tipografía** ha evolucionado enormemente desde la era de la Bauhaus hasta la actualidad digital. En la escuela **Bauhaus** (1919-1933), se promovía un diseño funcional y minimalista, privilegiando tipografías **sans-serif** simples para enfatizar la forma y legibilidad sobre la ornamentación
 
-[La tipografía en la Bauhaus y el Carácter Universal | Pixartprinting](https://www.pixartprinting.es/blog/bauhaus-caracter-universal/#:~:text=Herbert%20Bayer%20fue%20el%20dise%C3%B1ador,por%20encima%20de%20la%20forma).
-
 Un ejemplo emblemático es la fuente _Universal_ de Herbert Bayer, un experimento tipográfico que llevó al extremo los valores Bauhaus poniendo la función por encima de la forma. Estas ideas sentaron las bases del modernismo tipográfico que influirían décadas después en el diseño web.
 
- _Figura 1: Muestra de caracteres de la tipografía **Universal** de la Bauhaus, caracterizada por formas geométricas simples y ausencia de mayúsculas. Esta fuente refleja la búsqueda de funcionalidad y simplicidad en la comunicación visual de la Bauhaus ([La tipografía en la Bauhaus y el Carácter Universal | Pixartprinting](https://www.pixartprinting.es/blog/bauhaus-caracter-universal/#:~:text=Herbert%20Bayer%20fue%20el%20dise%C3%B1ador,por%20encima%20de%20la%20forma))._
+ _Figura 1: Muestra de caracteres de la tipografía **Universal** de la Bauhaus, caracterizada por formas geométricas simples y ausencia de mayúsculas. Esta fuente refleja la búsqueda de funcionalidad y simplicidad en la comunicación visual de la Bauhaus_
+
+[La tipografía en la Bauhaus y el Carácter Universal | Pixartprinting](https://www.pixartprinting.es/blog/bauhaus-caracter-universal/#:~:text=Herbert%20Bayer%20fue%20el%20dise%C3%B1ador,por%20encima%20de%20la%20forma).
 
 Con la llegada de la era digital, se produjeron cambios radicales. La invención del ordenador personal en los años 80 marcó la transición de técnicas analógicas (metal, fotocomposición) a la **tipografía digital**
 
@@ -16,7 +18,7 @@ Con la llegada de la era digital, se produjeron cambios radicales. La invención
 
 Inicialmente, la tipografía en pantallas se limitaba a unas pocas fuentes preinstaladas, pero pronto surgió la necesidad de fuentes diseñadas específicamente para máquinas. Por ejemplo, fuentes como **OCR-A** (introducida en 1966) fueron desarrolladas para reconocimiento óptico de caracteres: sus trazos gruesos y formas sencillas buscaban ser perfectamente legibles por computadoras de la época ([OCR B Alternativas | FontShop](https://www.myfonts.com/es/pages/fontshop-fontlists-ocr-b-alternatives?srsltid=AfmBOor_QvpuUOG6hoFcr0VdV6-7RgVuEDGDTcC1VUMTa2ySnmjchBPc#:~:text=OCR%20A%20y%20OCR%20B,Asociaci%C3%B3n%20Europea%20de%20Fabricantes%20de)). 
 
-Irónicamente, con el tiempo la apariencia “tecno” de OCR-A la hizo popular en gráficos digitales y publicidad ([OCR B Alternativas | FontShop](https://www.myfonts.com/es/pages/fontshop-fontlists-ocr-b-alternatives?srsltid=AfmBOor_QvpuUOG6hoFcr0VdV6-7RgVuEDGDTcC1VUMTa2ySnmjchBPc#:~:text=empresas%20de%20tarjetas%20de%20cr%C3%A9dito,el%20ojo%20humano%20que%20la)). Su sucesora **OCR-B** (diseñada en 1968 por Adrian Frutiger) equilibró legibilidad humana y de máquina, y también se adoptó en diseño por su estilo técnico distintivo ([OCR B Alternativas | FontShop](https://www.myfonts.com/es/pages/fontshop-fontlists-ocr-b-alternatives?srsltid=AfmBOor_QvpuUOG6hoFcr0VdV6-7RgVuEDGDTcC1VUMTa2ySnmjchBPc#:~:text=humanos,%C3%A9xito%20entre%20los%20dise%C3%B1adores%20gr%C3%A1ficos)).
+Irónicamente, con el tiempo la apariencia “tecno” de OCR-A la hizo popular en gráficos digitales y publicidad. Su sucesora **OCR-B** (diseñada en 1968 por Adrian Frutiger) equilibró legibilidad humana y de máquina, y también se adoptó en diseño por su estilo técnico distintivo.
 
 La **importancia de la tipografía** en la comunicación visual es fundamental. Una elección tipográfica adecuada transmite tono y personalidad al mensaje, funcionando prácticamente como la _voz_ de una marca o proyecto. En diseño gráfico y neuromarketing se habla de _psicología de la tipografía_ para referirse al impacto de las fuentes en las emociones y conducta del público ([Psicología de la tipografía: qué es y para qué sirve | Blog UE](https://creativecampus.universidadeuropea.com/blog/psicologia-de-la-tipografia/#:~:text=gr%C3%A1fico%20y%20en%20neuromarketing%20se,la%20psicolog%C3%ADa%20de%20la%20tipograf%C3%ADa)). 
 
