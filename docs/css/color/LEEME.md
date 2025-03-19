@@ -1,9 +1,3 @@
-Voy a crear una guía completa sobre el color en el diseño web, comenzando por su importancia en el diseño en general, con referencias clásicas a artistas y teorías como Kandinsky, Xul Solar y la Bauhaus. También exploraré tendencias modernas como el modo oscuro y claro desde una perspectiva de UI/UX.
-
-Además, la guía incluirá una explicación detallada del código proporcionado y guiará a los estudiantes en la creación de su propio archivo `theme.css`, integrándolo correctamente en sus proyectos. Explicaré el uso del `general sibling combinator`, la organización de los `@import` en CSS y cómo incluir un selector de tema en HTML. Finalmente, abordaré las limitaciones de una solución sin JavaScript y cómo podría implementarse con JS si se requiere.
-
-Te avisaré cuando la guía esté lista para revisión.
-
 # Guía Completa: El Color en el Diseño Web
 
 ## 1. Importancia del Color en el Diseño General
