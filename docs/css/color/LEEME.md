@@ -85,7 +85,7 @@ Luego en CSS definimos los estilos de tema claro por defecto (por ejemplo en `:r
 	--color-texto: #000;
 }
 /* Tema oscuro cuando el checkbox esté activado */
-#theme-toggle:checked ~ .page-content {
+#theme-toggle:checked ~ * {
 	--color-fondo: #121212;
 	--color-texto: #eaeaea;
 }
@@ -134,7 +134,7 @@ Siguiendo el ejemplo anterior de los temas en CSS, podríamos agregar:
 
 ```css
 /* Cuando el checkbox está marcado, aplicar tema oscuro */
-.nav-menu-btn:checked ~ .page-content {
+#theme-toggle:checked ~ * {
 	--color-fondo: #121212;
 	--color-texto: #eaeaea;
 }
