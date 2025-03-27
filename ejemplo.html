@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        font-size: 30px;
+        }
+
+    .caja {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        position: absolute;
+        top: 5rem;
+        left: 5rem;
+    }
+
+    #caja-principal {
+        z-index: -1;
+    }
+
+    .imagenuntercio {
+        width: 33%;
+        height: auto;
+}
+
+    #fotogatobengali {
+        float: right;
+        margin-right: 1rem;
+        
+}
+.menu {
+	display: flex;
+    width: 100vw;
+	justify-content: space-around;
+    flex-direction: row;
+	background-color: #333;
+	padding: 1rem;
+}
+.menu a {
+	color: red;
+	text-decoration: none;
+    background-color: #CCCCCC;
+    flex:1;
+    
+}
+.galeria {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+}
+.galeria img {
+	width: 20rem;
+	border-radius: .5rem;
+    z-index: -1;
+}
+.perfil {
+	display: flex;
+	align-items: center;
+	background: linear-gradient(135deg, #667eea, #764ba2);
+	padding: 20px;
+	border-radius: 15px;
+	color: white;
+}
+.perfil img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+@keyframes myfadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.animado {
+	animation: myfadeIn 2s ease-in-out;
+}
+</style>
+</head>
+<body>
+    <!--El menú-->
+    <nav class="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <!--La caja-->
+    <div class="caja" id="caja-principal">
+           <p>&nbsp;</p>
+    </div>
+    <!--El bloque de texto con imagen-->
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg" class="imagenuntercio animado" id="fotogatobengali"/>
+		<p><strong>Lorem Ipsum > </strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+         
+        </p>
+    </div>
+    <!--La galería-->
+    <div class="galeria">
+        <img src="data:image/png;base64,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" />
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAApVBMVEX///8AAAAA//+lpaUA9/cA+voAzc0A/PwA1NQA5eUA2dkA7u4Ad3cA8vIAPDwA3t4AsLAAu7sAMTEABwcApKQAxMQA4uIAWFgAm5sAwMAAhoYAyckA6uoAMzMAe3sAk5MAKSkATU1SUlL29vYAbGwAHx8AJSUAo6MAY2PLy8teXl4+Pj4wMDBHR0eysrIgICDl5eUARUVqamrW1taQkJB6enqrq6tbl7boAAAEsElEQVR4nO3cC1faSBjG8ZZyRwyhBghEi1ItdnfddrfL9/9om9tMbmQS8ghDM8//WJTMm/TwOwG8oB8+nKHX7x+vrqfXc9zSM7S7Qrygp51umTrt/tDtVNafv4PflZ57QX/ptqnuVbeRqjfdOpVd7V036G/dOlXtdAup+6Hbp6I33UDqDrp9KvqkG0jdJ90+FZEPinxQ5IMiHxT5oMgHRT4o8kGRD4p8UOSDIh8U+aDIB0U+KPJBkQ+KfFDkgyIfFPmgyAdFPijyQZEPinxQ5IMiHxT5oMgHRT4o8kE15ft81nFZy/geVnEPl9mvZXxfZnFfLrNfy/jWKN/6tP3IF0a+LAPvvGHkgzqVz8b4bPI1YWi6X+v44lan7bcS+5nN93UtuhE9l08/yyG521ej+WRLx7ZdN3i7Lx+6t/0Jf852lg3/m9byueLuOC8fmosZl3zZgrOvPh/PvlxLx42quPNGkS+X5HNVfC75jrfcOFFqvnhoQ75sks9R8YmZPvmyLfvOxtn4b47qqSOY8EfIF/cyj9ru+5so5+d2XtL2pxMP9fdi6MVovtl4GLfp9/03/99QUT/I15ND45nRfHeRSOOGd+Qjn+xkPjCz+ZLHvmYZ/tg3G0cNx+mGmQ+Gx0ZEhvNZR1FqZxnOt4j9LL/wwgo/9i/G0fVwLTMQvhPXjeeLWoxEliI5JHczkk9+2mst4tzHZdR+vFjIrXFWvGG8j4ceXbEkn3r6BvHJ00gojGyxNB8vyhqN5dfDdrKnOGkN4kvuqnGe5Lu38mtJlvxujO3l1xYm8eVvvedKvsJaMrSQfG7hACbxjbxckzRfaSm+SX5tZBLfJMxL3jli6XYUbvCixejCi6+NbsWUM/HkRHQUk/hit6Rphq+sFN80v+aZxDf1m0xTJXxebiWVl+JLNQnmTeIr+HQl39YrsQuItpKvm1+btJ7v8S5uVYDpWt+ipW+zslMvIJqJqUWBb7oSR39sKd9NZxDXLSaWekfWZL0aB+jctJXv2K1+9wat5ev0/Lq9dN1kS7ebbMpNBJfd/HzJPu09+zoplUEWyb9bZrYO8uu1azHfIHzwko9ggZG4ntqYLGQ29gofRFd6ckuv3Y99ncEFajHfRSIf+ZR88ivVHmrVk4cyiE++sGeD8m3EkV4M4pPfdH8/vrmJfH2UT/6EiHzkIx8W+aDIB0U+qEvz8ROXsOH29oS2Q559Gb56r/CRFfcjH/nIh0U+KPJBkQ+q6TesmvIZ9Hnfg7yF8nV673f23cuDq/6k3+/MJ1/jMpN/q2UtN9n53L0Y2ruFxZnYT/4FtedZ21/jourIj5GkzLq4prqDqiIf+chXFvmgyAdFPijyQZEPqinfvvCLqCNJdFNc26uOZSDfx8+F6q2R74KRD4p8UOSDIh8U+aDIB0U+KPJBkQ+KfFDkgyIfFPmgyAdFPijyQZEPinxQ5IMiHxT5oMgHRT4o8kGRD4p8UOSDIh8U+aDIB0U+qGvnO+gGUnftfK+6gdS96fapSjeQup1unqr+0S2k6km3TmU/dBOp+le3TnVX/Nz7S7dNnX7pVirrP90y9Xpr/GsXZ+2g26Vuu8N33Vb5ng5nedL9HzNr9q+7BuyiAAAAAElFTkSuQmCC" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGDOM9WaArcumsr_CmWI084UgYDLKN9mMDCQ&s" />
+    </div>
+    <!--Tarjeta-->
+    <div class="perfil">
+        <img src="https://pics.craiyon.com/2024-09-09/KuChDyBXQXaLCvKXrujE9A.webp" class="imagenuntercio"/>
+        <div>
+            <h3>Nombre del Usuario</h3>
+            <p>Diseñador Web</p>
+        </div>
+    </div>
+</body>
+</html>
