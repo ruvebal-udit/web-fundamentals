@@ -22,7 +22,7 @@ A Guide to Responsive Web Design:
 
 - https://kinsta.com/blog/responsive-web-design/
 
-CSS Layout - MDN Web Docs:
+CSS Layout - web.dev:
 
 - https://web.dev/learn/css/layout/
 
@@ -165,7 +165,15 @@ Luego, en el archivo `/css/main.css`, agrega el siguiente código:
 }
 ```
 
-Documentación: Guía de Flexbox en MDN: https://developer.mozilla.org/es/docs/Web/CSS/flexbox
+#### Referencias
+
+Guía de Flexbox en MDN:
+
+- https://developer.mozilla.org/es/docs/Web/CSS/flexbox
+
+CSS Flexbox Layout Guide en CSS Tricks:
+
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 ---
 
@@ -199,7 +207,12 @@ Luego, en el archivo `/css/main.css`, agrega el siguiente código:
 }
 ```
 
-Documentación: Guía de Grid en MDN: https://developer.mozilla.org/es/docs/Web/CSS/grid
+##### Referencias:
+
+- Guía de Grid en MDN:
+  - https://developer.mozilla.org/es/docs/Web/CSS/grid
+- CSS Grid Layout Guide en CSS Tricks
+  - https://css-tricks.com/snippets/css/complete-guide-grid/
 
 ---
 
