@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo Responsive</title>
+    <style>
+      /* Estilos base */
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background-color: white;
+      }
+      header,
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
+      .contenedor {
+        display: flex;
+        flex-wrap: wrap; /* permitir que las columnas bajen */
+        max-width: 1200px;
+        margin: auto; /* centrar el contenedor en pantallas grandes */
+        padding: 1rem;
+      }
+      .columna {
+        flex: 1 1 33%; /* tres columnas, cada una ~33% (1/3) del ancho */
+        padding: 1rem;
+      }
+      .columna:nth-child(odd) {
+        background: #f0f0f0;
+      }
+
+      /* Media query: pantallas medianas (tablet) */
+      @media (max-width: 800px) {
+        .contenedor {
+          flex-wrap: wrap;
+        }
+        .columna {
+          flex: 1 1 40%; /* dos columnas de ~50% cada una */
+        }
+        body {
+          background-color: #f5d2d2;
+        }
+      }
+
+      /* Media query: pantallas pequeñas (móvil) */
+      @media (max-width: 500px) {
+        .contenedor {
+          flex-direction: column; /* apilar columnas verticalmente */
+        }
+        .columna {
+          flex: 1 1 100%; /* cada columna ocupa 100% del ancho (una por fila) */
+        }
+        body {
+          background-color: #cccccc;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Mi Sitio Web</h1>
+    </header>
+    <main class="contenedor">
+      <article class="columna">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. 1
+      </article>
+      <article class="columna">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. 2
+      </article>
+      <article class="columna">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. 3
+      </article>
+      <article class="columna">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. 4
+      </article>
+      <article class="columna">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. 2
+      </article>
+      <article class="columna">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. 6
+      </article>
+    </main>
+    <footer>&copy; 2025 Mi Sitio Web</footer>
+  </body>
+</html>
