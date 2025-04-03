@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejemplo Responsive</title>
+    <link rel="stylesheet" href="./css/root.css" />
     <style>
-      /* Estilos base */
+      /* Estilos base (Mobile First) */
       body {
         margin: 0;
         font-family: sans-serif;
-        background-color: white;
+        background-color: azure;
+        min-width: 100vw;
       }
+
+      main {
+        background-color: bisque;
+      }
+
       header,
       footer {
         background: #333;
@@ -18,44 +25,48 @@
         text-align: center;
         padding: 1rem;
       }
+
       .contenedor {
         display: flex;
-        flex-wrap: wrap; /* permitir que las columnas bajen */
-        max-width: 1200px;
-        margin: auto; /* centrar el contenedor en pantallas grandes */
+        flex-wrap: wrap;
+        max-width: 90%;
+        margin: auto;
         padding: 1rem;
       }
+
       .columna {
-        flex: 1 1 33%; /* tres columnas, cada una ~33% (1/3) del ancho */
+        font-size: var(--text-xs);
+        line-height: var(--line-height-xs);
+
+        /*
+		Sintaxis: flex: [flex-grow] [flex-shrink] [flex-basis];
+		- flex-grow:    1 → permite que crezca para ocupar espacio disponible
+		- flex-shrink:  1 → permite que se reduzca si no cabe
+		- flex-basis: 100% → ancho base deseado para esta columna
+		En este caso: 1 columna por fila en móvil.
+	*/
+        flex: 1 1 100%;
+        box-sizing: border-box;
         padding: 1rem;
       }
+
       .columna:nth-child(odd) {
         background: #f0f0f0;
       }
 
-      /* Media query: pantallas medianas (tablet) */
-      @media (max-width: 800px) {
-        .contenedor {
-          flex-wrap: wrap;
-        }
+      /* Tablet (min-width: 600px) — 2 columnas */
+      @media (min-width: 600px) {
         .columna {
-          flex: 1 1 40%; /* dos columnas de ~50% cada una */
-        }
-        body {
-          background-color: #f5d2d2;
+          /* 2 columnas por fila: cada una ~50% del ancho */
+          flex: 1 1 50%;
         }
       }
 
-      /* Media query: pantallas pequeñas (móvil) */
-      @media (max-width: 500px) {
-        .contenedor {
-          flex-direction: column; /* apilar columnas verticalmente */
-        }
+      /* Desktop (min-width: 900px) — 3 columnas */
+      @media (min-width: 900px) {
         .columna {
-          flex: 1 1 100%; /* cada columna ocupa 100% del ancho (una por fila) */
-        }
-        body {
-          background-color: #cccccc;
+          /* 3 columnas por fila: cada una ~33.33% del ancho */
+          flex: 1 1 33.33%;
         }
       }
     </style>

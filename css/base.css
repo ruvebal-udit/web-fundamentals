@@ -1,21 +1,21 @@
 html,
 body {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 body {
-	font-family: 'Helvetica Neue', sans-serif;
-	justify-content: center;
-	align-items: center;
-	font-size: var(--text-sm);
-	line-height: var(--line-height-sm);
+  font-family: "Helvetica Neue", sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--text-sm);
+  line-height: var(--line-height-sm);
 }
 
 .theme {
-	min-height: 100vh;
-	transition: color 0.3s, background-color 0.3s;
-	background-color: var(--background);
-	color: var(--secondary-foreground);
+  min-height: 100vh;
+  transition: color 0.3s, background-color 0.3s;
+  background-color: var(--background);
+  color: var(--secondary-foreground);
 }
 
 /*  When the body has display: flex;
@@ -25,283 +25,283 @@ body {
 */
 
 main {
-	overflow-y: auto;
-	/* Enable scrolling for content */
-	scroll-snap-type: y mandatory;
-	/* Enable snapping in the vertical direction */
-	scroll-behavior: smooth;
-	/* Enable smooth scrolling */
+  overflow-y: auto;
+  /* Enable scrolling for content */
+  scroll-snap-type: y mandatory;
+  /* Enable snapping in the vertical direction */
+  scroll-behavior: smooth;
+  /* Enable smooth scrolling */
 }
 
 header,
 footer {
-	display: flex;
-	align-items: center;
-	position: fixed;
-	background-color: var(--secondary);
-	color: var(--secondary-foreground);
-	gap: 10px;
-	width: 100%;
-	z-index: 10;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  gap: 10px;
+  width: 100%;
+  z-index: 10;
 }
 
 footer {
-	bottom: 0;
-	width: 100%;
-	box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-	height: var(--footer-height);
+  bottom: 0;
+  width: 100%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  height: var(--footer-height);
 }
 
 header {
-	top: 0;
-	width: 100%;
-	box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-	height: var(--header-height);
+  top: 0;
+  width: 100%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  height: var(--header-height);
 }
 
 header div,
 footer div {
-	background-color: var(--primar-backgroundy);
-	padding: 10px;
-	text-align: center;
-	display: block;
+  background-color: var(--primar-background);
+  padding: 10px;
+  text-align: center;
+  display: block;
 }
 
 /* Headings */
 h1 {
-	color: var(--foreground);
-	font-size: var(--text-2xl);
-	/* Very large display text (Hero headers) */
-	line-height: var(--line-height-2xl);
-	/* Responsive line height */
-	margin-bottom: 1rem;
-	font-weight: 900;
+  color: var(--foreground);
+  font-size: var(--text-2xl);
+  /* Very large display text (Hero headers) */
+  line-height: var(--line-height-2xl);
+  /* Responsive line height */
+  margin-bottom: 1rem;
+  font-weight: 900;
 }
 
 h2 {
-	/*font-family: 'OCR-A';*/
-	color: var(--primary-foreground);
-	font-size: var(--text-xl);
-	/* Large text for main headings */
-	line-height: var(--line-height-2xl);
-	/* Responsive line height */
-	margin-bottom: 0.75rem;
-	font-weight: 700;
+  /*font-family: 'OCR-A';*/
+  color: var(--primary-foreground);
+  font-size: var(--text-xl);
+  /* Large text for main headings */
+  line-height: var(--line-height-2xl);
+  /* Responsive line height */
+  margin-bottom: 0.75rem;
+  font-weight: 700;
 }
 
 h3 {
-	color: var(--destructive);
-	font-size: var(--text-lg);
-	/* Medium heading text */
-	line-height: var(--line-height-lg);
-	/* Responsive line height */
-	margin-bottom: 0.75rem;
-	font-weight: 500;
+  color: var(--destructive);
+  font-size: var(--text-lg);
+  /* Medium heading text */
+  line-height: var(--line-height-lg);
+  /* Responsive line height */
+  margin-bottom: 0.75rem;
+  font-weight: 500;
 }
 
 h4 {
-	font-size: var(--text-base);
-	font-weight: 300;
+  font-size: var(--text-base);
+  font-weight: 300;
 }
 
 h5 {
-	font-size: var(--text-sm);
-	font-weight: 300;
+  font-size: var(--text-sm);
+  font-weight: 300;
 }
 
 h6 {
-	font-size: var(--text-xm);
-	font-weight: 300;
+  font-size: var(--text-xm);
+  font-weight: 300;
 }
 
 /* Small Text (e.g., captions or footnotes) */
 .small-text {
-	font-size: var(--text-2xs);
-	line-height: var(--line-height-2xs);
-	font-weight: 100;
+  font-size: var(--text-2xs);
+  line-height: var(--line-height-2xs);
+  font-weight: 100;
 }
 
 /* Links */
 a,
 a:active,
 a:visited {
-	text-decoration: underline;
-	color: inherit;
+  text-decoration: underline;
+  color: inherit;
 }
 
 em {
-	font-style: italic;
+  font-style: italic;
 }
 
 strong {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 p {
-	margin-bottom: 1rem;
-	color: var(--black);
+  margin-bottom: 1rem;
+  color: var(--black);
 }
 
 article {
-	margin-bottom: 40px;
-	background-color: var(--card);
-	padding: 20px 40px;
-	border-radius: var(--border-radius);
-	color: var(--destructive);
-	background-color: var(--foreground);
+  margin-bottom: 40px;
+  background-color: var(--card);
+  padding: 20px 40px;
+  border-radius: var(--border-radius);
+  color: var(--destructive);
+  background-color: var(--foreground);
 }
 
 blockquote {
-	position: relative;
-	padding-left: 0.25em; /* Adds space between text and border */
-	border-left: var(--border-radius) solid var(--border); /* Left border */
-	margin: 1em 0 0 calc(0.25em + 5px * -1);
+  position: relative;
+  padding-left: 0.25em; /* Adds space between text and border */
+  border-left: var(--border-radius) solid var(--border); /* Left border */
+  margin: 1em 0 0 calc(0.25em + 5px * -1);
 }
 
 p,
 li,
 figcaption,
 pre {
-	font-family: 'adobe-caslon-pro';
-	font-size: var(--text-xs);
-	line-height: var(--line-height-xs);
-	margin-bottom: 1rem;
+  font-family: "adobe-caslon-pro";
+  font-size: var(--text-xs);
+  line-height: var(--line-height-xs);
+  margin-bottom: 1rem;
 }
 
 figcaption,
 cite {
-	font-family: 'adobe-caslon-pro';
-	font-size: var(--text-2xs);
-	line-height: var(--line-height-2xs);
-	margin-bottom: 2.5rem;
-	margin-top: 1rem;
+  font-family: "adobe-caslon-pro";
+  font-size: var(--text-2xs);
+  line-height: var(--line-height-2xs);
+  margin-bottom: 2.5rem;
+  margin-top: 1rem;
 }
 
 ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 ul li {
-	position: relative;
-	padding-left: 1em; /* Adds space for the hyphen */
+  position: relative;
+  padding-left: 1em; /* Adds space for the hyphen */
 }
 
 article ul li::before {
-	content: '—'; /* Inserts hyphen before each list item */
-	position: absolute;
-	left: 0;
-	color: var(--accent); /* Color of the hyphen */
-	font-weight: bold;
+  content: "—"; /* Inserts hyphen before each list item */
+  position: absolute;
+  left: 0;
+  color: var(--accent); /* Color of the hyphen */
+  font-weight: bold;
 }
 
 .toc ul li::before {
-	content: '—'; /* Inserts hyphen before each list item */
-	position: absolute;
-	left: 0;
-	color: var(--accent); /* Color of the hyphen */
-	font-weight: bold;
+  content: "—"; /* Inserts hyphen before each list item */
+  position: absolute;
+  left: 0;
+  color: var(--accent); /* Color of the hyphen */
+  font-weight: bold;
 }
 
 cite {
-	text-align: left;
-	display: block;
-	margin-top: 10px;
-	color: var(--primary-foreground);
+  text-align: left;
+  display: block;
+  margin-top: 10px;
+  color: var(--primary-foreground);
 }
 
 .highlight {
-	color: var(--primary);
+  color: var(--primary);
 }
 
 .header-container h1 {
-	color: var(--destructive);
-	margin: 0;
-	padding-bottom: 20px;
+  color: var(--destructive);
+  margin: 0;
+  padding-bottom: 20px;
 }
 
 .image-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .image-container img {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .toc {
-	text-align: left;
-	margin: 20px 0;
+  text-align: left;
+  margin: 20px 0;
 }
 
 .toc a:hover {
-	background-color: var(--primary);
+  background-color: var(--primary);
 }
 
 .final-section {
-	text-align: center;
-	padding: 40px 20px;
-	background-color: var(--muted);
-	color: var(--foreground);
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--muted);
+  color: var(--foreground);
 }
 
 .final-section a {
-	display: block;
-	margin: 10px 0;
-	color: var(--foreground);
-	text-decoration: none;
-	font-weight: bold;
+  display: block;
+  margin: 10px 0;
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .final-section a:hover {
-	color: var(--accent);
+  color: var(--accent);
 }
 
 /* Style the pre element */
 pre {
-	background: #333;
-	color: #f8f8f2;
-	padding: 10px;
-	border-radius: var(--border-radius);
-	margin: 0 0 1.5rem 0;
-	overflow: auto;
-	white-space: pre-wrap;
+  background: #333;
+  color: #f8f8f2;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  margin: 0 0 1.5rem 0;
+  overflow: auto;
+  white-space: pre-wrap;
 }
 
 /* Code Container Styling */
 .code-container {
-	display: flex;
-	background-color: #333;
-	color: #f8f8f2;
-	border-radius: var(--border-radius);
-	padding: 0.75rem;
-	white-space: pre-wrap;
-	overflow-x: auto;
-	cursor: text;
-	user-select: text;
-	box-sizing: border-box;
+  display: flex;
+  background-color: #333;
+  color: #f8f8f2;
+  border-radius: var(--border-radius);
+  padding: 0.75rem;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  cursor: text;
+  user-select: text;
+  box-sizing: border-box;
 }
 
 .code-content {
-	font-family: monospace;
-	white-space: pre-wrap;
+  font-family: monospace;
+  white-space: pre-wrap;
 }
 
 .collection-title {
-	font-variant-caps: all-small-caps;
-	padding-bottom: 2rem;
-	padding-top: 2rem;
+  font-variant-caps: all-small-caps;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .responsive-image {
-	width: 100%;
-	/* Full width of the container */
-	height: 100%;
-	/* Full height of the container */
-	object-fit: cover;
-	/* Ensures image covers container without changing aspect ratio */
+  width: 100%;
+  /* Full width of the container */
+  height: 100%;
+  /* Full height of the container */
+  object-fit: cover;
+  /* Ensures image covers container without changing aspect ratio */
 }
