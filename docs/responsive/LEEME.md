@@ -4,32 +4,32 @@
 
 ([100,000+ Free Responsive Design & Design Images - Pixabay](https://pixabay.com/images/search/responsive%20design/))】 _Ejemplo de un diseño web adaptativo mostrado en varios dispositivos de distinto tamaño._
 
-El **diseño web responsive** se refiere a la creación de sitios capaces de proporcionar una experiencia de usuario óptima en una amplia variedad de dispositivos, desde ordenadores de escritorio hasta teléfonos móvile ([La importancia del diseño web responsive en la era móvil | Pibeca Solutions](https://www.pibeca.com/2023/11/27/la-importancia-del-diseno-web-responsive-en-la-era-movil/#:~:text=El%20dise%C3%B1o%20web%20responsive%20se,audiencia%20cada%20vez%20m%C3%A1s%20m%C3%B3vil))】. En la actualidad, existen cientos de tamaños de pantalla diferentes utilizados por los usuarios; de hecho, en un sitio web con suficiente tráfico pueden registrarse **más de 1.000 resoluciones distintas\* ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=Hoy%20en%20d%C3%ADa%2C%20en%20una,%E2%80%8D))】. Esta enorme diversidad —que incluye no solo PCs y smartphones, sino también tablets, televisores 4K, wearables y pantallas integradas en dispositivos del IoT— hace **indispensable** que los diseñadores adopten enfoques adaptativos. Un diseño que no se adapte a diferentes pantallas puede ofrecer una experiencia deficiente o incluso volverse inutilizable en ciertos dispositivos. Por ello, las técnicas de diseño **responsive** (adaptativo) y **fluido\*\* se han vuelto fundamentales para garantizar la accesibilidad y usabilidad en el ecosistema web moderno.
+El **diseño web responsive** se refiere a la creación de sitios capaces de proporcionar una experiencia de usuario óptima en una amplia variedad de dispositivos, desde ordenadores de escritorio hasta teléfonos móvile ([La importancia del diseño web responsive en la era móvil | Pibeca Solutions](https://www.pibeca.com/2023/11/27/la-importancia-del-diseno-web-responsive-en-la-era-movil/#:~:text=El%20dise%C3%B1o%20web%20responsive%20se,audiencia%20cada%20vez%20m%C3%A1s%20m%C3%B3vil))】. En la actualidad, existen cientos de tamaños de pantalla diferentes utilizados por los usuarios; de hecho, en un sitio web con suficiente tráfico pueden registrarse **más de 1.000 resoluciones distintas\* ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=Hoy%20en%20d%C3%ADa%2C%20en%20una,%E2%80%8D))】. Esta enorme diversidad —que incluye no solo PCs y smartphones, sino también tablets, televisores 4K, wearables y pantallas integradas en dispositivos del IoT— hace **indispensable** que los diseñadores adopten enfoques adaptativos. Un diseño que no se adapte a diferentes pantallas puede ofrecer una experiencia deficiente o incluso volverse inutilizable en ciertos dispositivos. Por ello, las técnicas de diseño **responsive** (adaptativo) y **fluido** se han vuelto fundamentales para garantizar la accesibilidad y usabilidad en el ecosistema web moderno.
 
 **Objetivos de aprendizaje:**
 
 - Comprender **por qué** surgió el diseño responsive y fluido, en el contexto del auge de dispositivos móviles y del Internet de las Cosas (IoT).
 - Conocer la **evolución histórica** del diseño web adaptativo, desde los primeros _layouts_ fluidos y el uso de _media queries_ CSS, hasta técnicas modernas como la función `clamp()` de CSS.Com
-- Aplicar de forma **práctica** técnicas modernas de CSS —consultas media, función `clamp()`, unidades relativas (`em`, `rem`, `vw`, `vh`, `%`, etc.)— para crear diseños fluidos y adaptativos en HTML/CSS **sin usar frameworks**.
+- Aplicar de forma **práctica** técnicas modernas de CSS —`media queries`, función `clamp()`, unidades relativas (`em`, `rem`, `vw`, `vh`, `%`, etc.)— para crear diseños fluidos y adaptativos en HTML/CSS **sin usar frameworks**.
 - Reflexionar sobre las **ventajas y limitaciones** de cada técnica (diseño responsive _vs_ fluido) y las posibilidades de **combinarlas** en proyectos reales.
 
 ## Sesión 1: Fundamentos del Diseño Responsive y Fluido 🖥️📱
 
 ### La necesidad del diseño adaptativo en la era multi-dispositivo
 
-El crecimiento explosivo de dispositivos con acceso web a lo largo de las últimas dos décadas cambió por completo la forma de abordar el diseño de sitios. A inicios de los 2000, la mayoría de páginas se diseñaban pensando solo en monitores de escritorio con tamaños fijos; no se consideraba mayor variabilidad en las dimensiones de panta ([La importancia del diseño web responsive en la era móvil | Pibeca Solutions](https://www.pibeca.com/2023/11/27/la-importancia-del-diseno-web-responsive-en-la-era-movil/#:~:text=El%20dise%C3%B1o%20web%20ha%20experimentado,este%20enfoque%20ha%20cambiado%20dr%C3%A1sticamente))62】. Sin embargo, la llegada del **smartphone** (marcada por el lanzamiento del iPhone en 2007) inició una nueva era. En pocos años, millones de personas comenzaron a navegar en pantallas pequeñas y con orientación vertical, obligando a repensar los diseños web tradiciona ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=Desde%20que%20sali%C3%B3%20el%20iPhone,%E2%80%8D))88】. Pronto se sumaron **tablets**, lectores electrónicos, televisores inteligentes e incluso relojes, cada uno con distintas resoluciones y características de navegación.
+El crecimiento explosivo de dispositivos con acceso web a lo largo de las últimas dos décadas cambió por completo la forma de abordar el diseño de sitios. A inicios de los 2000, la mayoría de páginas se diseñaban pensando solo en monitores de escritorio con tamaños fijos; no se consideraba mayor variabilidad en las dimensiones de panta ([La importancia del diseño web responsive en la era móvil | Pibeca Solutions](https://www.pibeca.com/2023/11/27/la-importancia-del-diseno-web-responsive-en-la-era-movil/#:~:text=El%20dise%C3%B1o%20web%20ha%20experimentado,este%20enfoque%20ha%20cambiado%20dr%C3%A1sticamente))62】. Sin embargo, la llegada del **smartphone** (marcada por el lanzamiento del iPhone en 2007) inició una nueva era. En pocos años, millones de personas comenzaron a navegar en pantallas pequeñas y con orientación vertical, obligando a repensar los diseños web tradiciona ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=Desde%20que%20sali%C3%B3%20el%20iPhone,%E2%80%8D))】. Pronto se sumaron **tablets**, lectores electrónicos, televisores inteligentes e incluso relojes, cada uno con distintas resoluciones y características de navegación.
 
-Para 2015, el acceso móvil ya superaba al de escritorio en volumen de tráfico ([La importancia del diseño web responsive en la era móvil | Pibeca Solutions](https://www.pibeca.com/2023/11/27/la-importancia-del-diseno-web-responsive-en-la-era-movil/#:~:text=Este%20cambio%20hacia%20el%20dise%C3%B1o,a%20la%20audiencia%20en%20l%C3%ADnea))84】, y empresas como Google empezaron a penalizar en posicionamiento a los sitios no optimizados para móviles (el llamado _"Mobilegeddon"_ de 20 ([Responsive web design - Wikipedia](https://en.wikipedia.org/wiki/Responsive_web_design#:~:text=Responsive%20web%20design%20became%20more,13))28】. En este contexto, surgió la **necesidad imperiosa** de que los sitios web fueran capaces de “adaptarse” al entorno del usuario en vez de forzar al usuario a adaptarse al sitio (p. ej., haciendo _zoom_ constantemente en el móvil). Así, el diseño adaptativo se convirtió en una **estrategia crucial** para llegar y fidelizar a la audiencia moderna en la era multi-disposit ([La importancia del diseño web responsive en la era móvil | Pibeca Solutions](https://www.pibeca.com/2023/11/27/la-importancia-del-diseno-web-responsive-en-la-era-movil/#:~:text=Este%20cambio%20hacia%20el%20dise%C3%B1o,a%20la%20audiencia%20en%20l%C3%ADnea))85】.
+Para 2015, el acceso móvil ya superaba al de escritorio en volumen de tráfico ([La importancia del diseño web responsive en la era móvil | Pibeca Solutions](https://www.pibeca.com/2023/11/27/la-importancia-del-diseno-web-responsive-en-la-era-movil/#:~:text=Este%20cambio%20hacia%20el%20dise%C3%B1o,a%20la%20audiencia%20en%20l%C3%ADnea))84】, y empresas como Google empezaron a penalizar en posicionamiento a los sitios no optimizados para móviles (el llamado _"Mobilegeddon"_ de 20 ([Responsive web design - Wikipedia](https://en.wikipedia.org/wiki/Responsive_web_design#:~:text=Responsive%20web%20design%20became%20more,13))28】. En este contexto, surgió la **necesidad imperiosa** de que los sitios web fueran capaces de “adaptarse” al entorno del usuario en vez de forzar al usuario a adaptarse al sitio (p. ej., haciendo _zoom_ constantemente en el móvil). Así, el diseño adaptativo se convirtió en una **estrategia crucial** para llegar y fidelizar a la audiencia moderna en la era multi-dispositivo ([La importancia del diseño web responsive en la era móvil | Pibeca Solutions](https://www.pibeca.com/2023/11/27/la-importancia-del-diseno-web-responsive-en-la-era-movil/#:~:text=Este%20cambio%20hacia%20el%20dise%C3%B1o,a%20la%20audiencia%20en%20l%C3%ADnea))85】.
 
 ### Breve evolución histórica: de layouts fijos a grids fluidos y _responsive design_
 
 En los primeros días de la web, los layouts solían ser **estáticos o fijos**: definidos en píxeles, con un ancho rígido pensado para pantallas de ~800px o 1024px de ancho. Esto generaba experiencias pobres fuera de ese rango (barras de desplazamiento horizontal en pantallas pequeñas, o enormes márgenes vacíos en pantallas grandes).
 
-A medida que aparecieron más tamaños de pantalla, se exploraron alternativas. Antes de la popularización del término _responsive_, hubo intentos de **diseño líquido o fluido** (_liquid layouts_), donde las anchuras se definían en porcentajes o en `em` (unidades relativas) en lugar de píxeles. La idea era que la página se estirara o encogiera para rellenar el espacio disponi ([¿Qué son los diseños web fluidos, adaptativos y responsivos?](https://blog.ida.cl/diseno/diferencias-diseno-web-fluido-adaptativo-responsivo/#:~:text=Dise%C3%B1o%20web%20l%C3%ADquido%20o%20fluido))59】. Aunque este enfoque fluido funcionaba bien en ciertos rangos (ej. tablets o monitores medianos), se encontraron problemas en los extremos: en pantallas muy grandes las imágenes y elementos podían ampliarse excesivamente, y en pantallas muy pequeñas el texto resultaba diminuto e ilegi ([¿Qué son los diseños web fluidos, adaptativos y responsivos?](https://blog.ida.cl/diseno/diferencias-diseno-web-fluido-adaptativo-responsivo/#:~:text=En%20este%20tipo%20de%20dise%C3%B1o,textos%20son%20dif%C3%ADciles%20de%20leer))63】. Se intentó mejorar introduciendo anchuras máximas y mínimas para el contenedor, pero eso reintroducía zonas vacías en pantallas enormes o provocaba de nuevo _scroll_ horizontal en pantallas ultra peque ([¿Qué son los diseños web fluidos, adaptativos y responsivos?](https://blog.ida.cl/diseno/diferencias-diseno-web-fluido-adaptativo-responsivo/#:~:text=Como%20una%20forma%20de%20evitar,horizontal%20en%20las%20m%C3%A1s%20peque%C3%B1as))70】. En paralelo, también surgió el llamado **diseño adaptativo (Adaptive Web Design)**, que consistía en preparar **plantillas estáticas múltiples** para diferentes tamaños (por ejemplo, un diseño específico para móvil, otro para tablet, otro para desktop) y elegir cuál mostrar según el dispositivo o el ancho detect ([¿Qué son los diseños web fluidos, adaptativos y responsivos?](https://blog.ida.cl/diseno/diferencias-diseno-web-fluido-adaptativo-responsivo/#:~:text=Usa%20plantillas%20est%C3%A1ticas%20basadas%20en,se%20cambia%20a%20otro%20dise%C3%B1o))93】. Si bien el adaptativo permitía cierto grado de optimización por dispositivo, implicaba mantener varias versiones del sitio (mayor costo) y a menudo brindaba una experiencia inconsistente —por ejemplo, versiones móviles recortadas en contenido o funcio ([¿Qué son los diseños web fluidos, adaptativos y responsivos?](https://blog.ida.cl/diseno/diferencias-diseno-web-fluido-adaptativo-responsivo/#:~:text=Esta%20aproximaci%C3%B3n%20podr%C3%ADa%20funcionar%20mejor,gana%20cada%20vez%20m%C3%A1s%20relevancia))99】—.
+A medida que aparecieron más tamaños de pantalla, se exploraron alternativas. Antes de la popularización del término _responsive_, hubo intentos de **diseño líquido o fluido** (_liquid layouts_), donde las anchuras se definían en porcentajes o en `em` (unidades relativas) en lugar de píxeles. La idea era que la página se estirara o encogiera para rellenar el espacio disponi ([¿Qué son los diseños web fluidos, adaptativos y responsivos?](https://blog.ida.cl/diseno/diferencias-diseno-web-fluido-adaptativo-responsivo/#:~:text=Dise%C3%B1o%20web%20l%C3%ADquido%20o%20fluido))】. Aunque este enfoque fluido funcionaba bien en ciertos rangos (ej. tablets o monitores medianos), se encontraron problemas en los extremos: en pantallas muy grandes las imágenes y elementos podían ampliarse excesivamente, y en pantallas muy pequeñas el texto resultaba diminuto e ilegi ([¿Qué son los diseños web fluidos, adaptativos y responsivos?](https://blog.ida.cl/diseno/diferencias-diseno-web-fluido-adaptativo-responsivo/#:~:text=En%20este%20tipo%20de%20dise%C3%B1o,textos%20son%20dif%C3%ADciles%20de%20leer)). Se intentó mejorar introduciendo anchuras máximas y mínimas para el contenedor, pero eso reintroducía zonas vacías en pantallas enormes o provocaba de nuevo _scroll_ horizontal en pantallas ultra peque ([¿Qué son los diseños web fluidos, adaptativos y responsivos?](https://blog.ida.cl/diseno/diferencias-diseno-web-fluido-adaptativo-responsivo/#:~:text=Como%20una%20forma%20de%20evitar,horizontal%20en%20las%20m%C3%A1s%20peque%C3%B1as))】. En paralelo, también surgió el llamado **diseño adaptativo (Adaptive Web Design)**, que consistía en preparar **plantillas estáticas múltiples** para diferentes tamaños (por ejemplo, un diseño específico para móvil, otro para tablet, otro para desktop) y elegir cuál mostrar según el dispositivo o el ancho detectado ([¿Qué son los diseños web fluidos, adaptativos y responsivos?](https://blog.ida.cl/diseno/diferencias-diseno-web-fluido-adaptativo-responsivo/#:~:text=Usa%20plantillas%20est%C3%A1ticas%20basadas%20en,se%20cambia%20a%20otro%20dise%C3%B1o)). Si bien el adaptativo permitía cierto grado de optimización por dispositivo, implicaba mantener varias versiones del sitio (mayor costo) y a menudo brindaba una experiencia inconsistente —por ejemplo, versiones móviles recortadas en contenido o funcionamiento ([¿Qué son los diseños web fluidos, adaptativos y responsivos?](https://blog.ida.cl/diseno/diferencias-diseno-web-fluido-adaptativo-responsivo/#:~:text=Esta%20aproximaci%C3%B3n%20podr%C3%ADa%20funcionar%20mejor,gana%20cada%20vez%20m%C3%A1s%20relevancia))—.
 
-El gran salto ocurrió en **mayo de 2010**, cuando el diseñador Ethan Marcotte publicó en _A List Apart_ el artículo **"Responsive Web Design"**, acuñando el término y proponiendo una nueva metodolo ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=En%20cualquier%20caso%2C%20como%20dec%C3%ADa%2C,%E2%80%8D))14】. Marcotte integró varias ideas: el uso de **grillas fluidas** y **imágenes flexibles** combinado con las recién estandarizadas **media queries de CSS3**. En un artículo previo (2009) ya había introducido el concepto de _fluid grids_, explicando cómo convertir un diseño de píxeles a porcentajes relativos tomando como base el tamaño del texto del navega ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=Pero%20la%20accesibilidad%20y%20la,%E2%80%8D))20】. Ahora, con las media queries, era posible aplicar diferentes reglas CSS según las características del dispositivo (ancho de pantalla, orientación, resolución, etc.). En resumen, **Responsive Web Design (RWD)** implicaba construir una sola página capaz de **reorganizar su layout y escalar sus elementos fluidamente** para verse bien en cualquier disposit ([La importancia del diseño web responsive en la era móvil | Pibeca Solutions](https://www.pibeca.com/2023/11/27/la-importancia-del-diseno-web-responsive-en-la-era-movil/#:~:text=La%20respuesta%20a%20este%20desaf%C3%ADo,desde%20el%20que%20se%20accede))78】.
+El gran salto ocurrió en **mayo de 2010**, cuando el diseñador Ethan Marcotte publicó en _A List Apart_ el artículo **"Responsive Web Design"**, acuñando el término y proponiendo una nueva metodolo ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=En%20cualquier%20caso%2C%20como%20dec%C3%ADa%2C,%E2%80%8D)). Marcotte integró varias ideas: el uso de **grillas fluidas** y **imágenes flexibles** combinado con las recién estandarizadas **media queries de CSS3**. En un artículo previo (2009) ya había introducido el concepto de _fluid grids_, explicando cómo convertir un diseño de píxeles a porcentajes relativos tomando como base el tamaño del texto del navegador ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=Pero%20la%20accesibilidad%20y%20la,%E2%80%8D)). Ahora, con las media queries, era posible aplicar diferentes reglas CSS según las características del dispositivo (ancho de pantalla, orientación, resolución, etc.). En resumen, **Responsive Web Design (RWD)** implicaba construir una sola página capaz de **reorganizar su layout y escalar sus elementos fluidamente** para verse bien en cualquier dispositivo ([La importancia del diseño web responsive en la era móvil | Pibeca Solutions](https://www.pibeca.com/2023/11/27/la-importancia-del-diseno-web-responsive-en-la-era-movil/#:~:text=La%20respuesta%20a%20este%20desaf%C3%ADo,desde%20el%20que%20se%20accede)).
 
-Esta aproximación _“One Web”_ unificada resultó ser la más viable: en lugar de múltiples sitios, uno solo que “respondía” al entorno. Las técnicas clásicas de RWD se resumen en: **rejillas fluidas** (columnas dimensionadas en % en lugar de ([Responsive web design - Wikipedia](https://en.wikipedia.org/wiki/Responsive_web_design#:~:text=,to%20any%20device%20screen%20size))18】, **imágenes flexibles** (imágenes con max-width: 100% para que no sobrepasen su contened ([Responsive web design - Wikipedia](https://en.wikipedia.org/wiki/Responsive_web_design#:~:text=,to%20any%20device%20screen%20size))18】, y **media queries CSS** para aplicar cambios de diseño en puntos de quiebre (_breakpoints_) específi ([Responsive web design - Wikipedia](https://en.wikipedia.org/wiki/Responsive_web_design#:~:text=,to%20any%20device%20screen%20size))18】. Esta filosofía se extendió rápidamente: para 2013–2015 se volvió un estándar de la industria, apoyada por metodologías como _mobile-first_ (diseñar primero para móvil e ir “escalando” hacia desktop) y frameworks populares (Bootstrap, Foundation, etc.) que incorporaron rejillas responsivas.
+Esta aproximación _“One Web”_ unificada resultó ser la más viable: en lugar de múltiples sitios, uno solo que “respondía” al entorno. Las técnicas clásicas de RWD se resumen en: **rejillas fluidas** (columnas dimensionadas en % en lugar de ([Responsive web design - Wikipedia](https://en.wikipedia.org/wiki/Responsive_web_design#:~:text=,to%20any%20device%20screen%20size))】, **imágenes flexibles** (imágenes con max-width: 100% para que no sobrepasen su contenedor ([Responsive web design - Wikipedia](https://en.wikipedia.org/wiki/Responsive_web_design#:~:text=,to%20any%20device%20screen%20size))18】, y **media queries CSS** para aplicar cambios de diseño en puntos de quiebre (_breakpoints_) específicos ([Responsive web design - Wikipedia](https://en.wikipedia.org/wiki/Responsive_web_design#:~:text=,to%20any%20device%20screen%20size))】. Esta filosofía se extendió rápidamente: para 2013–2015 se volvió un estándar de la industria, apoyada por metodologías como _mobile-first_ (diseñar primero para móvil e ir “escalando” hacia desktop) y frameworks populares (Bootstrap, Foundation, etc.) que incorporaron rejillas responsivas.
 
 **Resumiendo la evolución:** empezamos con layouts fijos, luego vino el deseo de fluidos (pero con limitaciones), luego el diseño adaptativo con plantillas múltiples, y finalmente el **diseño responsivo** que combinó lo mejor de ambos mundos (fluidez + adaptabilidad por breakpoints).
 
@@ -37,11 +37,11 @@ Esta aproximación _“One Web”_ unificada resultó ser la más viable: en lug
 
 Es común confundir los términos, ya que ambos se refieren a lograr que la interfaz se adapte. En esta guía los distinguiremos así:
 
-- **Diseño Fluido (o “líquido”)**: Todas las dimensiones en la hoja de estilo se definen con **unidades relativas** (%, `em`, `rem`, `vw`, etc.) en lugar de valores fijos en píxeles. De este modo, el diseño escala de forma continua cuando el usuario redimensiona la ventana o cambia de dispositivo. Un layout fluido _puro_ evita utilizar cualquier anchura fija mientras no sea neces ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=Responsive%20Fluido%3A))323】. Por ejemplo, una columna podría ocupar `50%` del ancho del contenedor en lugar de, digamos, `400px`. Si el contenedor crece, la columna crece proporcionalmente. La ventaja es un aprovechamiento máximo del espacio en cada tamaño y transiciones **suaves**, sin “saltos” bruscos. Sin embargo, como vimos, un fluido puro puede llevar al extremo de elementos desproporcionados (texto demasiado pequeño en móvil, líneas de texto excesivamente largas en pantallas XXL, etc.). La solución moderna incorpora **límites**: es habitual combinar el fluido con valores _mínimos_ y _máximos_ para ciertos elementos clave. Por ejemplo, se puede permitir que un título escale con la pantalla pero fijando un mínimo de 16px para que nunca sea ilegible en un telé ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=El%20dise%C3%B1o%20fluido%20es%2C%20por,%E2%80%8D))324】. En suma, el diseño fluido busca que todo _fluya_ proporcionalmente al espacio disponible, manteniendo algunos topes para garantizar usabilidad.
+- **Diseño Fluido (o “líquido”)**: Todas las dimensiones en la hoja de estilo se definen con **unidades relativas** (%, `em`, `rem`, `vw`, etc.) en lugar de valores fijos en píxeles. De este modo, el diseño escala de forma continua cuando el usuario redimensiona la ventana o cambia de dispositivo. Un layout fluido _puro_ evita utilizar cualquier anchura fija mientras no sea necesario ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=Responsive%20Fluido%3A))323】. Por ejemplo, una columna podría ocupar `50%` del ancho del contenedor en lugar de, digamos, `400px`. Si el contenedor crece, la columna crece proporcionalmente. La ventaja es un aprovechamiento máximo del espacio en cada tamaño y transiciones **suaves**, sin “saltos” bruscos. Sin embargo, como vimos, un fluido puro puede llevar al extremo de elementos desproporcionados (texto demasiado pequeño en móvil, líneas de texto excesivamente largas en pantallas XXL, etc.). La solución moderna incorpora **límites**: es habitual combinar el fluido con valores _mínimos_ y _máximos_ para ciertos elementos clave. Por ejemplo, se puede permitir que un título escale con la pantalla pero fijando un mínimo de 16px para que nunca sea ilegible en un telé ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=El%20dise%C3%B1o%20fluido%20es%2C%20por,%E2%80%8D))324】. En suma, el diseño fluido busca que todo _fluya_ proporcionalmente al espacio disponible, manteniendo algunos topes para garantizar usabilidad.
 
 - **Diseño Responsive (Responsivo o Adaptativo)**: En sentido estricto, _responsive web design_ es un enfoque amplio que engloba varias técnicas (de hecho, un buen diseño responsivo suele incluir componentes fluidos). A efectos de comparación, podemos definir el enfoque responsive típico como aquel que utiliza **puntos de corte (breakpoints)** con **media queries CSS** para reorganizar o redimensionar elementos en ciertos anchos predefinidos. Fuera de esos puntos, a veces las dimensiones permanecen fijas. Por ejemplo, un sitio podría mostrarse con un ancho fijo de 1200px en pantallas grandes, pero al bajar de 992px de ancho aplicaría una media query para pasar a un ancho de 100% (fluido) o a una columna; luego a menos de 768px otra media query para reorganizar aún más (menú colapsado, etc.). Este sería un enfoque _responsive adaptativo clásico_, a veces llamado **diseño adaptativo** en español cuando se enfatiza el uso de breakpoints. La web “salta” o **cambia de diseño en ciertos umbrales** en lugar de ajustar cada píxel continuamente. Bien ejecutado, el responsive puede ofrecer diseños muy optimizados por tramo de tamaños, mostrando u ocultando elementos según convenga a cada formato. No obstante, si se abusa de valores fijos y solo se confía en unos pocos breakpoints, es posible que entre esos puntos existan rangos subóptimos (por ejemplo, 801px ancho versus 799px podría dar experiencias bastante diferentes si solo hay un corte justo en 800px).
 
-**Similitudes y combinación:** Tanto el diseño responsive como el fluido persiguen el mismo fin: que la página se **adapte a múltiples tamaños** de pantalla. De hecho, no son excluyentes, sino complementarios. El diseño responsivo _moderno_ suele incorporar fluidez en muchos elementos, y solo utiliza breakpoints cuando es necesario cambiar la disposición general. En palabras de algunos autores, el diseño fluido es realmente una forma de diseño responsive, en la cual se evitan tamaños fijos siempre que se p ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=Responsive%20Fluido%3A))323】. En la práctica, un enfoque recomendado es usar **fluidez por defecto** (layouts basados en porcentajes o `fr` de Grid, texto e imágenes escalables) y aplicar **media queries** para ajustes más drásticos de la estructura o para limitar esa fluidez en extremos. Gracias a esto obtenemos una experiencia más suave _entre_ breakpoints, evitando huecos muertos, y garantizamos a la vez una presentación apropiada en cada rango de disposi ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=Mantendremos%20los%20breakpoints%20y%20la,%E2%80%8D))334】.
+**Similitudes y combinación:** Tanto el diseño responsive como el fluido persiguen el mismo fin: que la página se **adapte a múltiples tamaños** de pantalla. De hecho, no son excluyentes, sino complementarios. El diseño responsivo _moderno_ suele incorporar fluidez en muchos elementos, y solo utiliza breakpoints cuando es necesario cambiar la disposición general. En palabras de algunos autores, el diseño fluido es realmente una forma de diseño responsive, en la cual se evitan tamaños fijos siempre que se pueda ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=Responsive%20Fluido%3A))】. En la práctica, un enfoque recomendado es usar **fluidez por defecto** (layouts basados en porcentajes o `fr` de Grid, texto e imágenes escalables) y aplicar **media queries** para ajustes más drásticos de la estructura o para limitar esa fluidez en extremos. Gracias a esto obtenemos una experiencia más suave _entre_ breakpoints, evitando huecos muertos, y garantizamos a la vez una presentación apropiada en cada rango de dispositivos ([El diseño web fluido](https://www.kingseo.es/post/el-diseno-web-fluido-2022#:~:text=Mantendremos%20los%20breakpoints%20y%20la,%E2%80%8D))】.
 
 **¿Cuándo usar uno u otro?** Realmente no se trata de escoger entre “responsive vs fluido”, sino de cuánto énfasis dar a cada estrategia. Si nuestro contenido es relativamente simple y puede reorganizarse en una sola columna en móvil, podríamos optar por un diseño muy fluido con mínimos breakpoints. Por otro lado, si diseñamos una interfaz muy compleja (ej: una aplicación web) podríamos necesitar múltiples breakpoints y ciertos elementos con tamaños fijos mínimos para mantener consistencia. En general, hoy en día se aconseja **combinar**: usar fluidez siempre que mejore la experiencia (tipografías, contenedores que escalen, etc.) y utilizar puntos de quiebre para cambios de layout o para mantener la legibilidad y la estética. Exploraremos cómo lograr esta combinación en la práctica.
 
@@ -77,11 +77,12 @@ Para entender mejor el enfoque _responsive_, vamos a crear un pequeño ejemplo. 
 **CSS (archivo styles.css):**
 
 ```css
-/* Estilos base */
+/* Estilos base (Mobile First) */
 body {
 	margin: 0;
 	font-family: sans-serif;
 }
+
 header,
 footer {
 	background: #333;
@@ -89,39 +90,52 @@ footer {
 	text-align: center;
 	padding: 1rem;
 }
+
 .contenedor {
 	display: flex;
-	flex-wrap: wrap; /* permitir que las columnas bajen */
+	flex-wrap: wrap;
 	max-width: 1200px;
-	margin: auto; /* centrar el contenedor en pantallas grandes */
+	margin: auto;
 	padding: 1rem;
 }
+
 .columna {
-	flex: 1 1 33%; /* tres columnas, cada una ~33% (1/3) del ancho */
+	/*
+		Sintaxis: flex: [flex-grow] [flex-shrink] [flex-basis];
+		- flex-grow:    1 → permite que crezca para ocupar espacio disponible
+		- flex-shrink:  1 → permite que se reduzca si no cabe
+		- flex-basis: 100% → ancho base deseado para esta columna
+		En este caso: 1 columna por fila en móvil.
+	*/
+	flex: 1 1 100%;
+	box-sizing: border-box;
 	padding: 1rem;
 }
+
 .columna:nth-child(odd) {
 	background: #f0f0f0;
 }
+
+
 ```
 
-Hasta aquí, definimos un contenedor flexible con tres columnas que ocupan cada una un tercio (aprox) del ancho gracias a `flex: 1 1 33%`. También hacemos que el contenedor no exceda 1200px (así tendrá margen a los lados en pantallas muy grandes, mejorando la legibilidad). Ahora añadimos las **media queries** para modificar la disposición en pantallas más pequeñas:
+Hasta aquí, definimos un contenedor flexible con una columna que ocupa todo del ancho gracias a `flex: 1 1 100%`. También hacemos que el contenedor no exceda 1200px (así tendrá margen a los lados en pantallas muy grandes, mejorando la legibilidad). Ahora añadimos las **media queries** para modificar la disposición en pantallas más grandes:
 
 ```css
-/* Media query: pantallas medianas (tablet) */
-@media (max-width: 800px) {
+
+/* Tablet (min-width: 600px) — 2 columnas */
+@media (min-width: 600px) {
 	.columna {
-		flex: 1 1 50%; /* dos columnas de ~50% cada una */
+		/* 2 columnas por fila: cada una ~50% del ancho */
+		flex: 1 1 50%;
 	}
 }
 
-/* Media query: pantallas pequeñas (móvil) */
-@media (max-width: 500px) {
-	.contenedor {
-		flex-direction: column; /* apilar columnas verticalmente */
-	}
+/* Desktop (min-width: 900px) — 3 columnas */
+@media (min-width: 900px) {
 	.columna {
-		flex: 1 1 100%; /* cada columna ocupa 100% del ancho (una por fila) */
+		/* 3 columnas por fila: cada una ~33.33% del ancho */
+		flex: 1 1 33.33%;
 	}
 }
 ```
@@ -132,7 +146,6 @@ Puedes probar este código abriendo el HTML en un navegador y redimensionando la
 
 > **Ejercicio 1:** _Responsive sin Frameworks_ – Tomando el código anterior como base, personaliza el layout: por ejemplo, añade una barra de navegación en el header que cambie a un menú desplegable en móvil, o cambia las columnas de contenido por tarjetas con imágenes y texto. El objetivo es practicar el uso de **media queries** y propiedades flexibles. Sube tu resultado a un repositorio en GitHub (o GitHub Pages) para revisión. Asegúrate de comentar tu código explicando cómo cada media query está adaptando el diseño.
 
-_(Pausa aquí para que los estudiantes desarrollen el ejercicio antes de la Sesión 2.)_
 
 ## Sesión 2: Técnicas Modernas para Diseño Fluido 🌊
 
@@ -168,7 +181,7 @@ Uno de los desafíos clásicos del diseño responsive era manejar el tamaño de 
 
 Afortunadamente CSS nos brinda una solución elegante: la función `clamp()`. Introducida alrededor de 2020, `clamp()` permite combinar en **una sola línea** lo mejor de ambos mundos (valores fluidos + límites fijo) sin necesidad de varias media q ([clamp() - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp#:~:text=Note%20that%20using%20,the%20use%20of%20media%20queries))L1234】.
 
-**¿Qué es `clamp()`?** Es una función CSS que recibe **tres valores**: un **mínimo**, un **valor preferido** y un \**má ([Diseño y tipografía fluida con CSS: Cómo aplicarlo a tu web con clamp](https://utopigstudio.com/es/blog/diseno/tipografia-fluida-css-clamp#:~:text=Esta%20funci%C3%B3n%20toma%20tres%20argumentos%3A))1-L99】. La sintaxis es `clamp(min, preferido, max)`. Lo que hace es *restringir* (de ahí su nombre, "clamp" = sujetar/restringir) el valor preferido dentro del rango dado por el mínimo y el ([Diseño y tipografía fluida con CSS: Cómo aplicarlo a tu web con clamp](https://utopigstudio.com/es/blog/diseno/tipografia-fluida-css-clamp#:~:text=Pst%3A%20Clamp%20como%20verbo%20en,que%20el%20nombre%20tiene%20sentido)) ([Diseño y tipografía fluida con CSS: Cómo aplicarlo a tu web con clamp](https://utopigstudio.com/es/blog/diseno/tipografia-fluida-css-clamp#:~:text=Esta%20funci%C3%B3n%20toma%20tres%20argumentos%3A))1-L99】. En la práctica, el valor preferido suele ser una expresión con unidades relativas (por ejemplo `5vw`), de modo que *crezca* o *disminuya\* según el tamaño del viewport; mientras que el mínimo y máximo suelen ser valores en `px` o `rem` que marcan el tope inferior y superior.
+**¿Qué es `clamp()`?** Es una función CSS que recibe **tres valores**: un **mínimo**, un **valor preferido** y un \**máximo ([Diseño y tipografía fluida con CSS: Cómo aplicarlo a tu web con clamp](https://utopigstudio.com/es/blog/diseno/tipografia-fluida-css-clamp#:~:text=Esta%20funci%C3%B3n%20toma%20tres%20argumentos%3A))1-L99】. La sintaxis es `clamp(min, preferido, max)`. Lo que hace es *restringir* (de ahí su nombre, "clamp" = sujetar/restringir) el valor preferido dentro del rango dado por el mínimo y el ([Diseño y tipografía fluida con CSS: Cómo aplicarlo a tu web con clamp](https://utopigstudio.com/es/blog/diseno/tipografia-fluida-css-clamp#:~:text=Pst%3A%20Clamp%20como%20verbo%20en,que%20el%20nombre%20tiene%20sentido)) ([Diseño y tipografía fluida con CSS: Cómo aplicarlo a tu web con clamp](https://utopigstudio.com/es/blog/diseno/tipografia-fluida-css-clamp#:~:text=Esta%20funci%C3%B3n%20toma%20tres%20argumentos%3A))1-L99】. En la práctica, el valor preferido suele ser una expresión con unidades relativas (por ejemplo `5vw`), de modo que *crezca* o *disminuya\* según el tamaño del viewport; mientras que el mínimo y máximo suelen ser valores en `px` o `rem` que marcan el tope inferior y superior.
 
 **Ejemplo sencillo:**
 
@@ -233,27 +246,110 @@ Hasta ahora hablamos de fluidos principalmente en términos de escalado continuo
 
 - **Unidades `fr` en Grid:** La unidad fracción (`fr`) de CSS Grid es especialmente útil para layouts fluidos. Por ejemplo, `grid-template-columns: 2fr 1fr;` define dos columnas que siempre ocuparán 2/3 y 1/3 del contenedor respectivamente (fluido). Combinado con `minmax()` podemos asegurar mínimos. Ej: `grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));` creará tantas columnas de mínimo 15rem como quepan, distribuyendo el resto del espacio equitativamente (1fr cada una).
 
-**Ejemplo práctico 3:** supongamos un portafolio de proyectos con tarjetas. Queremos que en desktop se vean 4 por fila, en tablet ~2 o 3, en móvil 1 por fila. Podemos lograrlo con CSS Grid fácilmente:
+**Ejemplo práctico 3:** supongamos un portafolio de proyectos con tarjetas. Queremos que en desktop se vean 4 por fila, en tablet ~2 o 3, en móvil 1 por fila. Podemos lograrlo con CSS Grid fácilmente **sin media queries**:
+
+***
+
+### Portafolio con tarjetas responsive (Grid)
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Ejemplo Práctico 3: Portafolio Responsive con CSS Grid</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header>
+		<h1>Mi Portafolio</h1>
+	</header>
+
+	<main class="projects-grid">
+		<article class="project-card">Proyecto 1</article>
+		<article class="project-card">Proyecto 2</article>
+		<article class="project-card">Proyecto 3</article>
+		<article class="project-card">Proyecto 4</article>
+		<article class="project-card">Proyecto 5</article>
+		<article class="project-card">Proyecto 6</article>
+	</main>
+
+	<footer>&copy; 2025 Mi Portafolio</footer>
+</body>
+</html>
+```
+
+***
+
+###  Diseño fluido con Grid sin media queries
 
 ```css
+/* Estilos base */
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+header,
+footer {
+	background: #222;
+	color: white;
+	text-align: center;
+	padding: 1rem;
+}
+
+/* Grid responsive */
 .projects-grid {
 	display: grid;
+
+	/* Repetir tantas columnas como quepan, cada una con un mínimo de 250px */
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
 	gap: 1rem;
+	padding: 1rem;
+	max-width: 1200px;
+	margin: auto;
 }
+
+/* Tarjeta de proyecto */
 .project-card {
 	background: #eee;
-	padding: 1rem;
+	padding: 1.5rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+	transform: translateY(-4px);
+	background: #f5f5f5;
 }
 ```
 
-Aquí, cada `.project-card` tendrá un mínimo de 250px. En un contenedor grande, entrarán 4 (4 _ 250px = 1000px mínimo requerido, si el container es más ancho se distribuye el sobrante). Si la pantalla es más pequeña, quizás solo caben 2 de 250px antes de que el resto salte a nueva fila, etc. En móviles estrechos, probablemente solo 1 por fila (porque 2 _ 250px excedería el ancho). Todo esto sucede **sin escribir ni una media query**: es un diseño fluido _intrínseco_ gracias a Grid.
+***
+
+### 🧠 ¿Qué se enseña aquí?
+
+* **`grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))`**:
+
+  * `auto-fit`: rellena el contenedor con tantas columnas como quepan.
+
+  * `minmax(250px, 1fr)`: cada columna tiene un mínimo de 250px y puede expandirse si sobra espacio. En un contenedor grande, entrarán 4 (4 _ 250px = 1000px mínimo requerido, si el container es más ancho se distribuye el sobrante). Si la pantalla es más pequeña, quizás solo caben 2 de 250px antes de que el resto salte a nueva fila, etc. En móviles estrechos, probablemente solo 1 por fila (porque 2 _ 250px excedería el ancho). 
+
+* El layout es **intrínsecamente fluido**: cambia el número de columnas automáticamente según el ancho del viewport.
+
+* **No se necesita ninguna media query** 🧼
+
+* El código es **escalable y limpio**: perfecto para portafolios, catálogos, grids de imágenes, etc.
+
+***
 
 ### Imágenes y otros elementos gráficos responsivos 📷
 
 Adaptar el **contenido visual** es tan importante como el layout o la tipografía:
 
-- **Imágenes flexibles:** La regla de oro para hacer una imagen (etiqueta `<img>`) fluida es aplicarle `max-width: 100%; height: auto;`. Con esto, una imagen se encogerá proporcionalmente si el contenedor es más estrecho que ella, evitando desborda ([Images - Bootstrap](https://getbootstrap.com/docs/4.0/content/images/#:~:text=Images%20,scales%20with%20the%20parent%20element))31-L39】. Por ejemplo, en una columna flexible podemos incluir `<img src="foto.jpg" alt="..." style="max-width:100%; height:auto;">` para que esa imagen nunca exceda el ancho de la columna. Esto resuelve que en móvil la imagen se vea más pequeña automáticamente y en desktop se vea a su tamaño natural (hasta su 100%). Hoy día muchos _reset/normalize CSS_ o frameworks incluyen `.img-fluid { max-width:100%; height:auto; }` por defecto.
+- **Imágenes flexibles:** La regla de oro para hacer una imagen (etiqueta `<img>`) fluida es aplicarle `max-width: 100%; height: auto;`. Con esto, una imagen se encogerá proporcionalmente si el contenedor es más estrecho que ella, evitando desbordamiento ([Images - Bootstrap](https://getbootstrap.com/docs/4.0/content/images/#:~:text=Images%20,scales%20with%20the%20parent%20element))31-L39】. Por ejemplo, en una columna flexible podemos incluir `<img src="foto.jpg" alt="..." style="max-width:100%; height:auto;">` para que esa imagen nunca exceda el ancho de la columna. Esto resuelve que en móvil la imagen se vea más pequeña automáticamente y en desktop se vea a su tamaño natural (hasta su 100%). Hoy día muchos _reset/normalize CSS_ o frameworks incluyen `.img-fluid { max-width:100%; height:auto; }` por defecto.
 
 - **Imágenes responsivas (srcset):** Aunque escapa un poco del enfoque “solo CSS” de la clase, es bueno mencionar que HTML5 ofrece atributos como `srcset` y el elemento `<picture>` para servir automáticamente imágenes de diferentes resoluciones o recortes según el dispositivo. Esto mejora rendimiento y adecuación visual (por ejemplo, cargar una versión más pequeña de una foto en pantallas móviles Retina). En nuestros ejercicios nos centraremos en CSS, pero sepan que es una técnica complementaria esencial para **responsive images**.
 
@@ -271,7 +367,7 @@ En el panorama de 2024-2025, vemos una convergencia interesante: tras años de c
 
 - **Container Queries (Consultas a contenedores):** Una de las adiciones más esperadas a CSS (ya disponibles en navegadores modernos) son las _container queries_. Si las media queries tradicionales basan las condiciones en el viewport (global), las container queries permiten que un componente adapte su estilo según el tamaño de su **contenedor padre** específico. Esto es revolucionario para diseño _responsive_ de componentes reutilizables. Por ejemplo, un widget de card podría tener diferentes disposiciones de sus elementos internos si su contenedor es ancho o estrecho, independientemente del tamaño global de la página. Las container queries complementan al diseño fluido, haciendo posible un responsive _contextual_. A medida que se estandaricen, veremos patrones de diseño aún más modulables.
 
-- **Otras tendencias:** El _Responsive Web Design_ sigue evolucionando con la tecnología: el aumento de dispositivos plegables (foldables), por ejemplo, introduce conceptos de diferentes ventanas en un mismo dispositivo; la integración con plataformas de TV o autos requiere pensar en distancias de visualización distintas; y la accesibilidad enfatiza adaptar no solo al tamaño sino a las necesidades del usuario (zoom, contrastes, motion preferences). También, la llegada de herramientas como **CSS Nesting**, **CSS Layers**, etc., facilitan manejar CSS complejo de forma organizada, lo cual es útil cuando combinamos muchas condiciones responsivas.
+- **Otras tendencias:** El _Responsive Web Design_ sigue evolucionando con la tecnología: el aumento de dispositivos plegables (foldables), por ejemplo, introduce conceptos de diferentes ventanas en un mismo dispositivo; la integración con plataformas de TV o vehículos requiere pensar en distancias de visualización distintas; y la accesibilidad enfatiza adaptar no solo al tamaño sino a las necesidades del usuario (zoom, contrastes, motion preferences). También, la llegada de herramientas como **CSS Nesting**, **CSS Layers**, etc., facilitan manejar CSS complejo de forma organizada, lo cual es útil cuando combinamos muchas condiciones responsivas.
 
 En resumen, **lo fluido no reemplaza a lo responsive, sino que lo enriquece**. Seguiremos definiendo breakpoints para cambios de layout mayores, pero probablemente necesitaremos menos breakpoints “menores” porque dejaremos que CSS haga el trabajo continuo por nosotros en cuestiones de tamaños relativos. La tendencia es lograr interfaces más “**elastic**” (término que a veces se usa), que se sientan naturales en cualquier entorno sin evidenciar puntos de corte bruscos.
 
@@ -337,4 +433,4 @@ Al completar este proyecto, el estudiante habrá demostrado su capacidad para **
 - Píbeca Blog: \*La importancia del diseño web responsive en la era m ([La importancia del diseño web responsive en la era móvil | Pibeca Solutions](https://www.pibeca.com/2023/11/27/la-importancia-del-diseno-web-responsive-en-la-era-movil/#:~:text=La%20respuesta%20a%20este%20desaf%C3%ADo,desde%20el%20que%20se%20accede)) ([La importancia del diseño web responsive en la era móvil | Pibeca Solutions](https://www.pibeca.com/2023/11/27/la-importancia-del-diseno-web-responsive-en-la-era-movil/#:~:text=Este%20cambio%20hacia%20el%20dise%C3%B1o,a%20la%20audiencia%20en%20l%C3%ADnea))4†L177-L185】
 - Documentación Bootstrap (ejemplo de imáge ([Images - Bootstrap](https://getbootstrap.com/docs/4.0/content/images/#:~:text=Images%20,scales%20with%20the%20parent%20element))
 
-_(Todas las URL apuntan a contenido relevante consultado para elaborar esta guía. Se recomienda su lectura para ampliar conocimientos.)_
+
