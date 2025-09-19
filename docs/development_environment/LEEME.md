@@ -389,5 +389,3 @@ Homebrew es un gestor de paquetes para macOS que simplifica la instalación de s
   https://brew.sh/
 
 ---
-
-¡Listo! 😊
