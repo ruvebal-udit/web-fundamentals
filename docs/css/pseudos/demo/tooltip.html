@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS-Only Tooltip Demo</title>
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				margin: 0;
+				font-family: system-ui, -apple-system, sans-serif;
+			}
+
+			.tooltip {
+				position: relative;
+				display: inline-block;
+				cursor: pointer;
+				padding: 0.75rem 1.5rem;
+				background: #4299e1;
+				color: white;
+				border: none;
+				border-radius: 0.375rem;
+				font-size: 1rem;
+			}
+
+			.tooltip::after {
+				content: attr(data-tooltip);
+				position: absolute;
+				bottom: 100%;
+				left: 50%;
+				transform: translateX(-50%);
+				background: #2d3748;
+				color: white;
+				padding: 0.5rem 1rem;
+				border-radius: 0.25rem;
+				font-size: 0.875rem;
+				white-space: nowrap;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.3s, visibility 0.3s;
+			}
+
+			.tooltip:hover::after {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			/* Optional: Add an arrow to the tooltip */
+			.tooltip::before {
+				content: '';
+				position: absolute;
+				bottom: 100%;
+				left: 50%;
+				transform: translateX(-50%);
+				border: 6px solid transparent;
+				border-top-color: #2d3748;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.3s, visibility 0.3s;
+			}
+
+			.tooltip:hover::before {
+				opacity: 1;
+				visibility: visible;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="tooltip" data-tooltip="This is a CSS-only tooltip!">Hover over me</button>
+	</body>
+</html>

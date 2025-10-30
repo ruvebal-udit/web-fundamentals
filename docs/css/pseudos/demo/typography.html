@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Typography with Pseudo-Elements Demo</title>
+		<style>
+			body {
+				font-family: system-ui, -apple-system, sans-serif;
+				line-height: 1.6;
+				max-width: 65ch;
+				margin: 2rem auto;
+				padding: 0 1rem;
+			}
+
+			h1 {
+				position: relative;
+				margin: 2rem 0;
+			}
+
+			/* Decorative emojis for headings */
+			h1::before {
+				content: '🔥 ';
+			}
+
+			h1::after {
+				content: ' ✨';
+			}
+
+			/* Drop cap effect */
+			.drop-cap p:first-of-type::first-letter {
+				font-size: 3rem;
+				float: left;
+				line-height: 0.8;
+				padding: 0.1em 0.1em 0 0;
+				color: #2b6cb0;
+			}
+
+			/* First line styling */
+			.first-line p::first-line {
+				font-weight: bold;
+				color: #2d3748;
+			}
+
+			/* Selection styling */
+			::selection {
+				background: #fbd38d;
+				color: #744210;
+			}
+
+			/* Demo sections */
+			section {
+				margin: 2rem 0;
+				padding: 1rem;
+				border: 1px solid #e2e8f0;
+				border-radius: 0.5rem;
+			}
+
+			.demo-label {
+				font-size: 0.875rem;
+				color: #718096;
+				margin-bottom: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<h2>Pseudo-Elements: Definition & Example</h2>
+			<p>
+				Pseudo-elements let you style specific parts of an element or insert content before/after it, without changing the
+				HTML. For example, the theme toggle button uses
+				<code>::before</code>
+				to add a Unicode shape before the button text:
+			</p>
+			<pre><code>.theme-toggle-button::before {
+  content: var(--toggle-shape);
+}</code></pre>
+			<p>This adds a dynamic icon before the button label, controlled by a CSS variable.</p>
+		</section>
+		<h1>Typography Enhancements</h1>
+
+		<section class="drop-cap">
+			<div class="demo-label">Drop Cap Effect (::first-letter)</div>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
+				aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+			</p>
+		</section>
+
+		<section class="first-line">
+			<div class="demo-label">Bold First Line (::first-line)</div>
+			<p>
+				This entire first line will be bold and darker. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+				eiusmod tempor incididunt ut labore.
+			</p>
+		</section>
+
+		<section>
+			<div class="demo-label">Custom Selection (::selection)</div>
+			<p>Try selecting this text to see the custom selection colors!</p>
+		</section>
+	</body>
+</html>

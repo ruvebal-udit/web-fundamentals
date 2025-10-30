@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Navigation and Cards Demo</title>
+		<style>
+			/* Base styles */
+			body {
+				margin: 0;
+				font-family: system-ui, -apple-system, sans-serif;
+				line-height: 1.5;
+			}
+
+			/* Navigation styles */
+			.nav {
+				background: #2d3748;
+				padding: 1rem;
+			}
+
+			.nav ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				gap: 1rem;
+			}
+
+			.nav a {
+				color: white;
+				text-decoration: none;
+				padding: 0.5rem 1rem;
+				border-radius: 0.25rem;
+				transition: background-color 0.2s;
+			}
+
+			.nav a:hover,
+			.nav a:focus {
+				background-color: #4a5568;
+				outline: 2px solid #90cdf4;
+				outline-offset: 2px;
+			}
+
+			.nav li:nth-child(odd) a {
+				background-color: #4a5568;
+			}
+
+			/* Cards grid */
+			.cards {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 1.5rem;
+				padding: 1.5rem;
+			}
+
+			.card {
+				position: relative;
+				background: white;
+				border-radius: 0.5rem;
+				padding: 1.5rem;
+				box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			}
+
+			/* Decorative elements using pseudo-elements */
+			.card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 4px;
+				background: linear-gradient(to right, #4299e1, #9f7aea);
+				border-radius: 0.5rem 0.5rem 0 0;
+			}
+
+			.card::after {
+				content: '→';
+				position: absolute;
+				bottom: 1rem;
+				right: 1rem;
+				font-size: 1.25rem;
+				opacity: 0;
+				transform: translateX(-10px);
+				transition: all 0.3s ease;
+			}
+
+			.card:hover::after {
+				opacity: 1;
+				transform: translateX(0);
+			}
+
+			/* Dynamic button */
+			.button {
+				display: inline-block;
+				padding: 0.75rem 1.5rem;
+				background: #4299e1;
+				color: white;
+				border: none;
+				border-radius: 0.375rem;
+				cursor: pointer;
+				position: relative;
+				overflow: hidden;
+				margin: 1.5rem;
+			}
+
+			.button::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 300%;
+				height: 300%;
+				background: rgba(255, 255, 255, 0.2);
+				transform: translate(-50%, -50%) rotate(35deg) translateY(100%);
+				transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+			}
+
+			.button:hover::before {
+				transform: translate(-50%, -50%) rotate(35deg) translateY(-100%);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="nav">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- Cards -->
+		<div class="cards">
+			<div class="card">
+				<h3>Feature One</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>
+			<div class="card">
+				<h3>Feature Two</h3>
+				<p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+			</div>
+			<div class="card">
+				<h3>Feature Three</h3>
+				<p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
+			</div>
+		</div>
+
+		<!-- Dynamic Button -->
+		<button class="button">Hover Me</button>
+	</body>
+</html>
